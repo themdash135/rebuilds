@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="robots" content="noindex,nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inspire Hope Realty — Grayson, GA Real Estate | Buy, Sell, Property Management</title>
+<meta name="description" content="Inspire Hope Realty is a 5.0-star (10 Google reviews) real estate agency at 516 Sosebee Farm Rd #633, Grayson, GA 30017 — selling, buying, home valuations, leasing, property management and HOA management across Gwinnett County. Open 7 days. Call (470) 628-0756.">
+<meta name="theme-color" content="#14110c">
+
+<!-- BUILD NOTES (mechanically checkable)
+  Facts sources: scraped lead facts (name, phone 4706280756, address, coords, rating 5.0/10, Google hours)
+  + harvested inspirehoperealty.com pages (broker name from /2332033.html "Meet the Broker | DANIELLE MARIE WILLIAMS | Broker",
+  service list from site nav/page titles, community list from /communities, taglines "Professional Real Estate Services",
+  "SELLING YOUR HOME THE RIGHT WAY", "THE BEST SOURCE FOR BUYING REAL ESTATE", Grayson lede from /Grayson).
+  Rating "5.0 · 10 Google reviews" appears in: hero chip, #reviews strip, footer, meta description — same values in all four. Never in JSON-LD (no aggregateRating by policy). No review bodies quoted anywhere.
+  Hours (Google Business Profile scrape): Mon–Sat 8 AM–9 PM, Sun 8 AM–6 PM. Chips used: "Open 7 days a week" (7 rows with hours) and "until 9 PM Monday–Saturday" (six rows close 9 PM). Both verified against the table in #visit.
+  Category conflict: Google card says "Commercial real estate agency"; the business's own site publishes residential MLS services. Per workflow the business's own page wins; the difference is disclosed once, in visible copy at the end of #services.
+  Trust signals shown (2+ types): Google rating + count; broker name/title from their own site; real harvested photography; published address + 7-day hours. GA license number: absent from the entire harvest — omitted, not invented.
+  Portraits: triage binds all three portraits to this location but does not verify the subject's name. Per triage warning, no portrait carries a name caption or name alt; the broker's name appears only in text sourced from the Meet the Broker page. Role-only link "Meet the broker" is used under the hero portrait.
+  House/interior/aerial photos are location-unknown or generic per triage: all appear uncaptioned and are never labeled as the office, a listing, a sold property, or a named subdivision. 159753_3112023100808PM75630.jpg appears only as a service-card image per triage restriction.
+  All 13 approved assets are used; zero rejected assets referenced.
+  Forms: none built (no backend exists). Conversion paths are tel: and links to the business's live pages (home-evaluation, buyers, buyers-request, sellers, properties, community pages) — every "↗" link lands on inspirehoperealty.com or the Google listing exactly as labeled.
+  Spelling: their site spells one community "Suwanne" in URLs/nav; visible copy uses the city's standard spelling "Suwanee"; the link points at their real /Suwanne URL.
+  Brand deviation note: warm ink/cream/bronze palette derived from the harvested photography (bronze column, corten-steel wall) and the values-driven brand name — a documented brand-appropriate deviation from the cool Apple/Spotify default.
+  3D hero: perspective stage, 4 layers at distinct depths (back −180px, scrim −90px, text plane 0, portrait +70px), pointer + scroll drivers, transform-only inside rAF, frozen under prefers-reduced-motion, fully composed with JS disabled via the plain-CSS rest transforms below.
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: { extend: {
+    colors: { ink:'#14110c', espresso:'#211b13', cream:'#f6f1e7', sand:'#efe6d4', paper:'#fffdf8', bronze:'#c29a5e', bronzedeep:'#8f6f3e' },
+    fontFamily: { display:['Fraunces','Georgia','serif'], sans:['Inter','ui-sans-serif','system-ui','sans-serif'] }
+  } }
+};
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RealEstateAgent",
+  "name": "Inspire Hope Realty",
+  "slogan": "Professional Real Estate Services",
+  "description": "Real estate agency in Grayson, GA offering selling, buying, home valuations, leasing, property management and HOA management across Gwinnett County.",
+  "url": "http://www.inspirehoperealty.com/",
+  "telephone": "+14706280756",
+  "image": "assets/159753_3112023103814PM12066.png",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "516 Sosebee Farm Rd #633",
+    "addressLocality": "Grayson",
+    "addressRegion": "GA",
+    "postalCode": "30017",
+    "addressCountry": "US"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 33.8971315, "longitude": -83.9631405 },
+  "hasMap": "https://www.google.com/maps/place/Inspire+Hope+Realty/data=!4m7!3m6!1s0x88f5939ba54dd3c1:0x34f61ccac1704651!8m2!3d33.8971315!4d-83.9631405!16s%2Fg%2F11r_pk3swh!19sChIJwdNNpZuT9YgRUUZwwcoc9jQ",
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "08:00", "closes": "21:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "08:00", "closes": "18:00" }
+  ],
+  "employee": { "@type": "Person", "name": "Danielle Marie Williams", "jobTitle": "Broker" },
+  "areaServed": [
+    { "@type": "City", "name": "Grayson" },
+    { "@type": "City", "name": "Lawrenceville" },
+    { "@type": "City", "name": "Duluth" },
+    { "@type": "City", "name": "Dacula" },
+    { "@type": "City", "name": "Buford" },
+    { "@type": "City", "name": "Suwanee" },
+    { "@type": "AdministrativeArea", "name": "Gwinnett County" }
+  ]
+}
+</script>
+
+<style>
+  :root{
+    --ink:#14110c; --espresso:#211b13; --cream:#f6f1e7; --bronze:#c2a05e; --bronze-strong:#d8b877; --bronze-deep:#8f6f3e;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:Inter,ui-sans-serif,system-ui,sans-serif;background:var(--cream);color:var(--ink);-webkit-font-smoothing:antialiased}
+  img{max-width:100%;height:auto}
+  ::selection{background:var(--bronze);color:var(--ink)}
+  a:focus-visible,button:focus-visible{outline:3px solid var(--bronze);outline-offset:2px;border-radius:6px}
+  [id]{scroll-margin-top:118px}
+  @media (min-width:920px){ [id]{scroll-margin-top:86px} }
+
+  .skip{position:absolute;left:-9999px;top:0;background:var(--bronze);color:var(--ink);padding:10px 16px;z-index:100;font-weight:600}
+  .skip:focus{left:12px;top:12px}
+
+  /* ---------- Buttons (primary is the ONLY solid bronze style, identical everywhere) ---------- */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font-weight:600;font-size:.95rem;line-height:1;
+       padding:14px 22px;border-radius:999px;text-decoration:none;min-height:48px;transition:transform .15s ease,box-shadow .15s ease,background .15s ease}
+  .btn--primary{background:linear-gradient(180deg,var(--bronze-strong),var(--bronze));color:var(--ink);box-shadow:0 8px 22px rgba(194,160,94,.35)}
+  .btn--primary:hover{transform:translateY(-1px);box-shadow:0 12px 26px rgba(194,160,94,.45)}
+  .btn--ghost{border:1.5px solid rgba(216,184,119,.75);color:var(--cream);background:rgba(20,17,12,.25)}
+  .btn--ghost:hover{background:rgba(216,184,119,.14)}
+  .btn--ghost-dark{border:1.5px solid var(--bronze-deep);color:var(--ink);background:transparent}
+  .btn--ghost-dark:hover{background:rgba(143,111,62,.12)}
+
+  /* ---------- Sticky header (pure CSS so it survives no-JS) ---------- */
+  .hdr{position:sticky;top:0;z-index:60;background:rgba(20,17,12,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+       border-bottom:1px solid rgba(194,160,94,.25);transition:box-shadow .25s ease}
+  .hdr.scrolled{box-shadow:0 10px 30px rgba(0,0,0,.45)}
+  .hdr-in{max-width:1180px;margin:0 auto;padding:10px 18px;display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px}
+  .brand{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:1.15rem;color:var(--cream);text-decoration:none;line-height:1.05;flex:1 1 auto;min-width:0}
+  .brand small{display:block;font-family:Inter,sans-serif;font-weight:600;font-size:.6rem;letter-spacing:.34em;color:var(--bronze-strong)}
+  .hdr-call{font-size:.85rem;padding:12px 18px;white-space:nowrap}
+  .nav{order:3;width:100%;display:flex;gap:2px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:2px}
+  .nav::-webkit-scrollbar{display:none}
+  .nav a{color:#e9dfc9;text-decoration:none;font-size:.82rem;font-weight:500;letter-spacing:.02em;padding:10px 12px;border-radius:8px;white-space:nowrap;min-height:40px;display:inline-flex;align-items:center}
+  .nav a:hover{color:var(--bronze-strong);background:rgba(216,184,119,.08)}
+  @media (min-width:920px){
+    .hdr-in{flex-wrap:nowrap;padding:12px 24px}
+    .nav{order:0;width:auto;margin-left:auto;overflow:visible;padding:0}
+  }
+
+  /* ---------- 3D hero — stage / scene / four layers at distinct translateZ depths ---------- */
+  .hero{background:var(--ink)}
+  .hero-stage{perspective:1100px;perspective-origin:50% 42%;overflow:hidden;position:relative}
+  .hero-scene{position:relative;transform-style:preserve-3d;will-change:transform}
+  .hero-back{position:absolute;inset:-8% -5%;transform:translateZ(-180px) scale(1.24);will-change:transform}
+  .hero-back img{width:100%;height:100%;object-fit:cover;object-position:center;filter:brightness(.82) saturate(1.02)}
+  .hero-scrim{position:absolute;inset:-8% -5%;transform:translateZ(-90px) scale(1.1);pointer-events:none;
+    background:
+      radial-gradient(120% 90% at 78% 30%, rgba(20,17,12,0) 0%, rgba(20,17,12,.45) 78%, rgba(20,17,12,.8) 100%),
+      linear-gradient(97deg, rgba(20,17,12,.96) 0%, rgba(20,17,12,.86) 34%, rgba(24,19,12,.52) 62%, rgba(24,19,12,.28) 100%)}
+  .hero-copy{position:relative;transform:translateZ(0);will-change:transform}
+  .hero-copy-in{max-width:1180px;margin:0 auto;padding:66px 20px 250px;min-height:min(86svh,760px);display:flex;flex-direction:column;justify-content:center}
+  .kicker{display:flex;align-items:center;gap:12px;color:var(--bronze-strong);font-size:.74rem;font-weight:700;letter-spacing:.32em;text-transform:uppercase;margin:0 0 18px}
+  .kicker::before{content:"";width:44px;height:2px;background:var(--bronze);flex:none}
+  .hero h1{font-family:Fraunces,Georgia,serif;font-weight:600;color:var(--cream);font-size:clamp(2.15rem,6.4vw,4.15rem);line-height:1.06;margin:0 0 18px;max-width:13ch}
+  .hero h1 em{font-style:italic;color:var(--bronze-strong)}
+  .hero-sub{color:#efe6d2;font-size:clamp(1rem,1.6vw,1.16rem);line-height:1.65;max-width:52ch;margin:0 0 26px}
+  .cta-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:20px}
+  .gold-rule{width:100%;max-width:460px;height:1px;background:linear-gradient(90deg,rgba(216,184,119,.7),rgba(216,184,119,0));margin:4px 0 16px}
+  .rating-chip{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:var(--cream);font-size:.9rem;font-weight:500;
+    border:1px solid rgba(216,184,119,.45);border-radius:999px;padding:10px 18px;background:rgba(20,17,12,.4);min-height:44px}
+  .rating-chip:hover{border-color:var(--bronze-strong)}
+  .rating-chip .stars{color:var(--bronze-strong);letter-spacing:2px;font-size:.95rem}
+  .hero-portrait{position:absolute;right:16px;bottom:20px;width:min(47vw,232px);margin:0;transform:translateZ(70px);will-change:transform;
+    background:rgba(24,19,12,.72);border:1px solid rgba(216,184,119,.55);border-radius:16px;padding:9px;box-shadow:0 26px 60px rgba(0,0,0,.55)}
+  .hero-portrait img{display:block;width:100%;height:auto;border-radius:9px}
+  .hero-portrait figcaption{padding:8px 4px 2px;text-align:center}
+  .hero-portrait figcaption a{color:var(--bronze-strong);font-size:.76rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;text-decoration:none}
+  .hero-portrait figcaption a:hover{color:var(--cream)}
+  @media (min-width:880px){
+    .hero-copy-in{padding:90px 24px 110px}
+    .hero-copy-in > *{max-width:58%}
+    .hero-portrait{width:min(30vw,360px);right:5vw;bottom:9%}
+  }
+
+  /* ---------- Film strip ---------- */
+  .strip{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x proximity;padding:6px 20px 18px;-webkit-overflow-scrolling:touch}
+  .strip img{height:240px;width:auto;max-width:none;border-radius:12px;scroll-snap-align:center;border:1px solid rgba(216,184,119,.28)}
+  @media (min-width:880px){ .strip img{height:320px} }
+
+  /* ---------- Hours table ---------- */
+  .hours-t{width:100%;border-collapse:collapse;font-size:.95rem}
+  .hours-t td{padding:11px 8px;border-bottom:1px solid rgba(20,17,12,.12)}
+  .hours-t td:last-child{text-align:right;font-weight:600}
+  .today-row td{color:var(--bronze-deep);font-weight:700}
+  .today-row td:first-child::after{content:" · today";font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
+
+  /* ---------- Reveal (JS-gated so no-JS shows everything) ---------- */
+  html.js .rv{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+  html.js .rv.in{opacity:1;transform:none}
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    html.js .rv{opacity:1;transform:none;transition:none}
+    .btn,.hdr{transition:none}
+    .hero-scene,.hero-back,.hero-copy,.hero-portrait{will-change:auto}
+  }
+</style>
+</head>
+
+<body class="bg-cream text-ink font-sans">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hdr" id="siteHeader">
+  <div class="hdr-in">
+    <a class="brand" href="#top">Inspire Hope<small>REALTY · GRAYSON, GA</small></a>
+    <nav class="nav" aria-label="Page sections">
+      <a href="#reviews">Reviews</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#why">Why Us</a>
+      <a href="#communities">Communities</a>
+      <a href="#visit">Hours &amp; Map</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn--primary hdr-call" href="tel:+14706280756">Call (470) 628-0756</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ HERO: CSS 3D scene (back plate / scrim / text plane / portrait plane) ============ -->
+  <section class="hero" id="top" aria-label="Inspire Hope Realty — Grayson, GA real estate">
+    <div class="hero-stage" id="heroStage">
+      <div class="hero-scene" id="heroScene">
+        <div class="hero-back" id="heroBack">
+          <img src="assets/159753_3112023103814PM12066.png" width="1000" height="750" fetchpriority="high"
+               alt="Stone-and-brick home with a turret and circular driveway on a wooded lot">
+        </div>
+        <div class="hero-scrim" aria-hidden="true"></div>
+        <div class="hero-copy" id="heroCopy">
+          <div class="hero-copy-in">
+            <p class="kicker">Grayson · Gwinnett County, GA</p>
+            <h1>Buy or sell your <em>Grayson</em> home with Inspire Hope Realty.</h1>
+            <p class="hero-sub">Sellers, buyers, home valuations, leasing, property management and HOA management —
+              from our office at 516 Sosebee Farm Rd&nbsp;#633, open seven days a week.</p>
+            <div class="cta-row">
+              <a class="btn btn--primary" href="tel:+14706280756">Call (470) 628-0756</a>
+              <a class="btn btn--ghost" href="https://inspirehoperealty.com/home-evaluation" target="_blank" rel="noopener">What&rsquo;s My Home Worth? ↗</a>
+            </div>
+            <div class="gold-rule" aria-hidden="true"></div>
+            <a class="rating-chip" href="https://www.google.com/maps/place/Inspire+Hope+Realty/data=!4m7!3m6!1s0x88f5939ba54dd3c1:0x34f61ccac1704651!8m2!3d33.8971315!4d-83.9631405!16s%2Fg%2F11r_pk3swh!19sChIJwdNNpZuT9YgRUUZwwcoc9jQ" target="_blank" rel="noopener">
+              <span class="stars" aria-hidden="true">★★★★★</span> 5.0 · 10 Google reviews — view our listing
+            </a>
+          </div>
+        </div>
+        <figure class="hero-portrait" id="heroPortrait">
+          <img src="assets/159753_331202382531AM80152.png" width="640" height="460"
+               alt="Smiling woman in a leopard-print top leaning on a weathered corten-steel wall">
+          <figcaption><a href="#about">Meet the broker ↓</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SOCIAL PROOF STRIP ============ -->
+  <section id="reviews" class="bg-espresso border-y border-bronze/25" aria-label="Google rating and trust facts">
+    <div class="max-w-6xl mx-auto px-5 py-8 md:py-10 flex flex-col md:flex-row md:items-center gap-6 md:gap-10">
+      <div class="flex items-center gap-4">
+        <p class="font-display text-cream text-5xl md:text-6xl leading-none m-0">5.0</p>
+        <div>
+          <p class="text-bronze tracking-widest text-lg m-0" aria-hidden="true">★★★★★</p>
+          <p class="text-cream text-sm font-medium m-0 mt-1">10 Google reviews</p>
+          <a class="text-bronze text-sm font-semibold underline underline-offset-4 hover:text-cream"
+             href="https://www.google.com/maps/place/Inspire+Hope+Realty/data=!4m7!3m6!1s0x88f5939ba54dd3c1:0x34f61ccac1704651!8m2!3d33.8971315!4d-83.9631405!16s%2Fg%2F11r_pk3swh!19sChIJwdNNpZuT9YgRUUZwwcoc9jQ"
+             target="_blank" rel="noopener">Read them on our Google listing ↗</a>
+        </div>
+      </div>
+      <div class="hidden md:block w-px self-stretch bg-bronze/30" aria-hidden="true"></div>
+      <ul class="flex flex-wrap gap-3 list-none p-0 m-0 text-sm">
+        <li class="border border-bronze/40 text-cream rounded-full px-4 py-2">Broker: Danielle Marie Williams</li>
+        <li class="border border-bronze/40 text-cream rounded-full px-4 py-2">Open 7 days a week</li>
+        <li class="border border-bronze/40 text-cream rounded-full px-4 py-2">516 Sosebee Farm Rd #633, Grayson, GA</li>
+        <li class="border border-bronze/40 text-cream rounded-full px-4 py-2">6 Gwinnett County market pages</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT / MEET THE BROKER — asymmetric split ============ -->
+  <section id="about" class="bg-cream">
+    <div class="max-w-6xl mx-auto px-5 py-16 md:py-20 grid md:grid-cols-12 gap-10 items-center">
+      <figure class="md:col-span-5 m-0 rv">
+        <div class="bg-ink/95 border border-bronze/50 rounded-2xl p-3 shadow-2xl md:-rotate-1">
+          <img src="assets/159753_331202381239AM54330.png" width="800" height="829" loading="lazy" decoding="async"
+               class="rounded-xl w-full h-auto"
+               alt="Portrait of a smiling woman in a leopard-print top beside a bronze column">
+        </div>
+        <figcaption class="text-xs text-ink/60 mt-3">Photography from inspirehoperealty.com</figcaption>
+      </figure>
+      <div class="md:col-span-7 rv">
+        <p class="kicker" style="color:var(--bronze-deep)">Meet the Broker</p>
+        <h2 class="font-display text-3xl md:text-5xl font-semibold leading-tight mt-0 mb-5">Danielle Marie Williams, <em class="text-bronzedeep not-italic italic">Broker</em></h2>
+        <p class="text-base md:text-lg leading-relaxed mb-4">Inspire Hope Realty puts one name front and center: Danielle Marie Williams, Broker.
+          The tagline is <strong>&ldquo;Professional Real Estate Services&rdquo;</strong> — and the practice covers the whole arc of a move:
+          the Buyers Advantage and Sellers Advantage programs, a Dream Home Finder, property updates, moving assistance,
+          and management for both rentals and homeowner associations.</p>
+        <p class="text-base md:text-lg leading-relaxed mb-6">The office sits at 516 Sosebee Farm Rd #633 in Grayson, and the markets published on
+          inspirehoperealty.com are the ones next door — six Gwinnett County communities, starting with Grayson itself.</p>
+        <div class="flex flex-wrap gap-3">
+          <a class="btn btn--ghost-dark" href="https://inspirehoperealty.com/2332033.html" target="_blank" rel="noopener">Meet the Broker page ↗</a>
+          <a class="btn btn--primary" href="tel:+14706280756">Call (470) 628-0756</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES — flagship valuation split + card grid ============ -->
+  <section id="services" class="bg-paper border-y border-bronze/20">
+    <div class="max-w-6xl mx-auto px-5 py-16 md:py-20">
+      <p class="kicker" style="color:var(--bronze-deep)">Services</p>
+      <h2 class="font-display text-3xl md:text-5xl font-semibold leading-tight mt-0 mb-3 max-w-3xl">Comprehensive real estate services in Grayson, Lawrenceville &amp; the surrounding markets</h2>
+      <p class="text-ink/75 max-w-2xl mb-10">Every service below is one Inspire Hope Realty publishes today on inspirehoperealty.com — nothing padded, nothing invented.</p>
+
+      <!-- Flagship: home valuation. evidence: /home-evaluation "What is My Home Worth?" / "GET YOUR PROPERTY VALUATION HERE" -->
+      <div class="grid md:grid-cols-2 gap-8 items-center bg-ink rounded-3xl p-6 md:p-10 mb-12 rv">
+        <div>
+          <h3 class="font-display text-cream text-2xl md:text-4xl font-semibold mt-0 mb-4">What&rsquo;s my home worth?</h3>
+          <p class="text-cream/85 leading-relaxed mb-6">Every listing conversation starts with one number. The home-evaluation form on
+            inspirehoperealty.com takes your property details and gets your valuation started. Prefer to talk it through first?
+            We&rsquo;re open until 9&nbsp;PM Monday–Saturday.</p>
+          <div class="flex flex-wrap gap-3">
+            <a class="btn btn--ghost" href="https://inspirehoperealty.com/home-evaluation" target="_blank" rel="noopener">Start your valuation ↗</a>
+            <a class="btn btn--primary" href="tel:+14706280756">Call (470) 628-0756</a>
+          </div>
+        </div>
+        <img src="assets/130259_1122201642100PM97861.jpg" width="600" height="400" loading="lazy" decoding="async"
+             class="rounded-2xl border border-bronze/40 w-full h-auto"
+             alt="Hand ticking checkboxes on a form with a silver pen">
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- evidence: /buyers "THE BEST SOURCE FOR BUYING REAL ESTATE"; /buyers-request; site nav "Dream Home Finder", "Buyers Advantage" -->
+        <article class="bg-cream rounded-2xl border border-bronze/25 overflow-hidden shadow-sm rv">
+          <img src="assets/130259_11232016113254AM66441.jpg" width="600" height="426" loading="lazy" decoding="async"
+               class="w-full h-44 object-cover" alt="Two-story white house with landscaped flower beds under a deep blue sky">
+          <div class="p-6">
+            <h3 class="font-display text-xl font-semibold mt-0 mb-2">Buying a home</h3>
+            <p class="text-sm text-ink/75 leading-relaxed mb-4">House hunting across Gwinnett starts with a plan: submit a buyers request,
+              run the Dream Home Finder, and put the Buyers Advantage program behind your search.</p>
+            <p class="m-0 text-sm font-semibold"><a class="text-bronzedeep underline underline-offset-4" href="https://inspirehoperealty.com/buyers" target="_blank" rel="noopener">Buyers on inspirehoperealty.com ↗</a></p>
+            <p class="m-0 mt-2 text-sm font-semibold"><a class="text-bronzedeep underline underline-offset-4" href="https://inspirehoperealty.com/buyers-request" target="_blank" rel="noopener">Start a buyers request ↗</a></p>
+          </div>
+        </article>
+
+        <!-- evidence: /sellers "JUST FOR SELLERS"; /sellers-advantage "SELLING YOUR HOME THE RIGHT WAY"; site nav "Sellers Request", "For Sale By Owner Real Estate Info".
+             Image 75630 is triage-restricted to service-card use only — this is its only placement. -->
+        <article class="bg-cream rounded-2xl border border-bronze/25 overflow-hidden shadow-sm rv">
+          <img src="assets/159753_3112023100808PM75630.jpg" width="600" height="400" loading="lazy" decoding="async"
+               class="w-full h-44 object-cover" alt="Cream colonial-style house with dormers behind hydrangeas and stone landscaping">
+          <div class="p-6">
+            <h3 class="font-display text-xl font-semibold mt-0 mb-2">Selling your home</h3>
+            <p class="text-sm text-ink/75 leading-relaxed mb-4">&ldquo;Selling your home the right way&rdquo; — the Sellers Advantage approach,
+              a sellers request to open the conversation, and for-sale-by-owner resources if you&rsquo;re weighing going it alone.</p>
+            <p class="m-0 text-sm font-semibold"><a class="text-bronzedeep underline underline-offset-4" href="https://inspirehoperealty.com/sellers" target="_blank" rel="noopener">Sellers on inspirehoperealty.com ↗</a></p>
+          </div>
+        </article>
+
+        <!-- evidence: /2351715.html "Property Management" -->
+        <article class="bg-cream rounded-2xl border border-bronze/25 overflow-hidden shadow-sm rv">
+          <img src="assets/159753_311202421703PM83951.jpg" width="455" height="240" loading="lazy" decoding="async"
+               class="w-full h-44 object-cover" alt="Two-story brick colonial home with a columned porch and landscaped lawn">
+          <div class="p-6">
+            <h3 class="font-display text-xl font-semibold mt-0 mb-2">Property management</h3>
+            <p class="text-sm text-ink/75 leading-relaxed mb-4">Own a rental? Property management is part of the practice —
+              the fastest way to learn what&rsquo;s covered is a phone call.</p>
+            <p class="m-0 text-sm font-semibold"><a class="text-bronzedeep underline underline-offset-4" href="https://inspirehoperealty.com/2351715.html" target="_blank" rel="noopener">Property management page ↗</a></p>
+          </div>
+        </article>
+
+        <!-- evidence: /2351716.html "Home Owners Association Management" -->
+        <article class="bg-cream rounded-2xl border border-bronze/25 p-6 shadow-sm rv">
+          <h3 class="font-display text-xl font-semibold mt-0 mb-2">HOA management</h3>
+          <p class="text-sm text-ink/75 leading-relaxed mb-4">Homeowners-association management for communities that want one point of contact.
+            Reach out to learn what the service includes for your association.</p>
+          <p class="m-0 text-sm font-semibold"><a class="text-bronzedeep underline underline-offset-4" href="https://inspirehoperealty.com/2351716.html" target="_blank" rel="noopener">HOA management page ↗</a></p>
+        </article>
+
+        <!-- evidence: site nav "Featured Properties For Lease", "Featured Leased Properties" -->
+        <article class="bg-cream rounded-2xl border border-bronze/25 p-6 shadow-sm rv">
+          <h3 class="font-display text-xl font-semibold mt-0 mb-2">Leasing</h3>
+          <p class="text-sm text-ink/75 leading-relaxed mb-4">Looking to lease instead of buy — or lease out what you own?
+            Featured properties for lease and previously leased homes are published on the main site.</p>
+          <p class="m-0 text-sm font-semibold"><a class="text-bronzedeep underline underline-offset-4" href="https://inspirehoperealty.com/properties" target="_blank" rel="noopener">Properties on inspirehoperealty.com ↗</a></p>
+        </article>
+
+        <!-- evidence: site nav "Danielle Williams Moving Assistance", "Danielle Williams Property Updates" -->
+        <article class="bg-cream rounded-2xl border border-bronze/25 p-6 shadow-sm rv">
+          <h3 class="font-display text-xl font-semibold mt-0 mb-2">Moving assistance &amp; property updates</h3>
+          <p class="text-sm text-ink/75 leading-relaxed mb-4">Moving assistance and ongoing property updates round out the service list.
+            Ask about both when you call.</p>
+          <p class="m-0 text-sm font-semibold"><a class="text-bronzedeep underline underline-offset-4" href="tel:+14706280756">(470) 628-0756</a></p>
+        </article>
+      </div>
+
+      <p class="text-xs text-ink/55 mt-8 max-w-3xl">Note: our Google listing is categorized &ldquo;commercial real estate agency&rdquo;;
+        the list above is the practice as the business itself publishes it on inspirehoperealty.com — residential sales, leasing and management. Call to confirm the right fit for your property.</p>
+    </div>
+  </section>
+
+  <!-- ============ FULL-BLEED PHOTO BAND (uncaptioned per triage — no location, listing, or sold claims) ============ -->
+  <section class="bg-ink py-10" aria-label="Photography from inspirehoperealty.com">
+    <p class="kicker max-w-6xl mx-auto px-5" style="color:var(--bronze-strong)">Photography from inspirehoperealty.com</p>
+    <div class="strip">
+      <img src="assets/159753_5132025103601AM31413.jpg" width="5824" height="3264" loading="lazy" decoding="async"
+           alt="Staged open-plan kitchen and living area with an island, pendant lights and a pool visible outside">
+      <img src="assets/130259_11232016111005AM64959.jpg" width="640" height="426" loading="lazy" decoding="async"
+           alt="Living room with a vaulted beamed ceiling, staircase and hardwood floors">
+      <img src="assets/159753_311202424715PM14346.png" width="553" height="304" loading="lazy" decoding="async"
+           alt="Aerial view of a suburban subdivision with new home construction on graded lots">
+      <img src="assets/159753_3112023100614PM71365.png" width="2048" height="1536" loading="lazy" decoding="async"
+           alt="Two-story suburban home with a lawn and mature trees">
+      <img src="assets/159753_3112023100732PM73226.jpg" width="600" height="400" loading="lazy" decoding="async"
+           alt="Weathered green wooden bench lettered 'A PLACE TO REST' beside flowering shrubs">
+    </div>
+  </section>
+
+  <!-- ============ WHY US — numbered sequence + call-script block ============ -->
+  <section id="why" class="bg-espresso text-cream">
+    <div class="max-w-6xl mx-auto px-5 py-16 md:py-20">
+      <p class="kicker">Why choose Inspire Hope Realty</p>
+      <h2 class="font-display text-3xl md:text-5xl font-semibold leading-tight mt-0 mb-10 max-w-3xl text-cream">When you&rsquo;re ready to act, you can actually reach us.</h2>
+
+      <div class="grid lg:grid-cols-12 gap-10 items-start">
+        <figure class="lg:col-span-4 m-0 rv">
+          <div class="bg-ink border border-bronze/50 rounded-2xl p-3 shadow-2xl lg:rotate-1">
+            <img src="assets/159753_331202381839AM12789.png" width="450" height="781" loading="lazy" decoding="async"
+                 class="rounded-xl w-full h-auto" alt="Laughing woman in a cream suit and heels standing on an outdoor patio">
+          </div>
+        </figure>
+
+        <ol class="lg:col-span-8 list-none m-0 p-0 grid gap-8">
+          <li class="grid grid-cols-[auto,1fr] gap-5 rv">
+            <span class="font-display text-bronze text-4xl md:text-5xl font-semibold leading-none" aria-hidden="true">01</span>
+            <div>
+              <h3 class="font-display text-xl md:text-2xl font-semibold mt-0 mb-2 text-cream">Hours that fit real life</h3>
+              <p class="text-cream/80 leading-relaxed m-0">Most house decisions happen after work. We&rsquo;re open seven days a week —
+                8&nbsp;AM to 9&nbsp;PM Monday through Saturday, and until 6&nbsp;PM on Sunday. One number: <a class="text-bronze font-semibold underline underline-offset-4" href="tel:+14706280756">(470) 628-0756</a>.</p>
+            </div>
+          </li>
+          <li class="grid grid-cols-[auto,1fr] gap-5 rv">
+            <span class="font-display text-bronze text-4xl md:text-5xl font-semibold leading-none" aria-hidden="true">02</span>
+            <div>
+              <h3 class="font-display text-xl md:text-2xl font-semibold mt-0 mb-2 text-cream">A record you can verify yourself</h3>
+              <p class="text-cream/80 leading-relaxed m-0">We hold a 5.0 rating across 10 reviews on Google. Don&rsquo;t take this page&rsquo;s word for it —
+                <a class="text-bronze font-semibold underline underline-offset-4" href="https://www.google.com/maps/place/Inspire+Hope+Realty/data=!4m7!3m6!1s0x88f5939ba54dd3c1:0x34f61ccac1704651!8m2!3d33.8971315!4d-83.9631405!16s%2Fg%2F11r_pk3swh!19sChIJwdNNpZuT9YgRUUZwwcoc9jQ" target="_blank" rel="noopener">the listing is public ↗</a>. And the broker&rsquo;s name — Danielle Marie Williams — is published, not hidden behind a brand.</p>
+            </div>
+          </li>
+          <li class="grid grid-cols-[auto,1fr] gap-5 rv">
+            <span class="font-display text-bronze text-4xl md:text-5xl font-semibold leading-none" aria-hidden="true">03</span>
+            <div>
+              <h3 class="font-display text-xl md:text-2xl font-semibold mt-0 mb-2 text-cream">Grayson-based, Gwinnett-wide</h3>
+              <p class="text-cream/80 leading-relaxed m-0">The office is at 516 Sosebee Farm Rd #633 in Grayson, and the markets we publish are the ones
+                next door — Grayson, Lawrenceville, Duluth, Dacula, Buford and Suwanee. Local pages, local stats, local homes for sale.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Call-script block: rates/fees/timelines are not published anywhere in the harvest, so we say what to ask instead of inventing numbers -->
+      <div class="mt-12 bg-ink border border-bronze/45 rounded-3xl p-6 md:p-10 rv">
+        <h3 class="font-display text-2xl md:text-3xl font-semibold mt-0 mb-3 text-cream">Rates, fees &amp; timelines: ask us directly</h3>
+        <p class="text-cream/80 leading-relaxed max-w-3xl mb-5">Every property is different, so commissions and fees aren&rsquo;t printed here. When you call, ask:</p>
+        <ul class="grid sm:grid-cols-2 gap-3 list-none p-0 m-0 mb-7 text-sm md:text-base">
+          <li class="border border-bronze/35 rounded-xl px-4 py-3 text-cream/90">&ldquo;What would a market analysis of my home include — and what might it list for?&rdquo;</li>
+          <li class="border border-bronze/35 rounded-xl px-4 py-3 text-cream/90">&ldquo;What commission and fees would apply to my sale or purchase?&rdquo;</li>
+          <li class="border border-bronze/35 rounded-xl px-4 py-3 text-cream/90">&ldquo;What&rsquo;s on the market right now in Grayson and nearby?&rdquo;</li>
+          <li class="border border-bronze/35 rounded-xl px-4 py-3 text-cream/90">&ldquo;How do property-management and HOA-management fees work?&rdquo;</li>
+        </ul>
+        <a class="btn btn--primary" href="tel:+14706280756">Call (470) 628-0756</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COMMUNITIES ============ -->
+  <section id="communities" class="bg-cream">
+    <div class="max-w-6xl mx-auto px-5 py-16 md:py-20">
+      <p class="kicker" style="color:var(--bronze-deep)">Featured local real estate markets</p>
+      <h2 class="font-display text-3xl md:text-5xl font-semibold leading-tight mt-0 mb-3 max-w-3xl">Six Gwinnett County communities, one local broker</h2>
+      <p class="text-ink/75 max-w-2xl mb-10">Inspire Hope Realty publishes a market page for each community below — local information, market stats and homes currently for sale.</p>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Grayson lede adapted from their own /Grayson page copy -->
+        <article class="md:col-span-2 bg-ink text-cream rounded-2xl p-7 md:p-9 rv">
+          <h3 class="font-display text-2xl md:text-3xl font-semibold mt-0 mb-3">Grayson <span class="text-bronze text-base font-sans font-semibold align-middle ml-2">HOME MARKET</span></h3>
+          <p class="text-cream/85 leading-relaxed mb-6">Grayson is a featured community where you can access homes currently for sale and good local
+            information. Questions about Grayson? Contact us for what else is happening in the real estate market — our own address is a Grayson address.</p>
+          <div class="flex flex-wrap gap-3 text-sm font-semibold">
+            <a class="btn btn--ghost" href="https://inspirehoperealty.com/realestatehomes/Grayson-GA/proptype_Residential/tbl_gamlsall" target="_blank" rel="noopener">Grayson homes for sale ↗</a>
+            <a class="btn btn--ghost" href="https://inspirehoperealty.com/Grayson" target="_blank" rel="noopener">Grayson market page ↗</a>
+          </div>
+        </article>
+
+        <div class="grid gap-4 rv">
+          <a class="bg-paper border border-bronze/30 rounded-2xl px-5 py-4 no-underline text-ink hover:border-bronzedeep flex items-center justify-between gap-3" href="https://inspirehoperealty.com/Lawrenceville" target="_blank" rel="noopener">
+            <span class="font-display text-lg font-semibold">Lawrenceville</span><span class="text-bronzedeep text-sm font-semibold">Stats &amp; homes ↗</span></a>
+          <a class="bg-paper border border-bronze/30 rounded-2xl px-5 py-4 no-underline text-ink hover:border-bronzedeep flex items-center justify-between gap-3" href="https://inspirehoperealty.com/Duluth" target="_blank" rel="noopener">
+            <span class="font-display text-lg font-semibold">Duluth</span><span class="text-bronzedeep text-sm font-semibold">Stats &amp; homes ↗</span></a>
+          <a class="bg-paper border border-bronze/30 rounded-2xl px-5 py-4 no-underline text-ink hover:border-bronzedeep flex items-center justify-between gap-3" href="https://inspirehoperealty.com/Dacula" target="_blank" rel="noopener">
+            <span class="font-display text-lg font-semibold">Dacula</span><span class="text-bronzedeep text-sm font-semibold">Stats &amp; homes ↗</span></a>
+          <a class="bg-paper border border-bronze/30 rounded-2xl px-5 py-4 no-underline text-ink hover:border-bronzedeep flex items-center justify-between gap-3" href="https://inspirehoperealty.com/Buford" target="_blank" rel="noopener">
+            <span class="font-display text-lg font-semibold">Buford</span><span class="text-bronzedeep text-sm font-semibold">Stats &amp; homes ↗</span></a>
+          <a class="bg-paper border border-bronze/30 rounded-2xl px-5 py-4 no-underline text-ink hover:border-bronzedeep flex items-center justify-between gap-3" href="https://inspirehoperealty.com/Suwanne" target="_blank" rel="noopener">
+            <span class="font-display text-lg font-semibold">Suwanee</span><span class="text-bronzedeep text-sm font-semibold">Stats &amp; homes ↗</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOURS + LOCATION ============ -->
+  <section id="visit" class="bg-paper border-y border-bronze/20">
+    <div class="max-w-6xl mx-auto px-5 py-16 md:py-20 grid lg:grid-cols-2 gap-10">
+      <div class="rv">
+        <p class="kicker" style="color:var(--bronze-deep)">Hours &amp; location</p>
+        <h2 class="font-display text-3xl md:text-4xl font-semibold leading-tight mt-0 mb-5">Open 7 days a week in Grayson</h2>
+        <table class="hours-t" aria-label="Business hours">
+          <tbody>
+            <tr data-day="mon"><td>Monday</td><td>8 AM – 9 PM</td></tr>
+            <tr data-day="tue"><td>Tuesday</td><td>8 AM – 9 PM</td></tr>
+            <tr data-day="wed"><td>Wednesday</td><td>8 AM – 9 PM</td></tr>
+            <tr data-day="thu"><td>Thursday</td><td>8 AM – 9 PM</td></tr>
+            <tr data-day="fri"><td>Friday</td><td>8 AM – 9 PM</td></tr>
+            <tr data-day="sat"><td>Saturday</td><td>8 AM – 9 PM</td></tr>
+            <tr data-day="sun"><td>Sunday</td><td>8 AM – 6 PM</td></tr>
+          </tbody>
+        </table>
+        <p class="text-xs text-ink/55 mt-3">Hours as published on our Google listing — call ahead to confirm.</p>
+        <address class="not-italic mt-6 text-base leading-relaxed">
+          <strong>Inspire Hope Realty</strong><br>
+          516 Sosebee Farm Rd #633<br>
+          Grayson, GA 30017
+        </address>
+        <div class="flex flex-wrap gap-3 mt-6">
+          <a class="btn btn--primary" href="tel:+14706280756">Call (470) 628-0756</a>
+          <a class="btn btn--ghost-dark" href="https://www.google.com/maps/place/Inspire+Hope+Realty/data=!4m7!3m6!1s0x88f5939ba54dd3c1:0x34f61ccac1704651!8m2!3d33.8971315!4d-83.9631405!16s%2Fg%2F11r_pk3swh!19sChIJwdNNpZuT9YgRUUZwwcoc9jQ" target="_blank" rel="noopener">Open in Google Maps ↗</a>
+        </div>
+      </div>
+      <div class="rv">
+        <iframe title="Map to Inspire Hope Realty, 516 Sosebee Farm Rd #633, Grayson, GA 30017"
+                src="https://maps.google.com/maps?q=33.8971315,-83.9631405&amp;output=embed"
+                width="600" height="450" style="border:0;width:100%;height:100%;min-height:420px;border-radius:18px"
+                allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ CONTACT / FOOTER ============ -->
+<footer id="contact" class="bg-ink text-cream">
+  <div class="max-w-6xl mx-auto px-5 py-14 md:py-16 grid md:grid-cols-3 gap-10">
+    <div>
+      <p class="font-display text-2xl font-semibold m-0">Inspire Hope <span class="text-bronze">Realty</span></p>
+      <p class="text-cream/70 text-sm mt-2 mb-4">Professional Real Estate Services — Grayson, GA.</p>
+      <p class="text-sm m-0"><span class="text-bronze" aria-hidden="true">★★★★★</span> 5.0 · 10 Google reviews ·
+        <a class="text-bronze underline underline-offset-4" href="https://www.google.com/maps/place/Inspire+Hope+Realty/data=!4m7!3m6!1s0x88f5939ba54dd3c1:0x34f61ccac1704651!8m2!3d33.8971315!4d-83.9631405!16s%2Fg%2F11r_pk3swh!19sChIJwdNNpZuT9YgRUUZwwcoc9jQ" target="_blank" rel="noopener">Google listing ↗</a></p>
+    </div>
+    <div>
+      <h2 class="font-display text-lg font-semibold mt-0 mb-3 text-cream">Contact</h2>
+      <address class="not-italic text-sm text-cream/80 leading-relaxed mb-4">
+        516 Sosebee Farm Rd #633<br>Grayson, GA 30017<br>
+        Open 7 days a week · from 8 AM daily
+      </address>
+      <a class="btn btn--primary" href="tel:+14706280756">Call (470) 628-0756</a>
+    </div>
+    <div>
+      <h2 class="font-display text-lg font-semibold mt-0 mb-3 text-cream">On inspirehoperealty.com</h2>
+      <ul class="list-none p-0 m-0 grid gap-2 text-sm">
+        <li><a class="text-cream/85 hover:text-bronze underline underline-offset-4" href="http://www.inspirehoperealty.com/" target="_blank" rel="noopener">Home page ↗</a></li>
+        <li><a class="text-cream/85 hover:text-bronze underline underline-offset-4" href="https://inspirehoperealty.com/properties" target="_blank" rel="noopener">Properties ↗</a></li>
+        <li><a class="text-cream/85 hover:text-bronze underline underline-offset-4" href="https://inspirehoperealty.com/sellers" target="_blank" rel="noopener">Sellers ↗</a></li>
+        <li><a class="text-cream/85 hover:text-bronze underline underline-offset-4" href="https://inspirehoperealty.com/buyers" target="_blank" rel="noopener">Buyers ↗</a></li>
+        <li><a class="text-cream/85 hover:text-bronze underline underline-offset-4" href="https://inspirehoperealty.com/home-evaluation" target="_blank" rel="noopener">What&rsquo;s My Home Worth? ↗</a></li>
+        <li><a class="text-cream/85 hover:text-bronze underline underline-offset-4" href="https://inspirehoperealty.com/2332033.html" target="_blank" rel="noopener">Meet the Broker ↗</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-bronze/25">
+    <div class="max-w-6xl mx-auto px-5 py-5 flex flex-col sm:flex-row gap-2 justify-between text-xs text-cream/60">
+      <p class="m-0">© <span id="yr">2026</span> Inspire Hope Realty · Grayson, GA</p>
+      <p class="m-0">Links marked ↗ open inspirehoperealty.com or our Google listing.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+  var root = document.documentElement;
+  root.classList.add('js');
+
+  var reduced = false;
+  try { reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
+
+  /* ---- 3D hero: pointer + scroll drivers, transform-only, applied inside rAF ---- */
+  var stage = document.getElementById('heroStage');
+  var scene = document.getElementById('heroScene');
+  var back = document.getElementById('heroBack');
+  var portrait = document.getElementById('heroPortrait');
+  var copy = document.getElementById('heroCopy');
+  var px = 0, py = 0, sy = 0, ticking = false;
+
+  function apply() {
+    ticking = false;
+    if (!scene) return;
+    scene.style.transform = 'rotateX(' + (py * -3.2).toFixed(2) + 'deg) rotateY(' + (px * 4.2).toFixed(2) + 'deg)';
+    var drift = Math.min(sy * 0.06, 30);
+    if (back) back.style.transform = 'translate3d(' + (px * -10).toFixed(1) + 'px,' + (drift + py * -8).toFixed(1) + 'px,-180px) scale(1.24)';
+    if (portrait) portrait.style.transform = 'translate3d(' + (px * 24).toFixed(1) + 'px,' + (py * 16 - drift * 0.5).toFixed(1) + 'px,70px)';
+    if (copy) copy.style.transform = 'translate3d(' + (px * 12).toFixed(1) + 'px,' + (py * 8).toFixed(1) + 'px,0)';
+  }
+  function queue() { if (!ticking) { ticking = true; requestAnimationFrame(apply); } }
+
+  if (!reduced && stage && scene) {
+    stage.addEventListener('pointermove', function (e) {
+      if (e.pointerType && e.pointerType !== 'mouse') return;
+      var r = stage.getBoundingClientRect();
+      if (!r.width || !r.height) return;
+      px = Math.max(-1, Math.min(1, ((e.clientX - r.left) / r.width - 0.5) * 2));
+      py = Math.max(-1, Math.min(1, ((e.clientY - r.top) / r.height - 0.5) * 2));
+      queue();
+    });
+    stage.addEventListener('pointerleave', function () { px = 0; py = 0; queue(); });
+    window.addEventListener('scroll', function () { sy = window.scrollY || 0; queue(); }, { passive: true });
+  }
+
+  /* ---- Header condense shadow ---- */
+  var hdr = document.getElementById('siteHeader');
+  window.addEventListener('scroll', function () {
+    if (hdr) hdr.classList.toggle('scrolled', (window.scrollY || 0) > 24);
+  }, { passive: true });
+
+  /* ---- Scroll reveal (content visible by default without JS) ---- */
+  var rvs = document.querySelectorAll('.rv');
+  if ('IntersectionObserver' in window && !reduced) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.12 });
+    rvs.forEach(function (el) { io.observe(el); });
+  } else {
+    rvs.forEach(function (el) { el.classList.add('in'); });
+  }
+
+  /* ---- Today's row in the hours table (computed client-side) ---- */
+  try {
+    var days = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
+    var row = document.querySelector('[data-day="' + days[new Date().getDay()] + '"]');
+    if (row) row.classList.add('today-row');
+  } catch (e) {}
+
+  /* ---- Copyright year ---- */
+  try {
+    var yr = document.getElementById('yr');
+    if (yr) yr.textContent = String(new Date().getFullYear());
+  } catch (e) {}
+})();
+</script>
+</body>
+</html>
