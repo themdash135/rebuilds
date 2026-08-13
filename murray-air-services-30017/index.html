@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="robots" content="noindex,nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Murray Air Services — HVAC Contractor Serving Grayson, Snellville &amp; Loganville, GA | (470) 940-8635</title>
+<meta name="description" content="Murray Air Services LLC — state-certified and licensed residential and light commercial air conditioning and heating company serving Grayson, Snellville and Loganville, Georgia. AC, heater, furnace, dehumidifier, ventilation, thermostat, zone control and Google Nest service. Rated 5.0 stars across 28 Google reviews. Call (470) 940-8635, Monday–Friday 8 AM–5 PM.">
+<meta name="theme-color" content="#050a14">
+<link rel="icon" href="assets/Logo_MAS_20stack.png">
+<link rel="canonical" href="https://www.murrayairservices.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- BUILD NOTE — palette: no brand color values were recoverable from the harvested assets (the logo is a line-art mascot on transparent ground), so the palette is derived from the trade per the design standard: bold/trustworthy navy ground, ice-blue for cooling, ember-orange for heating and for the single primary CTA. Documented deviation from a photographed brand palette. -->
+<!-- BUILD NOTE — critical styling (base type, color, hero 3D staging, light-band inversion) lives in this inline <style>, not in Tailwind classes, so the page and the hero still render as designed if the Tailwind CDN script does not execute. -->
+<style>
+  :root{
+    --ink:#050a14; --ink2:#0a1424; --panel:#0e1a2e; --line:#1e2f4a;
+    --text:#e8eefb; --muted:#9fb2cd; --ice:#38bdf8; --ice2:#22d3ee;
+    --ember:#f97316; --ember2:#fb923c;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  html,body{max-width:100%;overflow-x:hidden}
+  body{margin:0;background:var(--ink);color:var(--text);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.55;padding-bottom:76px}
+  @media (min-width:768px){body{padding-bottom:0}}
+  h1,h2,h3{font-family:Manrope,Inter,system-ui,sans-serif;letter-spacing:-.02em;line-height:1.08;margin:0 0 .4em}
+  h1{font-size:clamp(1.95rem,6.1vw,3.75rem);font-weight:800}
+  h2{font-size:clamp(1.6rem,3.6vw,2.5rem);font-weight:800}
+  h3{font-size:1.06rem;font-weight:700;letter-spacing:-.01em}
+  p{margin:0 0 1rem}
+  a{color:inherit}
+  img{max-width:100%;height:auto;display:block}
+  section{scroll-margin-top:88px}
+  .wrap{width:100%;max-width:1200px;margin:0 auto;padding:0 20px}
+
+  /* ---------- 3D HERO STAGE ---------- */
+  .hero-stage{position:relative;overflow:hidden;perspective:1000px;perspective-origin:50% 42%;background:var(--ink);isolation:isolate}
+  .hero-scene{position:relative;transform-style:preserve-3d;transform:rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));min-height:640px;display:flex;align-items:flex-end}
+  @media (min-width:768px){.hero-scene{min-height:760px}}
+  .plane{position:absolute;inset:0;transform-style:preserve-3d;backface-visibility:hidden}
+  .plane-back{transform:translateZ(-260px) scale(1.30) translateY(var(--pb,0px));opacity:var(--fade,1)}
+  .plane-mid{transform:translateZ(-90px) scale(1.10) translateY(var(--pm,0px));opacity:var(--fade,1);pointer-events:none}
+  .plane-front{position:relative;width:100%;transform:translateZ(70px) scale(.94) translateY(var(--pf,0px));z-index:3}
+  .plane-back img{width:100%;height:100%;object-fit:cover;object-position:50% 32%;filter:grayscale(.35) contrast(1.05) brightness(.62)}
+  .scrim{position:absolute;inset:0;background:
+      linear-gradient(180deg,rgba(5,10,20,.72) 0%,rgba(5,10,20,.55) 32%,rgba(5,10,20,.92) 82%,var(--ink) 100%),
+      radial-gradient(120% 80% at 18% 22%,rgba(34,211,238,.20) 0%,rgba(5,10,20,0) 60%)}
+  .plane-mid svg{width:100%;height:100%;display:block}
+  .hero-pad{padding:118px 0 44px}
+  @media (min-width:768px){.hero-pad{padding:150px 0 64px}}
+
+  /* ---------- BUTTONS (primary style is identical at every repetition) ---------- */
+  .btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:52px;padding:.85rem 1.5rem;border-radius:999px;font-weight:700;font-size:1.02rem;text-decoration:none;color:#1a0b00;background:linear-gradient(180deg,var(--ember2),var(--ember));box-shadow:0 10px 30px -8px rgba(249,115,22,.65);border:1px solid rgba(255,255,255,.18);transition:transform .18s ease,box-shadow .18s ease}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 40px -10px rgba(249,115,22,.8)}
+  .btn-ghost{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:52px;padding:.85rem 1.35rem;border-radius:999px;font-weight:600;text-decoration:none;color:var(--text);border:1px solid var(--line);background:rgba(255,255,255,.04);transition:border-color .18s ease,background .18s ease}
+  .btn-ghost:hover{border-color:var(--ice);background:rgba(56,189,248,.10)}
+  a:focus-visible,button:focus-visible{outline:3px solid var(--ice2);outline-offset:3px}
+
+  .chip{display:inline-flex;align-items:center;gap:.4rem;padding:.42rem .8rem;border-radius:999px;border:1px solid var(--line);background:rgba(10,20,36,.72);font-size:.83rem;font-weight:600;color:var(--text)}
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:18px}
+  .eyebrow{margin:0;color:var(--ice);font-size:.75rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
+  .tm{color:var(--muted)}
+  .tb{color:#c9d7ec}
+  .callbar{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(5,10,20,.94);border-top:1px solid var(--line);padding:9px 12px;display:flex;gap:10px;align-items:center;backdrop-filter:blur(10px)}
+  @media (min-width:768px){.callbar{display:none}}
+  .site-head{position:sticky;top:0;z-index:50;background:rgba(5,10,20,.72);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:background .25s ease,border-color .25s ease,box-shadow .25s ease}
+  .site-head.is-stuck{background:rgba(5,10,20,.96);border-bottom-color:var(--line);box-shadow:0 12px 30px -18px #000}
+  .head-logo{transition:transform .25s ease;transform-origin:left center}
+  .site-head.is-stuck .head-logo{transform:scale(.9)}
+  table{border-collapse:collapse;width:100%}
+  .hrs td{padding:.62rem .2rem;border-bottom:1px solid var(--line);font-size:.98rem}
+  .hrs tr:last-child td{border-bottom:0}
+  .hrs .d{color:var(--muted);font-weight:600}
+  .hrs .v{text-align:right;font-weight:700;font-variant-numeric:tabular-nums}
+  .hrs tr.today td{color:#fff}
+  .hrs tr.today .d::after{content:" · today";color:var(--ice);font-weight:700}
+  .num{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;flex:0 0 34px;border-radius:10px;background:linear-gradient(180deg,rgba(56,189,248,.22),rgba(56,189,248,.06));border:1px solid rgba(56,189,248,.38);font-family:Manrope,sans-serif;font-weight:800;color:#bfe9ff}
+  .rule{height:1px;background:linear-gradient(90deg,transparent,var(--line),transparent)}
+  .stat{padding:1.35rem 1rem}
+  @media (min-width:640px){.stat{padding:1.75rem 1.5rem}}
+
+  /* ---------- LIGHT BAND — deliberate tonal break in the dark stack ---------- */
+  .band-light{background:linear-gradient(180deg,#eaf1fa 0%,#ffffff 46%,#f2f6fc 100%);color:#0d1a2c}
+  .band-light h2,.band-light h3,.band-light strong{color:#08111f}
+  .band-light .tm{color:#4a5c78}
+  .band-light .tb{color:#33455f}
+  .band-light .eyebrow{color:#0369a1}
+  .band-light .panel{background:#fff;border-color:#d7e2f1;box-shadow:0 18px 40px -28px rgba(9,20,38,.55)}
+  .band-light .btn-ghost{color:#0d1a2c;border-color:#c6d5e8;background:#fff}
+  .band-light .btn-ghost:hover{border-color:#0284c7;background:#eff9ff}
+  .band-light .num{background:linear-gradient(180deg,rgba(2,132,199,.16),rgba(2,132,199,.04));border-color:rgba(2,132,199,.34);color:#075985}
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    .plane-back,.plane-mid,.plane-front{transition:none !important}
+    .btn-primary:hover{transform:none}
+  }
+</style>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = { theme: { extend: {
+    colors: { ink:'#050a14', ink2:'#0a1424', panel:'#0e1a2e', line:'#1e2f4a', ice:'#38bdf8', ice2:'#22d3ee', ember:'#f97316', muted:'#9fb2cd' },
+    fontFamily: { display:['Manrope','Inter','system-ui','sans-serif'], sans:['Inter','system-ui','sans-serif'] }
+  } } };
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HVACBusiness",
+  "name": "Murray Air Services",
+  "legalName": "Murray Air Services LLC",
+  "description": "State-certified and licensed residential and light commercial air conditioning and heating service, repair and installation company serving Grayson, Snellville and Loganville, Georgia.",
+  "url": "https://www.murrayairservices.com/",
+  "telephone": "+1-470-940-8635",
+  "image": "https://www.murrayairservices.com/masterfiles/master-page-mas/images/Logo_MAS%20hor%20tag.png",
+  "logo": "https://www.murrayairservices.com/masterfiles/master-page-mas/images/Logo_MAS%20stack.png",
+  "address": { "@type": "PostalAddress", "addressRegion": "GA", "addressCountry": "US" },
+  "geo": { "@type": "GeoCoordinates", "latitude": 33.8613764, "longitude": -83.9601814 },
+  "hasMap": "https://www.google.com/maps/place/Murray+Air+Services/data=!4m7!3m6!1s0x4c5964ce568ff153:0xa214cc917ff1a9f8!8m2!3d33.8613764!4d-83.9601814!16s%2Fg%2F11jzt5j6_x!19sChIJU_GPVs5kWUwR-Knxf5HMFKI",
+  "areaServed": [
+    { "@type": "City", "name": "Grayson" },
+    { "@type": "City", "name": "Snellville" },
+    { "@type": "City", "name": "Loganville" },
+    { "@type": "State", "name": "Georgia" }
+  ],
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "17:00" }
+  ],
+  "sameAs": [
+    "https://www.google.com/maps/place/Murray+Air+Services/data=!4m7!3m6!1s0x4c5964ce568ff153:0xa214cc917ff1a9f8!8m2!3d33.8613764!4d-83.9601814!16s%2Fg%2F11jzt5j6_x!19sChIJU_GPVs5kWUwR-Knxf5HMFKI"
+  ]
+}
+</script>
+<!-- BUILD NOTE — schema: no aggregateRating block, per policy on marking up third-party Google reviews. The 5.0 rating and 28-review count appear in visible copy and the meta description only, and link to the Google listing. image and logo are absolute URLs on the canonical domain, pointing at the same two brand files the crawler harvested from that site, so they resolve for a crawler reading the schema alone. -->
+<!-- BUILD NOTE — schema/copy identity: hours (Mon–Fri 08:00–17:00, Sat/Sun closed), phone, and the place names Grayson, Snellville, Loganville and Georgia appear identically in visible copy and in JSON-LD. areaServed contains exactly those four entries and no other place name appears anywhere in visible copy. -->
+<!-- BUILD NOTE — forced omissions: lead.json address is empty and their own site publishes no street address on any harvested page, so no address is published; no email or contact form is published because this page has no backend and their form's endpoint is not reproducible — tel: is the only conversion path. No prices, warranties, response times or brands carried are published because none appear in the scraped facts or in any harvested page. -->
+</head>
+
+<body class="bg-ink text-[#e8eefb] antialiased">
+
+<a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:z-[70] focus:m-3 focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:text-black">Skip to content</a>
+
+<!-- ============ HEADER (nav = in-page anchors only; phone is the one allowed off-page action) ============ -->
+<header class="site-head" id="siteHead">
+  <div class="wrap flex items-center justify-between gap-4 py-3">
+    <a href="#main" class="head-logo flex items-center gap-3 shrink-0" aria-label="Murray Air Services — top of page">
+      <img src="assets/Logo_MAS_20hor_20tag.png" width="280" height="156" alt="Murray Air Services logo: cartoon dog mascot holding manifold gauges beside the company wordmark" class="h-11 w-auto md:h-12">
+    </a>
+    <nav aria-label="Section navigation" class="hidden md:flex items-center gap-1 text-[15px] font-medium">
+      <a href="#services" class="rounded-full px-3.5 py-2 text-[#c9d7ec] hover:bg-white/5 hover:text-white transition">Services</a>
+      <a href="#why" class="rounded-full px-3.5 py-2 text-[#c9d7ec] hover:bg-white/5 hover:text-white transition">Why Murray</a>
+      <a href="#prep" class="rounded-full px-3.5 py-2 text-[#c9d7ec] hover:bg-white/5 hover:text-white transition">Call prep</a>
+      <a href="#hours" class="rounded-full px-3.5 py-2 text-[#c9d7ec] hover:bg-white/5 hover:text-white transition">Hours &amp; area</a>
+      <a href="#contact" class="rounded-full px-3.5 py-2 text-[#c9d7ec] hover:bg-white/5 hover:text-white transition">Contact</a>
+    </nav>
+    <a href="tel:+14709408635" class="btn-primary !min-h-[46px] !px-4 !text-[15px] md:!px-5 md:!text-base" data-cta="primary">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span class="hidden sm:inline">Call</span> (470)&nbsp;940-8635
+    </a>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ 1. HERO — CSS 3D scene: back photo plane, mid SVG duct-flow plane, front type/CTA plane ============ -->
+<!-- BUILD NOTE — hero layers: back = approved harvested photo, web-compressed (uncaptioned, no claim of being this company's technician or job), mid = generated SVG decoration only, front = brand logo + name + value proposition + primary tel: CTA. Without JS the layers rest at their CSS transforms and the hero is complete and readable. The condenser stock photo is deliberately NOT used as a hero plane: at hero scale its manufacturer badge would read as a dealer claim. -->
+<section class="hero-stage" id="hero" aria-labelledby="h1">
+  <div class="hero-scene" id="heroScene">
+
+    <div class="plane plane-back" aria-hidden="false">
+      <img src="assets/air_20conditioner_20service_web.jpg" width="1000" height="1500"
+           alt="HVAC technician crouched at a mini-split condenser, reading a manifold gauge set">
+      <div class="scrim"></div>
+    </div>
+
+    <div class="plane plane-mid" aria-hidden="true">
+      <svg viewBox="0 0 1200 760" preserveAspectRatio="none" role="presentation">
+        <defs>
+          <linearGradient id="rib1" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#22d3ee" stop-opacity="0"/><stop offset="45%" stop-color="#38bdf8" stop-opacity=".55"/><stop offset="100%" stop-color="#a5f3fc" stop-opacity="0"/>
+          </linearGradient>
+          <linearGradient id="rib2" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#f97316" stop-opacity="0"/><stop offset="55%" stop-color="#fb923c" stop-opacity=".38"/><stop offset="100%" stop-color="#fdba74" stop-opacity="0"/>
+          </linearGradient>
+          <filter id="soft"><feGaussianBlur stdDeviation="7"/></filter>
+        </defs>
+        <g filter="url(#soft)">
+          <path d="M-60 250 C 240 130, 430 360, 700 230 S 1090 120, 1270 210" fill="none" stroke="url(#rib1)" stroke-width="16"/>
+          <path d="M-60 330 C 260 220, 470 440, 730 320 S 1110 220, 1270 300" fill="none" stroke="url(#rib1)" stroke-width="9" opacity=".75"/>
+          <path d="M-60 470 C 300 380, 520 610, 800 470 S 1130 380, 1270 440" fill="none" stroke="url(#rib2)" stroke-width="12" opacity=".85"/>
+          <path d="M-60 560 C 220 500, 520 690, 860 560 S 1140 470, 1270 520" fill="none" stroke="url(#rib1)" stroke-width="6" opacity=".55"/>
+        </g>
+        <g opacity=".5">
+          <circle cx="180" cy="180" r="150" fill="#22d3ee" opacity=".10"/>
+          <circle cx="1010" cy="520" r="200" fill="#f97316" opacity=".08"/>
+        </g>
+      </svg>
+    </div>
+
+    <div class="plane-front">
+      <div class="wrap hero-pad">
+        <div class="max-w-[900px]">
+          <p class="mb-4 flex flex-wrap items-center gap-2">
+            <span class="chip"><span aria-hidden="true">★</span> 5.0 · 28 Google reviews</span>
+            <span class="chip">Over 23 years in the industry</span>
+            <span class="chip">State certified &amp; licensed · CN211147</span>
+          </p>
+
+          <h1 id="h1" class="font-display">
+            <span class="block text-[#9fb2cd] text-[.42em] font-bold tracking-[.16em] uppercase mb-3">Murray Air Services LLC</span>
+            <span class="block">Air conditioning and heating repair for Grayson, Snellville and Loganville.</span>
+          </h1>
+
+          <p class="mt-5 max-w-[660px] text-[1.06rem] md:text-[1.18rem] tb">
+            Residential and light commercial AC, heating, ventilation and thermostat work — service, repair and
+            installation on all types of equipment. One number reaches a state-certified, licensed Georgia
+            company with over 23 years in the industry and a 5.0 rating across 28 Google reviews.
+          </p>
+
+          <div class="mt-7 flex flex-col sm:flex-row gap-3 sm:items-center">
+            <a href="tel:+14709408635" class="btn-primary" data-cta="primary">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Call (470) 940-8635
+            </a>
+            <a href="#services" class="btn-ghost">See the eight services</a>
+          </div>
+
+          <p class="mt-5 text-[.95rem] tm">
+            Phone hours: Monday–Friday, 8 AM–5 PM. Closed Saturday and Sunday.
+            <span class="hidden" id="openState" data-open-state></span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ 2. SOCIAL PROOF STRIP — full-bleed stat band (layout A: horizontal stat row) ============ -->
+<!-- BUILD NOTE — trust signals, four distinct types, every one traceable: (a) Google rating 5.0 and count 28 from lead.json; (b) "over 23 years experience in the industry" — verbatim phrase on murrayairservices.com/index.html: "We are a state-certified and licensed Heating & Air Conditioning Service & Repair Company with over 23 years experience in the industry."; (c) "Lic. CN211147" — printed in the footer of every harvested page (index.html, services.html, testimonials.html, contact.html); (d) no-commission technicians — verbatim on murrayairservices.com/index.html: "Our customers will not have to worry about high pressure sales tactics from our technicians; we do not work on commission and our technicians are trained to repair the problem, not to sell products that are not needed." That sentence is quoted on this page in the Why section rather than paraphrased. No review bodies are quoted anywhere on this page. Cell borders are set per cell (not divide-*) so no divider runs off an edge at any breakpoint. -->
+<section id="proof" aria-label="Ratings and credentials" class="border-y border-line bg-[linear-gradient(180deg,#0b1728_0%,#0a1424_100%)]">
+  <div class="wrap">
+    <div class="grid grid-cols-2 lg:grid-cols-4">
+      <div class="stat border-b border-r border-line lg:border-b-0">
+        <div class="font-display text-3xl sm:text-4xl font-extrabold text-white">5.0<span class="text-ice text-2xl align-top">★</span></div>
+        <div class="mt-1 text-sm tm">28 Google reviews</div>
+      </div>
+      <div class="stat border-b border-line lg:border-b-0 lg:border-r">
+        <div class="font-display text-3xl sm:text-4xl font-extrabold text-white">23<span class="text-ice text-2xl align-top">+</span></div>
+        <div class="mt-1 text-sm tm">Years in the industry</div>
+      </div>
+      <div class="stat border-r border-line">
+        <div class="font-display text-2xl sm:text-3xl font-extrabold text-white tracking-tight">CN211147</div>
+        <div class="mt-1 text-sm tm">State certified &amp; licensed</div>
+      </div>
+      <div class="stat">
+        <div class="font-display text-2xl sm:text-3xl font-extrabold text-white tracking-tight">No&#8209;commission</div>
+        <div class="mt-1 text-sm tm">Technicians, in their own words</div>
+      </div>
+    </div>
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 border-t border-line py-4">
+      <p class="m-0 text-sm tm">Rating and review count as published on the Google Business Profile for Murray Air Services. License, years and commission policy as published by the company on murrayairservices.com.</p>
+      <a class="text-sm font-semibold text-ice hover:text-white underline underline-offset-4" href="https://www.google.com/maps/place/Murray+Air+Services/data=!4m7!3m6!1s0x4c5964ce568ff153:0xa214cc917ff1a9f8!8m2!3d33.8613764!4d-83.9601814!16s%2Fg%2F11jzt5j6_x!19sChIJU_GPVs5kWUwR-Knxf5HMFKI" target="_blank" rel="noopener">Read the 28 reviews on Google →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. SERVICES — card grid with a spanning feature card (layout B) ============ -->
+<!-- BUILD NOTE — service evidence: all eight cards are the eight services enumerated by name on murrayairservices.com/services.html — "Air Conditioning Service", "Heater Service", "Furnace Service", "Dehumidifier Service", "Ventilation System Service", "Thermostat Service", "Zone Control System Service", "Google Nest Pro Service". Card copy paraphrases that page's own descriptions (e.g. Heater: "While winters are short in Georgia, during those weeks when the weather does require heating, we are the company to call when your heater doesn't work properly."; Nest: "professional installation from our Google Nest certified experts... our experts will teach you how to use your Nest device."). The residential/light-commercial scope is from their own site description line. No brands carried, prices, response times or availability claims appear here — none are in evidence. -->
+<section id="services" class="py-14 md:py-20">
+  <div class="wrap">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
+      <div class="max-w-[680px]">
+        <p class="eyebrow">What they work on</p>
+        <h2 class="mt-2">Eight services, named — the way their own service list names them.</h2>
+        <p class="m-0 tb">Residential and light commercial, across Grayson, Snellville and Loganville. Service, repair and installation on all types of equipment. Describe the symptom on the phone and they'll tell you which of these you actually have.</p>
+      </div>
+      <a href="tel:+14709408635" class="btn-primary shrink-0" data-cta="primary">Call (470) 940-8635</a>
+    </div>
+
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+
+      <article class="panel p-6 flex flex-col lg:col-span-2 hover:border-[#38bdf8] transition-colors duration-200">
+        <div class="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl border border-[#1e2f4a] bg-[radial-gradient(120%_120%_at_30%_10%,rgba(56,189,248,.28),rgba(56,189,248,.04))]">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7dd3fc" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M12 2v20M2 12h20M5 5l14 14M19 5 5 19"/></svg>
+        </div>
+        <h3 class="text-white text-xl">Air Conditioning Service</h3>
+        <p class="text-[.98rem] tm flex-1 max-w-[52ch]">AC repairs, service and installation for homes and businesses — blowing warm, short-cycling, tripping the breaker, iced-up line, or dead at the thermostat. Their site calls this their number-one job: local, personable and dependable AC repair, service and installation.</p>
+        <a href="tel:+14709408635" class="mt-4 text-sm font-semibold text-ice hover:text-white">Call about AC service →</a>
+      </article>
+
+      <article class="panel p-5 flex flex-col hover:border-[#fb923c] transition-colors duration-200">
+        <div class="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl border border-[#1e2f4a] bg-[radial-gradient(120%_120%_at_30%_10%,rgba(251,146,60,.28),rgba(251,146,60,.04))]">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fdba74" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22c4-2 5-5 5-8 0-4-4-5-3-9-3 1-5 4-5 7 0 1 .4 2 1 3-1 .4-2 1.6-2 3 0 2 1.8 4 4 4z"/></svg>
+        </div>
+        <h3 class="text-white">Heater Service</h3>
+        <p class="text-[.95rem] tm flex-1">Georgia winters are short — but for the weeks that need heat, this is the call when the heater won't run properly.</p>
+        <a href="tel:+14709408635" class="mt-4 text-sm font-semibold text-ice hover:text-white">Call about heat →</a>
+      </article>
+
+      <article class="panel p-5 flex flex-col hover:border-[#fb923c] transition-colors duration-200">
+        <div class="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl border border-[#1e2f4a] bg-[radial-gradient(120%_120%_at_30%_10%,rgba(251,146,60,.28),rgba(251,146,60,.04))]">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fdba74" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M9 12h6M11 16h2"/></svg>
+        </div>
+        <h3 class="text-white">Furnace Service</h3>
+        <p class="text-[.95rem] tm flex-1">"Furnace" isn't a common word in these parts, but plenty of Georgia homes and businesses have one — repairs and new furnace installation both.</p>
+        <a href="tel:+14709408635" class="mt-4 text-sm font-semibold text-ice hover:text-white">Call about a furnace →</a>
+      </article>
+
+      <article class="panel p-5 flex flex-col hover:border-[#38bdf8] transition-colors duration-200">
+        <div class="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl border border-[#1e2f4a] bg-[radial-gradient(120%_120%_at_30%_10%,rgba(56,189,248,.28),rgba(56,189,248,.04))]">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7dd3fc" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3s5 5.5 5 9a5 5 0 0 1-10 0c0-3.5 5-9 5-9z"/><path d="M9.5 14a2.5 2.5 0 0 0 2.5 2.5"/></svg>
+        </div>
+        <h3 class="text-white">Dehumidifier Service</h3>
+        <p class="text-[.95rem] tm flex-1">Residential and commercial — a converted garage that never dries out, or an assisted living facility that has to hold a number.</p>
+        <a href="tel:+14709408635" class="mt-4 text-sm font-semibold text-ice hover:text-white">Call about humidity →</a>
+      </article>
+
+      <article class="panel p-5 flex flex-col hover:border-[#38bdf8] transition-colors duration-200">
+        <div class="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl border border-[#1e2f4a] bg-[radial-gradient(120%_120%_at_30%_10%,rgba(56,189,248,.28),rgba(56,189,248,.04))]">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7dd3fc" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h11a3 3 0 1 0-3-3M3 13h15a3 3 0 1 1-3 3M3 18h8"/></svg>
+        </div>
+        <h3 class="text-white">Ventilation System Service</h3>
+        <p class="text-[.95rem] tm flex-1">Airflow that never reaches the far room, or a building that just feels stale — ventilation issues addressed for home or business.</p>
+        <a href="tel:+14709408635" class="mt-4 text-sm font-semibold text-ice hover:text-white">Call about airflow →</a>
+      </article>
+
+      <article class="panel p-5 flex flex-col hover:border-[#38bdf8] transition-colors duration-200">
+        <div class="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl border border-[#1e2f4a] bg-[radial-gradient(120%_120%_at_30%_10%,rgba(56,189,248,.28),rgba(56,189,248,.04))]">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7dd3fc" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="14" rx="3"/><path d="M9 21h6M12 7v3l2 1"/></svg>
+        </div>
+        <h3 class="text-white">Thermostat Service</h3>
+        <p class="text-[.95rem] tm flex-1">Repair, replace or install a thermostat — the cheapest fix on this list when it turns out to be the cause.</p>
+        <a href="tel:+14709408635" class="mt-4 text-sm font-semibold text-ice hover:text-white">Call about a thermostat →</a>
+      </article>
+
+      <article class="panel p-5 flex flex-col hover:border-[#38bdf8] transition-colors duration-200">
+        <div class="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl border border-[#1e2f4a] bg-[radial-gradient(120%_120%_at_30%_10%,rgba(56,189,248,.28),rgba(56,189,248,.04))]">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7dd3fc" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="8" height="7" rx="1.5"/><rect x="13" y="4" width="8" height="16" rx="1.5"/><rect x="3" y="13" width="8" height="7" rx="1.5"/></svg>
+        </div>
+        <h3 class="text-white">Zone Control System Service</h3>
+        <p class="text-[.95rem] tm flex-1">Install, maintain or repair all models of zone control — for the house where upstairs and downstairs never agree.</p>
+        <a href="tel:+14709408635" class="mt-4 text-sm font-semibold text-ice hover:text-white">Call about zoning →</a>
+      </article>
+
+      <article class="panel p-5 flex flex-col hover:border-[#38bdf8] transition-colors duration-200">
+        <div class="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl border border-[#1e2f4a] bg-[radial-gradient(120%_120%_at_30%_10%,rgba(56,189,248,.28),rgba(56,189,248,.04))]">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7dd3fc" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 4v2"/></svg>
+        </div>
+        <h3 class="text-white">Google Nest Pro Service</h3>
+        <p class="text-[.95rem] tm flex-1">Their site lists Google Nest certified experts for installation and setup, including showing you how to actually use the device.</p>
+        <a href="tel:+14709408635" class="mt-4 text-sm font-semibold text-ice hover:text-white">Call about Nest →</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. WHY US / PAIN POINTS — asymmetric photo split (layout C) ============ -->
+<!-- BUILD NOTE — image use: the condenser stock photo appears here web-compressed (1100x729 JPEG, re-encoded from the harvested PNG), cropped and scrimmed, uncaptioned, with object-position pushed off the manufacturer badge so no dealer relationship is implied. Its alt text describes only what is in the frame and does not claim the equipment is this company's installation. -->
+<section id="why" class="border-y border-line bg-[#0a1424] py-14 md:py-20">
+  <div class="wrap grid gap-8 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-12 items-stretch">
+
+    <div class="relative overflow-hidden rounded-2xl border border-line min-h-[280px] lg:min-h-full">
+      <img src="assets/air_20conditioner_web.jpg" width="1100" height="729" loading="lazy"
+           alt="Two outdoor condenser units standing on pads beside a light brick wall with mulch and shrubs"
+           class="absolute inset-0 h-full w-full object-cover" style="object-position:22% 55%;transform:scale(1.22)">
+      <div class="absolute inset-0" style="background:linear-gradient(200deg,rgba(5,10,20,.15) 0%,rgba(5,10,20,.72) 62%,rgba(5,10,20,.94) 100%)"></div>
+      <div class="absolute inset-x-0 bottom-0 p-5">
+        <p class="m-0 font-display text-xl font-extrabold text-white">Three things a broken system costs you</p>
+        <p class="m-0 mt-1 text-sm tb">Time, certainty, and the nerve to let a stranger into the house.</p>
+      </div>
+    </div>
+
+    <div>
+      <p class="eyebrow">Why this page exists</p>
+      <h2 class="mt-2">The three things that go wrong before the technician even arrives.</h2>
+
+      <ol class="mt-6 space-y-5 list-none p-0 m-0">
+        <li class="flex gap-4">
+          <span class="num" aria-hidden="true">1</span>
+          <div>
+            <h3 class="text-white">The number was there. It wasn't tappable.</h3>
+            <p class="m-0 text-[.97rem] tm">A Georgia July does not leave room for hunting through a page. On this page, <a class="text-ice underline underline-offset-4" href="tel:+14709408635">(470) 940-8635</a> is a button in the header, a button in the hero, a button on every section, and a bar fixed to the bottom of your phone screen. One tap from anywhere, at any scroll position.</p>
+          </div>
+        </li>
+        <li class="flex gap-4">
+          <span class="num" aria-hidden="true">2</span>
+          <div>
+            <h3 class="text-white">"All types of equipment" answers nothing.</h3>
+            <p class="m-0 text-[.97rem] tm">If you searched for a furnace repair or a zone control fix, a paragraph that covers everything tells you nothing. Their service list already names eight jobs one at a time — those eight are <a class="text-ice underline underline-offset-4" href="#services">on the homepage now</a>, in the words you'd use for them, each one a tap from the phone.</p>
+          </div>
+        </li>
+        <li class="flex gap-4">
+          <span class="num" aria-hidden="true">3</span>
+          <div>
+            <h3 class="text-white">You're deciding whether to let a stranger inside.</h3>
+            <p class="m-0 text-[.97rem] tm">The proof was real and buried: 5.0 across 28 Google reviews, state certified and licensed under CN211147, and over 23 years in the industry. So is the sales question, which they answer themselves on their site:</p>
+            <blockquote class="mt-3 mb-0 border-l-2 border-[#38bdf8] pl-4 text-[.97rem] tb italic">"Our customers will not have to worry about high pressure sales tactics from our technicians; we do not work on commission and our technicians are trained to repair the problem, not to sell products that are not needed."</blockquote>
+            <p class="mt-2 mb-0 text-[.85rem] tm">— Murray Air Services, in their own words on murrayairservices.com. It was three paragraphs down a desktop page; it's next to the phone number here.</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="mt-7 flex flex-col sm:flex-row gap-3">
+        <a href="tel:+14709408635" class="btn-primary" data-cta="primary">Call (470) 940-8635</a>
+        <a href="#prep" class="btn-ghost">What to have ready</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. CALL PREP — numbered sequence + call-script checklist, on an inverted light band (layout D) ============ -->
+<!-- BUILD NOTE — this section is category education plus the required call-script block. Both panels are framed explicitly as general HVAC guidance and as questions for the customer to ask; neither states a Murray Air Services policy, price, warranty, lead time or process, none of which are published on any harvested page. The light surface is a deliberate tonal break in an otherwise dark stack, not a second theme. -->
+<section id="prep" class="band-light py-14 md:py-20">
+  <div class="wrap">
+    <div class="max-w-[740px]">
+      <p class="eyebrow">Before and during the call</p>
+      <h2 class="mt-2">General guidance for booking any HVAC contractor.</h2>
+      <p class="tb">Nothing below is a Murray Air Services policy — pricing, warranty terms and scheduling windows are set by the company and aren't published anywhere we can quote. This is the standard shape of an HVAC service call, and the questions worth asking before anyone drives out.</p>
+    </div>
+
+    <div class="mt-8 grid gap-4 lg:grid-cols-2">
+
+      <div class="panel p-6">
+        <h3 class="text-lg mb-4">Have this ready when you dial</h3>
+        <ol class="list-none p-0 m-0 space-y-4">
+          <li class="flex gap-3.5"><span class="num" aria-hidden="true">1</span><div><strong class="block text-[.98rem]">Equipment type and brand</strong><span class="text-[.93rem] tm">Read the label on the outdoor unit or the furnace door — brand, model, serial. It's usually a sticker.</span></div></li>
+          <li class="flex gap-3.5"><span class="num" aria-hidden="true">2</span><div><strong class="block text-[.98rem]">Roughly how old it is</strong><span class="text-[.93rem] tm">Age is the difference between a repair conversation and a replacement conversation.</span></div></li>
+          <li class="flex gap-3.5"><span class="num" aria-hidden="true">3</span><div><strong class="block text-[.98rem]">The exact symptom</strong><span class="text-[.93rem] tm">Not "it's broken" — runs but blows warm, won't start at all, starts then stops after two minutes, makes a noise it didn't make last week.</span></div></li>
+          <li class="flex gap-3.5"><span class="num" aria-hidden="true">4</span><div><strong class="block text-[.98rem]">What you already checked</strong><span class="text-[.93rem] tm">Thermostat setting and batteries, the breaker, the filter, the outdoor unit's disconnect. Saying so saves everyone a step.</span></div></li>
+          <li class="flex gap-3.5"><span class="num" aria-hidden="true">5</span><div><strong class="block text-[.98rem]">Access details</strong><span class="text-[.93rem] tm">Attic, crawlspace, closet, roof — and a gate code or dog, if there is one.</span></div></li>
+        </ol>
+      </div>
+
+      <div class="panel p-6">
+        <h3 class="text-lg mb-1">Ask these while you're on the phone</h3>
+        <p class="text-[.9rem] tm mb-4">Rates, warranties and scheduling aren't published — so ask, and write the answers down.</p>
+        <ul class="list-none p-0 m-0 space-y-3.5">
+          <li class="flex gap-3 items-start"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span class="text-[.96rem] tb">"What's the diagnostic or trip charge, and is it applied to the repair if I go ahead?"</span></li>
+          <li class="flex gap-3 items-start"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span class="text-[.96rem] tb">"Which brands do you install, and what do you keep on the truck for a system like mine?"</span></li>
+          <li class="flex gap-3 items-start"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span class="text-[.96rem] tb">"What warranty comes with the labor, and what comes with the part?"</span></li>
+          <li class="flex gap-3 items-start"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span class="text-[.96rem] tb">"What's the earliest window you can get to me, and will I get a call before arrival?"</span></li>
+          <li class="flex gap-3 items-start"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span class="text-[.96rem] tb">"Can you confirm the license number on file — CN211147 — and that you're insured for the work?"</span></li>
+          <li class="flex gap-3 items-start"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span class="text-[.96rem] tb">"If it needs replacing instead of repairing, will you quote both so I can compare?"</span></li>
+        </ul>
+        <a href="tel:+14709408635" class="btn-primary mt-6 w-full" data-cta="primary">Call (470) 940-8635</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. HOURS + SERVICE AREA + LOCATION — table + keyless map (layout E) ============ -->
+<!-- BUILD NOTE — service area: Grayson, Snellville and Loganville are the three towns named on murrayairservices.com — the site-wide description line reads "...Air Conditioning & Heating Service and Repair Company serving Grayson, Snellville and Loganville," and services.html opens "Provides the best residential and commercial air conditioning services in the Snellville, Grayson and Loganville Area." Those three plus Georgia are the only place names in visible copy and the only entries in areaServed. -->
+<section id="hours" class="border-y border-line bg-[#0a1424] py-14 md:py-20">
+  <div class="wrap grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.25fr)] lg:gap-10 items-start">
+
+    <div>
+      <p class="eyebrow">Hours, area &amp; map</p>
+      <h2 class="mt-2">When the phone is answered.</h2>
+      <p class="tb">Hours as published on the Murray Air Services Google Business Profile. Closed Saturday and Sunday — call ahead to confirm before you drive anywhere.</p>
+
+      <table class="hrs mt-5 panel px-5 py-2">
+        <caption class="sr-only">Business hours for Murray Air Services</caption>
+        <tbody>
+          <tr data-day="1"><td class="d">Monday</td><td class="v">8 AM – 5 PM</td></tr>
+          <tr data-day="2"><td class="d">Tuesday</td><td class="v">8 AM – 5 PM</td></tr>
+          <tr data-day="3"><td class="d">Wednesday</td><td class="v">8 AM – 5 PM</td></tr>
+          <tr data-day="4"><td class="d">Thursday</td><td class="v">8 AM – 5 PM</td></tr>
+          <tr data-day="5"><td class="d">Friday</td><td class="v">8 AM – 5 PM</td></tr>
+          <tr data-day="6"><td class="d">Saturday</td><td class="v tm">Closed</td></tr>
+          <tr data-day="0"><td class="d">Sunday</td><td class="v tm">Closed</td></tr>
+        </tbody>
+      </table>
+
+      <div class="mt-5 panel p-5">
+        <h3 class="text-white">Service area</h3>
+        <p class="m-0 text-[.95rem] tm">Murray Air Services describes itself on its own site as serving <strong class="text-white">Grayson</strong>, <strong class="text-white">Snellville</strong> and <strong class="text-white">Loganville</strong>, Georgia — residential and light commercial. Those three towns are the whole published area; if you're outside them, ask on the phone rather than assuming either way.</p>
+      </div>
+
+      <div class="mt-4 panel p-5">
+        <h3 class="text-white">Where the pin is</h3>
+        <p class="m-0 text-[.95rem] tm">The company does not publish a street address on its Google listing or on any page of its own site, so this page doesn't invent one. The map is the exact Google Business Profile pin, at 33.86138, −83.96018. Open it in Google Maps for driving directions.</p>
+        <a class="mt-4 btn-ghost w-full" href="https://www.google.com/maps/place/Murray+Air+Services/data=!4m7!3m6!1s0x4c5964ce568ff153:0xa214cc917ff1a9f8!8m2!3d33.8613764!4d-83.9601814!16s%2Fg%2F11jzt5j6_x!19sChIJU_GPVs5kWUwR-Knxf5HMFKI" target="_blank" rel="noopener">Open the Google Maps listing</a>
+      </div>
+    </div>
+
+    <div>
+      <div class="overflow-hidden rounded-2xl border border-line bg-[#0e1a2e]">
+        <iframe
+          title="Map showing the Google Business Profile location of Murray Air Services"
+          src="https://maps.google.com/maps?q=33.8613764,-83.9601814&output=embed"
+          width="600" height="480" style="border:0;width:100%;height:420px;display:block" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="mt-4 panel p-5 flex flex-col sm:flex-row sm:items-center gap-4 justify-between">
+        <div>
+          <p class="m-0 font-display text-lg font-extrabold text-white">Reading this outside 8 AM–5 PM?</p>
+          <p class="m-0 text-[.93rem] tm">Write down the equipment brand, the symptom and your number now, and call during phone hours — that's what a technician needs to plan the visit.</p>
+        </div>
+        <a href="tel:+14709408635" class="btn-primary shrink-0" data-cta="primary">Call (470) 940-8635</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ 7. CONTACT / FOOTER ============ -->
+<footer id="contact" class="pt-14 pb-10">
+  <div class="wrap">
+    <div class="panel p-6 md:p-9 grid gap-8 md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] items-center">
+      <div>
+        <img src="assets/Logo_MAS_20stack.png" width="208" height="208" loading="lazy" alt="Murray Air Services stacked logo: cartoon dog mascot above the company wordmark" class="h-20 w-auto mb-4">
+        <h2 class="text-white">One number. That's the whole contact page.</h2>
+        <p class="m-0 tb">Murray Air Services LLC — state-certified and licensed residential and light commercial air conditioning and heating company serving Grayson, Snellville and Loganville, Georgia. Over 23 years in the industry, 5.0 stars across 28 Google reviews, license CN211147.</p>
+      </div>
+      <div class="md:justify-self-end w-full md:max-w-[340px]">
+        <a href="tel:+14709408635" class="btn-primary w-full text-lg" data-cta="primary">Call (470) 940-8635</a>
+        <p class="mt-3 mb-0 text-center text-[.9rem] tm">Monday–Friday, 8 AM–5 PM · Closed Sat &amp; Sun</p>
+        <a class="btn-ghost w-full mt-3" href="https://www.google.com/maps/place/Murray+Air+Services/data=!4m7!3m6!1s0x4c5964ce568ff153:0xa214cc917ff1a9f8!8m2!3d33.8613764!4d-83.9601814!16s%2Fg%2F11jzt5j6_x!19sChIJU_GPVs5kWUwR-Knxf5HMFKI" target="_blank" rel="noopener">View listing &amp; 28 reviews on Google</a>
+      </div>
+    </div>
+
+    <div class="rule my-8"></div>
+
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 text-[.92rem] tm">
+      <div>
+        <p class="m-0 font-semibold text-white mb-1">Contact</p>
+        <p class="m-0"><a class="hover:text-white" href="tel:+14709408635">(470) 940-8635</a></p>
+        <p class="m-0">Mon–Fri 8 AM–5 PM · Sat &amp; Sun closed</p>
+        <p class="m-0"><a class="hover:text-white underline underline-offset-4" href="https://www.murrayairservices.com/" target="_blank" rel="noopener">murrayairservices.com</a></p>
+      </div>
+      <div>
+        <p class="m-0 font-semibold text-white mb-1">Services</p>
+        <p class="m-0"><a class="hover:text-white" href="#services">Air conditioning</a> · <a class="hover:text-white" href="#services">Heater</a> · <a class="hover:text-white" href="#services">Furnace</a></p>
+        <p class="m-0"><a class="hover:text-white" href="#services">Dehumidifier</a> · <a class="hover:text-white" href="#services">Ventilation</a></p>
+        <p class="m-0"><a class="hover:text-white" href="#services">Thermostat</a> · <a class="hover:text-white" href="#services">Zone control</a> · <a class="hover:text-white" href="#services">Google Nest Pro</a></p>
+      </div>
+      <div>
+        <p class="m-0 font-semibold text-white mb-1">Service area</p>
+        <p class="m-0">Grayson, Georgia</p>
+        <p class="m-0">Snellville, Georgia</p>
+        <p class="m-0">Loganville, Georgia</p>
+      </div>
+      <div>
+        <p class="m-0 font-semibold text-white mb-1">Credentials</p>
+        <p class="m-0">State certified &amp; licensed · CN211147</p>
+        <p class="m-0">Over 23 years in the industry</p>
+        <p class="m-0">Technicians do not work on commission</p>
+      </div>
+    </div>
+
+    <p class="mt-8 mb-0 text-[.82rem] text-[#6f83a1]">
+      © <span id="yr">2026</span> Murray Air Services LLC. HVAC contractor serving Grayson, Snellville and Loganville, Georgia. Hours, rating and review count as published on the company's Google Business Profile; license, service area, years in the industry and commission policy as published by the company on murrayairservices.com. Call to confirm.
+    </p>
+  </div>
+</footer>
+
+<!-- Sticky mobile call bar — always-available primary action, phone only -->
+<div class="callbar" role="region" aria-label="Call Murray Air Services">
+  <div class="min-w-0 flex-1">
+    <p class="m-0 text-[.78rem] leading-tight tm">Murray Air Services · ★ 5.0 (28)</p>
+    <p class="m-0 text-[.82rem] leading-tight text-white font-semibold truncate">Mon–Fri 8 AM–5 PM</p>
+  </div>
+  <a href="tel:+14709408635" class="btn-primary !min-h-[48px] !px-4 !text-[.95rem] shrink-0" data-cta="primary">Call (470) 940-8635</a>
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ---- 3D hero: pointer rotates the stage, scroll drifts each plane at its own rate.
+         Both drivers write CSS custom properties consumed by transform/opacity only,
+         inside a single rAF. Reduced motion freezes everything at rest. ---- */
+  var stage = document.getElementById('hero');
+  var scene = document.getElementById('heroScene');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+  var fine = window.matchMedia('(hover: hover) and (pointer: fine)');
+  var rx = 0, ry = 0, sy = 0, queued = false;
+
+  function paint() {
+    queued = false;
+    if (!scene) return;
+    var p = Math.min(sy, 760);
+    scene.style.setProperty('--rx', rx.toFixed(2) + 'deg');
+    scene.style.setProperty('--ry', ry.toFixed(2) + 'deg');
+    scene.style.setProperty('--pb', (p * 0.22).toFixed(1) + 'px');
+    scene.style.setProperty('--pm', (p * 0.11).toFixed(1) + 'px');
+    scene.style.setProperty('--pf', (p * -0.05).toFixed(1) + 'px');
+    scene.style.setProperty('--fade', (1 - Math.min(p / 900, 0.45)).toFixed(3));
+  }
+  function queue() { if (!queued) { queued = true; window.requestAnimationFrame(paint); } }
+
+  if (scene && stage && !reduce.matches) {
+    window.addEventListener('scroll', function () {
+      sy = window.pageYOffset || document.documentElement.scrollTop || 0;
+      queue();
+    }, { passive: true });
+
+    if (fine.matches) {
+      stage.addEventListener('pointermove', function (e) {
+        var r = stage.getBoundingClientRect();
+        ry = ((e.clientX - r.left) / r.width - 0.5) * 7;   // max 3.5deg
+        rx = -(((e.clientY - r.top) / r.height) - 0.5) * 5; // max 2.5deg
+        queue();
+      }, { passive: true });
+      stage.addEventListener('pointerleave', function () { rx = 0; ry = 0; queue(); });
+    }
+  }
+
+  /* ---- Header condense: paint-only class toggle, no layout properties animated ---- */
+  var head = document.getElementById('siteHead'), stuck = false;
+  window.addEventListener('scroll', function () {
+    var s = (window.pageYOffset || document.documentElement.scrollTop || 0) > 24;
+    if (s !== stuck) { stuck = s; head.classList.toggle('is-stuck', s); }
+  }, { passive: true });
+
+  /* ---- Open / closed state computed client-side from the published hours (never hardcoded) ---- */
+  var HOURS = { 1: [8, 17], 2: [8, 17], 3: [8, 17], 4: [8, 17], 5: [8, 17] }; // Mon–Fri 8:00–17:00
+  var NAMES = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+  function localNow() {
+    try {
+      var parts = new Intl.DateTimeFormat('en-US', {
+        timeZone: 'America/New_York', weekday: 'short', hour: 'numeric', minute: 'numeric', hour12: false
+      }).formatToParts(new Date());
+      var o = {};
+      parts.forEach(function (p) { o[p.type] = p.value; });
+      var map = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
+      return { day: map[o.weekday], mins: (parseInt(o.hour, 10) % 24) * 60 + parseInt(o.minute, 10) };
+    } catch (err) {
+      var d = new Date();
+      return { day: d.getDay(), mins: d.getHours() * 60 + d.getMinutes() };
+    }
+  }
+
+  var now = localNow();
+  var el = document.getElementById('openState');
+  if (el) {
+    var win = HOURS[now.day], msg;
+    if (win && now.mins >= win[0] * 60 && now.mins < win[1] * 60) {
+      msg = '· Open now, closes 5 PM';
+    } else {
+      var nd = now.day, hops = 0;
+      if (win && now.mins < win[0] * 60) { msg = '· Closed now, opens 8 AM today'; }
+      else {
+        do { nd = (nd + 1) % 7; hops++; } while (!HOURS[nd] && hops < 8);
+        msg = '· Closed now, opens ' + NAMES[nd] + ' at 8 AM';
+      }
+    }
+    el.textContent = msg;
+    el.classList.remove('hidden');
+  }
+
+  var row = document.querySelector('.hrs tr[data-day="' + now.day + '"]');
+  if (row) row.classList.add('today');
+
+  var yr = document.getElementById('yr');
+  if (yr) yr.textContent = String(new Date().getFullYear());
+})();
+</script>
+
+</body>
+</html>
