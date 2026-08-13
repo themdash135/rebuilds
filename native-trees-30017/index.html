@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="robots" content="noindex,nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Native Trees — Large Tree Transplanting in Grayson, GA</title>
+<meta name="description" content="Native Trees (Native Tree, LLC) of Grayson, GA — large tree transplanting, tree spade and crane tree moving for metro Atlanta and the Southeast. Rated 5.0 from 2 Google reviews. Call (770) 337-3740 for a free quote.">
+<meta name="theme-color" content="#0A130E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        ink: '#0A130E', forest: '#123425', moss: '#2F7D52',
+        leaf: '#6ECB90', sand: '#F4F1E9', clay: '#C24F32', bark: '#3B2C22'
+      },
+      fontFamily: { display: ['Archivo','system-ui','sans-serif'], body: ['Inter','system-ui','sans-serif'] }
+    }
+  }
+}
+</script>
+
+<!-- BUILD NOTE — FACT SOURCES USED
+     (1) lead.json: name "Native Trees", phone 7703373740, address "Grayson, GA 30017",
+         rating 5.0 / 2 reviews, category "tree service", website http://nativetreellc.com/,
+         lat/lng 33.8942729,-83.95574, maps_url.
+     (2) Their own site (harvested page titles/headings + harvested photography):
+         H1 "Large Tree Transplanting Specialists"; site title names Atlanta, Marietta, Roswell,
+         Alpharetta, Georgia, Alabama, Tennessee, North & South Carolina; pages About Us,
+         Our Projects, Our Services, Photo Gallery, Trees for Sale, Transplanting Blog, Contact Us;
+         blog post "Friends of Brookhaven Park Tree Save"; legal name "Native Tree, LLC";
+         truck door decal in assets/8618430_orig.jpg carries phone 770.337.3740 and USDOT 948787.
+     DELIBERATELY OMITTED (pain-point analysis is not a fact source): "25 years in business",
+     "Atlanta's only 3-truck tree spade fleet", 4"-12" caliper / 35' height specs, licensed-and-
+     insured statement, and the extra city list (Loganville, Snellville, Lawrenceville, Dacula,
+     Bethlehem, Gwinnett County). None are traceable to (1) or (2), so none are asserted here.
+     HOURS: the scraped hours field contains a review histogram ("5 4 3 2 1"), not opening hours,
+     and their site publishes none — so no hours are claimed anywhere. See #visit.
+     ASSETS EXCLUDED ON PURPOSE: 3719912_orig, 8349409_orig, 1659411934_orig (baked slogan bands
+     that cannot be reliably cropped in CSS), 9305864 (prominent third-party sign),
+     5478502 (mountain terrain, no safe caption), 9772073/9483270 (bleak dormant frames).
+     assets/1405019488.png is cropped to its left-hand logo mark only; the baked
+     "Phone: (770) 337-3740" sits bottom-right and is outside the crop window.
+-->
+
+<style>
+  :root{
+    --ink:#0A130E; --forest:#123425; --moss:#2F7D52; --leaf:#6ECB90;
+    --sand:#F4F1E9; --clay:#C24F32; --line:rgba(255,255,255,.14);
+    --nav-h:64px;
+  }
+  html{ scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+  body{ background:var(--sand); color:#15201A; font-family:Inter,system-ui,sans-serif; overflow-x:hidden; }
+  h1,h2,h3,.disp{ font-family:Archivo,system-ui,sans-serif; letter-spacing:-.022em; }
+  section{ scroll-margin-top:calc(var(--nav-h) + 14px); }
+  .wrap{ width:100%; max-width:1180px; margin:0 auto; padding-left:20px; padding-right:20px; }
+  .tap{ min-height:48px; display:inline-flex; align-items:center; justify-content:center; }
+
+  /* ---------- nav ---------- */
+  .nav{ position:sticky; top:0; z-index:60; background:rgba(10,19,14,.82); backdrop-filter:blur(14px) saturate(140%);
+        border-bottom:1px solid rgba(255,255,255,.09); transition:padding .25s ease, background .25s ease; }
+  .nav.is-stuck{ background:rgba(10,19,14,.96); }
+  .nav-inner{ height:var(--nav-h); display:flex; align-items:center; gap:14px; }
+  .nav a.navlink{ color:#D9E5DC; font-size:14px; font-weight:600; padding:10px 10px; border-radius:9px; white-space:nowrap; }
+  .nav a.navlink:hover{ color:#fff; background:rgba(255,255,255,.09); }
+  .logo-crop{ width:74px; height:60px; overflow:hidden; background:#fff; border-radius:12px; flex:none; display:block; }
+  .logo-crop img{ height:60px; width:auto; max-width:none; display:block; }
+
+  .btn{ font-weight:800; border-radius:999px; letter-spacing:-.01em; transition:transform .18s ease, box-shadow .18s ease, background .18s ease; }
+  .btn:hover{ transform:translateY(-2px); }
+  .btn-primary{ background:var(--clay); color:#fff; box-shadow:0 10px 26px -10px rgba(194,79,50,.85); }
+  .btn-primary:hover{ background:#D2593B; box-shadow:0 16px 34px -12px rgba(194,79,50,.9); }
+  .btn-ghost{ background:transparent; color:#EAF3EC; border:1.5px solid rgba(255,255,255,.35); }
+  .btn-ghost:hover{ background:rgba(255,255,255,.1); }
+  .btn-dark{ background:var(--forest); color:#fff; box-shadow:0 10px 26px -12px rgba(18,52,37,.8); }
+  .btn-dark:hover{ background:#18452F; }
+
+  /* ---------- 3D HERO ---------- */
+  .hero{ position:relative; background:linear-gradient(160deg,#0A130E 0%,#10291D 52%,#0A130E 100%); overflow:hidden; }
+  .hero-stage{ perspective:1000px; perspective-origin:50% 46%; }
+  .hero-scene{
+    position:relative; transform-style:preserve-3d; will-change:transform;
+    transform:rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));
+    transition:transform .18s cubic-bezier(.2,.6,.3,1);
+  }
+  .hl{ position:absolute; }
+  .hl-back{ inset:-9%; transform:translateZ(-230px) scale(1.28) translateY(var(--sb,0px)); }
+  .hl-back img{ width:100%; height:100%; object-fit:cover; object-position:50% 42%; opacity:.5; filter:saturate(.9) contrast(1.04); }
+  .hl-scrim{ inset:-9%; transform:translateZ(-120px) scale(1.14);
+    background:
+      radial-gradient(120% 90% at 12% 30%, rgba(10,19,14,.30) 0%, rgba(10,19,14,.86) 62%, rgba(10,19,14,.96) 100%),
+      linear-gradient(to top, rgba(10,19,14,.98) 4%, rgba(10,19,14,0) 55%);
+  }
+  .hl-truck{ right:-3%; bottom:-2%; width:min(58%,660px); transform:translateZ(-40px) scale(1.04) translateY(var(--sm,0px)); }
+  .hl-truck img{ width:100%; height:auto; display:block;
+    -webkit-mask-image:linear-gradient(100deg, rgba(0,0,0,0) 2%, rgba(0,0,0,.55) 16%, #000 38%, #000 88%, rgba(0,0,0,0) 100%),
+                        linear-gradient(to top, rgba(0,0,0,0) 1%, #000 16%);
+    -webkit-mask-composite:source-in; mask-image:linear-gradient(100deg, rgba(0,0,0,0) 2%, rgba(0,0,0,.55) 16%, #000 38%, #000 88%, rgba(0,0,0,0) 100%);
+    filter:saturate(1.05) contrast(1.05) drop-shadow(0 30px 40px rgba(0,0,0,.55));
+  }
+  .hl-fol{ inset:0; width:100%; height:100%; transform:translateZ(70px) scale(.93) translateY(var(--sf,0px)); pointer-events:none; }
+  .hl-copy{ position:relative; z-index:5; transform:translateZ(46px) scale(.955) translateY(var(--sc,0px));
+            padding:52px 0 300px; }
+  @media (min-width:768px){
+    .hero-scene{ min-height:min(88vh,760px); display:flex; align-items:center; }
+    .hl-copy{ padding:96px 0 104px; width:62%; }
+  }
+  @media (max-width:767px){
+    .hl-truck{ left:0; right:0; bottom:0; width:100%; }
+    .hl-truck img{ height:250px; object-fit:cover; object-position:50% 55%; }
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    .hero-scene{ transform:none !important; transition:none; }
+    .hl-back,.hl-truck,.hl-fol,.hl-copy{ --sb:0px; --sm:0px; --sf:0px; --sc:0px; }
+    .btn:hover{ transform:none; }
+    .card:hover{ transform:none; }
+  }
+
+  .eyebrow{ font-size:12px; font-weight:800; letter-spacing:.2em; text-transform:uppercase; }
+  .rule{ height:1px; background:linear-gradient(to right, rgba(0,0,0,.16), rgba(0,0,0,0)); }
+
+  .card{ background:#fff; border:1px solid rgba(10,19,14,.09); border-radius:18px; overflow:hidden;
+         transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+  .card:hover{ transform:translateY(-4px); box-shadow:0 22px 46px -26px rgba(10,19,14,.55); border-color:rgba(47,125,82,.4); }
+  .shot{ display:block; width:100%; height:100%; object-fit:cover; background:#DCE3DA; }
+  .ratio-43{ aspect-ratio:4/3; }
+  .ratio-11{ aspect-ratio:1/1; }
+  .ratio-169{ aspect-ratio:16/9; }
+  .cap{ font-size:12px; line-height:1.45; color:#5A6A5F; }
+
+  .paper{ background-color:#EFEBE0; background-image:url('assets/Main_Bg.jpg'); background-size:420px; background-repeat:repeat; }
+  .footer-tex{ background-color:#0A130E; background-image:linear-gradient(rgba(10,19,14,.90), rgba(10,19,14,.94)), url('assets/Footer_Bg.jpg');
+               background-size:auto, 296px 500px; background-repeat:repeat; }
+
+  .stepnum{ font-family:Archivo; font-weight:900; font-size:46px; line-height:1; color:rgba(47,125,82,.28); }
+  table.ask{ width:100%; border-collapse:collapse; }
+  table.ask th, table.ask td{ text-align:left; padding:14px 14px; border-bottom:1px solid rgba(10,19,14,.12); vertical-align:top; font-size:15px; }
+  table.ask th{ font-family:Archivo; font-weight:800; font-size:13px; letter-spacing:.12em; text-transform:uppercase; color:#4A5A4F; border-bottom-color:rgba(10,19,14,.22); }
+
+  .callbar{ position:fixed; left:0; right:0; bottom:0; z-index:70; padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+            background:rgba(10,19,14,.95); backdrop-filter:blur(10px); border-top:1px solid rgba(255,255,255,.14); }
+  @media (min-width:768px){ .callbar{ display:none; } }
+  @media (max-width:767px){ body{ padding-bottom:78px; } }
+  a:focus-visible, button:focus-visible{ outline:3px solid #6ECB90; outline-offset:3px; border-radius:8px; }
+  .skip{ position:absolute; left:-9999px; }
+  .skip:focus{ left:12px; top:12px; z-index:99; background:#fff; color:#0A130E; padding:12px 16px; border-radius:10px; }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"HomeAndConstructionBusiness",
+  "name":"Native Trees",
+  "alternateName":"Native Tree, LLC",
+  "description":"Large tree transplanting specialists — truck-mounted tree spade and crane tree moving, plus mature trees for sale — based in Grayson, Georgia.",
+  "telephone":"+1-770-337-3740",
+  "url":"http://nativetreellc.com/",
+  "image":"assets/8618430_orig.jpg",
+  "address":{"@type":"PostalAddress","addressLocality":"Grayson","addressRegion":"GA","postalCode":"30017","addressCountry":"US"},
+  "geo":{"@type":"GeoCoordinates","latitude":33.8942729,"longitude":-83.95574},
+  "hasMap":"https://www.google.com/maps/place/Native+Trees/data=!4m7!3m6!1s0x88f5b8c02c8a039b:0x1cc80df9eb016505!8m2!3d33.8942729!4d-83.95574!16s%2Fg%2F1tqg15bk!19sChIJmwOKLMC49YgRBWUB6_kNyBw",
+  "identifier":{"@type":"PropertyValue","name":"USDOT","value":"948787"},
+  "areaServed":[
+    {"@type":"City","name":"Grayson"},
+    {"@type":"City","name":"Atlanta"},
+    {"@type":"City","name":"Marietta"},
+    {"@type":"City","name":"Roswell"},
+    {"@type":"City","name":"Alpharetta"},
+    {"@type":"City","name":"Brookhaven"},
+    {"@type":"State","name":"Georgia"},
+    {"@type":"State","name":"Alabama"},
+    {"@type":"State","name":"Tennessee"},
+    {"@type":"State","name":"North Carolina"},
+    {"@type":"State","name":"South Carolina"}
+  ],
+  "hasOfferCatalog":{
+    "@type":"OfferCatalog","name":"Tree services",
+    "itemListElement":[
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Large tree transplanting with a truck-mounted tree spade"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Crane tree moving and large-tree installation"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Commercial and subdivision tree planting"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Residential tree planting"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Mature trees for sale"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Tree preservation and tree save projects"}}
+    ]
+  }
+}
+</script>
+<!-- BUILD NOTE: no aggregateRating in schema by policy — the 5.0 / 2-review figure is Google's
+     third-party data and lives only in visible copy, the meta description, and a link to the listing. -->
+</head>
+
+<body class="font-body">
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ================= NAV — in-page anchors only ================= -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="flex items-center gap-3 mr-1">
+      <span class="logo-crop" aria-hidden="false">
+        <!-- cropped to the logo mark; baked phone text sits outside this window -->
+        <img src="assets/1405019488.png" alt="Native Tree hand-drawn tree logo with a red transplant arrow" width="866" height="157">
+      </span>
+      <span class="hidden sm:block leading-tight">
+        <span class="disp block text-white font-extrabold text-[17px]">Native Trees</span>
+        <span class="block text-[11px] font-semibold tracking-wider text-leaf uppercase">Grayson, GA</span>
+      </span>
+    </a>
+    <nav class="hidden lg:flex items-center gap-1 ml-2" aria-label="Section navigation">
+      <a class="navlink tap" href="#services">Services</a>
+      <a class="navlink tap" href="#trees">Trees for Sale</a>
+      <a class="navlink tap" href="#how">How It Works</a>
+      <a class="navlink tap" href="#why">Why Us</a>
+      <a class="navlink tap" href="#gallery">Gallery</a>
+      <a class="navlink tap" href="#area">Service Area</a>
+      <a class="navlink tap" href="#visit">Location</a>
+    </nav>
+    <a href="tel:+17703373740" class="btn btn-primary tap ml-auto px-4 sm:px-5 text-[14px] sm:text-[15px]">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="mr-2"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.3 2.2z"/></svg>
+      <span class="hidden sm:inline">Call&nbsp;</span>(770)&nbsp;337-3740
+    </a>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ================= 1. HERO — CSS 3D scene ================= -->
+<!-- BUILD NOTE (hero layers): back plate = assets/9388497_orig.jpg (nursery maples, location-neutral),
+     mid plane = assets/8618430_orig.jpg (this-location binding: Native Tree door decal + 770.337.3740),
+     front planes = generated SVG foliage + type/CTA. Three distinct translateZ depths (-230px, -40px,
+     +70px/+46px). Pointer driver runs on fine-pointer devices only; scroll driver runs everywhere;
+     both are disabled under prefers-reduced-motion. With JS off, every layer sits at its CSS rest
+     transform and the headline, phone CTA and both photo planes still compose the finished hero. -->
+<section id="top" class="hero">
+  <div class="hero-stage">
+    <div class="hero-scene" id="heroScene">
+
+      <div class="hl hl-back">
+        <img src="assets/9388497_orig.jpg" alt="Rows of red maples in fall color among green nursery rows under a blue sky" width="475" height="536" fetchpriority="high" decoding="async">
+      </div>
+      <div class="hl hl-scrim" aria-hidden="true"></div>
+
+      <div class="hl hl-truck">
+        <img src="assets/8618430_orig.jpg" alt="White Sterling truck with a mounted hydraulic tree spade, carrying the Native Tree door logo, phone number 770.337.3740 and USDOT 948787" width="1066" height="800" decoding="async">
+      </div>
+
+      <svg class="hl hl-fol" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
+        <defs>
+          <path id="lf" d="M0 0C16-14 40-14 54 0C40 14 16 14 0 0Z"/>
+          <linearGradient id="fg" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#0C2317"/><stop offset="1" stop-color="#061009"/>
+          </linearGradient>
+        </defs>
+        <g fill="url(#fg)" opacity=".92">
+          <path d="M-30 700C40 640 60 560 62 470C64 396 40 330 -10 276L-30 300Z"/>
+          <path d="M58 470C58 470 120 452 168 470C130 486 90 486 58 470Z"/>
+          <path d="M60 540C60 540 128 524 180 546C136 562 94 558 60 540Z"/>
+          <path d="M56 400C56 400 112 380 156 394C120 412 84 412 56 400Z"/>
+          <g transform="translate(72,318) rotate(-24)"><use href="#lf"/></g>
+          <g transform="translate(96,352) rotate(-6)"><use href="#lf"/></g>
+          <g transform="translate(80,606) rotate(14)"><use href="#lf"/></g>
+          <g transform="translate(132,636) rotate(4)"><use href="#lf"/></g>
+          <path d="M1230 700C1160 664 1128 604 1120 540C1112 470 1136 412 1186 372L1230 396Z"/>
+          <g transform="translate(1104,520) rotate(196)"><use href="#lf"/></g>
+          <g transform="translate(1120,588) rotate(178)"><use href="#lf"/></g>
+        </g>
+        <g fill="#08170F" opacity=".85">
+          <path d="M0 700C120 686 260 678 420 690C300 700 140 704 0 700Z"/>
+        </g>
+      </svg>
+
+      <div class="hl hl-copy wrap">
+        <p class="eyebrow text-leaf">Grayson, GA&nbsp;30017 · Tree service</p>
+        <h1 class="text-white font-extrabold mt-3 text-[38px] leading-[1.03] sm:text-[56px] lg:text-[68px]">
+          Large tree<br>transplanting<br><span class="text-leaf">specialists.</span>
+        </h1>
+        <p class="text-[#D6E4D9] mt-5 text-[17px] sm:text-[19px] leading-relaxed max-w-[34rem]">
+          Truck-mounted tree spades and crane work out of Grayson — moving mature trees for
+          metro&nbsp;Atlanta, all of Georgia, and across Alabama, Tennessee, North&nbsp;Carolina and
+          South&nbsp;Carolina. Mature trees for sale too.
+        </p>
+        <div class="mt-7 flex flex-wrap gap-3">
+          <a href="tel:+17703373740" class="btn btn-primary tap px-7 text-[17px]">Call (770) 337-3740 — free quote</a>
+          <a href="#services" class="btn btn-ghost tap px-6 text-[15px]">What they move</a>
+        </div>
+        <p class="mt-5 text-[13px] text-[#9FB6A6]">
+          <strong class="text-white">5.0★</strong> · 2 Google reviews &nbsp;·&nbsp; USDOT 948787 &nbsp;·&nbsp; Free quotes by phone
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= 2. SOCIAL PROOF STRIP ================= -->
+<!-- BUILD NOTE: rating 5.0 and count 2 are printed as scraped, everywhere they appear.
+     No review text is quoted. Second and third trust types are the USDOT number lettered on
+     the truck door in assets/8618430_orig.jpg and their own published photo archive. -->
+<section id="proof" class="bg-forest text-white">
+  <div class="wrap py-7">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-7">
+      <div>
+        <p class="disp text-[26px] font-extrabold leading-none">5.0<span class="text-leaf">★</span></p>
+        <p class="text-[13px] text-[#B9CDBF] mt-1">2 Google reviews —
+          <a class="underline underline-offset-2 hover:text-white" href="https://www.google.com/maps/place/Native+Trees/data=!4m7!3m6!1s0x88f5b8c02c8a039b:0x1cc80df9eb016505!8m2!3d33.8942729!4d-83.95574!16s%2Fg%2F1tqg15bk!19sChIJmwOKLMC49YgRBWUB6_kNyBw" target="_blank" rel="noopener">see the listing</a>
+        </p>
+      </div>
+      <div>
+        <p class="disp text-[26px] font-extrabold leading-none">USDOT 948787</p>
+        <p class="text-[13px] text-[#B9CDBF] mt-1">Lettered on the spade truck door</p>
+      </div>
+      <div>
+        <p class="disp text-[26px] font-extrabold leading-none">5 states</p>
+        <p class="text-[13px] text-[#B9CDBF] mt-1">GA, AL, TN, NC, SC</p>
+      </div>
+      <div>
+        <p class="disp text-[26px] font-extrabold leading-none">Own archive</p>
+        <p class="text-[13px] text-[#B9CDBF] mt-1">Every photo here is theirs —
+          <a class="underline underline-offset-2 hover:text-white" href="http://nativetreellc.com/" target="_blank" rel="noopener">nativetreellc.com</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 3. SERVICES — asymmetric feature + grid ================= -->
+<section id="services" class="py-14 sm:py-20">
+  <div class="wrap">
+    <p class="eyebrow text-moss">What they do</p>
+    <h2 class="text-[30px] sm:text-[42px] font-extrabold mt-2 max-w-[24ch]">Moving trees nobody else will touch — plus the everyday planting work.</h2>
+    <p class="mt-3 text-[16px] text-[#4A5A4F] max-w-[62ch]">
+      Native Tree, LLC calls itself a large tree transplanting specialist, and the equipment in its own photographs
+      backs that up: hydraulic tree spades on trucks and skid steers, plus cranes for root balls too big to spade.
+      Every service below is called out on their own site or shown in their own pictures.
+    </p>
+
+    <!-- feature card -->
+    <!-- BUILD NOTE (evidence): "Large Tree Transplanting Specialists" is the H1 of nativetreellc.com,
+         and their Our Services / Our Projects pages exist; spade photos 4886285, 7682707, 5100737. -->
+    <div class="card mt-9 grid md:grid-cols-2 items-stretch">
+      <div class="min-h-[260px]">
+        <img class="shot" src="assets/7682707.jpg" alt="Red tree-spade truck transporting a mature tree along a gravel drive with a support pickup behind it" width="333" height="249" loading="lazy" decoding="async">
+      </div>
+      <div class="p-6 sm:p-9 flex flex-col justify-center">
+        <p class="eyebrow text-clay">Flagship service</p>
+        <h3 class="text-[26px] sm:text-[32px] font-extrabold mt-2">Large tree transplanting by tree spade</h3>
+        <p class="mt-3 text-[15px] leading-relaxed text-[#3E4C43]">
+          A hydraulic spade cuts a cone of soil around the root ball, lifts the whole tree intact, and sets it into
+          a matching hole at the new address. It is how a grown tree changes location instead of being cut down and
+          replaced with a stick. Their photographs show it done on lawns, golf-course grounds, red-clay yards,
+          campus grounds and job sites.
+        </p>
+        <div class="mt-5 flex flex-wrap gap-3">
+          <a href="tel:+17703373740" class="btn btn-dark tap px-6 text-[15px]">Call about a transplant</a>
+          <a href="#ask" class="btn tap px-5 text-[15px] border border-[#123425]/30 text-forest font-bold">What to ask first</a>
+        </div>
+        <div class="grid grid-cols-3 gap-2 mt-6">
+          <img class="shot ratio-11 rounded-lg" src="assets/4886285.jpg" alt="Hydraulic tree spade clamped around a mature tree trunk mid-transplant" width="333" height="249" loading="lazy" decoding="async">
+          <img class="shot ratio-11 rounded-lg" src="assets/5100737.jpg" alt="Tree spade truck carrying a large balled tree across a red-clay yard beside a brick house" width="333" height="249" loading="lazy" decoding="async">
+          <img class="shot ratio-11 rounded-lg" src="assets/6488321.jpg" alt="Large tree with a dormant brown canopy gripped in yellow hydraulic tree-spade blades" width="145" height="327" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </div>
+
+    <!-- five supporting services -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-6">
+
+      <!-- BUILD NOTE (evidence): crane work shown in their photos 961370 and 2621843. -->
+      <article class="card flex flex-col">
+        <img class="shot ratio-43" src="assets/961370.jpg" alt="Extended crane working over a white-columned house during tree work" width="333" height="249" loading="lazy" decoding="async">
+        <div class="p-5 flex flex-col grow">
+          <h3 class="text-[20px] font-extrabold">Crane tree moving &amp; installation</h3>
+          <p class="mt-2 text-[14px] leading-relaxed text-[#4A5A4F] grow">
+            When a boxed root ball is too heavy or the setting is too tight for a spade truck, a crane lifts the tree
+            over the obstacle instead. Their archive shows crane picks over houses and boxed magnolias set beside brick homes.
+          </p>
+          <a href="tel:+17703373740" class="mt-4 font-extrabold text-clay text-[15px] tap justify-start">Call (770) 337-3740 →</a>
+        </div>
+      </article>
+
+      <!-- BUILD NOTE (evidence): commercial installs shown in 1699700 and 977718. -->
+      <article class="card flex flex-col">
+        <img class="shot ratio-43" src="assets/1699700.jpg" alt="Hydraulic tree spade lowering a large tree into place at a commercial building with a green metal roof while a crew works" width="333" height="249" loading="lazy" decoding="async">
+        <div class="p-5 flex flex-col grow">
+          <h3 class="text-[20px] font-extrabold">Commercial &amp; subdivision planting</h3>
+          <p class="mt-2 text-[14px] leading-relaxed text-[#4A5A4F] grow">
+            Instant-canopy work for buildings, entrances and common areas — grown trees set in one visit rather than a
+            decade of waiting. Their photos include commercial walkways and a subdivision entrance island.
+          </p>
+          <a href="tel:+17703373740" class="mt-4 font-extrabold text-clay text-[15px] tap justify-start">Call (770) 337-3740 →</a>
+        </div>
+      </article>
+
+      <!-- BUILD NOTE (evidence): residential installs shown in 6281225, 7841533, 5823633. -->
+      <article class="card flex flex-col">
+        <img class="shot ratio-43" src="assets/6281225.jpg" alt="Bobcat skid steer with a spade attachment planting a tree in a residential front yard with a brick home behind" width="333" height="249" loading="lazy" decoding="async">
+        <div class="p-5 flex flex-col grow">
+          <h3 class="text-[20px] font-extrabold">Residential planting</h3>
+          <p class="mt-2 text-[14px] leading-relaxed text-[#4A5A4F] grow">
+            Smaller spade rigs get into front yards and side gates for single specimen trees, screening rows and
+            replacements after a remodel. Same equipment principle, house-sized footprint.
+          </p>
+          <a href="tel:+17703373740" class="mt-4 font-extrabold text-clay text-[15px] tap justify-start">Call (770) 337-3740 →</a>
+        </div>
+      </article>
+
+      <!-- BUILD NOTE (evidence): "Trees for Sale" is a published page on nativetreellc.com; nursery-field photos throughout. -->
+      <article class="card flex flex-col">
+        <img class="shot ratio-43" src="assets/2193516_orig.jpg" alt="Rows of large field-grown magnolias with a person in a yellow jacket walking alongside for scale" width="478" height="512" loading="lazy" decoding="async">
+        <div class="p-5 flex flex-col grow">
+          <h3 class="text-[20px] font-extrabold">Mature trees for sale</h3>
+          <p class="mt-2 text-[14px] leading-relaxed text-[#4A5A4F] grow">
+            They sell grown stock, not whips — field-grown magnolias, hollies, evergreens, shade trees, crape myrtles
+            and Japanese maples, dug and delivered with the same equipment. See the stock below.
+          </p>
+          <a href="#trees" class="mt-4 font-extrabold text-forest text-[15px] tap justify-start">See the stock ↓</a>
+        </div>
+      </article>
+
+      <!-- BUILD NOTE (evidence): their Transplanting Blog publishes "Friends of Brookhaven Park Tree Save". -->
+      <article class="card flex flex-col">
+        <img class="shot ratio-43" src="assets/5845485.jpg" alt="Balled-and-burlapped tree lying on its side ready for transplant with more root balls nearby" width="225" height="250" loading="lazy" decoding="async">
+        <div class="p-5 flex flex-col grow">
+          <h3 class="text-[20px] font-extrabold">Tree preservation &amp; tree saves</h3>
+          <p class="mt-2 text-[14px] leading-relaxed text-[#4A5A4F] grow">
+            Trees in the path of construction can sometimes be relocated instead of removed. Their own blog documents
+            a tree-save project with Friends of Brookhaven Park.
+          </p>
+          <a href="tel:+17703373740" class="mt-4 font-extrabold text-clay text-[15px] tap justify-start">Call (770) 337-3740 →</a>
+        </div>
+      </article>
+
+      <!-- BUILD NOTE (evidence): Google category for this listing is "Tree service"; loading/haul photos 8464493, 1370817. -->
+      <article class="card flex flex-col">
+        <img class="shot ratio-43" src="assets/1370817.jpg" alt="Red flatbed truck loaded with a full leafy evergreen tree and a spade rig" width="333" height="249" loading="lazy" decoding="async">
+        <div class="p-5 flex flex-col grow">
+          <h3 class="text-[20px] font-extrabold">Digging, hauling &amp; delivery</h3>
+          <p class="mt-2 text-[14px] leading-relaxed text-[#4A5A4F] grow">
+            Trees are dug, loaded and hauled on their own rigs, which is why the reach runs past Georgia into four
+            neighbouring states. Listed on Google simply as a tree service.
+          </p>
+          <a href="tel:+17703373740" class="mt-4 font-extrabold text-clay text-[15px] tap justify-start">Call (770) 337-3740 →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FULL-BLEED FLEET BAND ================= -->
+<section class="relative bg-ink text-white overflow-hidden">
+  <img class="absolute inset-0 w-full h-full object-cover opacity-45" src="assets/header-wrapper-forest1.jpg" alt="Tree-spade transplanting trucks in red, white and yellow parked on grass beneath mature trees" width="1300" height="250" loading="lazy" decoding="async">
+  <div class="absolute inset-0" style="background:linear-gradient(90deg,rgba(10,19,14,.94) 8%,rgba(10,19,14,.62) 60%,rgba(10,19,14,.9) 100%)"></div>
+  <div class="wrap relative py-12 sm:py-16">
+    <div class="grid md:grid-cols-[1.1fr,.9fr] gap-8 items-center">
+      <div>
+        <p class="eyebrow text-leaf">The equipment</p>
+        <h2 class="text-[28px] sm:text-[38px] font-extrabold mt-2 leading-tight">More than one spade rig, photographed side by side.</h2>
+        <p class="mt-3 text-[15px] leading-relaxed text-[#C9DACE] max-w-[60ch]">
+          Their own banner photograph shows several spade trucks lined up together, and two more trucks appear in the
+          archive wearing the company decal — a white Sterling and a red International. That is the part of a tree
+          business you cannot fake or rent by the afternoon.
+        </p>
+      </div>
+      <div class="grid grid-cols-2 gap-3">
+        <img class="shot ratio-43 rounded-xl" src="assets/3485284_orig.jpg" alt="Red International truck with a tree-spade rig carrying the Native Tree door logo and phone number, parked on a gravel yard" width="1066" height="800" loading="lazy" decoding="async">
+        <img class="shot ratio-43 rounded-xl" src="assets/8559141_orig.jpg" alt="Tree-spade truck with its spade raised carrying a tree beside a pond, tractor in the background" width="1066" height="800" loading="lazy" decoding="async">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TREES FOR SALE — mosaic ================= -->
+<!-- BUILD NOTE (evidence): "Trees for Sale" page on nativetreellc.com; species named below are the
+     ones identifiable in their own harvested photographs. No sizes, prices or availability claimed. -->
+<section id="trees" class="py-14 sm:py-20">
+  <div class="wrap">
+    <div class="flex flex-wrap items-end justify-between gap-4">
+      <div>
+        <p class="eyebrow text-moss">Trees for sale</p>
+        <h2 class="text-[30px] sm:text-[42px] font-extrabold mt-2">Grown stock, dug to order.</h2>
+      </div>
+      <a href="tel:+17703373740" class="btn btn-dark tap px-6 text-[15px]">Ask what's in the field</a>
+    </div>
+    <p class="mt-3 text-[16px] text-[#4A5A4F] max-w-[68ch]">
+      These are the species visible in their own field photographs. Stock, sizes and pricing change with the season and
+      are not published anywhere — the phone call is the inventory list.
+    </p>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+      <figure class="card row-span-2">
+        <img class="shot" style="aspect-ratio:.9" src="assets/9288218_orig.jpg" alt="Japanese maple in brilliant red-orange fall colour standing on an open lawn" width="480" height="502" loading="lazy" decoding="async">
+        <figcaption class="p-4"><span class="font-extrabold block">Japanese maples</span><span class="cap">Upright and lace-leaf forms, in colour</span></figcaption>
+      </figure>
+      <figure class="card">
+        <img class="shot ratio-43" src="assets/8364623_orig.jpg" alt="Two tall evergreen magnolia-type trees backlit against a blue sky in a nursery row" width="479" height="498" loading="lazy" decoding="async">
+        <figcaption class="p-4"><span class="font-extrabold block">Evergreen magnolias</span><span class="cap">Field-grown, full to the ground</span></figcaption>
+      </figure>
+      <figure class="card">
+        <img class="shot ratio-43" src="assets/2610805_orig.jpg" alt="Row of tall cryptomeria-type conifers on a sunny day with a man standing beside them for scale" width="479" height="571" loading="lazy" decoding="async">
+        <figcaption class="p-4"><span class="font-extrabold block">Screening evergreens</span><span class="cap">Tall conifer rows for privacy</span></figcaption>
+      </figure>
+      <figure class="card">
+        <img class="shot ratio-43" src="assets/1528001_orig.jpg" alt="Bare crape myrtles in the foreground with rows of planted nursery stock behind under a blue sky" width="640" height="480" loading="lazy" decoding="async">
+        <figcaption class="p-4"><span class="font-extrabold block">Crape myrtles</span><span class="cap">Multi-trunk, dormant-season dig</span></figcaption>
+      </figure>
+      <figure class="card">
+        <img class="shot ratio-43" src="assets/8915837_orig.jpg" alt="Dormant shade-tree nursery rows on red Georgia clay with evergreens in the distance under an overcast winter sky" width="1066" height="800" loading="lazy" decoding="async">
+        <figcaption class="p-4"><span class="font-extrabold block">Shade trees</span><span class="cap">Rows of deciduous stock</span></figcaption>
+      </figure>
+      <figure class="card">
+        <img class="shot ratio-43" src="assets/7831226_orig.jpg" alt="Three mature evergreen holly or magnolia specimens standing in a row on a dormant field" width="640" height="480" loading="lazy" decoding="async">
+        <figcaption class="p-4"><span class="font-extrabold block">Specimen evergreens</span><span class="cap">Matched sets for a single line</span></figcaption>
+      </figure>
+      <figure class="card">
+        <img class="shot ratio-43" src="assets/6238982_orig.jpg" alt="Tall field-grown conifers at a nursery beside a small blue shed and a white pickup" width="478" height="527" loading="lazy" decoding="async">
+        <figcaption class="p-4"><span class="font-extrabold block">Large conifers</span><span class="cap">Well past what a garden centre carries</span></figcaption>
+      </figure>
+      <figure class="card">
+        <img class="shot ratio-43" src="assets/2684232_orig.jpg" alt="Field of large hollies and broadleaf evergreens on a grassy slope under a clear blue sky" width="640" height="480" loading="lazy" decoding="async">
+        <figcaption class="p-4"><span class="font-extrabold block">Broadleaf evergreens</span><span class="cap">Hollies and similar, field grown</span></figcaption>
+      </figure>
+      <figure class="card">
+        <img class="shot ratio-43" src="assets/1990674_orig.jpg" alt="Mature Japanese maple in full crimson leaf standing on a green grass field" width="480" height="405" loading="lazy" decoding="async">
+        <figcaption class="p-4"><span class="font-extrabold block">Statement maples</span><span class="cap">Full canopy, ready to move</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HOW IT WORKS — numbered sequence, category education ================= -->
+<section id="how" class="paper py-14 sm:py-20">
+  <div class="wrap">
+    <p class="eyebrow text-clay">Category explainer — not this company's stated policy</p>
+    <h2 class="text-[30px] sm:text-[42px] font-extrabold mt-2">How large-tree transplanting generally works</h2>
+    <p class="mt-3 text-[16px] text-[#4A5A4F] max-w-[70ch]">
+      Native Tree has not published its own step-by-step process, so what follows is how spade transplanting is done
+      across the trade — useful for knowing what to expect and what to ask. Confirm every specific with them on the call.
+    </p>
+
+    <ol class="mt-10 grid md:grid-cols-3 gap-x-8 gap-y-10">
+      <li class="relative">
+        <div class="stepnum">01</div>
+        <h3 class="text-[21px] font-extrabold mt-1">Sizing and season</h3>
+        <p class="mt-2 text-[15px] leading-relaxed text-[#3E4C43]">
+          In general the trunk diameter decides which spade can lift the tree, and the species plus the time of year
+          decide whether it should be moved at all. Dormant-season digging is the trade's usual preference for
+          deciduous stock. Ask them what your specific tree and month allow.
+        </p>
+      </li>
+      <li class="relative">
+        <div class="stepnum">02</div>
+        <h3 class="text-[21px] font-extrabold mt-1">Dig, lift, and match the hole</h3>
+        <p class="mt-2 text-[15px] leading-relaxed text-[#3E4C43]">
+          Spade work typically cuts the receiving hole first, then returns to cut and lift the tree so the root ball
+          spends the least possible time out of the ground. Larger or tighter jobs are generally craned instead, with
+          the ball boxed or burlapped — both approaches appear in their photographs.
+        </p>
+      </li>
+      <li class="relative">
+        <div class="stepnum">03</div>
+        <h3 class="text-[21px] font-extrabold mt-1">Set, backfill, water in</h3>
+        <p class="mt-2 text-[15px] leading-relaxed text-[#3E4C43]">
+          The tree is set to grade, backfilled and watered, and often staked. Across the trade, aftercare watering in
+          the first seasons is what decides survival — ask who is responsible for it on your job, and what, if
+          anything, is guaranteed.
+        </p>
+      </li>
+    </ol>
+
+    <div class="mt-10 rounded-2xl bg-forest text-white p-6 sm:p-8 flex flex-wrap items-center justify-between gap-5">
+      <p class="text-[17px] sm:text-[19px] font-extrabold max-w-[46ch] leading-snug">
+        The fastest way to find out if your tree is a candidate is to describe it out loud.
+      </p>
+      <a href="tel:+17703373740" class="btn btn-primary tap px-7 text-[16px]">Call (770) 337-3740</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 4. WHY US / PAIN POINTS — split ================= -->
+<section id="why" class="py-14 sm:py-20 bg-white">
+  <div class="wrap grid lg:grid-cols-[1.05fr,.95fr] gap-10 items-start">
+    <div>
+      <p class="eyebrow text-moss">Straight answers</p>
+      <h2 class="text-[30px] sm:text-[42px] font-extrabold mt-2">The three things people actually want to know.</h2>
+
+      <div class="mt-8 space-y-7">
+        <div>
+          <h3 class="text-[20px] font-extrabold">“Are they still in business?”</h3>
+          <p class="mt-2 text-[15px] leading-relaxed text-[#3E4C43]">
+            Two Google reviews and an old website make any small trade look dormant. Here is what can be checked
+            independently, right now: the Google listing at
+            <a class="underline decoration-moss underline-offset-2 font-semibold" href="https://www.google.com/maps/place/Native+Trees/data=!4m7!3m6!1s0x88f5b8c02c8a039b:0x1cc80df9eb016505!8m2!3d33.8942729!4d-83.95574!16s%2Fg%2F1tqg15bk!19sChIJmwOKLMC49YgRBWUB6_kNyBw" target="_blank" rel="noopener">Grayson, GA 30017</a>,
+            their own site at <a class="underline decoration-moss underline-offset-2 font-semibold" href="http://nativetreellc.com/" target="_blank" rel="noopener">nativetreellc.com</a>,
+            USDOT 948787 on the truck door, and one phone number that has stayed the same across the listing, the
+            website and the equipment: <a class="font-extrabold text-clay" href="tel:+17703373740">(770) 337-3740</a>.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-[20px] font-extrabold">“Are they insured, and who pays if something goes wrong?”</h3>
+          <p class="mt-2 text-[15px] leading-relaxed text-[#3E4C43]">
+            This page will not claim what it cannot show. Native Tree publishes no insurance or certification details,
+            so nothing about coverage is asserted here. Tree work is the trade where that question matters most —
+            ask for a certificate of insurance naming you, and ask about workers' compensation, before anyone puts a
+            spade in the ground. It is question one in the call script below.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-[20px] font-extrabold">“Do they do the thing I need?”</h3>
+          <p class="mt-2 text-[15px] leading-relaxed text-[#3E4C43]">
+            They are a transplanting specialist first — moving grown trees with a spade or a crane, and selling mature
+            stock. That is a narrow, uncommon trade, and it is what the equipment in every photograph on this page is
+            built for. If your job is a grown tree that needs to move, arrive somewhere, or be saved from a build, it
+            is squarely their work. If it is something else, ask on the call rather than assuming.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-2 gap-4">
+      <img class="shot rounded-2xl" style="aspect-ratio:.85" src="assets/233661.jpg" alt="Company truck and tree spade working alongside a Hyundai excavator tight against a house with the crew on site" width="333" height="249" loading="lazy" decoding="async">
+      <img class="shot rounded-2xl" style="aspect-ratio:.85" src="assets/1408440_orig.jpg" alt="Worker standing beside a tall maple holding a measuring pole in leafed-out nursery rows" width="478" height="559" loading="lazy" decoding="async">
+      <img class="shot rounded-2xl col-span-2" style="aspect-ratio:1.6" src="assets/5823633_orig.jpg" alt="Freshly transplanted mature oak in a subdivision island with a yellow tree-spade truck and a worker at right" width="1066" height="800" loading="lazy" decoding="async">
+      <p class="cap col-span-2">Photographs published by Native Tree, LLC on nativetreellc.com.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CALL SCRIPT — table layout ================= -->
+<!-- BUILD NOTE: pricing, lead times and insurance are unknowable from the scrape and from their site,
+     so nothing is invented — the approved call-script pattern is used instead. -->
+<section id="ask" class="py-14 sm:py-20 bg-ink text-white">
+  <div class="wrap">
+    <div class="grid lg:grid-cols-[.8fr,1.2fr] gap-8 items-start">
+      <div>
+        <p class="eyebrow text-leaf">Before you hire anyone</p>
+        <h2 class="text-[30px] sm:text-[40px] font-extrabold mt-2 leading-tight">Six questions for the phone call.</h2>
+        <p class="mt-3 text-[15px] text-[#B9CDBF] leading-relaxed">
+          Native Tree does not publish prices, scheduling windows or insurance paperwork, and this page will not guess
+          at them. Take these to the call — they are the same questions worth asking any tree contractor.
+        </p>
+        <a href="tel:+17703373740" class="btn btn-primary tap px-7 text-[16px] mt-6">Call (770) 337-3740</a>
+      </div>
+      <div class="overflow-hidden rounded-2xl bg-white text-[#15201A]">
+        <table class="ask">
+          <thead>
+            <tr><th style="width:44%">Ask this</th><th>Why it matters</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="font-semibold">“Can you send a certificate of insurance, and do you carry workers' comp?”</td><td>Tree work is the highest-risk residential trade. Coverage decides who pays for a dropped limb or an injured crew member.</td></tr>
+            <tr><td class="font-semibold">“What does moving a tree this size cost, and what's included?”</td><td>Establishes whether the quote covers digging, hauling, setting, backfill, staking and clean-up — or only some of them.</td></tr>
+            <tr><td class="font-semibold">“Is my tree a candidate at this trunk size, species and season?”</td><td>Not every tree survives a move. Better to hear no on the phone than after the spade arrives.</td></tr>
+            <tr><td class="font-semibold">“How far out are you scheduling right now?”</td><td>Transplant windows are seasonal and equipment is shared across jobs. Get the date before you plan around it.</td></tr>
+            <tr><td class="font-semibold">“What survival guarantee, if any, comes with it — and what watering is on me?”</td><td>Aftercare usually decides whether a transplant takes. Know the split before work starts.</td></tr>
+            <tr><td class="font-semibold">“Do you have this species in stock at the size I want?”</td><td>They sell mature stock as well as moving yours. Availability changes with the season.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GALLERY — mosaic ================= -->
+<section id="gallery" class="py-14 sm:py-20">
+  <div class="wrap">
+    <div class="flex flex-wrap items-end justify-between gap-4">
+      <div>
+        <p class="eyebrow text-moss">Photo archive</p>
+        <h2 class="text-[30px] sm:text-[42px] font-extrabold mt-2">Photographs published by Native Tree.</h2>
+      </div>
+      <a href="http://nativetreellc.com/" target="_blank" rel="noopener" class="btn tap px-5 text-[15px] border border-[#123425]/30 text-forest font-bold">View their full site →</a>
+    </div>
+    <p class="mt-3 text-[15px] text-[#4A5A4F] max-w-[68ch]">
+      Every frame below comes from Native Tree's own website. Captions describe only what is in the picture.
+    </p>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-8">
+      <figure class="col-span-2 md:col-span-2 md:row-span-2">
+        <img class="shot rounded-2xl" style="aspect-ratio:1.33" src="assets/6830857_orig.jpg" alt="Tree-spade truck parked on a lawn in downtown Atlanta with the skyline behind" width="1066" height="800" loading="lazy" decoding="async">
+        <figcaption class="cap mt-2">Spade truck on a lawn in downtown Atlanta.</figcaption>
+      </figure>
+      <figure><img class="shot ratio-43 rounded-xl" src="assets/965129.jpg" alt="Red truck hauling a large bare root-ball tree across a field with a stadium in the background and a worker in hi-vis" width="333" height="249" loading="lazy" decoding="async"><figcaption class="cap mt-2">Bare root-ball haul past a stadium.</figcaption></figure>
+      <figure><img class="shot ratio-43 rounded-xl" src="assets/120464.jpg" alt="Red truck with a tree spade transporting a large bare tree past brick campus-style buildings" width="333" height="249" loading="lazy" decoding="async">   <figcaption class="cap mt-2">Transport past campus buildings.</figcaption></figure>
+      <figure><img class="shot ratio-43 rounded-xl" src="assets/977718.jpg" alt="Boom truck planting a large evergreen beside a commercial building walkway" width="333" height="249" loading="lazy" decoding="async">                    <figcaption class="cap mt-2">Evergreen set beside a walkway.</figcaption></figure>
+      <figure><img class="shot ratio-43 rounded-xl" src="assets/8464493_orig.jpg" alt="Red dump truck on a gravel lane beside a row of tall field-grown evergreens with workers loading in the background" width="475" height="500" loading="lazy" decoding="async"><figcaption class="cap mt-2">Loading in the evergreen rows.</figcaption></figure>
+      <figure><img class="shot ratio-43 rounded-xl" src="assets/9179851_orig.jpg" alt="Worker holding a measuring pole up against very tall nursery trees to show their height" width="478" height="532" loading="lazy" decoding="async">        <figcaption class="cap mt-2">Measuring height in the field.</figcaption></figure>
+      <figure><img class="shot ratio-43 rounded-xl" src="assets/8434501_orig.jpg" alt="Burgundy lace-leaf Japanese maple underplanted with hostas at a white brick house" width="480" height="449" loading="lazy" decoding="async">           <figcaption class="cap mt-2">Lace-leaf maple at a brick house.</figcaption></figure>
+      <figure><img class="shot ratio-43 rounded-xl" src="assets/6572851_orig.jpg" alt="Green lace-leaf Japanese maple beside a walkway with a white shuttered house behind" width="480" height="456" loading="lazy" decoding="async">          <figcaption class="cap mt-2">Green lace-leaf beside a walkway.</figcaption></figure>
+      <figure><img class="shot ratio-43 rounded-xl" src="assets/4351458_orig.jpg" alt="Mature burgundy lace-leaf Japanese maple beside a white house with a porch column" width="480" height="501" loading="lazy" decoding="async">           <figcaption class="cap mt-2">Mature maple at a porch corner.</figcaption></figure>
+      <figure><img class="shot ratio-43 rounded-xl" src="assets/2739978_orig.jpg" alt="Upright purple-leaf Japanese maple in a backyard with a chain-link fence and dappled sun" width="479" height="441" loading="lazy" decoding="async">     <figcaption class="cap mt-2">Purple-leaf maple in a backyard.</figcaption></figure>
+      <figure><img class="shot ratio-43 rounded-xl" src="assets/2209282_orig.jpg" alt="Large crimson lace-leaf Japanese maple in a wooden planter on a gravel lot" width="640" height="480" loading="lazy" decoding="async">                 <figcaption class="cap mt-2">Boxed crimson lace-leaf maple.</figcaption></figure>
+      <figure><img class="shot ratio-43 rounded-xl" src="assets/8843225_orig.jpg" alt="Rows of bare young trees at a tree farm with a white pickup parked in the background" width="475" height="521" loading="lazy" decoding="async">          <figcaption class="cap mt-2">Dormant rows at the tree farm.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICE AREA — split with region map ================= -->
+<section id="area" class="py-14 sm:py-20 bg-forest text-white">
+  <div class="wrap grid md:grid-cols-[.85fr,1.15fr] gap-10 items-center">
+    <div class="bg-white/95 rounded-2xl p-6 flex items-center justify-center">
+      <img src="assets/4941889.png" alt="Map graphic of the Southeastern United States with Tennessee, North Carolina, Alabama, Georgia and South Carolina highlighted" width="212" height="180" class="w-full max-w-[260px] h-auto" loading="lazy" decoding="async">
+    </div>
+    <div>
+      <p class="eyebrow text-leaf">Where they work</p>
+      <h2 class="text-[30px] sm:text-[42px] font-extrabold mt-2 leading-tight">Based in Grayson. Loaded and rolling across five states.</h2>
+      <p class="mt-3 text-[15px] leading-relaxed text-[#C4D6C9] max-w-[62ch]">
+        The business is listed in Grayson, GA 30017, and its own site names metro Atlanta and the wider Southeast as
+        its working range. Because they haul on their own trucks, distance is a scheduling question, not a hard border —
+        ask when you call.
+      </p>
+      <ul class="mt-6 flex flex-wrap gap-2 text-[14px] font-semibold">
+        <li class="rounded-full bg-white/12 border border-white/20 px-4 py-2">Grayson</li>
+        <li class="rounded-full bg-white/12 border border-white/20 px-4 py-2">Atlanta</li>
+        <li class="rounded-full bg-white/12 border border-white/20 px-4 py-2">Marietta</li>
+        <li class="rounded-full bg-white/12 border border-white/20 px-4 py-2">Roswell</li>
+        <li class="rounded-full bg-white/12 border border-white/20 px-4 py-2">Alpharetta</li>
+        <li class="rounded-full bg-white/12 border border-white/20 px-4 py-2">Brookhaven</li>
+        <li class="rounded-full bg-leaf/20 border border-leaf/40 px-4 py-2">Georgia</li>
+        <li class="rounded-full bg-leaf/20 border border-leaf/40 px-4 py-2">Alabama</li>
+        <li class="rounded-full bg-leaf/20 border border-leaf/40 px-4 py-2">Tennessee</li>
+        <li class="rounded-full bg-leaf/20 border border-leaf/40 px-4 py-2">North Carolina</li>
+        <li class="rounded-full bg-leaf/20 border border-leaf/40 px-4 py-2">South Carolina</li>
+      </ul>
+      <!-- BUILD NOTE: this list is exactly the areaServed array in the JSON-LD above — same entries,
+           no extras in either direction. Cities come from their own site title and the address;
+           Brookhaven comes from their published "Friends of Brookhaven Park Tree Save" post. -->
+      <a href="tel:+17703373740" class="btn btn-primary tap px-7 text-[16px] mt-7">Call (770) 337-3740</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 5. HOURS + LOCATION ================= -->
+<section id="visit" class="py-14 sm:py-20 bg-white">
+  <div class="wrap">
+    <p class="eyebrow text-moss">Location</p>
+    <h2 class="text-[30px] sm:text-[42px] font-extrabold mt-2">Grayson, Georgia 30017</h2>
+    <div class="grid lg:grid-cols-2 gap-8 mt-7 items-start">
+      <div>
+        <dl class="text-[16px]">
+          <div class="py-4 border-b border-black/10">
+            <dt class="eyebrow text-[#6B7A70]">Phone</dt>
+            <dd class="mt-1"><a class="text-[24px] font-extrabold text-clay" href="tel:+17703373740">(770) 337-3740</a></dd>
+          </div>
+          <div class="py-4 border-b border-black/10">
+            <dt class="eyebrow text-[#6B7A70]">Address</dt>
+            <dd class="mt-1 font-semibold">Grayson, GA 30017</dd>
+          </div>
+          <div class="py-4 border-b border-black/10">
+            <dt class="eyebrow text-[#6B7A70]">Hours</dt>
+            <dd class="mt-1 text-[15px] text-[#3E4C43]">
+              No opening hours are published on their Google listing or their website, so none are shown here.
+              Call ahead to confirm when they can talk or come out.
+            </dd>
+            <!-- BUILD NOTE: the scraped "hours" value is a star-rating histogram ("5 / 4 / 3 / 2 / 1"),
+                 not hours data. Nothing is inferred, no hours appear in copy or in the JSON-LD. -->
+          </div>
+          <div class="py-4">
+            <dt class="eyebrow text-[#6B7A70]">On the web</dt>
+            <dd class="mt-1 text-[15px] flex flex-wrap gap-x-5 gap-y-2">
+              <a class="font-semibold underline decoration-moss underline-offset-2" href="http://nativetreellc.com/" target="_blank" rel="noopener">nativetreellc.com</a>
+              <a class="font-semibold underline decoration-moss underline-offset-2" href="https://www.google.com/maps/place/Native+Trees/data=!4m7!3m6!1s0x88f5b8c02c8a039b:0x1cc80df9eb016505!8m2!3d33.8942729!4d-83.95574!16s%2Fg%2F1tqg15bk!19sChIJmwOKLMC49YgRBWUB6_kNyBw" target="_blank" rel="noopener">Google Maps listing (5.0★, 2 reviews)</a>
+            </dd>
+          </div>
+        </dl>
+        <a href="tel:+17703373740" class="btn btn-primary tap px-7 text-[16px] mt-3">Call (770) 337-3740 — free quote</a>
+      </div>
+      <div class="rounded-2xl overflow-hidden border border-black/10 bg-[#DCE3DA]">
+        <iframe
+          title="Map showing the Native Trees location in Grayson, Georgia"
+          src="https://maps.google.com/maps?q=33.8942729,-83.95574&output=embed"
+          width="100%" height="420" style="border:0; display:block" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= 6. CONTACT / FOOTER ================= -->
+<footer id="contact" class="footer-tex text-white pt-14 pb-10">
+  <div class="wrap">
+    <div class="grid md:grid-cols-[1.2fr,.8fr,.8fr] gap-10">
+      <div>
+        <div class="flex items-center gap-3">
+          <span class="logo-crop" style="width:74px;height:60px">
+            <img src="assets/1405019488.png" alt="Native Tree hand-drawn tree logo with a red transplant arrow" width="866" height="157" loading="lazy" decoding="async">
+          </span>
+          <span>
+            <span class="disp block text-[22px] font-extrabold leading-tight">Native Trees</span>
+            <span class="block text-[12px] text-leaf font-semibold tracking-wider uppercase">Native Tree, LLC</span>
+          </span>
+        </div>
+        <p class="mt-4 text-[15px] text-[#B9CDBF] max-w-[46ch] leading-relaxed">
+          Large tree transplanting specialists — tree spade and crane tree moving, commercial and residential planting,
+          tree preservation, and mature trees for sale. Grayson, Georgia.
+        </p>
+        <p class="mt-4 text-[13px] text-[#8FA697]">USDOT 948787 · Rated 5.0 from 2 Google reviews</p>
+      </div>
+      <div>
+        <p class="eyebrow text-leaf">Contact</p>
+        <ul class="mt-3 space-y-3 text-[15px]">
+          <li><a class="font-extrabold text-[20px]" href="tel:+17703373740">(770) 337-3740</a></li>
+          <li class="text-[#B9CDBF]">Grayson, GA 30017</li>
+          <li><a class="text-[#B9CDBF] underline underline-offset-2 hover:text-white" href="http://nativetreellc.com/" target="_blank" rel="noopener">nativetreellc.com</a></li>
+          <li><a class="text-[#B9CDBF] underline underline-offset-2 hover:text-white" href="https://www.google.com/maps/place/Native+Trees/data=!4m7!3m6!1s0x88f5b8c02c8a039b:0x1cc80df9eb016505!8m2!3d33.8942729!4d-83.95574!16s%2Fg%2F1tqg15bk!19sChIJmwOKLMC49YgRBWUB6_kNyBw" target="_blank" rel="noopener">Google Maps listing</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="eyebrow text-leaf">On this page</p>
+        <ul class="mt-3 space-y-2 text-[15px] text-[#B9CDBF]">
+          <li><a class="hover:text-white" href="#services">Services</a></li>
+          <li><a class="hover:text-white" href="#trees">Trees for sale</a></li>
+          <li><a class="hover:text-white" href="#how">How it works</a></li>
+          <li><a class="hover:text-white" href="#why">Why us</a></li>
+          <li><a class="hover:text-white" href="#ask">Questions to ask</a></li>
+          <li><a class="hover:text-white" href="#gallery">Photo archive</a></li>
+          <li><a class="hover:text-white" href="#area">Service area</a></li>
+          <li><a class="hover:text-white" href="#visit">Location</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-10 pt-6 border-t border-white/12 flex flex-wrap gap-3 justify-between text-[12px] text-[#8FA697]">
+      <p>© 2026 Native Tree, LLC · Grayson, Georgia</p>
+      <p>Photography on this page is Native Tree's own, from nativetreellc.com.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- sticky mobile call bar -->
+<div class="callbar">
+  <a href="tel:+17703373740" class="btn btn-primary tap w-full text-[17px] py-3">Call (770) 337-3740 — free quote</a>
+</div>
+
+<script>
+(function () {
+  'use strict';
+  var nav = document.getElementById('nav');
+  var scene = document.getElementById('heroScene');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  // condensing / darkening nav
+  var stuck = false;
+  function navScroll() {
+    var s = window.pageYOffset > 20;
+    if (s !== stuck) { stuck = s; nav.classList.toggle('is-stuck', s); }
+  }
+  window.addEventListener('scroll', navScroll, { passive: true });
+  navScroll();
+
+  if (!scene || reduce.matches) return;
+
+  var rx = 0, ry = 0, prog = 0, queued = false;
+
+  function render() {
+    queued = false;
+    scene.style.setProperty('--rx', rx.toFixed(2) + 'deg');
+    scene.style.setProperty('--ry', ry.toFixed(2) + 'deg');
+    scene.style.setProperty('--sb', (prog * 46).toFixed(1) + 'px');   // back plate drifts slowest
+    scene.style.setProperty('--sm', (prog * -22).toFixed(1) + 'px');  // truck plane, mid speed
+    scene.style.setProperty('--sf', (prog * -64).toFixed(1) + 'px');  // foliage, fastest
+    scene.style.setProperty('--sc', (prog * -38).toFixed(1) + 'px');  // type lockup
+  }
+  function queue() { if (!queued) { queued = true; requestAnimationFrame(render); } }
+
+  function onScroll() {
+    var r = scene.getBoundingClientRect();
+    var p = -r.top / Math.max(r.height, 1);
+    prog = Math.max(0, Math.min(1, p));
+    queue();
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll, { passive: true });
+  onScroll();
+
+  // pointer driver: fine pointers only — touch relies on the scroll driver alone
+  if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    window.addEventListener('pointermove', function (e) {
+      var r = scene.getBoundingClientRect();
+      if (r.bottom < 0 || r.top > window.innerHeight) return;
+      var cx = (e.clientX - r.left) / Math.max(r.width, 1) - 0.5;
+      var cy = (e.clientY - r.top) / Math.max(r.height, 1) - 0.5;
+      ry = Math.max(-5, Math.min(5, cx * 9));
+      rx = Math.max(-4, Math.min(4, -cy * 7));
+      queue();
+    }, { passive: true });
+    scene.addEventListener('pointerleave', function () { rx = 0; ry = 0; queue(); });
+  }
+})();
+</script>
+</body>
+</html>
