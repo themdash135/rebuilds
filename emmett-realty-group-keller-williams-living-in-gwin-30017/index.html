@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="robots" content="noindex,nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Emmett Realty Group – Keller Williams | Real Estate Agent in Gwinnett County, GA</title>
+<meta name="description" content="Emmett Realty Group – Keller Williams, Living in Gwinnett. Rated 5.0 stars from 42 Google reviews. Buying, selling, investing and relocation across Gwinnett County, Georgia. Open 7 days — call (678) 379-9896.">
+<meta name="theme-color" content="#0b0b0d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="assets/asset_19.jpg">
+<link rel="preload" as="image" href="assets/asset_24.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        ink: '#0b0b0d',
+        ink2: '#15161a',
+        bone: '#f6f4f0',
+        sand: '#ddd3c5',
+        kw: '#c8102e',
+        kwdark: '#9c0c23'
+      },
+      fontFamily: {
+        display: ['Fraunces', 'Georgia', 'serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif']
+      }
+    }
+  }
+}
+</script>
+<style>
+  :root { --nav-h: 72px; }
+  html { scroll-behavior: smooth; }
+  body { -webkit-font-smoothing: antialiased; }
+  section[id] { scroll-margin-top: 92px; }
+
+  /* ---------- 3D HERO STAGE ---------- */
+  .stage {
+    perspective: 1000px;
+    perspective-origin: 50% 45%;
+    overflow: hidden;
+    position: relative;
+  }
+  .scene {
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(calc(var(--my, 0) * -2.4deg + var(--sc, 0) * 2deg))
+               rotateY(calc(var(--mx, 0) * 3.4deg));
+    transition: transform .35s cubic-bezier(.22,.61,.36,1);
+    will-change: transform;
+  }
+  .plate { position: absolute; inset: -8% -6%; overflow: hidden; }
+  .plate img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  /* back plate — deepest, slowest */
+  .plate-back {
+    transform: translate3d(calc(var(--mx,0) * -10px), calc(var(--my,0) * -8px + var(--sc,0) * 46px), -260px) scale(1.34);
+    transition: transform .5s cubic-bezier(.22,.61,.36,1);
+    filter: saturate(.85) brightness(.72);
+  }
+  /* mid plate — the hero photograph, feather-masked at the edges */
+  .plate-mid {
+    inset: 2% 0 6% 0;
+    transform: translate3d(calc(var(--mx,0) * -24px), calc(var(--my,0) * -16px + var(--sc,0) * 96px), -90px) scale(1.12);
+    transition: transform .4s cubic-bezier(.22,.61,.36,1);
+    -webkit-mask-image: radial-gradient(120% 105% at 50% 42%, #000 42%, rgba(0,0,0,.72) 66%, transparent 92%);
+    mask-image: radial-gradient(120% 105% at 50% 42%, #000 42%, rgba(0,0,0,.72) 66%, transparent 92%);
+  }
+  /* front scrim + type — fastest, moves inverse */
+  .scrim {
+    position: absolute; inset: 0; z-index: 2; pointer-events: none;
+    transform: translate3d(0, calc(var(--sc,0) * -18px), 10px);
+  }
+  .hero-copy {
+    position: relative; z-index: 3;
+    transform: translate3d(calc(var(--mx,0) * 12px), calc(var(--my,0) * 8px + var(--sc,0) * -34px), 42px) scale(.958);
+    transition: transform .3s cubic-bezier(.22,.61,.36,1);
+    will-change: transform;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .scene, .plate-back, .plate-mid, .hero-copy { transition: none !important; }
+  }
+
+  /* header condense — transform/opacity only, no layout properties animated */
+  #header-inner { transform-origin: left center; }
+  #site-header.condensed #header-inner { transform: scale(.92); }
+  #site-header.condensed { box-shadow: 0 10px 30px -20px rgba(0,0,0,.9); }
+  #site-header.condensed #hdr-pad { opacity: .96; }
+
+  .rule-grad { background-image: linear-gradient(90deg, #c8102e, rgba(200,16,46,0)); }
+  .card-lift { transition: transform .28s cubic-bezier(.22,.61,.36,1), box-shadow .28s ease, border-color .28s ease; }
+  .card-lift:hover { transform: translateY(-4px); box-shadow: 0 24px 48px -28px rgba(0,0,0,.55); }
+  .link-u { text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+  .tap { min-height: 48px; }
+  .num { font-variant-numeric: tabular-nums; }
+  .band-fade::after {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(11,11,13,.30), rgba(11,11,13,.86));
+  }
+  @media (max-width: 767px) { body { padding-bottom: 74px; } }
+</style>
+</head>
+<body class="bg-bone text-ink font-sans antialiased">
+
+<!-- BUILD NOTE — SCOPE: this_location_only. Single KW team, one phone, one site.
+     No per-city community pages were rebuilt: every community-bound image in the harvest was
+     rejected for falsely binding non-Georgia stock to Gwinnett/Walton place names. -->
+<!-- BUILD NOTE — FACT SOURCES USED:
+     (1) lead.json: name, phone 6783799896, rating 5.0, review_count 42, hours, lat/lng, maps_url, website, category.
+         address field is an empty string in lead.json, so no street address is asserted anywhere on this page
+         or in the JSON-LD; the map embed uses the scraped lat/lng instead.
+     (2) emmettrealtygroup.com harvested pages: H1/H2 copy ("Your Dream Home Is Closer Than You Think",
+         "There With You — Step by Step", Buying / Selling / Investing / Relocation, "Communities We Call Home"),
+         page inventory (/buyers, /sellers, /communities, /home-value, /how-much-house-you-can-afford,
+         /sell-and-make-a-profit, /practicing-good-sellers-etiquette, /location-location-location,
+         /client-reviews, /about, /contact-us, /grayson, /loganville), contact page (Danny Emmett,
+         danny@emmettrealtygroup.com), and the rendered old-site badge "Gwinnett County's Trusted Team Since 2013".
+     Nothing else is asserted. The pain-point analysis was used only to decide layout and emphasis. -->
+<!-- BUILD NOTE — LOGO USAGE: Logo-50.png (white wordmark) is used on dark surfaces only (header, hero, footer);
+     kw-Logo.png (red lettermark, transparent) is used on the light affiliation band only. The 3D hero plan
+     named kw-Logo.png for the hero front plane; the hero scrim is dark, so Logo-50.png is used there instead
+     per the asset warning. Deliberate, documented deviation. -->
+
+<!-- ============================ HEADER ============================ -->
+<header id="site-header" class="fixed top-0 inset-x-0 z-50 bg-ink/85 backdrop-blur-md border-b border-white/10 transition-shadow duration-300">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6">
+    <div id="header-inner" class="flex items-center justify-between gap-4 h-[72px] transition-transform duration-300 will-change-transform">
+      <a href="#top" class="flex items-center gap-3 shrink-0">
+        <img src="assets/Logo-50.png" width="254" height="50" alt="Keller Williams kw logo" class="h-7 w-auto sm:h-8">
+        <span class="hidden sm:block leading-tight">
+          <span class="block font-display text-bone text-[15px] font-semibold tracking-tight">Emmett Realty Group</span>
+          <span class="block text-[10px] uppercase tracking-[.18em] text-sand/70">Living in Gwinnett</span>
+        </span>
+      </a>
+
+      <nav aria-label="Primary" class="hidden lg:flex items-center gap-1 text-[13px] font-medium text-bone/80">
+        <a href="#services" class="px-3 py-2 rounded-lg hover:text-bone hover:bg-white/10 transition">Services</a>
+        <a href="#why" class="px-3 py-2 rounded-lg hover:text-bone hover:bg-white/10 transition">Why this team</a>
+        <a href="#value" class="px-3 py-2 rounded-lg hover:text-bone hover:bg-white/10 transition">Home value</a>
+        <a href="#communities" class="px-3 py-2 rounded-lg hover:text-bone hover:bg-white/10 transition">Communities</a>
+        <a href="#visit" class="px-3 py-2 rounded-lg hover:text-bone hover:bg-white/10 transition">Hours &amp; map</a>
+        <a href="#about" class="px-3 py-2 rounded-lg hover:text-bone hover:bg-white/10 transition">About</a>
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <span id="hdr-status" class="hidden xl:inline-flex items-center gap-2 text-[12px] text-bone/70 pr-1"></span>
+        <a href="tel:+16783799896" class="tap inline-flex items-center gap-2 rounded-full bg-kw px-4 sm:px-5 text-[14px] font-semibold text-white hover:bg-kwdark transition shadow-lg shadow-kw/25">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+          <span class="hidden sm:inline">(678) 379-9896</span><span class="sm:hidden">Call</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============================ 1. HERO (CSS 3D scene) ============================ -->
+<!-- BUILD NOTE — HERO LAYERS: back = assets/asset_24.jpg, mid = assets/asset_19.jpg, front = CSS gradient scrim
+     + DOM type + Logo-50.png. Three distinct translateZ depths (-260px / -90px / +42px). Neither photograph
+     carries a place name in alt text or caption; both are decorative per their approval conditions.
+     Both hero plates are <link rel="preload"> and are never lazy-loaded.
+     With JS disabled the layers rest at their CSS transforms and all hero copy and CTAs remain readable. -->
+<section id="top" class="stage relative bg-ink pt-[72px]">
+  <div class="scene" id="scene">
+
+    <div class="plate plate-back" aria-hidden="false">
+      <img src="assets/asset_24.jpg" width="600" height="338" alt="Sunset over an open farm field with a distant treeline" decoding="async" fetchpriority="high">
+    </div>
+
+    <div class="plate plate-mid">
+      <img src="assets/asset_19.jpg" width="600" height="400" alt="Wood-and-glass chalet-style home lit warmly at dusk, with a landscaped lawn and a forested hillside behind it" decoding="async" fetchpriority="high">
+    </div>
+
+    <div class="scrim" style="background:linear-gradient(180deg, rgba(11,11,13,.82) 0%, rgba(11,11,13,.34) 34%, rgba(11,11,13,.74) 72%, rgba(11,11,13,.96) 100%);"></div>
+    <div class="scrim" style="background:radial-gradient(90% 60% at 12% 78%, rgba(200,16,46,.28), transparent 60%);"></div>
+
+    <div class="hero-copy mx-auto max-w-7xl px-4 sm:px-6 pt-14 pb-16 sm:pt-20 sm:pb-20 lg:pt-24 lg:pb-24">
+      <div class="max-w-3xl">
+        <div class="flex items-center gap-3 mb-5">
+          <img src="assets/Logo-50.png" width="254" height="50" alt="Keller Williams kw logo" class="h-8 w-auto">
+          <span class="h-6 w-px bg-white/25"></span>
+          <span class="text-[11px] sm:text-xs uppercase tracking-[.24em] text-sand font-semibold">Living in Gwinnett</span>
+        </div>
+
+        <h1 class="font-display text-bone font-semibold leading-[1.02] tracking-tight" style="font-size:clamp(2.5rem,7.4vw,4.6rem)">
+          Your Dream Home Is<br class="hidden sm:block"> Closer Than You Think
+        </h1>
+
+        <p class="mt-5 text-[17px] sm:text-xl leading-relaxed text-bone/85 max-w-2xl">
+          Emmett Realty Group is a Keller Williams real estate team working across
+          <strong class="text-bone font-semibold">Gwinnett County, Georgia</strong> — buying, selling, investing and
+          relocation, there with you step by step. One number, open 9&nbsp;AM–7&nbsp;PM Monday through Saturday and
+          2–5&nbsp;PM Sunday.
+        </p>
+
+        <div class="mt-7 flex flex-col sm:flex-row flex-wrap gap-3">
+          <a href="tel:+16783799896" class="tap inline-flex items-center justify-center gap-2 rounded-full bg-kw px-7 text-white text-base font-semibold hover:bg-kwdark transition shadow-xl shadow-kw/30">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+            Call (678) 379-9896
+          </a>
+          <a href="https://www.google.com/maps/place/Emmett+Realty+Group+-+Keller+Williams+-+Living+in+Gwinnett/data=!4m7!3m6!1s0x88f5b8c327daaaab:0xb85c01787975abae!8m2!3d33.911304!4d-83.9591636!16s%2Fg%2F11f5fp310r!19sChIJq6raJ8O49YgRrqt1eXgBXLg" rel="noopener" class="tap inline-flex items-center justify-center gap-2 rounded-full border border-white/30 bg-white/5 px-7 text-bone text-base font-semibold hover:bg-white/15 transition">
+            Book on Google
+          </a>
+        </div>
+
+        <!-- BUILD NOTE — "Book on Google" is surfaced because the scraped Google card_text lists
+             "Online appointments"; the link goes to the Google Business listing and is labelled as such. -->
+
+        <ul class="mt-8 flex flex-wrap items-center gap-x-3 gap-y-2 text-[13px] text-bone/80">
+          <li class="inline-flex items-center gap-1.5 rounded-full bg-white/10 border border-white/15 px-3 py-1.5">
+            <span class="text-kw font-bold">★ 5.0</span> <span class="num">42 Google reviews</span>
+          </li>
+          <li class="inline-flex items-center gap-1.5 rounded-full bg-white/10 border border-white/15 px-3 py-1.5">Open 7 days a week</li>
+          <li class="inline-flex items-center gap-1.5 rounded-full bg-white/10 border border-white/15 px-3 py-1.5">Until 7&nbsp;PM Mon–Sat</li>
+          <li id="hero-status" class="hidden items-center gap-1.5 rounded-full bg-kw/20 border border-kw/40 px-3 py-1.5 text-bone"></li>
+        </ul>
+
+        <p class="mt-5 text-[14px] text-bone/70">
+          Talk to <strong class="text-bone font-semibold">Danny Emmett</strong> —
+          <a class="link-u text-sand hover:text-white" href="tel:+16783799896">(678) 379-9896</a> or
+          <a class="link-u text-sand hover:text-white" href="mailto:danny@emmettrealtygroup.com">danny@emmettrealtygroup.com</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 2. SOCIAL PROOF STRIP ============================ -->
+<section aria-label="Reputation and credentials" class="bg-ink2 border-y border-white/10">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 py-6 sm:py-7">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-6 items-center">
+      <div>
+        <div class="flex items-baseline gap-2">
+          <span class="font-display text-3xl font-semibold text-bone num">5.0</span>
+          <span class="text-kw text-lg leading-none" aria-hidden="true">★★★★★</span>
+        </div>
+        <p class="mt-1 text-[13px] text-bone/70"><span class="num">42</span> Google reviews —
+          <a class="link-u text-sand hover:text-bone" rel="noopener" href="https://www.google.com/maps/place/Emmett+Realty+Group+-+Keller+Williams+-+Living+in+Gwinnett/data=!4m7!3m6!1s0x88f5b8c327daaaab:0xb85c01787975abae!8m2!3d33.911304!4d-83.9591636!16s%2Fg%2F11f5fp310r!19sChIJq6raJ8O49YgRrqt1eXgBXLg">read them on Google</a>
+        </p>
+      </div>
+      <div>
+        <div class="font-display text-3xl font-semibold text-bone num">2013</div>
+        <p class="mt-1 text-[13px] text-bone/70">Gwinnett County's trusted team since 2013</p>
+      </div>
+      <div>
+        <img src="assets/Logo-50.png" width="254" height="50" alt="Keller Williams kw logo" loading="lazy" class="h-7 w-auto">
+        <p class="mt-2 text-[13px] text-bone/70">Licensed under the Keller Williams brokerage</p>
+      </div>
+      <div>
+        <div class="font-display text-3xl font-semibold text-bone">7 days</div>
+        <p class="mt-1 text-[13px] text-bone/70">Open every day, incl. Sunday afternoons</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- BUILD NOTE — TRUST SIGNALS, four distinct types, all traceable:
+     (a) Google rating 5.0 / 42 reviews [lead.json]; (b) "since 2013" [rendered badge on their current site];
+     (c) Keller Williams brokerage affiliation [business name]; (d) 7-day schedule [scraped hours table].
+     Review bodies are never quoted and the rating is deliberately absent from the JSON-LD. -->
+
+<!-- ============================ 3. SERVICES ============================ -->
+<section id="services" class="bg-bone">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 py-16 sm:py-20">
+    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-10">
+      <div class="max-w-2xl">
+        <p class="text-[11px] uppercase tracking-[.24em] font-semibold text-kw">What the team does</p>
+        <h2 class="mt-3 font-display text-4xl sm:text-5xl font-semibold tracking-tight leading-[1.05]">There With You — Step by Step</h2>
+        <p class="mt-4 text-[17px] leading-relaxed text-ink/75">
+          Four practice areas, published on Emmett Realty Group's own site: buying, selling, investing and relocation.
+          The short explanations below describe what these roles generally involve in residential real estate —
+          for how this team handles yours specifically, call and ask.
+        </p>
+      </div>
+      <a href="tel:+16783799896" class="tap inline-flex items-center justify-center gap-2 rounded-full bg-kw px-6 text-white font-semibold hover:bg-kwdark transition shrink-0">Call (678) 379-9896</a>
+    </div>
+
+    <!-- BUILD NOTE — SERVICE EVIDENCE: each of the four cards maps to a heading on emmettrealtygroup.com's
+         homepage ("Buying | Selling | Investing | Relocation") and, where noted, to a dedicated harvested page
+         (/buyers, /sellers, /location-location-location). Descriptions are explicitly framed as category
+         education ("generally", "typically") because the crawl captured headings, not body copy. -->
+
+    <div class="grid lg:grid-cols-12 gap-5">
+      <!-- feature card -->
+      <article class="lg:col-span-7 card-lift group relative overflow-hidden rounded-3xl bg-ink text-bone border border-ink/10">
+        <img src="assets/asset_7.jpg" width="600" height="400" loading="lazy" alt="Gray shingle cape-cod house with a large front porch, autumn trees and a manicured lawn" class="h-64 sm:h-80 w-full object-cover opacity-90 group-hover:opacity-100 transition duration-500 group-hover:scale-[1.03]">
+        <div class="p-6 sm:p-8">
+          <div class="flex items-center gap-3">
+            <span class="text-[11px] font-bold tracking-[.2em] text-kw uppercase">01</span>
+            <h3 class="font-display text-2xl sm:text-3xl font-semibold">Buying</h3>
+          </div>
+          <p class="mt-3 text-bone/80 leading-relaxed">
+            A buyer's agent generally runs the search, books the showings, reads the comparable sales before you write,
+            shapes the offer and its contingencies, then keeps inspection, appraisal and lender deadlines from slipping
+            between contract and closing. Emmett Realty Group publishes a Buyers page covering this side of the deal.
+          </p>
+          <div class="mt-5 flex flex-wrap gap-3">
+            <a href="https://emmettrealtygroup.com/buyers" rel="noopener" class="tap inline-flex items-center gap-2 rounded-full border border-white/25 px-5 text-sm font-semibold text-bone hover:bg-white/10 transition">Buyers page on emmettrealtygroup.com →</a>
+          </div>
+        </div>
+      </article>
+
+      <div class="lg:col-span-5 grid gap-5">
+        <article class="card-lift group relative overflow-hidden rounded-3xl bg-white border border-ink/10 flex">
+          <img src="assets/asset_2.jpg" width="400" height="267" loading="lazy" alt="White cape-cod style house with a wraparound porch on a green lawn" class="w-28 sm:w-40 shrink-0 object-cover">
+          <div class="p-5 sm:p-6">
+            <div class="flex items-center gap-3">
+              <span class="text-[11px] font-bold tracking-[.2em] text-kw uppercase">02</span>
+              <h3 class="font-display text-xl sm:text-2xl font-semibold">Selling</h3>
+            </div>
+            <p class="mt-2 text-[15px] leading-relaxed text-ink/75">
+              Listing work typically means pricing from recent local sales, prep and presentation, marketing the
+              property, then handling offers, negotiation and the paperwork through closing.
+            </p>
+            <a href="https://emmettrealtygroup.com/sellers" rel="noopener" class="mt-3 inline-block text-sm font-semibold text-kw link-u">Sellers page on their site →</a>
+          </div>
+        </article>
+
+        <article class="card-lift group relative overflow-hidden rounded-3xl bg-white border border-ink/10 flex">
+          <img src="assets/asset_10.jpg" width="600" height="400" loading="lazy" alt="Brick two-car-garage suburban house with a front lawn and autumn trees, street in the foreground" class="w-28 sm:w-40 shrink-0 object-cover">
+          <div class="p-5 sm:p-6">
+            <div class="flex items-center gap-3">
+              <span class="text-[11px] font-bold tracking-[.2em] text-kw uppercase">03</span>
+              <h3 class="font-display text-xl sm:text-2xl font-semibold">Investing</h3>
+            </div>
+            <p class="mt-2 text-[15px] leading-relaxed text-ink/75">
+              Investment purchases are generally judged on rent versus carrying cost, condition and holding period
+              rather than on how a house feels to live in — a different underwriting conversation from a first home.
+            </p>
+            <a href="tel:+16783799896" class="mt-3 inline-block text-sm font-semibold text-kw link-u">Ask about investing — call →</a>
+          </div>
+        </article>
+
+        <article class="card-lift group relative overflow-hidden rounded-3xl bg-white border border-ink/10 flex">
+          <img src="assets/location-300x220-1.jpg" width="300" height="220" loading="lazy" alt="Person carrying a moving box while another packs boxes in a bare room" class="w-28 sm:w-40 shrink-0 object-cover">
+          <div class="p-5 sm:p-6">
+            <div class="flex items-center gap-3">
+              <span class="text-[11px] font-bold tracking-[.2em] text-kw uppercase">04</span>
+              <h3 class="font-display text-xl sm:text-2xl font-semibold">Relocation</h3>
+            </div>
+            <p class="mt-2 text-[15px] leading-relaxed text-ink/75">
+              Moving in from out of the area usually means learning the map before the listings — which is exactly the
+              point of their "Location, Location, Location" page.
+            </p>
+            <a href="https://emmettrealtygroup.com/location-location-location" rel="noopener" class="mt-3 inline-block text-sm font-semibold text-kw link-u">Location, Location, Location →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- resources: different layout — a linked list, not a card grid -->
+    <div class="mt-12 rounded-3xl border border-ink/10 bg-white overflow-hidden">
+      <div class="px-6 sm:px-8 py-5 border-b border-ink/10 flex items-center justify-between gap-4">
+        <h3 class="font-display text-xl font-semibold">Guides the team already publishes</h3>
+        <span class="text-[12px] text-ink/50">on emmettrealtygroup.com</span>
+      </div>
+      <ul class="divide-y divide-ink/10">
+        <li>
+          <a href="https://emmettrealtygroup.com/how-much-house-you-can-afford" rel="noopener" class="flex items-center gap-4 sm:gap-6 px-5 sm:px-8 py-4 hover:bg-bone transition group">
+            <img src="assets/how-much-afford-300x220-1.jpg" width="300" height="220" loading="lazy" alt="Stacks of coins topped with small wooden house figurines against a chart backdrop" class="h-14 w-20 sm:h-16 sm:w-24 object-cover rounded-lg shrink-0">
+            <span class="min-w-0">
+              <span class="block font-semibold">Deciding How Much House You Can Afford</span>
+              <span class="block text-[14px] text-ink/65">Budget before browsing — what to settle before the first showing.</span>
+            </span>
+            <span class="ml-auto text-kw font-bold shrink-0 group-hover:translate-x-1 transition" aria-hidden="true">→</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://emmettrealtygroup.com/practicing-good-sellers-etiquette" rel="noopener" class="flex items-center gap-4 sm:gap-6 px-5 sm:px-8 py-4 hover:bg-bone transition group">
+            <img src="assets/seller-etiquette-300x220-1.jpg" width="300" height="220" loading="lazy" alt="Three people sitting on the floor among moving boxes holding a FOR SALE sign with a SOLD sticker" class="h-14 w-20 sm:h-16 sm:w-24 object-cover rounded-lg shrink-0">
+            <span class="min-w-0">
+              <span class="block font-semibold">Practicing Good Seller's Etiquette</span>
+              <span class="block text-[14px] text-ink/65">How sellers behave around showings and offers, and why it moves the price.</span>
+            </span>
+            <span class="ml-auto text-kw font-bold shrink-0 group-hover:translate-x-1 transition" aria-hidden="true">→</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://emmettrealtygroup.com/sell-and-make-a-profit" rel="noopener" class="flex items-center gap-4 sm:gap-6 px-5 sm:px-8 py-4 hover:bg-bone transition group">
+            <img src="assets/asset_26.jpg" width="600" height="400" loading="lazy" alt="Staged dining and living room with a glass table, blue chairs, a fireplace and french doors" class="h-14 w-20 sm:h-16 sm:w-24 object-cover rounded-lg shrink-0">
+            <span class="min-w-0">
+              <span class="block font-semibold">Sell and Make a Profit</span>
+              <span class="block text-[14px] text-ink/65">Their write-up on getting more out of a sale than you put in.</span>
+            </span>
+            <span class="ml-auto text-kw font-bold shrink-0 group-hover:translate-x-1 transition" aria-hidden="true">→</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://emmettrealtygroup.com/client-reviews" rel="noopener" class="flex items-center gap-4 sm:gap-6 px-5 sm:px-8 py-4 hover:bg-bone transition group">
+            <span class="h-14 w-20 sm:h-16 sm:w-24 rounded-lg shrink-0 bg-ink flex items-center justify-center text-kw text-lg" aria-hidden="true">★★★</span>
+            <span class="min-w-0">
+              <span class="block font-semibold">Client Reviews</span>
+              <span class="block text-[14px] text-ink/65">Their own reviews page, alongside the 5.0-star Google listing.</span>
+            </span>
+            <span class="ml-auto text-kw font-bold shrink-0 group-hover:translate-x-1 transition" aria-hidden="true">→</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FULL-BLEED BAND ============================ -->
+<section aria-hidden="false" class="relative band-fade overflow-hidden">
+  <img src="assets/danny-emmett-bg.jpg" width="1400" height="634" loading="lazy" alt="Wide view of a staged luxury living room with a stone fireplace and a tufted sofa" class="w-full h-[280px] sm:h-[360px] object-cover">
+  <div class="absolute inset-0 z-10 flex items-center">
+    <div class="mx-auto max-w-7xl w-full px-4 sm:px-6">
+      <p class="font-display text-bone text-3xl sm:text-5xl font-semibold tracking-tight max-w-3xl leading-[1.06]">Communities We Call Home</p>
+      <p class="mt-3 text-bone/80 max-w-xl">Buying, selling, investing and relocation across Gwinnett County, Georgia — with the same team from the first call to the closing table.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 4. WHY THIS TEAM / PAIN POINTS ============================ -->
+<section id="why" class="bg-ink text-bone">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 py-16 sm:py-20">
+    <div class="grid lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+      <div class="lg:col-span-5">
+        <p class="text-[11px] uppercase tracking-[.24em] font-semibold text-kw">Why this team</p>
+        <h2 class="mt-3 font-display text-4xl sm:text-5xl font-semibold tracking-tight leading-[1.05]">Every KW agent has a badge. Here is the record.</h2>
+        <p class="mt-4 text-bone/75 leading-relaxed">
+          Real estate moves fast: the seller comparing three agents this afternoon, the buyer standing in front of a
+          sign right now. So the phone comes first, the reputation comes second, and every link on this page lands
+          somewhere useful.
+        </p>
+        <img src="assets/asset_16.jpg" width="600" height="401" loading="lazy" alt="Modern open-plan office interior with dark-blue walls, a glass-partition corridor and black shelving" class="mt-8 w-full h-56 object-cover rounded-2xl border border-white/10">
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="tel:+16783799896" class="tap inline-flex items-center justify-center gap-2 rounded-full bg-kw px-6 text-white font-semibold hover:bg-kwdark transition">Call (678) 379-9896</a>
+          <a href="#visit" class="tap inline-flex items-center justify-center rounded-full border border-white/25 px-6 font-semibold text-bone hover:bg-white/10 transition">See hours &amp; map</a>
+        </div>
+      </div>
+
+      <ol class="lg:col-span-7 space-y-3">
+        <li class="rounded-2xl border border-white/12 bg-white/[.04] p-5 sm:p-6 flex gap-5 card-lift">
+          <span class="font-display text-2xl font-semibold text-kw num shrink-0 w-10">01</span>
+          <div>
+            <h3 class="font-semibold text-lg">One number, on every screen</h3>
+            <p class="mt-1 text-bone/75 text-[15px] leading-relaxed">
+              <a class="link-u text-bone hover:text-kw" href="tel:+16783799896">(678) 379-9896</a> is a tap-to-call link
+              in the header, in the hero, in every section below, in the footer, and on a fixed bar on your phone. One
+              tap, from anywhere on the page.
+            </p>
+          </div>
+        </li>
+        <li class="rounded-2xl border border-white/12 bg-white/[.04] p-5 sm:p-6 flex gap-5 card-lift">
+          <span class="font-display text-2xl font-semibold text-kw num shrink-0 w-10">02</span>
+          <div>
+            <h3 class="font-semibold text-lg">A 5.0 rating from 42 reviews, shown and linked</h3>
+            <p class="mt-1 text-bone/75 text-[15px] leading-relaxed">
+              Not a self-designed badge — the public Google record, stated as a number and
+              <a class="link-u text-bone hover:text-kw" rel="noopener" href="https://www.google.com/maps/place/Emmett+Realty+Group+-+Keller+Williams+-+Living+in+Gwinnett/data=!4m7!3m6!1s0x88f5b8c327daaaab:0xb85c01787975abae!8m2!3d33.911304!4d-83.9591636!16s%2Fg%2F11f5fp310r!19sChIJq6raJ8O49YgRrqt1eXgBXLg">linked to the listing</a>
+              so you can read all 42 yourself.
+            </p>
+          </div>
+        </li>
+        <li class="rounded-2xl border border-white/12 bg-white/[.04] p-5 sm:p-6 flex gap-5 card-lift">
+          <span class="font-display text-2xl font-semibold text-kw num shrink-0 w-10">03</span>
+          <div>
+            <h3 class="font-semibold text-lg">Open seven days, including Sunday</h3>
+            <p class="mt-1 text-bone/75 text-[15px] leading-relaxed">
+              9&nbsp;AM–7&nbsp;PM Monday through Saturday and 2–5&nbsp;PM on Sunday. Weekend showings and after-work
+              calls are inside those hours, and the full table is published below exactly as Google lists it.
+            </p>
+          </div>
+        </li>
+        <li class="rounded-2xl border border-white/12 bg-white/[.04] p-5 sm:p-6 flex gap-5 card-lift">
+          <span class="font-display text-2xl font-semibold text-kw num shrink-0 w-10">04</span>
+          <div>
+            <h3 class="font-semibold text-lg">Local since 2013, under Keller Williams</h3>
+            <p class="mt-1 text-bone/75 text-[15px] leading-relaxed">
+              "Gwinnett County's trusted team since 2013" is the team's own line, and Keller Williams is the brokerage
+              behind the licence, the compliance and the transaction file.
+            </p>
+          </div>
+        </li>
+        <li class="rounded-2xl border border-white/12 bg-white/[.04] p-5 sm:p-6 flex gap-5 card-lift">
+          <span class="font-display text-2xl font-semibold text-kw num shrink-0 w-10">05</span>
+          <div>
+            <h3 class="font-semibold text-lg">Four ways in, all of them live</h3>
+            <p class="mt-1 text-bone/75 text-[15px] leading-relaxed">
+              Call <a class="link-u text-bone hover:text-kw" href="tel:+16783799896">(678) 379-9896</a>, email
+              <a class="link-u text-bone hover:text-kw" href="mailto:danny@emmettrealtygroup.com">danny@emmettrealtygroup.com</a>,
+              request an appointment through the Google listing, or open the buyer and seller guides on
+              emmettrealtygroup.com. Pick whichever is faster for you today.
+            </p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+<!-- BUILD NOTE — PAIN POINTS ADDRESSED, in the order the analysis ranked them:
+     (1) no phone → tel: link in sticky header, hero, why-us, value, visit, footer + fixed mobile bar;
+     (2) dead-end site → this full-length page; every promised destination is a real URL (no IDX search is
+         claimed, because no search tool exists in the scraped data and inventing one would be a fake feature);
+     (3) no differentiation → rating + count + since-2013 + KW brokerage, above the fold and in the proof strip;
+     (4) home-value question abandoned → dedicated section below linking their real /home-value page and the phone;
+     (5) "are they even real" → published hours table, keyless map at the scraped coordinates, service-area list,
+         and RealEstateAgent JSON-LD. No street address is claimed: lead.json's address field is empty. -->
+
+<!-- ============================ 5. HOME VALUE ============================ -->
+<section id="value" class="bg-bone">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 py-16 sm:py-20">
+    <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+      <div class="order-2 lg:order-1">
+        <p class="text-[11px] uppercase tracking-[.24em] font-semibold text-kw">For sellers</p>
+        <h2 class="mt-3 font-display text-4xl sm:text-5xl font-semibold tracking-tight leading-[1.05]">What's my home worth?</h2>
+        <p class="mt-4 text-[17px] leading-relaxed text-ink/75">
+          It is the first question every seller asks and the one their site answers on a dedicated page. Two ways to
+          get the number: run their online home-value tool, or call and talk through the specifics no automated
+          estimate can see — the addition, the roof, the school-zone line running down your street.
+        </p>
+        <div class="mt-6 grid sm:grid-cols-2 gap-4">
+          <a href="https://emmettrealtygroup.com/home-value" rel="noopener" class="tap flex flex-col justify-center rounded-2xl border border-ink/15 bg-white px-5 py-4 hover:border-kw transition card-lift">
+            <span class="font-semibold">Home Value tool</span>
+            <span class="text-[14px] text-ink/60">emmettrealtygroup.com/home-value →</span>
+          </a>
+          <a href="tel:+16783799896" class="tap flex flex-col justify-center rounded-2xl bg-kw px-5 py-4 text-white hover:bg-kwdark transition card-lift">
+            <span class="font-semibold">Call (678) 379-9896</span>
+            <span class="text-[14px] text-white/80">Talk it through with an agent</span>
+          </a>
+        </div>
+        <p class="mt-5 text-[14px] text-ink/60">
+          Prefer to write it out? Email the address and anything unusual about the house to
+          <a class="link-u text-kw" href="mailto:danny@emmettrealtygroup.com">danny@emmettrealtygroup.com</a>.
+        </p>
+      </div>
+      <div class="order-1 lg:order-2">
+        <div class="relative rounded-3xl overflow-hidden border border-ink/10">
+          <img src="assets/asset_4.jpg" width="400" height="267" loading="lazy" alt="Staged living room with a white coffered ceiling, built-in shelving, a fireplace and a wall-mounted television" class="w-full h-[300px] sm:h-[420px] object-cover">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 6. COMMUNITIES ============================ -->
+<section id="communities" class="bg-white border-y border-ink/10">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 py-16 sm:py-20">
+    <div class="max-w-3xl">
+      <p class="text-[11px] uppercase tracking-[.24em] font-semibold text-kw">Communities we call home</p>
+      <h2 class="mt-3 font-display text-4xl sm:text-5xl font-semibold tracking-tight leading-[1.05]">Living in Gwinnett — and the towns around it</h2>
+      <p class="mt-4 text-[17px] leading-relaxed text-ink/75">
+        The brand name is the service area. Grayson and Loganville each have a full community guide on
+        emmettrealtygroup.com with an area write-up and points of interest; the rest of the towns below are part of
+        the same Gwinnett-and-around footprint the team works.
+      </p>
+    </div>
+
+    <!-- BUILD NOTE — COMMUNITY LIST EVIDENCE: Grayson and Loganville have dedicated harvested pages
+         (/grayson, /loganville, each with "ABOUT ..." and "POINTS OF INTEREST NEAR ..." headings) and are the only
+         two rendered as city-labelled links, each pointing at its own page. Auburn appears in the homepage heading
+         run under "Communities We Call Home". Snellville, Dacula, Lilburn, Peachtree Corners, Sugar Hill,
+         Braselton and Between were each captured as community-page labels in the harvested material and are
+         rendered as plain service-area text, not as links, because no per-city destination is evidenced for them.
+         Gwinnett County comes from the business name "Living in Gwinnett". Every name here also appears in
+         areaServed in the JSON-LD, and areaServed contains nothing else. -->
+
+    <div class="mt-8 grid lg:grid-cols-12 gap-5">
+      <div class="lg:col-span-5 grid sm:grid-cols-2 lg:grid-cols-1 gap-3">
+        <a href="https://emmettrealtygroup.com/grayson" rel="noopener" class="tap flex items-center justify-between gap-4 rounded-2xl border border-ink/12 bg-bone px-5 py-4 hover:border-kw hover:text-kw transition card-lift">
+          <span>
+            <span class="block font-display text-xl font-semibold">Grayson</span>
+            <span class="block text-[13px] text-ink/60">Area guide &amp; points of interest</span>
+          </span>
+          <span aria-hidden="true" class="text-kw font-bold">→</span>
+        </a>
+        <a href="https://emmettrealtygroup.com/loganville" rel="noopener" class="tap flex items-center justify-between gap-4 rounded-2xl border border-ink/12 bg-bone px-5 py-4 hover:border-kw hover:text-kw transition card-lift">
+          <span>
+            <span class="block font-display text-xl font-semibold">Loganville</span>
+            <span class="block text-[13px] text-ink/60">Area guide &amp; points of interest</span>
+          </span>
+          <span aria-hidden="true" class="text-kw font-bold">→</span>
+        </a>
+        <a href="https://emmettrealtygroup.com/communities" rel="noopener" class="tap flex items-center justify-between gap-4 rounded-2xl bg-ink text-bone px-5 py-4 hover:bg-ink2 transition card-lift sm:col-span-2 lg:col-span-1">
+          <span>
+            <span class="block font-semibold">See all communities</span>
+            <span class="block text-[13px] text-bone/60">emmettrealtygroup.com/communities</span>
+          </span>
+          <span aria-hidden="true" class="text-kw font-bold">→</span>
+        </a>
+      </div>
+
+      <div class="lg:col-span-7 rounded-2xl border border-ink/12 bg-bone p-6 sm:p-8">
+        <h3 class="text-[11px] uppercase tracking-[.24em] font-semibold text-ink/55">Service area</h3>
+        <p class="mt-3 text-[19px] sm:text-[21px] leading-snug font-display font-semibold">
+          Gwinnett County, Georgia — including Grayson, Loganville, Auburn, Snellville, Dacula, Lilburn,
+          Peachtree Corners, Sugar Hill, Braselton and Between.
+        </p>
+        <p class="mt-4 text-[15px] leading-relaxed text-ink/70">
+          Buying or selling anywhere in that footprint — or moving in from outside it — starts with the same
+          conversation about price, timing and which streets actually fit what you need.
+        </p>
+        <a href="tel:+16783799896" class="tap mt-5 inline-flex items-center justify-center gap-2 rounded-full bg-kw px-6 text-white font-semibold hover:bg-kwdark transition">Call (678) 379-9896</a>
+      </div>
+    </div>
+
+    <div class="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <figure class="rounded-2xl overflow-hidden border border-ink/10">
+        <img src="assets/asset_23.jpg" width="600" height="400" loading="lazy" alt="Farmers-market produce stall with carrots, leeks and crates of fruit" class="h-44 w-full object-cover">
+      </figure>
+      <figure class="rounded-2xl overflow-hidden border border-ink/10">
+        <img src="assets/asset_22.jpg" width="600" height="450" loading="lazy" alt="Industrial-style cafe interior with wood tables, a staircase and seated patrons" class="h-44 w-full object-cover">
+      </figure>
+      <figure class="rounded-2xl overflow-hidden border border-ink/10">
+        <img src="assets/asset_21.jpg" width="600" height="400" loading="lazy" alt="Overhead view of a seated graduation crowd in light-blue gowns and white mortarboards" class="h-44 w-full object-cover">
+      </figure>
+    </div>
+    <p class="mt-3 text-[13px] text-ink/55">Decorative photography. These images are not of any named town, listing, school or business.</p>
+  </div>
+</section>
+
+<!-- thin full-bleed divider -->
+<div class="relative h-40 sm:h-56 overflow-hidden">
+  <img src="assets/asset_15.jpg" width="600" height="400" loading="lazy" alt="Log-sided house with a steep gray roof on a quiet lane at sunrise with tall conifers" class="w-full h-full object-cover">
+  <div class="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/25 to-transparent"></div>
+</div>
+
+<!-- ============================ 7. HOURS + LOCATION ============================ -->
+<section id="visit" class="bg-ink text-bone">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 py-16 sm:py-20">
+    <div class="grid lg:grid-cols-2 gap-10 lg:gap-14 items-start">
+      <div>
+        <p class="text-[11px] uppercase tracking-[.24em] font-semibold text-kw">Hours &amp; where to find them</p>
+        <h2 class="mt-3 font-display text-4xl sm:text-5xl font-semibold tracking-tight leading-[1.05]">Open seven days a week</h2>
+        <p class="mt-4 text-bone/75 leading-relaxed">
+          Hours exactly as published on the team's Google listing. Sunday is a short afternoon window — call ahead to
+          confirm before you drive out, and to set a showing time that fits your week.
+        </p>
+
+        <table class="mt-6 w-full text-[15px] border-collapse">
+          <caption class="sr-only">Weekly opening hours for Emmett Realty Group</caption>
+          <tbody>
+            <tr data-day="1" class="border-b border-white/10"><th scope="row" class="text-left font-medium py-3 text-bone/85">Monday</th><td class="py-3 text-right num text-bone">9 AM – 7 PM</td></tr>
+            <tr data-day="2" class="border-b border-white/10"><th scope="row" class="text-left font-medium py-3 text-bone/85">Tuesday</th><td class="py-3 text-right num text-bone">9 AM – 7 PM</td></tr>
+            <tr data-day="3" class="border-b border-white/10"><th scope="row" class="text-left font-medium py-3 text-bone/85">Wednesday</th><td class="py-3 text-right num text-bone">9 AM – 7 PM</td></tr>
+            <tr data-day="4" class="border-b border-white/10"><th scope="row" class="text-left font-medium py-3 text-bone/85">Thursday</th><td class="py-3 text-right num text-bone">9 AM – 7 PM</td></tr>
+            <tr data-day="5" class="border-b border-white/10"><th scope="row" class="text-left font-medium py-3 text-bone/85">Friday</th><td class="py-3 text-right num text-bone">9 AM – 7 PM</td></tr>
+            <tr data-day="6" class="border-b border-white/10"><th scope="row" class="text-left font-medium py-3 text-bone/85">Saturday</th><td class="py-3 text-right num text-bone">9 AM – 7 PM</td></tr>
+            <tr data-day="0"><th scope="row" class="text-left font-medium py-3 text-bone/85">Sunday</th><td class="py-3 text-right num text-bone">2 PM – 5 PM</td></tr>
+          </tbody>
+        </table>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="tel:+16783799896" class="tap inline-flex items-center justify-center gap-2 rounded-full bg-kw px-6 text-white font-semibold hover:bg-kwdark transition">Call (678) 379-9896</a>
+          <a href="https://www.google.com/maps/place/Emmett+Realty+Group+-+Keller+Williams+-+Living+in+Gwinnett/data=!4m7!3m6!1s0x88f5b8c327daaaab:0xb85c01787975abae!8m2!3d33.911304!4d-83.9591636!16s%2Fg%2F11f5fp310r!19sChIJq6raJ8O49YgRrqt1eXgBXLg" rel="noopener" class="tap inline-flex items-center justify-center rounded-full border border-white/25 px-6 font-semibold hover:bg-white/10 transition">Directions on Google Maps</a>
+        </div>
+        <p id="visit-status" class="mt-4 text-[14px] text-sand"></p>
+      </div>
+
+      <div>
+        <div class="rounded-3xl overflow-hidden border border-white/15 bg-white/5">
+          <iframe
+            title="Map showing the location of Emmett Realty Group - Keller Williams - Living in Gwinnett"
+            src="https://maps.google.com/maps?q=33.911304,-83.9591636&amp;output=embed"
+            width="600" height="420" style="border:0;width:100%;height:420px;display:block"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <img src="assets/asset_8.jpg" width="600" height="400" loading="lazy" alt="Front porch of a blue clapboard house with white wicker furniture and a porch swing" class="mt-4 w-full h-40 object-cover rounded-2xl border border-white/10">
+      </div>
+    </div>
+  </div>
+</section>
+<!-- BUILD NOTE — HOURS are published exactly as scraped (Wed–Sat and Mon–Tue 9 AM–7 PM, Sun 2–5 PM); the visible
+     table, the "Open 7 days" and "Until 7 PM Mon–Sat" chips, and the JSON-LD openingHoursSpecification all assert
+     the same values. No open/closed state is hardcoded — the status line is computed client-side in
+     America/New_York and stays empty when JS is off. -->
+
+<!-- ============================ CALL SCRIPT ============================ -->
+<section class="relative overflow-hidden bg-ink2">
+  <img src="assets/page-bg.jpg" width="1400" height="510" loading="lazy" alt="Softly blurred kitchen cabinetry and backsplash" class="absolute inset-0 w-full h-full object-cover opacity-25">
+  <div class="relative mx-auto max-w-7xl px-4 sm:px-6 py-16 sm:py-20">
+    <div class="grid lg:grid-cols-12 gap-8 items-start">
+      <div class="lg:col-span-4">
+        <p class="text-[11px] uppercase tracking-[.24em] font-semibold text-kw">Before you hang up</p>
+        <h2 class="mt-3 font-display text-3xl sm:text-4xl font-semibold text-bone tracking-tight leading-[1.08]">Six questions worth asking on the call</h2>
+        <p class="mt-4 text-bone/75 leading-relaxed">
+          Commission structures, current inventory and timelines change week to week, so this page does not quote any
+          of them. Ask these instead — the answers are the whole comparison between one agent and the next.
+        </p>
+        <a href="tel:+16783799896" class="tap mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-kw px-6 text-white font-semibold hover:bg-kwdark transition">Call (678) 379-9896</a>
+      </div>
+      <ol class="lg:col-span-8 grid sm:grid-cols-2 gap-3 text-bone/85">
+        <li class="rounded-xl border border-white/12 bg-ink/60 backdrop-blur-sm p-4"><span class="text-kw font-bold num mr-2">1.</span>What is your commission, and what exactly does it cover?</li>
+        <li class="rounded-xl border border-white/12 bg-ink/60 backdrop-blur-sm p-4"><span class="text-kw font-bold num mr-2">2.</span>How many homes have you closed in my specific community?</li>
+        <li class="rounded-xl border border-white/12 bg-ink/60 backdrop-blur-sm p-4"><span class="text-kw font-bold num mr-2">3.</span>What is the realistic price range for my house today, and what moves it?</li>
+        <li class="rounded-xl border border-white/12 bg-ink/60 backdrop-blur-sm p-4"><span class="text-kw font-bold num mr-2">4.</span>How long is the listing agreement, and can I cancel it?</li>
+        <li class="rounded-xl border border-white/12 bg-ink/60 backdrop-blur-sm p-4"><span class="text-kw font-bold num mr-2">5.</span>Who will actually attend my showings and answer my calls?</li>
+        <li class="rounded-xl border border-white/12 bg-ink/60 backdrop-blur-sm p-4"><span class="text-kw font-bold num mr-2">6.</span>What is the first appointment, and how soon can we have it?</li>
+      </ol>
+    </div>
+  </div>
+</section>
+<!-- BUILD NOTE — CALL-SCRIPT BLOCK stands in for commercially unknowable data (commission rates, current
+     inventory, appointment lead times). None of those are invented anywhere on this page. -->
+
+<!-- ============================ 8. ABOUT / AFFILIATION ============================ -->
+<section id="about" class="bg-bone">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 py-16 sm:py-20">
+    <div class="grid lg:grid-cols-12 gap-10 items-center">
+      <figure class="lg:col-span-4">
+        <img src="assets/NAMAR-2021-scaled.jpg" width="800" height="1198" loading="lazy" alt="Portrait of a smiling man with gray hair, a white goatee and rimless glasses, wearing a white shirt in front of a blue banner backdrop" class="w-full max-w-sm mx-auto rounded-3xl object-cover border border-ink/10 shadow-xl">
+        <figcaption class="mt-3 text-[13px] text-ink/55 text-center max-w-sm mx-auto">Photograph published on emmettrealtygroup.com.</figcaption>
+      </figure>
+      <div class="lg:col-span-8">
+        <p class="text-[11px] uppercase tracking-[.24em] font-semibold text-kw">About</p>
+        <h2 class="mt-3 font-display text-4xl sm:text-5xl font-semibold tracking-tight leading-[1.05]">Emmett Realty Group, under Keller Williams</h2>
+        <p class="mt-4 text-[17px] leading-relaxed text-ink/75">
+          A real estate team calling itself Living in Gwinnett, working buyers, sellers, investors and relocations
+          across Gwinnett County, Georgia, and trading under the Keller Williams brokerage. Their own site names
+          <strong class="font-semibold text-ink">Danny Emmett</strong> as the contact on the Get In Touch page, at
+          <a class="link-u text-kw" href="mailto:danny@emmettrealtygroup.com">danny@emmettrealtygroup.com</a>.
+        </p>
+        <div class="mt-6 grid sm:grid-cols-3 gap-4">
+          <div class="rounded-2xl bg-white border border-ink/10 p-5">
+            <div class="font-display text-3xl font-semibold num">5.0</div>
+            <p class="text-[14px] text-ink/65 mt-1">Google rating across 42 reviews</p>
+          </div>
+          <div class="rounded-2xl bg-white border border-ink/10 p-5">
+            <div class="font-display text-3xl font-semibold num">2013</div>
+            <p class="text-[14px] text-ink/65 mt-1">Serving Gwinnett County since</p>
+          </div>
+          <div class="rounded-2xl bg-white border border-ink/10 p-5 flex flex-col justify-between">
+            <img src="assets/kw-Logo.png" width="315" height="62" loading="lazy" alt="Keller Williams kw brand logo" class="h-8 w-auto">
+            <p class="text-[14px] text-ink/65 mt-3">Brokerage affiliation</p>
+          </div>
+        </div>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="tel:+16783799896" class="tap inline-flex items-center justify-center gap-2 rounded-full bg-kw px-6 text-white font-semibold hover:bg-kwdark transition">Call (678) 379-9896</a>
+          <a href="https://emmettrealtygroup.com/about" rel="noopener" class="tap inline-flex items-center justify-center rounded-full border border-ink/20 px-6 font-semibold hover:bg-white transition">About page on their site</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- BUILD NOTE — PORTRAIT: the subject of NAMAR-2021-scaled.jpg is not identified anywhere in the harvest, so the
+     image is captioned only as a photograph published on the team's own site and is never labelled with a name.
+     Danny Emmett is named in text because the harvested /contact-us page names him; the two are deliberately not
+     presented as the same assertion. His name and email also appear in the hero and in why-us #05 so the contact
+     does not sit only at the bottom of the page. -->
+
+<!-- ============================ 9. CONTACT / FOOTER ============================ -->
+<footer id="contact" class="bg-ink text-bone border-t border-white/10">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 py-14">
+    <div class="grid md:grid-cols-12 gap-10">
+      <div class="md:col-span-5">
+        <div class="flex items-center gap-3">
+          <img src="assets/Logo-50.png" width="254" height="50" loading="lazy" alt="Keller Williams kw logo" class="h-8 w-auto">
+          <span class="h-7 w-px bg-white/20"></span>
+          <span class="font-display text-lg font-semibold">Emmett Realty Group</span>
+        </div>
+        <p class="mt-4 text-bone/70 text-[15px] leading-relaxed max-w-md">
+          Emmett Realty Group – Keller Williams – Living in Gwinnett. Real estate agent serving Gwinnett County,
+          Georgia. Rated 5.0 from 42 Google reviews.
+        </p>
+        <a href="tel:+16783799896" class="tap mt-5 inline-flex items-center justify-center gap-2 rounded-full bg-kw px-6 text-white font-semibold hover:bg-kwdark transition">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+          (678) 379-9896
+        </a>
+        <p class="mt-3 text-[14px] text-bone/65">
+          Email <a class="link-u text-sand hover:text-white" href="mailto:danny@emmettrealtygroup.com">danny@emmettrealtygroup.com</a>
+        </p>
+      </div>
+
+      <div class="md:col-span-3">
+        <h3 class="text-[11px] uppercase tracking-[.24em] font-semibold text-sand/80">Hours</h3>
+        <ul class="mt-4 space-y-1.5 text-[14px] text-bone/75">
+          <li class="flex justify-between gap-4"><span>Mon – Sat</span><span class="num">9 AM – 7 PM</span></li>
+          <li class="flex justify-between gap-4"><span>Sunday</span><span class="num">2 PM – 5 PM</span></li>
+        </ul>
+        <h3 class="mt-7 text-[11px] uppercase tracking-[.24em] font-semibold text-sand/80">Find us</h3>
+        <ul class="mt-4 space-y-2 text-[14px]">
+          <li><a class="link-u text-bone/80 hover:text-white" rel="noopener" href="https://www.google.com/maps/place/Emmett+Realty+Group+-+Keller+Williams+-+Living+in+Gwinnett/data=!4m7!3m6!1s0x88f5b8c327daaaab:0xb85c01787975abae!8m2!3d33.911304!4d-83.9591636!16s%2Fg%2F11f5fp310r!19sChIJq6raJ8O49YgRrqt1eXgBXLg">Google Business listing &amp; directions</a></li>
+          <li><a class="link-u text-bone/80 hover:text-white" rel="noopener" href="https://emmettrealtygroup.com/">emmettrealtygroup.com</a></li>
+          <li><a class="link-u text-bone/80 hover:text-white" rel="noopener" href="https://emmettrealtygroup.com/contact-us">Get in touch page</a></li>
+        </ul>
+      </div>
+
+      <div class="md:col-span-4">
+        <h3 class="text-[11px] uppercase tracking-[.24em] font-semibold text-sand/80">On this page</h3>
+        <ul class="mt-4 grid grid-cols-2 gap-y-2 text-[14px]">
+          <li><a class="link-u text-bone/80 hover:text-white" href="#services">Services</a></li>
+          <li><a class="link-u text-bone/80 hover:text-white" href="#why">Why this team</a></li>
+          <li><a class="link-u text-bone/80 hover:text-white" href="#value">Home value</a></li>
+          <li><a class="link-u text-bone/80 hover:text-white" href="#communities">Communities</a></li>
+          <li><a class="link-u text-bone/80 hover:text-white" href="#visit">Hours &amp; map</a></li>
+          <li><a class="link-u text-bone/80 hover:text-white" href="#about">About</a></li>
+        </ul>
+        <h3 class="mt-7 text-[11px] uppercase tracking-[.24em] font-semibold text-sand/80">Service area</h3>
+        <p class="mt-3 text-[14px] text-bone/70 leading-relaxed">
+          Gwinnett County, Georgia — including Grayson, Loganville, Auburn, Snellville, Dacula, Lilburn,
+          Peachtree Corners, Sugar Hill, Braselton and Between.
+        </p>
+      </div>
+    </div>
+
+    <div class="mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between text-[12px] text-bone/50">
+      <p>&copy; <span id="yr">2026</span> Emmett Realty Group – Keller Williams – Living in Gwinnett. Each Keller Williams office is independently owned and operated.</p>
+      <p>Photography on this page is decorative and does not depict specific listings, addresses or offices.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================ MOBILE STICKY ACTION BAR ============================ -->
+<div class="md:hidden fixed bottom-0 inset-x-0 z-50 bg-ink/95 backdrop-blur border-t border-white/15 px-3 py-2.5 flex gap-2">
+  <a href="tel:+16783799896" class="tap flex-1 inline-flex items-center justify-center gap-2 rounded-full bg-kw text-white font-semibold text-[15px]">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+    Call now
+  </a>
+  <a href="#visit" class="tap inline-flex items-center justify-center rounded-full border border-white/25 px-5 text-bone font-semibold text-[15px]">Hours</a>
+</div>
+
+<!-- ============================ JSON-LD ============================ -->
+<!-- BUILD NOTE — SCHEMA: @type RealEstateAgent (a LocalBusiness subtype, matching the scraped category
+     "real estate agency"). No aggregateRating is published — the 5.0/42 figures are Google's review data, not
+     first-party reviews this site hosts, so they live in visible copy and the meta description only.
+     No PostalAddress: lead.json's address field is empty and nothing else in the harvest supplies a street
+     address. areaServed matches the visible service-area copy item for item, in both directions.
+     image resolves to a real file shipped in assets/. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RealEstateAgent",
+  "name": "Emmett Realty Group - Keller Williams - Living in Gwinnett",
+  "url": "https://emmettrealtygroup.com/",
+  "telephone": "+1-678-379-9896",
+  "email": "danny@emmettrealtygroup.com",
+  "image": "assets/danny-emmett-bg.jpg",
+  "logo": "assets/kw-Logo.png",
+  "hasMap": "https://www.google.com/maps/place/Emmett+Realty+Group+-+Keller+Williams+-+Living+in+Gwinnett/data=!4m7!3m6!1s0x88f5b8c327daaaab:0xb85c01787975abae!8m2!3d33.911304!4d-83.9591636!16s%2Fg%2F11f5fp310r!19sChIJq6raJ8O49YgRrqt1eXgBXLg",
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 33.911304,
+    "longitude": -83.9591636
+  },
+  "areaServed": [
+    { "@type": "AdministrativeArea", "name": "Gwinnett County, Georgia" },
+    { "@type": "City", "name": "Grayson" },
+    { "@type": "City", "name": "Loganville" },
+    { "@type": "City", "name": "Auburn" },
+    { "@type": "City", "name": "Snellville" },
+    { "@type": "City", "name": "Dacula" },
+    { "@type": "City", "name": "Lilburn" },
+    { "@type": "City", "name": "Peachtree Corners" },
+    { "@type": "City", "name": "Sugar Hill" },
+    { "@type": "City", "name": "Braselton" },
+    { "@type": "City", "name": "Between" }
+  ],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      "opens": "09:00",
+      "closes": "19:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Sunday",
+      "opens": "14:00",
+      "closes": "17:00"
+    }
+  ],
+  "makesOffer": [
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Buying" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Selling" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Investing" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Relocation" } }
+  ]
+}
+</script>
+
+<script>
+(function () {
+  "use strict";
+
+  /* ---------- 3D hero drivers: pointer (desktop) + scroll, transform/opacity only ---------- */
+  try {
+    var scene = document.getElementById('scene');
+    var stage = scene ? scene.parentElement : null;
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var fine = window.matchMedia('(pointer: fine)').matches;
+
+    if (scene && stage && !reduce) {
+      var mx = 0, my = 0, sc = 0, queued = false;
+
+      function paint() {
+        queued = false;
+        scene.style.setProperty('--mx', mx.toFixed(3));
+        scene.style.setProperty('--my', my.toFixed(3));
+        scene.style.setProperty('--sc', sc.toFixed(3));
+      }
+      function schedule() {
+        if (!queued) { queued = true; window.requestAnimationFrame(paint); }
+      }
+      if (fine) {
+        stage.addEventListener('pointermove', function (e) {
+          var r = stage.getBoundingClientRect();
+          if (!r.width || !r.height) return;
+          mx = ((e.clientX - r.left) / r.width) * 2 - 1;
+          my = ((e.clientY - r.top) / r.height) * 2 - 1;
+          schedule();
+        }, { passive: true });
+        stage.addEventListener('pointerleave', function () { mx = 0; my = 0; schedule(); }, { passive: true });
+      }
+      window.addEventListener('scroll', function () {
+        var h = stage.offsetHeight || 1;
+        var v = window.pageYOffset / h;
+        sc = v < 0 ? 0 : (v > 1 ? 1 : v);
+        schedule();
+      }, { passive: true });
+      schedule();
+    }
+  } catch (e) { /* hero falls back to its CSS rest transforms */ }
+
+  /* ---------- condensing sticky header: class toggle, transform only, applied in rAF ---------- */
+  try {
+    var hdr = document.getElementById('site-header');
+    if (hdr) {
+      var hqueued = false, hdown = false;
+      window.addEventListener('scroll', function () {
+        hdown = window.pageYOffset > 40;
+        if (!hqueued) {
+          hqueued = true;
+          window.requestAnimationFrame(function () {
+            hqueued = false;
+            hdr.classList.toggle('condensed', hdown);
+          });
+        }
+      }, { passive: true });
+    }
+  } catch (e) {}
+
+  /* ---------- open/closed, computed live from the published hours (America/New_York) ---------- */
+  try {
+    var HOURS = { 0: [14, 17], 1: [9, 19], 2: [9, 19], 3: [9, 19], 4: [9, 19], 5: [9, 19], 6: [9, 19] };
+    var DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    var IDX = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
+
+    var parts = new Intl.DateTimeFormat('en-US', {
+      timeZone: 'America/New_York', weekday: 'short', hour: 'numeric', minute: 'numeric', hour12: false
+    }).formatToParts(new Date());
+
+    var wd = null, hh = null, mm = null;
+    for (var i = 0; i < parts.length; i++) {
+      if (parts[i].type === 'weekday') wd = IDX[parts[i].value];
+      if (parts[i].type === 'hour') hh = parseInt(parts[i].value, 10) % 24;
+      if (parts[i].type === 'minute') mm = parseInt(parts[i].value, 10);
+    }
+
+    if (wd !== null && hh !== null) {
+      var now = hh + mm / 60;
+      var today = HOURS[wd];
+      var open = now >= today[0] && now < today[1];
+
+      function fmt(h) {
+        var suffix = h >= 12 ? 'PM' : 'AM';
+        var display = h % 12 === 0 ? 12 : h % 12;
+        return display + ' ' + suffix;
+      }
+
+      var label;
+      if (open) {
+        label = 'Open now \u00b7 closes ' + fmt(today[1]);
+      } else if (now < today[0]) {
+        label = 'Closed now \u00b7 opens ' + fmt(today[0]) + ' today';
+      } else {
+        var d = (wd + 1) % 7;
+        label = 'Closed now \u00b7 opens ' + fmt(HOURS[d][0]) + ' ' + DAYS[d];
+      }
+
+      var hero = document.getElementById('hero-status');
+      if (hero) { hero.textContent = label; hero.classList.remove('hidden'); hero.classList.add('inline-flex'); }
+      var hdrS = document.getElementById('hdr-status');
+      if (hdrS) { hdrS.textContent = label; }
+      var visitS = document.getElementById('visit-status');
+      if (visitS) { visitS.textContent = label + ' (Eastern time).'; }
+
+      var row = document.querySelector('tr[data-day="' + wd + '"]');
+      if (row) { row.classList.add('bg-white/10'); }
+    }
+  } catch (e) { /* status simply stays empty */ }
+
+  /* ---------- copyright year ---------- */
+  try {
+    var yr = document.getElementById('yr');
+    if (yr) yr.textContent = String(new Date().getFullYear());
+  } catch (e) {}
+})();
+</script>
+</body>
+</html>
