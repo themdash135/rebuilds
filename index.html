@@ -4,40 +4,254 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>Rebuilds</title>
+<title>Rebuilds — before and after</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
-  body{font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif;margin:0;
-       padding:2rem 1.25rem;max-width:44rem;color:#111}
-  h1{font-size:1.35rem;margin:0 0 .35rem}
-  p.sub{margin:0 0 1.75rem;color:#555}
-  ul{list-style:none;padding:0;margin:0}
-  li{border-top:1px solid #e5e5e5;padding:.85rem 0}
-  a{color:#0b5cff;text-decoration:none;font-weight:600}
-  a:hover{text-decoration:underline}
-  span.was{display:block;font-size:.85rem;color:#777;font-weight:400;margin-top:.15rem}
-  span.was a{color:#777;font-weight:400}
+  :root{
+    --ink:#16181C; --paper:#F6F6F4; --card:#FFFFFF; --rule:#E2E2DD;
+    --dim:#6C7076; --link:#17457A; --hi:#FFB000;
+    --disp:"Barlow Condensed","Arial Narrow",system-ui,sans-serif;
+    --body:system-ui,-apple-system,"Segoe UI",sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);
+       font:16px/1.55 var(--body);-webkit-text-size-adjust:100%}
+  .wrap{max-width:52rem;margin:0 auto;padding:0 1.15rem}
+  a{color:var(--link)}
+  a:focus-visible{outline:3px solid var(--hi);outline-offset:2px;border-radius:2px}
+
+  .band{background:var(--ink);color:#fff;padding:2.4rem 0 2.1rem;margin-bottom:1.6rem}
+  .eyebrow{font-family:var(--disp);text-transform:uppercase;letter-spacing:.18em;
+           font-size:.8rem;font-weight:600;color:var(--hi);margin:0 0 .45rem}
+  .band h1{font-family:var(--disp);font-weight:700;text-transform:uppercase;
+           letter-spacing:.01em;font-size:clamp(2.6rem,11vw,4.2rem);line-height:.92;
+           margin:0 0 .7rem}
+  .lede{margin:0;max-width:34rem;color:#C9CCD1;font-size:1.02rem}
+
+  .order{font-family:var(--disp);text-transform:uppercase;letter-spacing:.13em;
+         font-size:.78rem;font-weight:600;color:var(--dim);margin:0 0 .6rem}
+  .jobs{list-style:none;margin:0;padding:0}
+  .job{background:var(--card);border:1px solid var(--rule);border-radius:3px;
+       padding:1.05rem 1.1rem;margin-bottom:.55rem;
+       display:grid;gap:.85rem;grid-template-columns:1fr}
+  .job h2{font-family:var(--disp);font-weight:600;text-transform:uppercase;
+          letter-spacing:.015em;font-size:1.55rem;line-height:1.08;margin:0}
+  .job h2 a{color:inherit;text-decoration:none}
+  .job h2 a:hover{text-decoration:underline;text-decoration-thickness:2px;
+                  text-underline-offset:3px}
+  .meta{margin:.2rem 0 0;font-size:.85rem;color:var(--dim)}
+
+  .delta{display:flex;align-items:baseline;gap:.55rem;font-family:var(--disp);
+         font-variant-numeric:tabular-nums}
+  .n{font-size:2.05rem;font-weight:700;line-height:1}
+  .n.was{color:var(--dim);font-weight:500}
+  .arrow{flex:0 0 2.2rem;height:2px;background:var(--hi);position:relative;top:-.55rem}
+  .cap{font-family:var(--body);font-size:.72rem;color:var(--dim);
+       margin-left:.35rem;max-width:9rem;line-height:1.3}
+
+  .go{display:flex;flex-wrap:wrap;align-items:center;gap:.55rem .9rem}
+  .btn{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;
+       font-family:var(--disp);text-transform:uppercase;letter-spacing:.09em;
+       font-weight:600;font-size:.92rem;padding:.55rem 1.05rem;border-radius:2px}
+  .btn:hover{background:#000}
+  .was-link{font-size:.87rem;color:var(--dim)}
+  .none{font-size:.87rem;color:var(--dim)}
+
+  @media(min-width:44rem){
+    .job{grid-template-columns:1fr auto auto;align-items:center;gap:1.4rem;
+         padding:1.15rem 1.3rem}
+    .cap{display:none}
+    .go{justify-content:flex-end}
+  }
+
+  .how{border-top:1px solid var(--rule);margin:2.2rem 0 0;padding:1.6rem 0 3rem}
+  .how h3{font-family:var(--disp);text-transform:uppercase;letter-spacing:.13em;
+          font-size:.86rem;font-weight:600;margin:0 0 .7rem}
+  .how ol{margin:0;padding-left:1.15rem;color:#3A3E44;font-size:.94rem}
+  .how li{margin-bottom:.4rem}
 </style>
 </head>
 <body>
-<h1>Rebuilt sites</h1>
-<p class="sub">14 live. Tap a name for our rebuild, or "before" for the site it
-replaces. To change one, open <a href="https://claude.ai/code">claude.ai/code</a>,
-pick the <strong>rebuilds</strong> repo, and say which folder to edit.</p>
-<ul>
-<li><a href="atlas-health-center-94541/">Chiropractor in Hayward, CA</a><span class="was"><a href="https://www.atlashealthcenter.net/">before</a> — their site today</span></li>
-<li><a href="emmett-realty-group-keller-williams-living-in-gwin-30017/">Emmett Realty Group – Keller Williams</a><span class="was"><a href="https://emmettrealtygroup.com/">before</a> — their site today</span></li>
-<li><a href="ethical-works-llc-30017/">Ethical Works, LLC</a><span class="was"><a href="http://ethical-works.com/">before</a> — their site today</span></li>
-<li><a href="girard-roofing-30017/">Girard Roofing</a><span class="was"><a href="https://www.girardroofing.com/">before</a> — their site today</span></li>
-<li><a href="guero-mex-grill-30017/">Guero Mex Grill</a><span class="was"><a href="https://gueromexgrill2graysonga.com/">before</a> — their site today</span></li>
-<li><a href="inspire-hope-realty-30017/">Inspire Hope Realty</a><span class="was"><a href="http://www.inspirehoperealty.com/">before</a> — their site today</span></li>
-<li><a href="mo-williams-realty-30017/">Mo Williams Realty</a><span class="was"><a href="https://mowilliamsrealty.com/">before</a> — their site today</span></li>
-<li><a href="murray-air-services-30017/">Murray Air Services</a><span class="was"><a href="https://www.murrayairservices.com/">before</a> — their site today</span></li>
-<li><a href="national-restoration-inc-30017/">National Restoration Inc</a><span class="was"><a href="http://nationalrestorationatl.com/">before</a> — their site today</span></li>
-<li><a href="native-trees-30017/">Native Trees</a><span class="was"><a href="http://nativetreellc.com/">before</a> — their site today</span></li>
-<li><a href="oscar-trucks-and-cars-details-llc-30017/">Oscar Trucks and Cars Details LLC</a><span class="was"><a href="http://www.oscarsdetailingdudes.com/">before</a> — their site today</span></li>
-<li><a href="rooted-real-estate-group-30017/">Rooted Real Estate Group</a><span class="was"><a href="http://rootedregroup.com/">before</a> — their site today</span></li>
-<li><a href="timberstone-tree-service-30017/">Timberstone Tree Service</a><span class="was"><a href="https://timberstonetreeservice.com/">before</a> — their site today</span></li>
-<li><a href="wash-any-car-auto-detailing-services-30017/">WASH ANY CAR . Auto Detailing Services</a><span class="was"><a href="http://www.washanycaratl.com/">before</a> — their site today</span></li>
-</ul>
+<header class="band"><div class="wrap">
+  <p class="eyebrow">Concept redesigns</p>
+  <h1>Rebuilds</h1>
+  <p class="lede">14 local businesses, each with the site they have today and the
+  one we built to replace it. Open a rebuild to see the work; open their site to
+  see what it replaces.</p>
+</div></header>
+<div class="wrap">
+<p class="order">Ordered by how far the site moved · scores out of 100, before and after</p>
+<ol class="jobs">
+<li class="job">
+  <div class="who">
+    <h2><a href="oscar-trucks-and-cars-details-llc-30017/">Oscar Trucks and Cars Details LLC</a></h2>
+    <p class="meta">Auto Detailing · Grayson, GA</p>
+  </div>
+  <div class="delta" aria-label="Site score 16 out of 100 before, 94 after">
+    <span class="n was" aria-hidden="true">16</span><span class="arrow"></span><span class="n" aria-hidden="true">94</span>
+    <span class="cap">site score, before and after</span>
+  </div>
+  <div class="go"><a class="btn" href="oscar-trucks-and-cars-details-llc-30017/">Open rebuild</a><a class="was-link" href="http://www.oscarsdetailingdudes.com/">Their site today</a></div>
+</li>
+<li class="job">
+  <div class="who">
+    <h2><a href="inspire-hope-realty-30017/">Inspire Hope Realty</a></h2>
+    <p class="meta">Real Estate Agency · Grayson, GA</p>
+  </div>
+  <div class="delta" aria-label="Site score 25 out of 100 before, 97 after">
+    <span class="n was" aria-hidden="true">25</span><span class="arrow"></span><span class="n" aria-hidden="true">97</span>
+    <span class="cap">site score, before and after</span>
+  </div>
+  <div class="go"><a class="btn" href="inspire-hope-realty-30017/">Open rebuild</a><a class="was-link" href="http://www.inspirehoperealty.com/">Their site today</a></div>
+</li>
+<li class="job">
+  <div class="who">
+    <h2><a href="wash-any-car-auto-detailing-services-30017/">WASH ANY CAR . Auto Detailing Services</a></h2>
+    <p class="meta">Auto Detailing · Loganville, GA</p>
+  </div>
+  <div class="delta" aria-label="Site score 25 out of 100 before, 95 after">
+    <span class="n was" aria-hidden="true">25</span><span class="arrow"></span><span class="n" aria-hidden="true">95</span>
+    <span class="cap">site score, before and after</span>
+  </div>
+  <div class="go"><a class="btn" href="wash-any-car-auto-detailing-services-30017/">Open rebuild</a><a class="was-link" href="http://www.washanycaratl.com/">Their site today</a></div>
+</li>
+<li class="job">
+  <div class="who">
+    <h2><a href="guero-mex-grill-30017/">Guero Mex Grill</a></h2>
+    <p class="meta">Restaurant · Grayson, GA</p>
+  </div>
+  <div class="delta" aria-label="Site score 31 out of 100 before, 94 after">
+    <span class="n was" aria-hidden="true">31</span><span class="arrow"></span><span class="n" aria-hidden="true">94</span>
+    <span class="cap">site score, before and after</span>
+  </div>
+  <div class="go"><a class="btn" href="guero-mex-grill-30017/">Open rebuild</a><a class="was-link" href="https://gueromexgrill2graysonga.com/">Their site today</a></div>
+</li>
+<li class="job">
+  <div class="who">
+    <h2><a href="timberstone-tree-service-30017/">Timberstone Tree Service</a></h2>
+    <p class="meta">Tree Service · Loganville, GA</p>
+  </div>
+  <div class="delta" aria-label="Site score 37 out of 100 before, 97 after">
+    <span class="n was" aria-hidden="true">37</span><span class="arrow"></span><span class="n" aria-hidden="true">97</span>
+    <span class="cap">site score, before and after</span>
+  </div>
+  <div class="go"><a class="btn" href="timberstone-tree-service-30017/">Open rebuild</a><a class="was-link" href="https://timberstonetreeservice.com/">Their site today</a></div>
+</li>
+<li class="job">
+  <div class="who">
+    <h2><a href="murray-air-services-30017/">Murray Air Services</a></h2>
+    <p class="meta">HVAC Contractor</p>
+  </div>
+  <div class="delta" aria-label="Site score 45 out of 100 before, 99 after">
+    <span class="n was" aria-hidden="true">45</span><span class="arrow"></span><span class="n" aria-hidden="true">99</span>
+    <span class="cap">site score, before and after</span>
+  </div>
+  <div class="go"><a class="btn" href="murray-air-services-30017/">Open rebuild</a><a class="was-link" href="https://www.murrayairservices.com/">Their site today</a></div>
+</li>
+<li class="job">
+  <div class="who">
+    <h2><a href="mo-williams-realty-30017/">Mo Williams Realty</a></h2>
+    <p class="meta">Real Estate Agency · Grayson, GA</p>
+  </div>
+  <div class="delta" aria-label="Site score 42 out of 100 before, 94 after">
+    <span class="n was" aria-hidden="true">42</span><span class="arrow"></span><span class="n" aria-hidden="true">94</span>
+    <span class="cap">site score, before and after</span>
+  </div>
+  <div class="go"><a class="btn" href="mo-williams-realty-30017/">Open rebuild</a><a class="was-link" href="https://mowilliamsrealty.com/">Their site today</a></div>
+</li>
+<li class="job">
+  <div class="who">
+    <h2><a href="native-trees-30017/">Native Trees</a></h2>
+    <p class="meta">Tree Service · Grayson, GA</p>
+  </div>
+  <div class="delta" aria-label="Site score 46 out of 100 before, 96 after">
+    <span class="n was" aria-hidden="true">46</span><span class="arrow"></span><span class="n" aria-hidden="true">96</span>
+    <span class="cap">site score, before and after</span>
+  </div>
+  <div class="go"><a class="btn" href="native-trees-30017/">Open rebuild</a><a class="was-link" href="http://nativetreellc.com/">Their site today</a></div>
+</li>
+<li class="job">
+  <div class="who">
+    <h2><a href="rooted-real-estate-group-30017/">Rooted Real Estate Group</a></h2>
+    <p class="meta">Real Estate Agency · Grayson, GA</p>
+  </div>
+  <div class="delta" aria-label="Site score 49 out of 100 before, 97 after">
+    <span class="n was" aria-hidden="true">49</span><span class="arrow"></span><span class="n" aria-hidden="true">97</span>
+    <span class="cap">site score, before and after</span>
+  </div>
+  <div class="go"><a class="btn" href="rooted-real-estate-group-30017/">Open rebuild</a><a class="was-link" href="http://rootedregroup.com/">Their site today</a></div>
+</li>
+<li class="job">
+  <div class="who">
+    <h2><a href="national-restoration-inc-30017/">National Restoration Inc</a></h2>
+    <p class="meta">Roofing Contractor · Grayson, GA</p>
+  </div>
+  <div class="delta" aria-label="Site score 50 out of 100 before, 96 after">
+    <span class="n was" aria-hidden="true">50</span><span class="arrow"></span><span class="n" aria-hidden="true">96</span>
+    <span class="cap">site score, before and after</span>
+  </div>
+  <div class="go"><a class="btn" href="national-restoration-inc-30017/">Open rebuild</a><a class="was-link" href="http://nationalrestorationatl.com/">Their site today</a></div>
+</li>
+<li class="job">
+  <div class="who">
+    <h2><a href="ethical-works-llc-30017/">Ethical Works, LLC</a></h2>
+    <p class="meta">Pressure Washing · Grayson, GA</p>
+  </div>
+  <div class="delta" aria-label="Site score 54 out of 100 before, 97 after">
+    <span class="n was" aria-hidden="true">54</span><span class="arrow"></span><span class="n" aria-hidden="true">97</span>
+    <span class="cap">site score, before and after</span>
+  </div>
+  <div class="go"><a class="btn" href="ethical-works-llc-30017/">Open rebuild</a><a class="was-link" href="http://ethical-works.com/">Their site today</a></div>
+</li>
+<li class="job">
+  <div class="who">
+    <h2><a href="girard-roofing-30017/">Girard Roofing</a></h2>
+    <p class="meta">Roofing Contractor · Snellville, GA</p>
+  </div>
+  <div class="delta" aria-label="Site score 54 out of 100 before, 94 after">
+    <span class="n was" aria-hidden="true">54</span><span class="arrow"></span><span class="n" aria-hidden="true">94</span>
+    <span class="cap">site score, before and after</span>
+  </div>
+  <div class="go"><a class="btn" href="girard-roofing-30017/">Open rebuild</a><a class="was-link" href="https://www.girardroofing.com/">Their site today</a></div>
+</li>
+<li class="job">
+  <div class="who">
+    <h2><a href="emmett-realty-group-keller-williams-living-in-gwin-30017/">Emmett Realty Group - Keller Williams - Living in Gwinnett</a></h2>
+    <p class="meta">Real Estate Agency</p>
+  </div>
+  <div class="delta" aria-label="Site score 54 out of 100 before, 93 after">
+    <span class="n was" aria-hidden="true">54</span><span class="arrow"></span><span class="n" aria-hidden="true">93</span>
+    <span class="cap">site score, before and after</span>
+  </div>
+  <div class="go"><a class="btn" href="emmett-realty-group-keller-williams-living-in-gwin-30017/">Open rebuild</a><a class="was-link" href="https://emmettrealtygroup.com/">Their site today</a></div>
+</li>
+<li class="job">
+  <div class="who">
+    <h2><a href="atlas-health-center-94541/">Atlas Health Center</a></h2>
+    <p class="meta">Chiropractor · Hayward, CA</p>
+  </div>
+  <div class="delta" aria-label="Site score 68 out of 100 before, 98 after">
+    <span class="n was" aria-hidden="true">68</span><span class="arrow"></span><span class="n" aria-hidden="true">98</span>
+    <span class="cap">site score, before and after</span>
+  </div>
+  <div class="go"><a class="btn" href="atlas-health-center-94541/">Open rebuild</a><a class="was-link" href="https://www.atlashealthcenter.net/">Their site today</a></div>
+</li>
+</ol>
+<section class="how">
+  <h3>Changing a site</h3>
+  <ol>
+    <li>Accept the one GitHub invitation. One repo, one accept, permanent — every
+        site here and every site added later is already inside it.</li>
+    <li>Open <a href="https://claude.ai/code">claude.ai/code</a> and sign in with
+        your own Claude account.</li>
+    <li>Pick the <strong>rebuilds</strong> repo, name the site folder, and say what to
+        change in plain English.</li>
+    <li>Wait about a minute, then reload the site. Add <code>?v=2</code> to the URL
+        if your phone shows the old version.</li>
+  </ol>
+</section>
+</div>
 </body>
 </html>
