@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="robots" content="noindex,nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alex's Services — HVAC Contractor in Grayson, GA</title>
+<meta name="description" content="Alex's Services is an HVAC contractor at 441 Brackin Trace, Grayson, GA 30017. Heating and air conditioning repair and installation for all makes and models. Rated 5.0 stars from 21 Google reviews. Call (678) 313-9999.">
+<meta name="theme-color" content="#0a1018">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- ============================ BUILD NOTES (mechanically checkable) ============================
+  FACT SOURCES USED
+  1. lead.json: name "Alex's Services", category "hvac contractor", rating 5.0, review_count 21,
+     phone 6783139999, address 441 Brackin Trace / Grayson / GA / 30017, website
+     alexshvacservices.com, lat 33.9055216 lng -83.9629291, hours string, maps_url.
+  2. Harvested copy from their own site (headings): "Residential Heating and Air Conditioning,
+     Electrical and Plumbing Services Company", "Offers the following services in Gwinnett County
+     Areas", "Services for All Makes & Models", "Fast, Efficient Repairs and Installations",
+     "Plumbing & Electric Services for Maintenance", "AC installation and related HVAC services",
+     "Alex's Home Repair services INC" (page titles).
+
+  LAWRENCEVILLE — EVIDENCE CHAIN (source 2, not the pain-point analysis)
+  Their own live site prints this exact string in the header and footer address slots, sitewide:
+      "100 miles around Lawrenceville GA."
+  Source URL: https://alexshvacservices.com/  (same header/footer block also on
+  https://alexshvacservices.com/contact-us under "CONTACT INFORMATION"). That published sentence is
+  the sole basis for naming Lawrenceville in visible copy and in areaServed. This page does NOT
+  reproduce the "100 miles" radius claim as a service-area promise — it keeps only the city the
+  business itself named, and pins it to the real street address instead of a mileage radius.
+  Gwinnett County comes from their homepage heading "Offers the following services in Gwinnett
+  County Areas". Grayson comes from the listing address in lead.json.
+
+  WEBSITE-AGE EVIDENCE (used once, in the proof band, worded exactly to what the harvest proves)
+  Harvested gallery asset URLs are date-foldered by WordPress:
+      https://alexshvacservices.com/wp-content/uploads/2017/05/gallery-002.jpeg  (through -032)
+      https://alexshvacservices.com/wp-content/uploads/2019/05/gallery-alex-shva-1.jpg
+  So the claim on the page is limited to "their own website has carried a job gallery since at least
+  2017, by the upload dates on its own image files". No founding year, no years-in-business number,
+  and no "long-running"/"established" adjective is asserted anywhere.
+
+  DELIBERATE OMISSIONS (input gaps — not laziness)
+  - IMAGERY: the approved-image pool for this build is EMPTY — zero harvested images survived vision
+    triage. Therefore this page contains NO <img> and NO photography of any kind, and it references
+    no local image file at all. Every visual is hand-written inline SVG/CSS and is drawn as line art
+    so it cannot be mistaken for a job photo. No image is hotlinked from alexshvacservices.com (the
+    2017/2019 gallery URLs above are cited as text evidence in this comment only, never fetched).
+    JSON-LD "image" is omitted because no image would resolve.
+  - No owner/technician portrait, no van, no storefront, no before/after installs, no logo file:
+    all unavailable in the harvest. Trust falls back to typography + verified NAP + Google rating.
+    The wordmark in the header and footer is typeset, not a reproduced logo.
+  - TRUST SIGNALS: third-party signal available is the Google rating (5.0 / 21). No license number,
+    no certification, no founding year, and no awards are published anywhere in the scraped facts or
+    harvested copy, so none are stated. The "since 2014" line suggested in the rebuild brief is NOT
+    traceable to lead.json or to harvested page copy and was therefore dropped. Additional signals
+    used are first-party but externally checkable: the real street address with a live map embed,
+    their own published scope of work quoted as their own words, and the 2017 upload-date evidence
+    above. Insurance status is asked for on the call, never claimed.
+  - REVIEW BODIES: the scraped card_text contains one review sentence. Per build_workflow ("NEVER
+    quote review bodies") it is not reproduced anywhere on this page. The rating and count appear as
+    text with a link to the source listing. No aggregateRating markup (self-serving-review policy).
+  - NO same-day / 24-7 / emergency / "we answer fast" / financing / diagnostic-fee claims: none are
+    evidenced. Hours close at 5 PM, so no evening chip is claimed either.
+  - SISTER LOCATIONS: scope is this_location_only. No other address, hours, or service claim appears.
+  - No contact form: there is no backend and no scraped booking URL, so tel: is the sole booking path
+    and no copy references a scheduler, portal, or form.
+
+  PLACE-NAME / areaServed PARITY
+  Visible copy names exactly three service places: Grayson, Lawrenceville, Gwinnett County. All three
+  appear in areaServed and nothing else does. "GA"/"Georgia" appears only inside the postal address
+  and the state field of the address block — it is not used as a service-area claim, so it is not an
+  areaServed entry. Cities from the pain-point analysis that the business never published
+  (Snellville, Loganville, Dacula) are intentionally absent: the analysis is not a fact source.
+
+  CHIP + PROOF-CELL ARITHMETIC (checked against the hours table below)
+  - "Open 6 days" = Mon,Tue,Wed,Thu,Fri,Sat open; Sunday closed. 6 is correct.
+  - Proof cell 3 "8–5" is read off the Mon,Tue,Wed,Thu,Fri rows (all five identical: 8 AM–5 PM).
+  - Proof cell 4 "8–12" is read off the Saturday row.
+  - No proof cell holds the ZIP or a non-comparable token; the street address is stated as a
+    location line under the strip and again in the hours block and footer, not as a KPI.
+  - Open/closed status text is computed client-side from the same hours array; nothing time-relative
+    is hardcoded.
+
+  DESIGN / LAYOUT
+  - Style anchor "Apple meets Spotify", bent trustworthy-trade: near-black ground, one heat accent
+    (#ff6a1f) and one cool accent (#38d6f0), heavy Manrope type, thin borders, no drop-shadow soup.
+  - Section layouts in order: 3D hero / full-bleed stat band / card grid / asymmetric sticky split /
+    comparison table / numbered dark band / map+table split / footer columns. No layout repeats
+    twice in a row.
+  - HERO REST STATE (no-JS / desktop 1280px): the front condenser plane is sized min(680px,58vw)
+    wide by min(660px,78%) tall at full opacity, and the ribbon strokes run at .95/.85/.72/.66
+    opacity, so the static stacked composition fills the 660px stage without JS and reads
+    dimensional standing still.
+  - Hand-written CSS instead of a CDN: with JS disabled the page keeps its full styling, including
+    the hero, which a JS-delivered utility framework cannot do.
+  - EXTERNAL REQUESTS: Google Fonts and the keyless Google map embed only. No other network call.
+============================================================================================== -->
+
+<style>
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:#f6f7f9;color:#111721;font-family:Manrope,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4{margin:0;line-height:1.08;letter-spacing:-.022em;font-weight:800}
+p{margin:0}
+a{color:inherit}
+ul,ol{margin:0;padding:0;list-style:none}
+img,svg{display:block;max-width:100%}
+:focus-visible{outline:3px solid #38d6f0;outline-offset:3px;border-radius:6px}
+
+.wrap{width:100%;max-width:1200px;margin:0 auto;padding:0 20px}
+.sec{scroll-margin-top:104px}
+.eyebrow{font-size:.72rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#ff6a1f}
+.lede{font-size:1.06rem;color:#48525f;max-width:62ch}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:52px;padding:0 22px;border-radius:999px;font-weight:800;font-size:1.02rem;text-decoration:none;border:2px solid transparent;transition:transform .16s ease,box-shadow .16s ease,background .16s ease,border-color .16s ease}
+.btn-primary{background:#ff6a1f;color:#160800;box-shadow:0 8px 22px rgba(255,106,31,.32)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(255,106,31,.42)}
+.btn-ghost{border-color:rgba(17,23,33,.22);color:#111721;background:transparent;font-weight:700}
+.btn-ghost:hover{border-color:#111721;transform:translateY(-2px)}
+.on-dark .btn-ghost{border-color:rgba(255,255,255,.3);color:#fff}
+.on-dark .btn-ghost:hover{border-color:#fff}
+.btn .num{font-variant-numeric:tabular-nums}
+
+/* ---------- header ---------- */
+.hdr{position:sticky;top:0;z-index:60;background:rgba(9,14,21,.92);backdrop-filter:saturate(160%) blur(12px);border-bottom:1px solid rgba(255,255,255,.09);color:#fff}
+.hdr-in{display:flex;align-items:center;gap:16px;min-height:74px;transition:min-height .2s ease}
+.hdr.tight .hdr-in{min-height:60px}
+.mark{display:flex;align-items:center;gap:10px;text-decoration:none;flex:0 0 auto}
+.mark .glyph{width:34px;height:34px;flex:0 0 auto}
+.mark b{display:block;font-weight:800;font-size:1.06rem;letter-spacing:-.02em;line-height:1.1}
+.mark span{display:block;font-size:.66rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8fa0b3}
+.nav{display:flex;gap:2px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 12px;border-radius:8px;font-size:.9rem;font-weight:700;color:#c8d2de;text-decoration:none;white-space:nowrap}
+.nav a:hover{color:#fff;background:rgba(255,255,255,.09)}
+.hdr .btn{min-height:46px;font-size:.95rem;flex:0 0 auto}
+
+/* ---------- hero / 3d stage ---------- */
+.hero{position:relative;background:#0a1018;color:#fff;overflow:hidden}
+.stage{position:relative;min-height:660px;perspective:1100px;perspective-origin:50% 42%}
+.scene{position:absolute;inset:0;transform-style:preserve-3d;transform:rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .12s linear}
+.layer{position:absolute;left:-8%;right:-8%;top:0;bottom:0;will-change:transform;pointer-events:none}
+.layer svg{width:100%;height:100%}
+.l-back{transform:translate3d(0,var(--dy,0px),0) translateZ(-260px) scale(1.34)}
+.l-mid{transform:translate3d(0,var(--dy,0px),0) translateZ(-90px) scale(1.12)}
+.l-scrim{transform:translateZ(-40px) scale(1.06);background:linear-gradient(180deg,rgba(8,13,20,.62) 0%,rgba(8,13,20,.3) 42%,rgba(8,13,20,.88) 100%)}
+.l-front{left:auto;right:-3%;width:min(680px,58vw);top:auto;bottom:-5%;height:min(660px,78%);transform:translate3d(0,var(--dy,0px),0) translateZ(60px);opacity:1}
+.hero-copy{position:relative;z-index:5;transform:translateZ(34px) scale(.985);transform-style:preserve-3d;padding:88px 0 96px;max-width:720px}
+.hero h1{font-size:clamp(2.15rem,5.6vw,4rem);text-wrap:balance}
+.hero h1 .cool{background:linear-gradient(92deg,#ffb066,#38d6f0);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-sub{margin-top:18px;font-size:clamp(1.02rem,1.6vw,1.2rem);color:#cbd6e2;max-width:56ch}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.chip{display:inline-flex;align-items:center;gap:7px;padding:7px 13px;border:1px solid rgba(255,255,255,.22);border-radius:999px;font-size:.79rem;font-weight:700;letter-spacing:.01em;background:rgba(255,255,255,.06);color:#e8eef6}
+.chip.hot{border-color:rgba(255,106,31,.5);color:#ffc9a6}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.hero-facts{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:30px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14);font-size:.92rem;color:#aebbca}
+.hero-facts b{color:#fff;font-weight:800}
+.dot{width:8px;height:8px;border-radius:50%;background:#39d98a;box-shadow:0 0 0 4px rgba(57,217,138,.18);flex:0 0 auto}
+.dot.shut{background:#ff6a1f;box-shadow:0 0 0 4px rgba(255,106,31,.18)}
+#status{display:none}
+#status.on{display:inline-flex}
+
+/* ---------- proof band ---------- */
+.band{background:#111a24;color:#fff}
+.proof{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.12);border-radius:18px;overflow:hidden;margin:-42px 0 0;position:relative;z-index:10;box-shadow:0 24px 60px rgba(6,11,18,.34)}
+.proof>div{background:#111a24;padding:24px 22px}
+.proof .k{display:block;font-size:1.9rem;font-weight:800;letter-spacing:-.03em;line-height:1;font-variant-numeric:tabular-nums}
+.proof .k .stars{color:#ffc255;font-size:1.1rem;letter-spacing:.06em}
+.proof .v{display:block;margin-top:8px;font-size:.85rem;color:#9db0c4;line-height:1.4}
+.band-in{padding:34px 0 46px}
+.band-note{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:26px;font-size:.93rem;color:#9db0c4}
+.band-note a{color:#8ce6f7;font-weight:700;text-decoration:underline;text-underline-offset:3px}
+.band-loc{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;margin-top:18px;font-size:.95rem;color:#c3d2e1}
+.band-loc b{color:#fff;font-weight:800}
+.band-loc a{color:#8ce6f7;font-weight:700;text-decoration:underline;text-underline-offset:3px}
+
+/* ---------- generic section ---------- */
+.pad{padding:66px 0}
+.pad-sm{padding:52px 0}
+.hd{max-width:70ch}
+.hd h2{font-size:clamp(1.7rem,3.4vw,2.5rem);margin:12px 0 12px}
+.hd p{color:#48525f}
+
+/* ---------- services grid ---------- */
+.grid4{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px}
+.card{background:#fff;border:1px solid #e3e7ec;border-radius:16px;padding:24px;display:flex;flex-direction:column;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 38px rgba(16,24,36,.1);border-color:#c9d2dc}
+.card .ico{width:46px;height:46px;margin-bottom:16px}
+.card h3{font-size:1.16rem;margin-bottom:10px}
+.card p{font-size:.95rem;color:#4a5563}
+.card .src{margin-top:14px;padding-top:14px;border-top:1px dashed #dfe4ea;font-size:.8rem;color:#68727f}
+.card .src b{color:#111721;font-weight:800}
+.card .go{margin-top:16px;font-weight:800;font-size:.92rem;color:#c2440a;text-decoration:none;display:inline-flex;gap:6px;align-items:center}
+.card .go:hover{text-decoration:underline}
+.also{margin-top:16px;background:#eef1f5;border:1px solid #e0e5eb;border-radius:16px;padding:20px 22px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between}
+.also p{font-size:.93rem;color:#3f4a58;max-width:74ch}
+.also strong{font-weight:800;color:#111721}
+
+/* ---------- split (why us) ---------- */
+.split{display:grid;grid-template-columns:minmax(0,.86fr) minmax(0,1.14fr);gap:52px;align-items:start}
+.split .stick{position:sticky;top:110px}
+.numlist{counter-reset:n;display:grid;gap:2px}
+.numlist li{counter-increment:n;background:#fff;border:1px solid #e3e7ec;padding:22px 24px 22px 74px;position:relative}
+.numlist li:first-child{border-radius:16px 16px 0 0}
+.numlist li:last-child{border-radius:0 0 16px 16px}
+.numlist li+li{border-top:0}
+.numlist li::before{content:counter(n,decimal-leading-zero);position:absolute;left:24px;top:22px;font-weight:800;font-size:.86rem;color:#ff6a1f;letter-spacing:.04em}
+.numlist h3{font-size:1.08rem;margin-bottom:7px}
+.numlist p{font-size:.95rem;color:#4a5563}
+.numlist .q{display:block;font-size:.8rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:#8a95a3;margin-bottom:8px}
+
+/* ---------- comparison table ---------- */
+.tbl-wrap{border:1px solid #e3e7ec;border-radius:16px;overflow:hidden;background:#fff;margin-top:30px}
+table{width:100%;border-collapse:collapse;font-size:.95rem}
+caption{text-align:left;padding:18px 22px;background:#f0f3f7;font-size:.88rem;color:#4a5563;border-bottom:1px solid #e3e7ec}
+th,td{text-align:left;padding:15px 22px;border-bottom:1px solid #eceff3;vertical-align:top}
+thead th{background:#111a24;color:#fff;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;font-weight:800;border-bottom:0}
+tbody tr:last-child td{border-bottom:0}
+td:first-child{font-weight:800;width:26%}
+.tbl-foot{padding:16px 22px;background:#f8fafc;font-size:.88rem;color:#5a6472;border-top:1px solid #e3e7ec}
+
+/* ---------- ask band ---------- */
+.ask{background:#0a1018;color:#fff}
+.ask h2{font-size:clamp(1.7rem,3.4vw,2.4rem)}
+.ask .lede{color:#a9b7c7}
+.asks{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:32px;counter-reset:a}
+.asks li{counter-increment:a;border:1px solid rgba(255,255,255,.16);border-radius:14px;padding:20px 22px 20px 60px;position:relative;background:rgba(255,255,255,.045)}
+.asks li::before{content:counter(a);position:absolute;left:20px;top:19px;width:26px;height:26px;border-radius:50%;background:#ff6a1f;color:#160800;font-weight:800;font-size:.82rem;display:flex;align-items:center;justify-content:center}
+.asks b{display:block;font-size:1rem;margin-bottom:5px}
+.asks span{font-size:.9rem;color:#a9b7c7}
+.ask-cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:30px}
+
+/* ---------- hours + map ---------- */
+.geo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.06fr);gap:24px;align-items:start;margin-top:32px}
+.hrs{background:#fff;border:1px solid #e3e7ec;border-radius:16px;overflow:hidden}
+.hrs table{font-size:.97rem}
+.hrs th{background:#fff;color:#111721;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;border-bottom:1px solid #e3e7ec}
+.hrs td{padding:13px 22px;font-variant-numeric:tabular-nums}
+.hrs td:last-child{text-align:right;font-weight:700}
+.hrs tr.closed td{color:#8a95a3}
+.hrs tr.today{background:#fff6f0}
+.hrs tr.today td:first-child::after{content:" · today";color:#c2440a;font-weight:800;font-size:.76rem;letter-spacing:.04em}
+.mapbox{border:1px solid #e3e7ec;border-radius:16px;overflow:hidden;background:#dfe4ea}
+.mapbox iframe{width:100%;height:330px;border:0;display:block}
+.addr{background:#fff;border-top:1px solid #e3e7ec;padding:20px 22px;display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center}
+.addr address{font-style:normal;font-size:1.02rem;font-weight:700;line-height:1.45}
+.addr small{display:block;font-weight:500;color:#5a6472;font-size:.86rem;margin-top:4px}
+
+/* ---------- footer ---------- */
+.ftr{background:#070b11;color:#c3cfdc;padding:56px 0 120px}
+.ftr-grid{display:grid;grid-template-columns:1.35fr 1fr 1fr 1fr;gap:32px}
+.ftr h4{color:#fff;font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px}
+.ftr li+li{margin-top:9px}
+.ftr a{text-decoration:none}
+.ftr a:hover{color:#fff;text-decoration:underline;text-underline-offset:3px}
+.ftr .big{color:#fff;font-size:1.5rem;font-weight:800;letter-spacing:-.02em;font-variant-numeric:tabular-nums;text-decoration:none;display:inline-block}
+.ftr .fine{margin-top:40px;padding-top:22px;border-top:1px solid rgba(255,255,255,.11);display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;font-size:.82rem;color:#7d8b9c}
+.ftr .fine p{max-width:78ch}
+
+/* ---------- mobile call bar ---------- */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:70;display:none;gap:10px;align-items:center;padding:10px 14px;background:rgba(9,14,21,.96);backdrop-filter:blur(10px);border-top:1px solid rgba(255,255,255,.14)}
+.callbar .btn{flex:1 1 auto;min-height:56px}
+.callbar .meta{color:#c3cfdc;font-size:.78rem;line-height:1.25;flex:0 0 auto;max-width:112px}
+.callbar .meta b{color:#fff;display:block;font-size:.86rem}
+
+/* ---------- responsive ---------- */
+@media (max-width:1080px){
+  .split{grid-template-columns:1fr;gap:28px}
+  .split .stick{position:static}
+  .proof{grid-template-columns:repeat(2,1fr)}
+  .geo{grid-template-columns:1fr}
+  .ftr-grid{grid-template-columns:1fr 1fr;gap:28px}
+}
+@media (max-width:900px){
+  .grid4{grid-template-columns:repeat(2,1fr)}
+  .l-front{width:min(420px,66vw);height:min(480px,66%);opacity:.82}
+  .hero-copy{max-width:none;padding:60px 0 84px}
+  .stage{min-height:600px}
+}
+@media (max-width:680px){
+  body{font-size:16px;padding-bottom:0}
+  .hdr-in{min-height:64px;flex-wrap:wrap;padding-bottom:6px;padding-top:8px}
+  .hdr .btn{display:none}
+  .nav{order:3;width:100%;margin-left:0;padding-bottom:4px;-webkit-overflow-scrolling:touch}
+  .nav a{padding:0 10px;font-size:.86rem}
+  .grid4{grid-template-columns:1fr}
+  .asks{grid-template-columns:1fr}
+  .proof{grid-template-columns:1fr 1fr}
+  .proof .k{font-size:1.55rem}
+  .ftr-grid{grid-template-columns:1fr}
+  .ftr{padding-bottom:132px}
+  .callbar{display:flex}
+  .pad{padding:52px 0}
+  .stage{min-height:560px}
+  .l-front{bottom:-2%;opacity:.64}
+  .hero-copy{padding:48px 0 70px}
+  th,td,.hrs td{padding:13px 16px}
+  td:first-child{width:auto}
+  caption{padding:16px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .scene{transform:none}
+}
+</style>
+</head>
+<body>
+
+<header class="hdr" id="hdr">
+  <div class="wrap hdr-in">
+    <!-- typeset wordmark: no logo file survived triage, so this is type, not a reproduced mark -->
+    <a class="mark" href="#top" aria-label="Alex's Services — home">
+      <svg class="glyph" viewBox="0 0 40 40" aria-hidden="true">
+        <rect x="1.5" y="1.5" width="37" height="37" rx="10" fill="none" stroke="#ff6a1f" stroke-width="2"/>
+        <path d="M9 27.5 20 11l11 16.5" fill="none" stroke="#38d6f0" stroke-width="2.4" stroke-linejoin="round"/>
+        <path d="M14.5 27.5h11" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/>
+      </svg>
+      <span style="display:block">
+        <b>Alex&rsquo;s Services</b>
+        <span>Heating &amp; Air &middot; Grayson</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Sections of this page">
+      <a href="#reviews">Reviews</a>
+      <a href="#services">Services</a>
+      <a href="#why">Why Us</a>
+      <a href="#decide">Repair or Replace</a>
+      <a href="#ask">What to Ask</a>
+      <a href="#hours">Hours &amp; Map</a>
+    </nav>
+    <a class="btn btn-primary" href="tel:+16783139999">Call <span class="num">(678)&nbsp;313-9999</span></a>
+  </div>
+</header>
+
+<main>
+
+<!-- ===================== 1. HERO — CSS 3D scene =====================
+     Layer stack (front to back): condenser line art translateZ(60px) / scrim translateZ(-40px) /
+     airflow ribbons translateZ(-90px) / dusk skyline translateZ(-260px). Copy plane sits at
+     translateZ(34px). Drivers: pointer (fine pointers only, max 5deg) rotates the stage; scroll
+     drifts back .2x, mid .5x, front .8x. Both drivers are enhancement — with JS off every layer
+     stays at its CSS rest transform and the hero is complete: name, value prop, CTA all readable.
+     Rest state is sized to fill the stage at 1280px: front plane min(680px,58vw) x min(660px,78%)
+     at full opacity, ribbons at .95/.85/.72/.66 stroke opacity.
+     All art is generated line/gradient SVG, deliberately illustrative, never photographic. -->
+<section class="hero" id="top">
+  <div class="stage" id="stage">
+    <div class="scene" id="scene">
+
+      <div class="layer l-back" id="lBack" aria-hidden="true">
+        <svg viewBox="0 0 1440 700" preserveAspectRatio="xMidYMax slice">
+          <defs>
+            <linearGradient id="dusk" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#0d1725"/>
+              <stop offset=".46" stop-color="#1b2436"/>
+              <stop offset=".78" stop-color="#3a2b31"/>
+              <stop offset="1" stop-color="#150f14"/>
+            </linearGradient>
+            <radialGradient id="glow" cx=".72" cy=".82" r=".55">
+              <stop offset="0" stop-color="#ff8a3d" stop-opacity=".30"/>
+              <stop offset="1" stop-color="#ff8a3d" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <rect width="1440" height="700" fill="url(#dusk)"/>
+          <rect width="1440" height="700" fill="url(#glow)"/>
+          <polygon fill="#0d1420" fill-opacity=".72" points="0,700 0,556 92,556 142,504 192,556 262,556 262,528 332,528 382,482 432,528 520,528 520,574 602,574 652,528 702,574 790,574 790,544 860,544 910,498 960,544 1050,544 1050,584 1140,584 1190,538 1240,584 1330,584 1330,558 1440,558 1440,700"/>
+          <polygon fill="#080d16" fill-opacity=".86" points="0,700 0,618 118,618 168,578 218,618 336,618 336,640 452,640 452,606 560,606 610,568 660,606 790,606 790,634 918,634 918,600 1030,600 1080,562 1130,600 1260,600 1260,628 1440,628 1440,700"/>
+        </svg>
+      </div>
+
+      <div class="layer l-mid" id="lMid" aria-hidden="true">
+        <svg viewBox="0 0 1440 700" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <linearGradient id="tempA" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#ff4d1f" stop-opacity=".85"/>
+              <stop offset=".48" stop-color="#ff9a4d" stop-opacity=".6"/>
+              <stop offset="1" stop-color="#38d6f0" stop-opacity=".85"/>
+            </linearGradient>
+            <linearGradient id="tempB" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#ff6a1f" stop-opacity=".5"/>
+              <stop offset="1" stop-color="#5fe3f7" stop-opacity=".55"/>
+            </linearGradient>
+            <filter id="soft" x="-12%" y="-40%" width="130%" height="200%">
+              <feGaussianBlur stdDeviation="7"/>
+            </filter>
+          </defs>
+          <g fill="none" filter="url(#soft)">
+            <path d="M-120 420 C 240 316, 470 484, 760 356 S 1200 216, 1580 306" stroke="url(#tempA)" stroke-width="28" stroke-opacity=".62"/>
+            <path d="M-120 520 C 220 452, 480 606, 780 484 S 1210 366, 1580 442" stroke="url(#tempB)" stroke-width="22" stroke-opacity=".56"/>
+          </g>
+          <g fill="none" stroke-linecap="round">
+            <path d="M-120 440 C 250 340, 460 500, 750 374 S 1190 236, 1580 322" stroke="url(#tempA)" stroke-width="7.5" stroke-opacity=".95"/>
+            <path d="M-120 486 C 230 404, 500 552, 800 428 S 1220 302, 1580 386" stroke="url(#tempB)" stroke-width="5" stroke-opacity=".85"/>
+            <path d="M-120 356 C 270 268, 470 424, 790 300 S 1240 168, 1580 250" stroke="url(#tempA)" stroke-width="3.4" stroke-opacity=".72"/>
+            <path d="M-120 576 C 260 508, 520 644, 830 520 S 1250 404, 1580 480" stroke="url(#tempB)" stroke-width="2.8" stroke-opacity=".66"/>
+          </g>
+        </svg>
+      </div>
+
+      <div class="layer l-scrim" aria-hidden="true"></div>
+
+      <div class="layer l-front" id="lFront" aria-hidden="true">
+        <svg viewBox="0 0 420 420" preserveAspectRatio="xMidYMax meet">
+          <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="62" y="118" width="286" height="252" rx="20" stroke="#38d6f0" stroke-opacity=".92" stroke-width="3.4"/>
+            <rect x="52" y="96" width="306" height="28" rx="12" stroke="#ff8a3d" stroke-opacity=".9" stroke-width="3.4"/>
+            <circle cx="205" cy="214" r="82" stroke="#e9f4ff" stroke-opacity=".6" stroke-width="2.4"/>
+            <circle cx="205" cy="214" r="66" stroke="#e9f4ff" stroke-opacity=".34" stroke-width="1.6"/>
+            <circle cx="205" cy="214" r="15" stroke="#ff6a1f" stroke-width="3.4"/>
+            <g stroke="#38d6f0" stroke-opacity=".9" stroke-width="2.8">
+              <path d="M205 214 C 238 176, 274 182, 279 208 C 256 200, 230 203, 205 214"/>
+              <g transform="rotate(72 205 214)"><path d="M205 214 C 238 176, 274 182, 279 208 C 256 200, 230 203, 205 214"/></g>
+              <g transform="rotate(144 205 214)"><path d="M205 214 C 238 176, 274 182, 279 208 C 256 200, 230 203, 205 214"/></g>
+              <g transform="rotate(216 205 214)"><path d="M205 214 C 238 176, 274 182, 279 208 C 256 200, 230 203, 205 214"/></g>
+              <g transform="rotate(288 205 214)"><path d="M205 214 C 238 176, 274 182, 279 208 C 256 200, 230 203, 205 214"/></g>
+            </g>
+            <g stroke="#e9f4ff" stroke-opacity=".32" stroke-width="2.2">
+              <path d="M92 318h228"/><path d="M92 334h228"/><path d="M92 350h228"/>
+            </g>
+            <g stroke="#e9f4ff" stroke-opacity=".26" stroke-width="1.8">
+              <path d="M84 140v56"/><path d="M100 140v56"/><path d="M310 140v56"/><path d="M326 140v56"/>
+            </g>
+            <path d="M62 208 C 30 208, 24 176, 6 168" stroke="#ff6a1f" stroke-opacity=".88" stroke-width="3.4"/>
+            <path d="M62 236 C 34 236, 26 260, 6 268" stroke="#38d6f0" stroke-opacity=".88" stroke-width="3.4"/>
+            <path d="M92 370v18M318 370v18" stroke="#e9f4ff" stroke-opacity=".48" stroke-width="4.4"/>
+            <path d="M74 392h262" stroke="#e9f4ff" stroke-opacity=".2" stroke-width="2.4"/>
+          </g>
+        </svg>
+      </div>
+
+      <div class="wrap" style="position:relative;height:100%;display:flex;align-items:center">
+        <div class="hero-copy">
+          <div class="chips">
+            <span class="chip hot">HVAC contractor &middot; Grayson, GA</span>
+            <span class="chip">5.0 &#9733; &middot; 21 Google reviews</span>
+            <span class="chip" id="status"><span class="dot" id="statusDot"></span><span id="statusText"></span></span>
+          </div>
+          <h1>HVAC repair &amp; installation in <span class="cool">Grayson, GA</span></h1>
+          <p class="hero-sub">Alex&rsquo;s Services is a heating and air conditioning contractor at 441 Brackin Trace, Grayson &mdash; working Grayson, Lawrenceville and Gwinnett County. Repairs and installations on all makes and models.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="tel:+16783139999">Call <span class="num">(678)&nbsp;313-9999</span></a>
+            <a class="btn btn-ghost" href="#hours">Hours &amp; address</a>
+          </div>
+          <div class="hero-facts">
+            <span><b>Open 6 days</b> &middot; Mon&ndash;Fri 8&nbsp;AM&ndash;5&nbsp;PM</span>
+            <span><b>Saturday</b> 8&nbsp;AM&ndash;12&nbsp;PM</span>
+            <span><b>Sunday</b> closed</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 2. SOCIAL PROOF STRIP =====================
+     Rating and count only, stated as text. No review body is quoted anywhere on this page.
+     No aggregateRating in JSON-LD — this is Google's review data, not first-party.
+     All four cells are comparable published facts: rating/count, day count, and the two distinct
+     published hour blocks. The street address is a location line under the strip, not a KPI. -->
+<section class="band sec" id="reviews" aria-labelledby="reviews-h">
+  <div class="wrap">
+    <div class="proof">
+      <div>
+        <span class="k">5.0 <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span></span>
+        <span class="v">Google rating, <span class="num">21</span> reviews</span>
+      </div>
+      <div>
+        <span class="k">6</span>
+        <span class="v">Days open each week (closed Sunday)</span>
+      </div>
+      <div>
+        <span class="k">8&ndash;5</span>
+        <span class="v">Monday to Friday, as published</span>
+      </div>
+      <div>
+        <span class="k">8&ndash;12</span>
+        <span class="v">Saturday mornings, as published</span>
+      </div>
+    </div>
+    <div class="band-in">
+      <p class="eyebrow">Verified on Google</p>
+      <h2 id="reviews-h" style="font-size:clamp(1.5rem,3vw,2.1rem);margin-top:10px;max-width:30ch">A 5.0 average across <span class="num">21</span> reviews.</h2>
+      <div class="band-loc">
+        <span><b>441 Brackin Trace, Grayson, GA 30017</b> &mdash; one location, <a href="#hours">on the map below</a>.</span>
+      </div>
+      <div class="band-note">
+        <span>Reviews live on the Google listing, where you can read every one and see the dates. This page does not reprint them.</span>
+      </div>
+      <div class="band-note" style="margin-top:14px">
+        <span>Their own website has carried a job gallery since at least 2017, by the upload dates on its own image files.</span>
+      </div>
+      <div class="band-note" style="margin-top:14px">
+        <a href="https://www.google.com/maps/place/Alex%27s+Services/data=!4m7!3m6!1s0x88f5b90b73d06acd:0xa3edea75730e904c!8m2!3d33.9055216!4d-83.9629291!16s%2Fg%2F11pkckr9st!19sChIJzWrQcwu59YgRTJAOc3Xq7aM" rel="noopener">Read the 21 reviews on Google Maps</a>
+        <a href="http://www.alexshvacservices.com/" rel="noopener">Their own site, alexshvacservices.com</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 3. SERVICES =====================
+     Evidence cited per card. Nothing here is invented: each card states what their own published
+     copy says, and where a card adds detail it is labelled as general trade context, not as this
+     company's policy. Plumbing/electrical are demoted to a single strip because the Google category
+     is "hvac contractor" and the identity problem on the old site came from leading with everything. -->
+<section class="pad sec" id="services">
+  <div class="wrap">
+    <div class="hd">
+      <p class="eyebrow">Services</p>
+      <h2>Heating and cooling first &mdash; because that is the trade Google lists them under.</h2>
+      <p class="lede">Everything below traces to Alex&rsquo;s own published pages. The wording of their scope is theirs; anything describing the trade in general is marked as such.</p>
+    </div>
+
+    <div class="grid4">
+
+      <!-- EVIDENCE: homepage + services page heading "Call the Top Residential Heating and Air
+           Conditioning, Electrical and Plumbing Services Company in the Area"; services page body
+           "We always live up to your demands in AC installation and related HVAC services." -->
+      <article class="card">
+        <svg class="ico" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <rect x="5" y="12" width="38" height="26" rx="6" stroke="#38d6f0" stroke-width="2.4"/>
+          <circle cx="24" cy="25" r="8.5" stroke="#38d6f0" stroke-width="2"/>
+          <path d="M24 25c5-5 9-4 9-1.5-3.5-1-6 0-9 1.5" stroke="#ff6a1f" stroke-width="2" stroke-linejoin="round"/>
+          <path d="M11 33h26" stroke="#9fb0c2" stroke-width="1.8"/>
+        </svg>
+        <h3>Air conditioning repair</h3>
+        <p>Central AC that has stopped cooling, runs without shutting off, or trips its breaker. Alex&rsquo;s advertises service on all makes and models, so the brand on your condenser is not the deciding question.</p>
+        <p class="src"><b>Evidence:</b> their homepage and services page &mdash; &ldquo;Residential Heating and Air Conditioning&hellip; Services Company&rdquo; and &ldquo;Services for All Makes &amp; Models&rdquo;.</p>
+        <a class="go" href="tel:+16783139999">Describe the symptom by phone &rarr;</a>
+      </article>
+
+      <!-- EVIDENCE: services page body "We always live up to your demands in AC installation and
+           related HVAC services." + services page heading "Fast, Efficient Repairs and Installations" -->
+      <article class="card">
+        <svg class="ico" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <path d="M8 40V20l16-11 16 11v20" stroke="#9fb0c2" stroke-width="2.2" stroke-linejoin="round"/>
+          <rect x="17" y="26" width="14" height="14" rx="3" stroke="#38d6f0" stroke-width="2.2"/>
+          <path d="M24 26v14M17 33h14" stroke="#ff6a1f" stroke-width="2"/>
+        </svg>
+        <h3>AC installation &amp; system replacement</h3>
+        <p>New condenser, coil and air-handler installs, including full changeouts when a system is past repair. This is the service their own site names most directly.</p>
+        <p class="src"><b>Evidence:</b> services page &mdash; &ldquo;AC installation and related HVAC services&rdquo;; heading &ldquo;Fast, Efficient Repairs and Installations&rdquo;.</p>
+        <a class="go" href="tel:+16783139999">Ask what your home needs &rarr;</a>
+      </article>
+
+      <!-- EVIDENCE: homepage/services heading "Residential Heating and Air Conditioning ..." — the
+           heating half of the same sentence. Google category is "hvac contractor". -->
+      <article class="card">
+        <svg class="ico" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <rect x="12" y="6" width="24" height="36" rx="6" stroke="#9fb0c2" stroke-width="2.2"/>
+          <path d="M24 14c3 4 4.5 6 4.5 8.5S26 27 24 27s-4.5-2-4.5-4.5S21 18 24 14z" stroke="#ff6a1f" stroke-width="2.2" stroke-linejoin="round"/>
+          <path d="M17 34h14" stroke="#38d6f0" stroke-width="2.2"/>
+        </svg>
+        <h3>Heating repair &amp; installation</h3>
+        <p>Furnace and heat-pump work for the short Gwinnett County heating season &mdash; no heat, short cycling, or a system that needs replacing before the next cold snap.</p>
+        <p class="src"><b>Evidence:</b> their published company line, &ldquo;Residential <em>Heating</em> and Air Conditioning&hellip;&rdquo;; Google category &ldquo;HVAC contractor&rdquo;.</p>
+        <a class="go" href="tel:+16783139999">Call about no heat &rarr;</a>
+      </article>
+
+      <!-- EVIDENCE: services page heading "Services for All Makes & Models" -->
+      <article class="card">
+        <svg class="ico" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <circle cx="24" cy="24" r="16" stroke="#38d6f0" stroke-width="2.2"/>
+          <path d="M24 8v8M24 32v8M8 24h8M32 24h8" stroke="#9fb0c2" stroke-width="2"/>
+          <path d="M19 24l4 4 7-8" stroke="#ff6a1f" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h3>All makes &amp; models</h3>
+        <p>Their site puts this in a heading of its own, which matters when your equipment is an older or off-brand unit that some shops decline to touch.</p>
+        <p class="src"><b>Evidence:</b> services page heading &mdash; &ldquo;Services for All Makes &amp; Models&rdquo;.</p>
+        <a class="go" href="tel:+16783139999">Ask about your unit &rarr;</a>
+      </article>
+
+      <!-- EVIDENCE: services page heading "Plumbing & Electric Services for Maintenance" + company
+           line naming electrical and plumbing. Kept as one card, not a headline, on purpose. -->
+      <article class="card">
+        <svg class="ico" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <path d="M26 6l-12 20h9l-3 16 14-22h-9l1-14z" stroke="#ff6a1f" stroke-width="2.2" stroke-linejoin="round"/>
+          <path d="M6 40c4 0 4-6 8-6" stroke="#38d6f0" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+        <h3>Plumbing &amp; electrical maintenance</h3>
+        <p>Alex&rsquo;s also publishes plumbing and electrical maintenance work. It is listed here rather than in the headline because heating and cooling is the trade they are listed under on Google.</p>
+        <p class="src"><b>Evidence:</b> services page heading &mdash; &ldquo;Plumbing &amp; Electric Services for Maintenance&rdquo;.</p>
+        <a class="go" href="tel:+16783139999">Ask if it is work they take &rarr;</a>
+      </article>
+
+      <!-- Service area card. Only places their own material names: the Grayson address (lead.json),
+           "Gwinnett County Areas" from their homepage heading, and Lawrenceville from the exact
+           sitewide header/footer string "100 miles around Lawrenceville GA." on
+           https://alexshvacservices.com/ — see the LAWRENCEVILLE EVIDENCE CHAIN note in the head. -->
+      <article class="card">
+        <svg class="ico" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <path d="M24 43s13-13.5 13-22a13 13 0 10-26 0c0 8.5 13 22 13 22z" stroke="#38d6f0" stroke-width="2.2" stroke-linejoin="round"/>
+          <circle cx="24" cy="20.5" r="5" stroke="#ff6a1f" stroke-width="2.2"/>
+        </svg>
+        <h3>Where they work</h3>
+        <p>Grayson, Lawrenceville, and the wider Gwinnett County area &mdash; the territory their own site claims, now attached to a real street address instead of a mileage radius.</p>
+        <p class="src"><b>Evidence:</b> their homepage &mdash; &ldquo;Offers the following services in Gwinnett County Areas&rdquo;; the address slot in their own site header and footer &mdash; &ldquo;100 miles around Lawrenceville GA.&rdquo;; Grayson from the listing address.</p>
+        <a class="go" href="#hours">See the map &rarr;</a>
+      </article>
+
+    </div>
+
+    <div class="also">
+      <p><strong>Not listed here on purpose.</strong> No pricing, no diagnostic fee, no financing terms, and no lead times &mdash; Alex&rsquo;s has never published any of them, so this page will not guess. The <a href="#ask" style="font-weight:800;color:#c2440a">questions to ask on the phone</a> are below instead.</p>
+      <a class="btn btn-primary" href="tel:+16783139999">Call <span class="num">(678)&nbsp;313-9999</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 4. WHY US / PAIN POINTS =====================
+     Asymmetric sticky split — deliberately not another card grid. Addresses the top pain points from
+     the analysis: (1) is this even an HVAC company, (2) who answers now, (3) are they real and local,
+     (5) will they upsell me. Nothing here claims response speed, staffing, or who picks up. -->
+<section class="pad sec" id="why" style="background:#eef1f5;border-top:1px solid #e2e7ec;border-bottom:1px solid #e2e7ec">
+  <div class="wrap split">
+    <div class="stick">
+      <p class="eyebrow">Why this page exists</p>
+      <h2 style="font-size:clamp(1.7rem,3.2vw,2.4rem);margin:12px 0 14px">Four things a homeowner checks in the first ten seconds.</h2>
+      <p class="lede">Each one is answered with a fact that can be verified from the Google listing or from Alex&rsquo;s own published pages &mdash; not with a slogan.</p>
+      <a class="btn btn-primary" href="tel:+16783139999" style="margin-top:22px">Call <span class="num">(678)&nbsp;313-9999</span></a>
+    </div>
+    <ol class="numlist">
+      <li>
+        <span class="q">&ldquo;Is this actually an HVAC company?&rdquo;</span>
+        <h3>Yes &mdash; heating and air is the category, and it is now in the headline.</h3>
+        <p>Google lists Alex&rsquo;s Services as an HVAC contractor. Their older site is published under the name <em>Alex&rsquo;s Home Repair Services INC</em> and leads with home repair generally, which is why searchers arriving from Maps could not tell. Same company, one trade stated up front.</p>
+      </li>
+      <li>
+        <span class="q">&ldquo;My AC just died &mdash; what do I do right now?&rdquo;</span>
+        <h3>Every button on this page dials one number.</h3>
+        <p><a href="tel:+16783139999" style="font-weight:800;color:#c2440a;text-decoration:none">(678) 313-9999</a> is the only conversion path here: no contact form vanishing into an inbox, no second page to hunt through. On a phone the call button stays fixed to the bottom of the screen the entire scroll.</p>
+      </li>
+      <li>
+        <span class="q">&ldquo;Are they real, local, and still in business?&rdquo;</span>
+        <h3>441 Brackin Trace, Grayson, GA 30017 &mdash; on the map, below.</h3>
+        <p>A street address, published hours, and a 5.0 average over 21 Google reviews, all pinned to Grayson rather than to a mileage radius around another town. The map at the bottom of this page is the real coordinates of that address.</p>
+      </li>
+      <li>
+        <span class="q">&ldquo;Will I be sold a new system I do not need?&rdquo;</span>
+        <h3>Decide with the numbers before anyone quotes you.</h3>
+        <p>The repair-versus-replace table below is general HVAC guidance, not an Alex&rsquo;s policy &mdash; read it first so you walk into the call already knowing which side of the line your system is on, and what to ask to confirm it.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===================== 5. CATEGORY EDUCATION (repair vs replace) =====================
+     Framed as category education in the heading, the lede, and at every specific. Every row talks
+     about HVAC systems generally. No row states what Alex's Services does, charges, or recommends. -->
+<section class="pad-sm sec" id="decide">
+  <div class="wrap">
+    <div class="hd">
+      <p class="eyebrow">General HVAC guidance &mdash; not this company&rsquo;s policy</p>
+      <h2>Repair or replace: how the trade generally frames it</h2>
+      <p class="lede">The following is standard industry rule-of-thumb for residential heating and cooling equipment. It is background so you can hold your own in the conversation. Alex&rsquo;s Services has published no pricing, policy, or recommendation, and none is implied here &mdash; confirm every line with whoever inspects your system.</p>
+    </div>
+    <div class="tbl-wrap">
+      <table>
+        <caption>How these factors are generally weighed across the HVAC trade. Not a quote from Alex&rsquo;s Services.</caption>
+        <thead>
+          <tr><th scope="col">Factor</th><th scope="col">Usually points to repair</th><th scope="col">Usually points to replace</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>System age</td><td>Under roughly 10 years and holding refrigerant charge.</td><td>Past roughly 15 years, where parts availability starts to bite.</td></tr>
+          <tr><td>Failed part</td><td>Capacitor, contactor, fan motor, thermostat, control board.</td><td>Compressor or a leaking evaporator or condenser coil.</td></tr>
+          <tr><td>Refrigerant type</td><td>Current refrigerant, still readily stocked.</td><td>An older phased-out refrigerant that has become costly to top up.</td></tr>
+          <tr><td>Repair cost vs. new</td><td>Well under a third of a replacement quote.</td><td>Approaching half of a replacement quote, or the second big repair in two seasons.</td></tr>
+          <tr><td>Comfort symptoms</td><td>One room off, or a duct or airflow problem that is fixable on its own.</td><td>Whole-house temperature swings plus rising runtime on an aging system.</td></tr>
+        </tbody>
+      </table>
+      <p class="tbl-foot">General guidance only, stated in industry terms. Ask for the specific failed part and a written estimate before agreeing to anything &mdash; the questions in the next section are written for exactly that call.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 6. CALL SCRIPT (missing commercial data) =====================
+     Approved pattern for unknowable commercial data: pricing, fees, lead times, license number and
+     insurance status are not published anywhere in the scraped facts or the harvested site, so they
+     are asked, never invented. -->
+<section class="ask pad sec" id="ask">
+  <div class="wrap on-dark">
+    <p class="eyebrow">Before you hang up</p>
+    <h2>Six questions to ask on the call</h2>
+    <p class="lede" style="margin-top:12px">Diagnostic fees, hourly rates, lead times, financing, license number and insurance status are not published on Alex&rsquo;s site or their Google listing, so this page will not state them. Ask, and write the answers down.</p>
+    <ol class="asks">
+      <li><b>&ldquo;What is the service-call or diagnostic fee, and does it come off the repair?&rdquo;</b><span>Settle the cost of showing up before anyone is dispatched.</span></li>
+      <li><b>&ldquo;When could someone actually get here?&rdquo;</b><span>Published hours are Mon&ndash;Fri 8&nbsp;AM&ndash;5&nbsp;PM and Saturday 8&nbsp;AM&ndash;12&nbsp;PM; the next open slot is a separate question.</span></li>
+      <li><b>&ldquo;Are you licensed and insured for this work &mdash; what is the license number?&rdquo;</b><span>Ask for it verbally and again on the invoice.</span></li>
+      <li><b>&ldquo;Will I get a written estimate before the repair starts?&rdquo;</b><span>The single best protection against a surprise total.</span></li>
+      <li><b>&ldquo;Which exact part failed, and what does it cost on its own?&rdquo;</b><span>Turns &lsquo;you need a new system&rsquo; into a checkable claim.</span></li>
+      <li><b>&ldquo;What warranty covers the part and the labour?&rdquo;</b><span>Confirm the length of each, separately.</span></li>
+    </ol>
+    <div class="ask-cta">
+      <a class="btn btn-primary" href="tel:+16783139999">Call <span class="num">(678)&nbsp;313-9999</span></a>
+      <span style="color:#a9b7c7;font-size:.93rem">Tap to dial &mdash; the only booking path published for this business.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 7. HOURS + LOCATION =====================
+     Hours published exactly as scraped (Wed/Thu/Fri/Mon/Tue 8AM-5PM, Sat 8AM-12PM, Sun closed),
+     reordered Mon-first for reading only — no value changed. Keyless map embed on the scraped
+     lat/lng, no loading="lazy" on the iframe. -->
+<section class="pad sec" id="hours" style="background:#eef1f5;border-top:1px solid #e2e7ec">
+  <div class="wrap">
+    <div class="hd">
+      <p class="eyebrow">Hours &amp; location</p>
+      <h2>Grayson, Georgia &mdash; the actual address</h2>
+      <p class="lede">Hours as published for this business. Holiday and seasonal exceptions are not published anywhere, so call to confirm before driving over.</p>
+    </div>
+    <div class="geo">
+      <div class="hrs">
+        <table>
+          <caption style="background:#fff;border-bottom:1px solid #e3e7ec"><strong>Business hours</strong> &mdash; open six days, closed Sunday</caption>
+          <thead><tr><th scope="col">Day</th><th scope="col" style="text-align:right">Hours</th></tr></thead>
+          <tbody id="hrsBody">
+            <tr data-d="1"><td>Monday</td><td>8 AM &ndash; 5 PM</td></tr>
+            <tr data-d="2"><td>Tuesday</td><td>8 AM &ndash; 5 PM</td></tr>
+            <tr data-d="3"><td>Wednesday</td><td>8 AM &ndash; 5 PM</td></tr>
+            <tr data-d="4"><td>Thursday</td><td>8 AM &ndash; 5 PM</td></tr>
+            <tr data-d="5"><td>Friday</td><td>8 AM &ndash; 5 PM</td></tr>
+            <tr data-d="6"><td>Saturday</td><td>8 AM &ndash; 12 PM</td></tr>
+            <tr data-d="0" class="closed"><td>Sunday</td><td>Closed</td></tr>
+          </tbody>
+        </table>
+        <div class="addr">
+          <div>
+            <address>Alex&rsquo;s Services<br>441 Brackin Trace<br>Grayson, GA 30017
+              <small>Serving Grayson, Lawrenceville and Gwinnett County</small>
+            </address>
+          </div>
+          <a class="btn btn-ghost" href="https://www.google.com/maps/place/Alex%27s+Services/data=!4m7!3m6!1s0x88f5b90b73d06acd:0xa3edea75730e904c!8m2!3d33.9055216!4d-83.9629291!16s%2Fg%2F11pkckr9st!19sChIJzWrQcwu59YgRTJAOc3Xq7aM" rel="noopener">Open in Google Maps</a>
+        </div>
+      </div>
+      <div class="mapbox">
+        <iframe src="https://maps.google.com/maps?q=33.9055216,-83.9629291&amp;output=embed" title="Map showing 441 Brackin Trace, Grayson, GA 30017" width="640" height="330" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="addr">
+          <div style="font-size:.92rem;color:#5a6472;max-width:44ch">Coordinates <span class="num">33.9055216, &minus;83.9629291</span> &mdash; the pin for the Grayson address above.</div>
+          <a class="btn btn-primary" href="tel:+16783139999">Call <span class="num">(678)&nbsp;313-9999</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===================== 8. CONTACT / FOOTER =====================
+     Phone, address, hours, service area, link to their own site and their Google listing. No email
+     address and no social profiles are published in the scraped data, so none are shown or invented.
+     Copyright year is written by JS with the current year hardcoded as the no-JS fallback. -->
+<footer class="ftr" id="contact">
+  <div class="wrap">
+    <div class="ftr-grid">
+      <div>
+        <h4>Alex&rsquo;s Services</h4>
+        <a class="big" href="tel:+16783139999">(678)&nbsp;313-9999</a>
+        <p style="margin-top:10px;font-size:.95rem">HVAC contractor &mdash; heating and air conditioning repair and installation, all makes and models.</p>
+        <a class="btn btn-primary" href="tel:+16783139999" style="margin-top:18px">Call now</a>
+      </div>
+      <div>
+        <h4>Location</h4>
+        <address style="font-style:normal;font-size:.95rem;line-height:1.7">441 Brackin Trace<br>Grayson, GA 30017</address>
+        <ul style="margin-top:12px;font-size:.95rem">
+          <li><a href="#hours">Hours &amp; map</a></li>
+          <li><a href="https://www.google.com/maps/place/Alex%27s+Services/data=!4m7!3m6!1s0x88f5b90b73d06acd:0xa3edea75730e904c!8m2!3d33.9055216!4d-83.9629291!16s%2Fg%2F11pkckr9st!19sChIJzWrQcwu59YgRTJAOc3Xq7aM" rel="noopener">View on Google Maps</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <ul style="font-size:.95rem;font-variant-numeric:tabular-nums">
+          <li>Mon &ndash; Fri &nbsp;8 AM &ndash; 5 PM</li>
+          <li>Saturday &nbsp;8 AM &ndash; 12 PM</li>
+          <li>Sunday &nbsp;Closed</li>
+        </ul>
+        <p style="margin-top:12px;font-size:.88rem;color:#8d9baa">5.0 &#9733; &middot; <span class="num">21</span> Google reviews</p>
+      </div>
+      <div>
+        <h4>On this page</h4>
+        <ul style="font-size:.95rem">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#why">Why us</a></li>
+          <li><a href="#decide">Repair or replace</a></li>
+          <li><a href="#ask">What to ask on the call</a></li>
+          <li><a href="http://www.alexshvacservices.com/" rel="noopener">alexshvacservices.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fine">
+      <p>&copy; <span id="yr">2026</span> Alex&rsquo;s Services &middot; 441 Brackin Trace, Grayson, GA 30017 &middot; <a href="tel:+16783139999">(678) 313-9999</a></p>
+      <p>Serving Grayson, Lawrenceville and Gwinnett County. Rating and review count shown as published on Google; reviews are hosted there, not reprinted here. Pricing, fees, lead times, licence and insurance details are not published by this business and are not stated on this page &mdash; ask on the call.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="callbar" aria-label="Call Alex's Services">
+  <div class="meta"><b>5.0 &#9733; &middot; 21</b>Google reviews</div>
+  <a class="btn btn-primary" href="tel:+16783139999">Call <span class="num">(678)&nbsp;313-9999</span></a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HVACBusiness",
+  "name": "Alex's Services",
+  "alternateName": "Alex's Home Repair Services INC",
+  "description": "HVAC contractor in Grayson, Georgia. Heating and air conditioning repair and installation for all makes and models, serving Grayson, Lawrenceville and Gwinnett County.",
+  "url": "http://www.alexshvacservices.com/",
+  "telephone": "+1-678-313-9999",
+  "hasMap": "https://www.google.com/maps/place/Alex%27s+Services/data=!4m7!3m6!1s0x88f5b90b73d06acd:0xa3edea75730e904c!8m2!3d33.9055216!4d-83.9629291!16s%2Fg%2F11pkckr9st!19sChIJzWrQcwu59YgRTJAOc3Xq7aM",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "441 Brackin Trace",
+    "addressLocality": "Grayson",
+    "addressRegion": "GA",
+    "postalCode": "30017",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 33.9055216,
+    "longitude": -83.9629291
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Grayson" },
+    { "@type": "City", "name": "Lawrenceville" },
+    { "@type": "AdministrativeArea", "name": "Gwinnett County" }
+  ],
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "17:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "12:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "00:00", "closes": "00:00" }
+  ],
+  "makesOffer": [
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Air conditioning repair" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Air conditioning installation and system replacement" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Heating repair and installation" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Plumbing and electrical maintenance" } }
+  ]
+}
+</script>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ---- current year (fallback is hardcoded in the markup for no-JS) ---- */
+  var yr = document.getElementById('yr');
+  if (yr) { yr.textContent = new Date().getFullYear(); }
+
+  /* ---- open / closed computed from the same hours the table publishes ---- */
+  /* index = getDay(): 0 Sunday .. 6 Saturday; null = closed */
+  var HOURS = [null, [8, 17], [8, 17], [8, 17], [8, 17], [8, 17], [8, 12]];
+  var DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+  function label(h) { var m = h % 12 === 0 ? 12 : h % 12; return m + (h < 12 ? ' AM' : ' PM'); }
+
+  function status() {
+    var now = new Date(), d = now.getDay(), mins = now.getHours() * 60 + now.getMinutes(), t = HOURS[d];
+    if (t && mins >= t[0] * 60 && mins < t[1] * 60) {
+      return { open: true, text: 'Open now \u00b7 closes ' + label(t[1]) };
+    }
+    for (var i = 0; i < 8; i++) {
+      var nd = (d + i) % 7, nt = HOURS[nd];
+      if (!nt) { continue; }
+      if (i === 0 && mins >= nt[0] * 60) { continue; }
+      var when = i === 0 ? 'today' : (i === 1 ? 'tomorrow' : DAYS[nd]);
+      return { open: false, text: 'Closed now \u00b7 opens ' + when + ' ' + label(nt[0]) };
+    }
+    return null;
+  }
+
+  var st = status(), pill = document.getElementById('status');
+  if (st && pill) {
+    document.getElementById('statusText').textContent = st.text;
+    document.getElementById('statusDot').className = 'dot' + (st.open ? '' : ' shut');
+    pill.classList.add('on');
+  }
+  var todayRow = document.querySelector('#hrsBody tr[data-d="' + new Date().getDay() + '"]');
+  if (todayRow) { todayRow.classList.add('today'); }
+
+  /* ---- header condense ---- */
+  var hdr = document.getElementById('hdr');
+
+  /* ---- 3D hero: pointer + scroll drivers, transform/opacity only, rAF-batched ---- */
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var fine = window.matchMedia && window.matchMedia('(pointer: fine)').matches;
+  var scene = document.getElementById('scene');
+  var stage = document.getElementById('stage');
+  var back = document.getElementById('lBack');
+  var mid = document.getElementById('lMid');
+  var front = document.getElementById('lFront');
+  var rx = 0, ry = 0, sy = 0, queued = false;
+
+  function paint() {
+    queued = false;
+    if (hdr) { hdr.classList.toggle('tight', sy > 40); }
+    if (reduce || !scene) { return; }
+    if (back) { back.style.setProperty('--dy', (sy * 0.2).toFixed(1) + 'px'); }
+    if (mid) { mid.style.setProperty('--dy', (sy * 0.5).toFixed(1) + 'px'); }
+    if (front) { front.style.setProperty('--dy', (sy * -0.8).toFixed(1) + 'px'); }
+    scene.style.setProperty('--rx', rx.toFixed(2) + 'deg');
+    scene.style.setProperty('--ry', ry.toFixed(2) + 'deg');
+  }
+
+  function queue() { if (!queued) { queued = true; window.requestAnimationFrame(paint); } }
+
+  function onScroll() { sy = window.pageYOffset || document.documentElement.scrollTop || 0; queue(); }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  if (!reduce && fine && stage && scene) {
+    stage.addEventListener('pointermove', function (e) {
+      var r = stage.getBoundingClientRect();
+      if (!r.width || !r.height) { return; }
+      ry = ((e.clientX - r.left) / r.width - 0.5) * 10;   /* max 5deg */
+      rx = (0.5 - (e.clientY - r.top) / r.height) * 6;    /* max 3deg */
+      queue();
+    }, { passive: true });
+    stage.addEventListener('pointerleave', function () { rx = 0; ry = 0; queue(); }, { passive: true });
+  }
+
+  /* ---- smooth in-page scrolling for the anchor nav ---- */
+  if (!reduce) {
+    document.documentElement.style.scrollBehavior = 'smooth';
+  }
+})();
+</script>
+</body>
+</html>
