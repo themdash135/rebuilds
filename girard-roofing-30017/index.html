@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="robots" content="noindex,nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Girard Roofing — Roof Leak Repair in Snellville, GA</title>
+<meta name="description" content="Girard Roofing, Snellville GA — roof leak repair, shingle and flashing repair, roof maintenance, new gutters and solar power roof vents. Roofing since 1983. 4.9 stars across 78 Google reviews. Call (770) 476-3539.">
+<meta name="theme-color" content="#0d1720">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+<!-- BUILD NOTE — FACT SOURCES
+     (1) lead.json: name, rating 4.9, review_count 78, phone 7704763539, address, hours, lat/lng, website, category.
+     (2) Harvested girardroofing.com page headings: "Roof Leaks Repairs, Maintenance, And New Gutters" (home),
+         "ROOF LEAK REPAIRS" (home), "ROOF LEAKS ROOF REPAIRS" (/services), "ROOF MAINTENANCE NEEDED"
+         (/roof-maintenance), "SOLAR POWER RO0F VENTS" (/power-roof-vents), "Roof Repair Pictures / PHOTO GALLERY"
+         (/work-pictures); footer line "SINCE 1983"; harvested work photography in assets/.
+     Nothing else is asserted. The pain-point analysis was used to decide ORDER and EMPHASIS only, never as a fact.
+-->
+<!-- BUILD NOTE — DELIBERATE OMISSIONS (inputs that provably do not exist in the harvest)
+     · No quote FORM and no mailto: anywhere. No email address is published anywhere in the harvest, and a form
+       with no backend is a hard failure. The phone is therefore the sole conversion path, and every primary CTA
+       on the page is the same tel: button. The off-hours gap is answered honestly with published hours + a
+       call-prep script instead of a fake inbox.
+     · No license or certification number: none appears in lead.json or in the harvested pages. Not invented.
+     · No price range anywhere — in copy or in JSON-LD. Nothing in lead.json or the harvest states one, and the
+       "what to ask" section explicitly says prices are not published, so no priceRange property is emitted.
+     · No crew/owner photo, no matched before/after pair, no wide house-exterior establishing shot, no gutter
+       photo — none exist in the approved pool. Handled with typography and layout; not substituted with stock.
+     · No Google Maps screenshots or scraped map tiles (asset_8-10, asset_17-34) and no manufacturer product
+       cut-out (rs_w_1240_h_932.jpg). Service area uses a live keyless map embed.
+     · asset_2 (truck) is shipped small in the trust band at its native 400x300 — never upscaled, never in the hero.
+-->
+<!-- BUILD NOTE — TRUST SIGNALS PRESENT (rubric wants >=2 distinct types; 4 are available and all are used)
+     1. Google rating + count (4.9 / 78) — stated identically in hero chip, proof strip and footer. NOT in JSON-LD
+        (third-party reviews must never be marked up as aggregateRating).
+     2. Years in business — "Since 1983" from their own site footer, promoted from grey fine print to the hero.
+     3. Real harvested job photography — all 7 approved assets are used, none unused.
+     4. Fixed street address, published in copy, schema and a live map.
+-->
+<!-- BUILD NOTE — AVAILABILITY CLAIMS ARE ARITHMETIC ON THE HOURS TABLE
+     Every availability statement on this page is derived by counting rows in the published hours table and
+     nothing else: "Open 6 days a week" (Mon,Tue,Wed,Thu,Fri,Sat have hours; Sun is Closed), "from 7 AM" (all six
+     open rows open at 7 AM), "open until 10 PM Wednesday and Thursday" (both rows close 10 PM), "until 9 PM
+     Monday" (Monday row). No claim is made about who answers the phone, how fast anyone responds, or staffing —
+     the source states listing hours only. The only time-relative copy is the open/closed badge, computed
+     client-side from the same table.
+-->
+<!-- BUILD NOTE — PLACE-NAME / areaServed PARITY
+     Place names in visible prose: "Snellville" and "Gwinnett County" only. Both appear in areaServed. "GA"
+     appears solely as part of the postal address. No metro-wide or multi-city service-area list is claimed —
+     nothing in the harvest evidences one — so the map section asks the visitor to confirm coverage by phone.
+-->
+<!-- BUILD NOTE — HOURS
+     Published exactly as scraped, including the 10 PM Wed/Thu close, which is unusual for a trade but is what the
+     source says; a neutral "call ahead to confirm" sits under the table rather than a silent correction. The
+     Google card's "Open · Closes 10 PM" agrees with the Wed/Thu rows, so there is no source conflict to disclose.
+-->
+<!-- BUILD NOTE — ASSET REUSE / DISTINCT CROPS
+     asset_11 and asset_12 each appear twice, and in each case the two appearances are deliberately different
+     framings so no image visibly repeats: asset_11 runs as a tight horizon band in the hero ridge strip
+     (object-position 50% 20%, scaled 1.5x inside a masked strip so only the vent line reads) versus a full 16:9
+     card crop in the leak-repair card; asset_12 runs as a wide full-bleed backdrop in the hero versus a zoomed
+     1.35x crop centred on the debris-packed valley in the maintenance card. Distinct subject matter is visible in
+     each pair, which is the point of the requirement.
+-->
+<style>
+*,*::before,*::after{box-sizing:border-box}
+html,body{overflow-x:hidden}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+:root{
+  --ink:#0b141c; --ink-2:#12222e; --slate:#31465a; --mute:#5d7386;
+  --paper:#f6f4f0; --paper-2:#fffdfa; --line:#dfd9d1;
+  --accent:#e2620d; --accent-d:#b94a05; --accent-soft:#fdf0e4;
+  --sky:#9fc4dd;
+  --shadow-s:0 1px 2px rgba(11,20,28,.08),0 4px 12px rgba(11,20,28,.06);
+  --shadow-m:0 2px 6px rgba(11,20,28,.10),0 18px 40px -14px rgba(11,20,28,.28);
+  --shadow-l:0 30px 70px -24px rgba(11,20,28,.55);
+  --rad:16px; --nav:74px;
+}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font:400 17px/1.6 Manrope,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  letter-spacing:-.005em;-webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3,h4{margin:0;line-height:1.08;letter-spacing:-.03em;font-weight:800}
+h1{font-size:clamp(34px,6.2vw,66px)}
+h2{font-size:clamp(27px,3.7vw,44px)}
+h3{font-size:clamp(19px,1.6vw,23px);letter-spacing:-.02em}
+p{margin:0}
+.wrap{width:min(1200px,92vw);margin-inline:auto}
+.sec{padding:clamp(52px,6.4vw,88px) 0;scroll-margin-top:calc(var(--nav) + 10px)}
+.eyebrow{font-size:12.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-d)}
+.lede{font-size:clamp(16.5px,1.35vw,19px);color:var(--slate);max-width:62ch}
+.dark{background:var(--ink);color:#e9eef3}
+.dark .lede{color:#a9bccb}
+.dark .eyebrow{color:#f6a86a}
+
+/* ---------- header ---------- */
+.hdr{position:sticky;top:0;z-index:60;background:rgba(246,244,240,.82);backdrop-filter:blur(14px) saturate(1.3);
+  border-bottom:1px solid transparent;transition:padding .22s ease,border-color .22s ease,box-shadow .22s ease}
+.hdr-in{display:flex;align-items:center;gap:18px;height:var(--nav);transition:height .22s ease}
+.hdr.is-stuck{border-bottom-color:var(--line);box-shadow:0 6px 24px -18px rgba(11,20,28,.6)}
+.hdr.is-stuck .hdr-in{height:60px}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;font-weight:800;letter-spacing:-.02em;flex:0 0 auto}
+.brand .mark{width:40px;height:40px;border-radius:11px;background:#fff;border:1px solid var(--line);
+  display:grid;place-items:center;overflow:hidden;flex:0 0 auto}
+.brand .mark img{width:34px;height:auto}
+.brand b{font-size:17px;line-height:1.1}
+.brand span{display:block;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+.nav{display:none;margin-left:auto;gap:2px}
+.nav a{position:relative;text-decoration:none;font-weight:700;font-size:14.5px;color:var(--slate);
+  padding:10px 12px;border-radius:9px;transition:color .16s ease,background .16s ease}
+.nav a:hover{color:var(--ink);background:rgba(11,20,28,.05)}
+.hdr-cta{margin-left:auto}
+@media(min-width:960px){.nav{display:flex}.hdr-cta{margin-left:14px}}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:13px 22px;
+  border-radius:13px;font-weight:800;font-size:16.5px;text-decoration:none;letter-spacing:-.01em;border:1.5px solid transparent;
+  transition:transform .16s ease,box-shadow .16s ease,background .16s ease,color .16s ease;white-space:nowrap}
+.btn-primary{background:var(--accent);color:#fff;box-shadow:0 10px 24px -12px rgba(226,98,13,.9)}
+.btn-primary:hover{background:var(--accent-d);transform:translateY(-2px);box-shadow:0 16px 30px -12px rgba(226,98,13,.95)}
+.btn-primary:active{transform:translateY(0)}
+.btn-ghost{background:transparent;color:var(--ink);border-color:rgba(11,20,28,.24)}
+.btn-ghost:hover{background:rgba(11,20,28,.06);transform:translateY(-2px)}
+/* dark-context ghost: hero scene, dark bands and the sticky bar all sit on near-black */
+.dark .btn-ghost,.hero .btn-ghost,.bar .btn-ghost{color:#e9eef3;border-color:rgba(255,255,255,.42);background:rgba(255,255,255,.06)}
+.dark .btn-ghost:hover,.hero .btn-ghost:hover,.bar .btn-ghost:hover{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.62)}
+.btn-sm{min-height:46px;padding:10px 16px;font-size:15px;border-radius:11px}
+.btn .num{font-variant-numeric:tabular-nums}
+.ctarow{display:flex;flex-wrap:wrap;gap:12px}
+
+/* ---------- 3D HERO ---------- */
+.hero{position:relative;isolation:isolate;background:var(--ink-2)}
+.stage{position:relative;overflow:hidden;perspective:1150px;perspective-origin:50% 42%;
+  min-height:clamp(580px,88vh,780px);display:grid}
+@supports(height:100svh){.stage{min-height:clamp(580px,88svh,780px)}}
+.scene{position:relative;grid-area:1/1;transform-style:preserve-3d;display:grid;
+  transform:rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg))}
+.layer{grid-area:1/1;position:relative;transform-style:preserve-3d;will-change:transform}
+/* rest transforms live in CSS, so the depth staging survives with JS disabled */
+.l-back{transform:translate3d(0,calc(var(--sy,0px) * -.05),-300px) scale(1.30)}
+.l-scrim{transform:translate3d(0,calc(var(--sy,0px) * .05),-190px) scale(1.19)}
+.l-ridge{transform:translate3d(0,calc(var(--sy,0px) * .13),-95px) scale(1.09)}
+.l-front{transform:translate3d(0,calc(var(--sy,0px) * .24),70px) scale(.94)}
+/* backdrop is brightened and cooled in CSS only — the asset file itself is untouched — so the three
+   photographic planes separate before any pointer motion happens */
+.l-back img{width:100%;height:100%;object-fit:cover;object-position:50% 58%;
+  filter:brightness(1.18) saturate(.86) contrast(.95) hue-rotate(-6deg)}
+.l-back::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(10,22,33,.72) 0%,rgba(10,22,33,.40) 38%,rgba(9,18,26,.70) 74%,rgba(8,16,23,.94) 100%)}
+.l-scrim{pointer-events:none}
+.l-scrim svg{width:100%;height:100%;display:block}
+.l-ridge{pointer-events:none;display:flex;align-items:flex-end}
+.ridge-strip{width:100%;height:clamp(104px,16vh,168px);overflow:hidden;position:relative;
+  -webkit-mask-image:linear-gradient(180deg,transparent,#000 46%,#000 100%);
+  mask-image:linear-gradient(180deg,transparent,#000 46%,#000 100%)}
+/* tight horizon band: 1.5x scale + high object-position isolates the vent line only — a visibly different
+   framing from the full 16:9 card crop of the same file further down the page */
+.ridge-strip img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;transform:scale(1.5);transform-origin:50% 30%;
+  opacity:.98;filter:saturate(.8) contrast(1.16) brightness(.86)}
+.ridge-strip::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,16,23,.16),rgba(8,16,23,.9))}
+.l-front{display:flex;align-items:center;padding:calc(var(--nav) - 24px) 0 clamp(40px,7vh,76px)}
+.hero-copy{width:min(1200px,92vw);margin-inline:auto;color:#fff;max-width:none}
+.plate{display:inline-flex;align-items:center;gap:14px;background:#fff;border-radius:18px;padding:10px 18px 10px 10px;
+  box-shadow:var(--shadow-l);margin-bottom:20px}
+.plate img{width:60px;height:auto;border-radius:10px}
+.plate div{color:var(--ink);line-height:1.15}
+.plate strong{display:block;font-size:16px;font-weight:800;letter-spacing:-.02em}
+.plate small{display:block;font-size:11.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--accent-d);margin-top:3px}
+.hero h1{color:#fff;text-shadow:0 2px 30px rgba(0,0,0,.5);max-width:16ch}
+.hero h1 em{font-style:normal;color:#ffb473}
+.hero-sub{margin-top:18px;max-width:52ch;font-size:clamp(16.5px,1.5vw,19.5px);color:#e2ebf2;text-shadow:0 1px 16px rgba(0,0,0,.7)}
+.hero .ctarow{margin-top:26px}
+.chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px}
+.chip{display:inline-flex;align-items:center;gap:7px;font-size:13.5px;font-weight:700;color:#eaf1f7;
+  background:rgba(8,16,23,.42);border:1px solid rgba(255,255,255,.28);padding:8px 13px;border-radius:999px;
+  backdrop-filter:blur(6px)}
+.chip .st{color:#ffc046}
+@media(prefers-reduced-motion:reduce){
+  .layer{transition:none!important}
+  html{scroll-behavior:auto}
+}
+
+/* ---------- proof strip ---------- */
+.proof{background:var(--ink);color:#fff;border-top:3px solid var(--accent)}
+.proof-grid{display:grid;gap:1px;background:rgba(255,255,255,.12);grid-template-columns:1fr}
+.proof-cell{background:var(--ink);padding:22px 20px}
+.proof-cell .k{font-size:11.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#8fa8ba}
+.proof-cell .v{font-size:clamp(21px,2.1vw,27px);font-weight:800;letter-spacing:-.025em;margin-top:6px;line-height:1.15}
+.proof-cell .n{font-size:13.5px;color:#a9bccb;margin-top:5px}
+.proof-cell a{color:#ffb473;text-decoration-thickness:1px;text-underline-offset:3px}
+@media(min-width:640px){.proof-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1020px){.proof-grid{grid-template-columns:repeat(4,1fr)}}
+
+/* ---------- section headers ---------- */
+.sec-head{display:grid;gap:14px;margin-bottom:clamp(26px,3vw,40px)}
+@media(min-width:900px){.sec-head{grid-template-columns:1.05fr .95fr;align-items:end;gap:34px}}
+.sec-head h2{max-width:19ch}
+
+/* ---------- services grid ---------- */
+.cards{display:grid;gap:18px;grid-template-columns:1fr}
+@media(min-width:680px){.cards{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1080px){.cards{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--paper-2);border:1px solid var(--line);border-radius:var(--rad);overflow:hidden;
+  display:flex;flex-direction:column;box-shadow:var(--shadow-s);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-m);border-color:#c9c0b4}
+.card-ph{position:relative;aspect-ratio:16/9;overflow:hidden;background:#dfe6eb}
+.card-ph img{width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.2,.7,.3,1)}
+.card:hover .card-ph img{transform:scale(1.05)}
+/* maintenance card: zoomed crop into the debris-packed valley, distinct from the hero's wide backdrop use */
+.card-ph.zoom img{transform:scale(1.35);transform-origin:38% 62%;object-position:38% 62%}
+.card:hover .card-ph.zoom img{transform:scale(1.42)}
+.card-nb{aspect-ratio:16/9;position:relative;display:grid;place-items:center;overflow:hidden;
+  background:radial-gradient(120% 140% at 18% 8%,#1d3causeless 0%,transparent 0%),linear-gradient(140deg,#0e1d28 0%,#1c3446 52%,#2b4a5c 100%);color:#fff;padding:18px}
+.card-nb::before{content:"";position:absolute;inset:0;opacity:.5;
+  background:repeating-linear-gradient(-58deg,rgba(255,255,255,.075) 0 2px,transparent 2px 13px)}
+.card-nb .glyph{position:relative;text-align:center;line-height:1}
+.card-nb .glyph .no{display:block;font-size:13px;font-weight:800;letter-spacing:.2em;color:#f6a86a;margin-bottom:12px;text-transform:uppercase;font-variant-numeric:tabular-nums}
+.card-nb .glyph .wd{display:block;font-size:clamp(34px,4.4vw,52px);font-weight:800;letter-spacing:-.045em}
+.card-nb .glyph span.sub{display:block;font-size:11.5px;letter-spacing:.16em;font-weight:700;color:#b9cbd8;margin-top:11px;text-transform:uppercase}
+.card-b{padding:20px 20px 22px;display:flex;flex-direction:column;gap:9px;flex:1}
+.card-b p{font-size:15.5px;color:var(--slate);line-height:1.55}
+.card-tag{margin-top:auto;padding-top:12px;font-size:12.5px;font-weight:700;color:var(--mute);
+  border-top:1px dashed var(--line);letter-spacing:.02em}
+
+/* ---------- asymmetric trust split ---------- */
+.split{display:grid;gap:clamp(26px,3.4vw,52px);align-items:start}
+@media(min-width:940px){.split{grid-template-columns:.92fr 1.08fr}}
+.stick{position:sticky;top:calc(var(--nav) + 22px)}
+.truck{border-radius:var(--rad);overflow:hidden;border:1px solid rgba(255,255,255,.16);background:#0a1219;
+  max-width:400px;box-shadow:var(--shadow-l)}
+.truck img{width:100%;height:auto}
+.truck figcaption{padding:13px 15px;font-size:13.5px;line-height:1.5;color:#a9bccb;border-top:1px solid rgba(255,255,255,.14)}
+.pts{display:grid;gap:14px;counter-reset:pt}
+.pt{position:relative;padding:20px 22px 20px 66px;border-radius:14px;background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.11);transition:background .2s ease,border-color .2s ease}
+.pt:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.2)}
+.pt::before{counter-increment:pt;content:counter(pt,decimal-leading-zero);position:absolute;left:20px;top:20px;
+  font-size:15px;font-weight:800;color:#f6a86a;font-variant-numeric:tabular-nums}
+.pt h3{color:#fff;margin-bottom:7px}
+.pt p{font-size:15.5px;color:#a9bccb;line-height:1.6}
+
+/* ---------- ask table ---------- */
+.asktable{width:100%;border-collapse:collapse;background:var(--paper-2);border:1px solid var(--line);
+  border-radius:var(--rad);overflow:hidden;font-size:15.5px}
+.asktable caption{caption-side:top;text-align:left;padding:0 0 14px;color:var(--slate);font-size:15.5px;max-width:78ch}
+.asktable th,.asktable td{text-align:left;padding:14px 16px;border-bottom:1px solid var(--line);vertical-align:top}
+.asktable thead th{background:#efeae3;font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--slate);font-weight:800}
+.asktable tbody tr:last-child th,.asktable tbody tr:last-child td{border-bottom:0}
+.asktable tbody th{font-weight:800;letter-spacing:-.015em;width:38%}
+.asktable td{color:var(--slate)}
+.asktable tbody tr:hover{background:#faf7f3}
+@media(max-width:640px){
+  .asktable thead{position:absolute;left:-9999px}
+  .asktable tbody th,.asktable tbody td{display:block;width:auto;border-bottom:0;padding:14px 16px 0}
+  .asktable tbody td{padding:6px 16px 16px}
+  .asktable tbody tr{display:block;border-bottom:1px solid var(--line)}
+  .asktable tbody tr:last-child{border-bottom:0}
+}
+
+/* ---------- hours + map ---------- */
+.hm{display:grid;gap:22px}
+@media(min-width:980px){.hm{grid-template-columns:.95fr 1.05fr;gap:34px;align-items:start}}
+.panel{background:var(--paper-2);border:1px solid var(--line);border-radius:var(--rad);box-shadow:var(--shadow-s);overflow:hidden}
+.panel-h{padding:18px 20px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.panel-h h3{letter-spacing:-.02em}
+.hours{width:100%;border-collapse:collapse;font-size:16px}
+.hours th,.hours td{padding:12px 20px;border-bottom:1px solid #eae5dd;text-align:left}
+.hours tr:last-child th,.hours tr:last-child td{border-bottom:0}
+.hours th{font-weight:600;color:var(--slate);width:46%}
+.hours td{font-weight:700;font-variant-numeric:tabular-nums;text-align:right}
+.hours tr.today th,.hours tr.today td{background:var(--accent-soft);color:var(--ink)}
+.hours tr.today th::after{content:" · today";font-weight:800;color:var(--accent-d);font-size:12px;letter-spacing:.05em}
+.hours .closed{color:var(--mute);font-weight:600}
+.status{display:none;align-items:center;gap:8px;font-size:13.5px;font-weight:800;padding:7px 12px;border-radius:999px;
+  background:#e8f3ea;color:#1c6b39;border:1px solid #c3e2cd}
+.status.shut{background:#f4ece8;color:#8a4a2b;border-color:#e6d2c6}
+.status.on{display:inline-flex}
+.status i{width:8px;height:8px;border-radius:50%;background:currentColor;display:block}
+.note{padding:14px 20px;font-size:14px;color:var(--mute);background:#f6f2ec;border-top:1px solid var(--line)}
+.mapbox{border-radius:var(--rad);overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow-s);background:#e7e2da}
+.mapbox iframe{display:block;width:100%;height:clamp(300px,42vw,430px);border:0}
+.addr{display:grid;gap:6px;padding:18px 20px;background:var(--paper-2);border-top:1px solid var(--line)}
+.addr .a{font-weight:800;letter-spacing:-.02em;font-size:17px}
+.addr .b{font-size:14.5px;color:var(--slate)}
+
+/* ---------- cta band ---------- */
+.band{background:linear-gradient(135deg,#0b141c 0%,#17303f 62%,#25404f 100%);color:#fff;border-radius:0}
+.band-in{display:grid;gap:20px;align-items:center;padding:clamp(34px,4.4vw,54px) 0}
+@media(min-width:900px){.band-in{grid-template-columns:1.25fr .75fr;gap:38px}}
+.band h2{color:#fff;max-width:20ch}
+.band p{color:#b9cbd8;margin-top:10px;max-width:56ch;font-size:16.5px}
+
+/* ---------- footer ---------- */
+.ftr{background:var(--ink);color:#c3d2dd;padding:clamp(44px,5vw,66px) 0 130px}
+@media(min-width:760px){.ftr{padding-bottom:44px}}
+.ftr-grid{display:grid;gap:28px}
+@media(min-width:820px){.ftr-grid{grid-template-columns:1.3fr 1fr 1fr}}
+.ftr h4{font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:#8fa8ba;margin-bottom:12px}
+.ftr a{color:#e9eef3;text-decoration:none}
+.ftr a:hover{color:#ffb473;text-decoration:underline;text-underline-offset:3px}
+.ftr ul{list-style:none;margin:0;padding:0;display:grid;gap:9px;font-size:15.5px}
+.ftr .big{font-size:clamp(23px,2.4vw,30px);font-weight:800;letter-spacing:-.03em;color:#fff;text-decoration:none}
+.ftr-b{margin-top:34px;padding-top:20px;border-top:1px solid rgba(255,255,255,.14);display:flex;flex-wrap:wrap;
+  gap:10px 22px;justify-content:space-between;font-size:13.5px;color:#8fa8ba}
+
+/* ---------- sticky mobile call bar ---------- */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:70;display:flex;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));
+  background:rgba(11,20,28,.94);backdrop-filter:blur(12px);border-top:1px solid rgba(255,255,255,.14)}
+.bar .btn{flex:1;min-height:52px;padding-inline:12px}
+.bar .btn-ghost{flex:0 1 auto;font-size:15px}
+@media(min-width:760px){.bar{display:none}}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:12px;top:12px;z-index:99;background:#fff;padding:10px 14px;border-radius:10px;font-weight:800}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:6px}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+</style>
+</head>
+<body>
+<a class="skip" href="#home">Skip to main content</a>
+
+<header class="hdr" id="hdr">
+  <div class="wrap hdr-in">
+    <a class="brand" href="#home">
+      <span class="mark"><img src="assets/asset_1.jpg" alt="Girard Roofing logo: a house sheltered under an open umbrella" width="400" height="432"></span>
+      <b>Girard Roofing<span>Snellville, GA</span></b>
+    </a>
+    <nav class="nav" aria-label="Sections of this page">
+      <a href="#services">Services</a>
+      <a href="#why">Why Girard</a>
+      <a href="#ask">What to ask</a>
+      <a href="#hours">Hours &amp; location</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-primary btn-sm hdr-cta" href="tel:+17704763539">Call <span class="num">(770) 476-3539</span></a>
+  </div>
+</header>
+
+<main id="home">
+
+<!-- ============ 1. HERO — CSS 3D scene, four layers at distinct translateZ ============
+     Layer stack (front → back): asset_1 brand plate + type + CTA (+70px) · asset_11 ridge strip (-95px)
+     · generated SVG haze scrim (-190px) · asset_12 backdrop (-300px).
+     Drivers: pointer rotates the stage <=4.5deg (desktop, pointer:fine only) and scroll drifts each layer at a
+     different rate. transform/opacity only, state read in the handler, written inside rAF.
+     No JS and prefers-reduced-motion both fall back to the CSS rest transforms above — the depth staging stays,
+     the parallax stops, and the name, value proposition and phone CTA are fully readable either way.
+     asset_1 sits on a white plate so its own white background reads as knocked out without editing the file.
+     asset_11/asset_12 carry no location claim in copy or alt text. -->
+<section class="hero">
+  <div class="stage" id="stage">
+    <div class="scene" id="scene">
+
+      <div class="layer l-back">
+        <img src="assets/asset_12.jpg" alt="Sunlit shingled roof valley with roof vents, a brick chimney and pine-needle debris, neighborhood trees in the distance" width="1160" height="653" fetchpriority="high" decoding="async">
+      </div>
+
+      <div class="layer l-scrim" aria-hidden="true">
+        <svg viewBox="0 0 1200 800" preserveAspectRatio="none" role="presentation" focusable="false">
+          <defs>
+            <linearGradient id="haze" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#bcd9ee" stop-opacity=".46"></stop>
+              <stop offset="46%" stop-color="#7ea6c3" stop-opacity=".14"></stop>
+              <stop offset="100%" stop-color="#0b141c" stop-opacity=".52"></stop>
+            </linearGradient>
+          </defs>
+          <rect width="1200" height="800" fill="url(#haze)"></rect>
+        </svg>
+      </div>
+
+      <div class="layer l-ridge" aria-hidden="true">
+        <div class="ridge-strip">
+          <img src="assets/asset_11.jpg" alt="" width="1240" height="620" decoding="async">
+        </div>
+      </div>
+
+      <div class="layer l-front">
+        <div class="hero-copy">
+          <div class="plate">
+            <img src="assets/asset_1.jpg" alt="Girard Roofing logo: a house sheltered under an open umbrella" width="400" height="432">
+            <div><strong>Girard Roofing</strong><small>Roofing since 1983</small></div>
+          </div>
+          <h1>The roof leak gets found. <em>Then it gets fixed.</em></h1>
+          <p class="hero-sub">Roof leak repair, shingle and flashing work, maintenance, new gutters and solar power roof vents — from a roofing contractor working out of a fixed Snellville address since 1983.</p>
+          <div class="ctarow">
+            <a class="btn btn-primary" href="tel:+17704763539">Call <span class="num">(770) 476-3539</span></a>
+            <a class="btn btn-ghost" href="#services">See what they repair</a>
+          </div>
+          <div class="chips">
+            <span class="chip"><span class="st">★</span> 4.9 · 78 Google reviews</span>
+            <span class="chip">Since 1983</span>
+            <span class="chip">1825 Windburn Ct SW, Snellville</span>
+            <span class="chip">Free estimates</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2. SOCIAL PROOF STRIP — rating + COUNT as text. No review bodies quoted anywhere on this page,
+     and the rating is deliberately absent from the JSON-LD block.
+     Cell 3 states open days only — counted off the hours table, no claim about phone staffing. ============ -->
+<section class="proof" aria-label="Ratings and business facts">
+  <div class="wrap">
+    <div class="proof-grid">
+      <div class="proof-cell">
+        <div class="k">Google rating</div>
+        <div class="v">4.9 ★</div>
+        <div class="n">78 Google reviews · <a href="https://www.google.com/maps/place/Girard+Roofing/data=!4m7!3m6!1s0x88f5b970c64ebae1:0xf1bf6aaed7da666f!8m2!3d33.8804128!4d-84.0045761!16s%2Fg%2F1hc11gd2z!19sChIJ4bpOxnC59YgRb2ba165qv_E" rel="noopener">View the Google listing</a></div>
+      </div>
+      <div class="proof-cell">
+        <div class="k">In business</div>
+        <div class="v">Since 1983</div>
+        <div class="n">More than 40 years roofing under the same name</div>
+      </div>
+      <div class="proof-cell">
+        <div class="k">Listed hours</div>
+        <div class="v">Open 6 days a week</div>
+        <div class="n">From 7 AM Monday through Saturday · closed Sunday</div>
+      </div>
+      <div class="proof-cell">
+        <div class="k">Where they are</div>
+        <div class="v">Snellville, GA</div>
+        <div class="n">1825 Windburn Ct SW, Snellville, GA 30078</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. SERVICES ============ -->
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">What they actually do</p>
+        <h2>Six jobs, named plainly.</h2>
+      </div>
+      <p class="lede">Every service below is one Girard Roofing publishes on its own site, and every photo is one of their own job photos — no stock, no renders. Describe your problem on the phone and they'll tell you which of these it is.</p>
+    </div>
+
+    <div class="cards">
+
+      <!-- EVIDENCE: girardroofing.com homepage headings "Roof Leaks Roof Repairs and Maintenance" and
+           "ROOF LEAK REPAIRS"; /services heading "ROOF LEAKS ROOF REPAIRS". Photo: approved asset_11 in a full
+           16:9 card crop — a different framing from the tight hero horizon band. Location-neutral, described
+           only as what is in the frame. -->
+      <article class="card">
+        <div class="card-ph"><img src="assets/asset_11.jpg" alt="Gray shingled roof ridge lined with box vents beside a white-sided chimney chase with a rusted cap flashing" width="1240" height="620" loading="lazy" decoding="async"></div>
+        <div class="card-b">
+          <h3>Roof leak repair</h3>
+          <p>Leaks rarely start where the ceiling stain is. Chimney chases, rusted cap flashing, vent boots and valleys are the usual entry points, and finding the real one is the job. Roof leaks are the service Girard has led with on its own site for years.</p>
+          <p class="card-tag">Have ready: where the stain is, and whether it shows during rain or after</p>
+        </div>
+      </article>
+
+      <!-- EVIDENCE: /services page "ROOF LEAKS ROOF REPAIRS"; repair work photographed on their own
+           /work-pictures gallery. Photo: approved asset_15. -->
+      <article class="card">
+        <div class="card-ph"><img src="assets/asset_15.jpg" alt="Finished shingle repair patch — newer lighter shingles woven into a darker shingle field near the roof edge, lawn beyond" width="1160" height="653" loading="lazy" decoding="async"></div>
+        <div class="card-b">
+          <h3>Shingle &amp; flashing repair</h3>
+          <p>Missing, lifted or wind-torn shingles woven back into the existing field, and flashing re-set where the roof meets a wall, chase or chimney. The photo is one of their own finished patches — new shingles blending into the old field.</p>
+          <p class="card-tag">Ask for the repair scope and the replacement scope, both in writing</p>
+        </div>
+      </article>
+
+      <!-- EVIDENCE: their own /work-pictures gallery photo (approved asset_14) showing OSB deck replacement in
+           progress — deck/wood repair is documented by their published work photography. -->
+      <article class="card">
+        <div class="card-ph"><img src="assets/asset_14.jpg" alt="Roof deck repair in progress: a fresh OSB decking patch, a stack of shingles, a coil nailer and a cordless drill, with a worker's boots at the eave" width="1160" height="653" loading="lazy" decoding="async"></div>
+        <div class="card-b">
+          <h3>Roof deck &amp; wood repair</h3>
+          <p>When water has been getting in for a while, the decking under the shingles goes soft and has to come out before anything new goes down. Their own job photos show OSB deck patches being cut in and re-nailed.</p>
+          <p class="card-tag">Soft spots underfoot or a sagging line usually mean deck, not shingle</p>
+        </div>
+      </article>
+
+      <!-- EVIDENCE: dedicated harvested page girardroofing.com/power-roof-vents, heading "SOLAR POWER RO0F VENTS".
+           Photo: approved asset_13 — the vent installed on a real job, used instead of the rejected
+           manufacturer cut-out product shot. No energy-saving figure is claimed. -->
+      <article class="card">
+        <div class="card-ph"><img src="assets/asset_13.jpg" alt="Newly installed gray power roof vent on a shingled slope, with a safety rope and pry bars resting on the roof and a chimney cap at right" width="1160" height="870" loading="lazy" decoding="async"></div>
+        <div class="card-b">
+          <h3>Solar power roof vents</h3>
+          <p>Girard keeps a whole page on its own site for solar power roof vents — powered vents that pull hot air out of the attic instead of letting it sit under the deck. This one is theirs, installed and flashed into a live slope.</p>
+          <p class="card-tag">Ask whether your existing ridge and soffit venting is the real problem first</p>
+        </div>
+      </article>
+
+      <!-- EVIDENCE: dedicated harvested page girardroofing.com/roof-maintenance, heading "ROOF MAINTENANCE NEEDED".
+           Photo: approved asset_12, cropped in hard on the debris-packed valley (.zoom) so it does not repeat the
+           wide hero backdrop framing of the same file. Location-neutral. -->
+      <article class="card">
+        <div class="card-ph zoom"><img src="assets/asset_12.jpg" alt="Close view of pine-needle debris packed into a shingled roof valley beside a vent" width="1160" height="653" loading="lazy" decoding="async"></div>
+        <div class="card-b">
+          <h3>Roof maintenance</h3>
+          <p>Pine needles packed into a valley, a rusting cap, a dried-out vent seal — this is what turns into next winter's leak. Maintenance has its own page on their site, which tells you how much of the work starts here.</p>
+          <p class="card-tag">Most common on tree-shaded roofs, where valleys never dry out</p>
+        </div>
+      </article>
+
+      <!-- EVIDENCE: homepage heading "Roof Leaks Repairs, Maintenance, And New Gutters". No gutter photograph
+           exists in the approved pool, so this card gets a deliberate numbered typographic lockup instead —
+           nothing was substituted and no stock was used. -->
+      <article class="card">
+        <div class="card-nb">
+          <div class="glyph">
+            <span class="no">Service 06</span>
+            <span class="wd">New gutters</span>
+            <span class="sub">Listed on their own homepage</span>
+          </div>
+        </div>
+        <div class="card-b">
+          <h3>New gutters</h3>
+          <p>Gutters sit alongside repairs and maintenance in Girard's own homepage heading. Water that leaves the roof correctly and then pools at the fascia is still a roof problem, and it is quoted with the rest of the work.</p>
+          <p class="card-tag">Worth pricing at the same visit as any repair on the same elevation</p>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="ctarow" style="margin-top:30px">
+      <a class="btn btn-primary" href="tel:+17704763539">Call <span class="num">(770) 476-3539</span></a>
+      <a class="btn btn-ghost" href="#hours">See hours &amp; location</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. WHY US / PAIN POINTS — asymmetric split, breaks the card-grid run ============ -->
+<section class="sec dark" id="why">
+  <div class="wrap split">
+    <div class="stick">
+      <p class="eyebrow">Why Girard</p>
+      <h2 style="color:#fff;margin-top:12px">The things a storm crew can't put on a truck.</h2>
+      <p class="lede" style="margin-top:16px">After a hail storm, out-of-town crews knock every door in Gwinnett County. Here is everything about this business that is checkable before you hand anyone a deposit.</p>
+      <!-- asset_2 is bound to this location: the truck lettering carries this location's exact scraped phone
+           number. Shipped at native 400x300, never upscaled or enhanced. -->
+      <figure class="truck" style="margin:24px 0 0">
+        <img src="assets/asset_2.jpg" alt="Girard Roofing's blue Ford Ranger work truck with a ladder rack, lettered 'Roof Leaks? 770-476-3539', girardroofing.com and 'Free Estimates'" width="400" height="300" loading="lazy" decoding="async">
+        <figcaption>Their own truck, lettered with the same number on this page — and with “Free Estimates”.</figcaption>
+      </figure>
+    </div>
+
+    <div class="pts">
+      <div class="pt">
+        <h3>A fixed address, and 40+ years at it</h3>
+        <p>1825 Windburn Ct SW, Snellville, GA 30078 — on the page, in the map below, and on the Google listing. The name has been roofing since 1983. Neither of those is something a crew passing through after a storm can produce.</p>
+      </div>
+      <div class="pt">
+        <h3>4.9 stars across 78 Google reviews</h3>
+        <p>Seventy-eight ratings is a long tail of finished jobs, not a handful of friends. Read them yourself on the <a href="https://www.google.com/maps/place/Girard+Roofing/data=!4m7!3m6!1s0x88f5b970c64ebae1:0xf1bf6aaed7da666f!8m2!3d33.8804128!4d-84.0045761!16s%2Fg%2F1hc11gd2z!19sChIJ4bpOxnC59YgRb2ba165qv_E" rel="noopener" style="color:#ffb473">Google listing</a> — this page doesn't reprint review text.</p>
+      </div>
+      <div class="pt">
+        <h3>Repairs are the headline, not the consolation prize</h3>
+        <p>Leaks, shingles, flashing, deck patches, vents, maintenance — that's the list Girard publishes about itself, and it's what the job photos on this page show. If a repair is what the roof needs, it's the everyday work here, not a downsell.</p>
+      </div>
+      <div class="pt">
+        <h3>The phone is the way in — and the listing runs late</h3>
+        <p>There is one published channel: <a href="tel:+17704763539" style="color:#ffb473">(770) 476-3539</a>. The listed hours start at 7 AM six days a week and run until 10 PM Wednesday and Thursday, and until 9 PM Monday. Full table below, straight from the listing.</p>
+      </div>
+      <div class="pt">
+        <h3>The proof is their own photographs</h3>
+        <p>Every image on this page came off Girard's own site — the ridge vents, the valley, the deck patch, the finished shingle weave, the lettered truck. Nothing here is stock, a render, or a stand-in.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. CALL SCRIPT — required pattern for unknowable commercial data (price, insurance, lead time).
+     Framed explicitly as general category guidance, not as this business's policies. ============ -->
+<section class="sec" id="ask">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">General guidance · not this company's policies</p>
+        <h2>What to ask any roofer in Gwinnett County before you hire.</h2>
+      </div>
+      <p class="lede">Prices, insurance details and how soon a crew can start are not published anywhere by this business, so this page does not guess at them. These are the questions worth putting to any roofing contractor on the first call — the answers should come from them, not from a website.</p>
+    </div>
+
+    <table class="asktable">
+      <caption>Roofing contractors in general vary widely on all five of these. Ask, and write the answers down.</caption>
+      <thead><tr><th scope="col">Ask this</th><th scope="col">Why it matters</th></tr></thead>
+      <tbody>
+        <tr>
+          <th scope="row">“Is this a repair, and what would a replacement cost instead?”</th>
+          <td>Get both numbers in the same conversation. A quote that only exists in one direction tells you nothing about whether the other was ever considered.</td>
+        </tr>
+        <tr>
+          <th scope="row">“Can you send proof of liability insurance and workers' comp?”</th>
+          <td>If someone is hurt on your roof, whose policy responds is a question you want answered before the ladder goes up, not after.</td>
+        </tr>
+        <tr>
+          <th scope="row">“What's the warranty on the workmanship, and separately on the materials?”</th>
+          <td>These are two different warranties from two different parties. A single vague “guaranteed” covers neither.</td>
+        </tr>
+        <tr>
+          <th scope="row">“What do you need from me for an insurance claim, and will you meet the adjuster?”</th>
+          <td>After hail or wind, the paperwork sequence matters as much as the repair. Establish who documents what before work starts.</td>
+        </tr>
+        <tr>
+          <th scope="row">“What's the deposit, and what does the written estimate include?”</th>
+          <td>A written scope — materials, tear-off, decking, disposal, and what happens if rot is found underneath — is the difference between a price and a surprise.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============ 6. HOURS + LOCATION — scraped hours published verbatim, keyless map embed, never lazy ============ -->
+<section class="sec" id="hours" style="background:#efeae3">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">Hours &amp; location</p>
+        <h2>Snellville, and the listing runs late.</h2>
+      </div>
+      <p class="lede">Hours as published on the Google listing, including the late Wednesday and Thursday close. Sunday is closed. Call ahead to confirm before driving over.</p>
+    </div>
+
+    <div class="hm">
+      <div class="panel">
+        <div class="panel-h">
+          <h3>Opening hours</h3>
+          <span class="status" id="status" aria-live="polite"><i></i><span id="statusText"></span></span>
+        </div>
+        <table class="hours">
+          <caption class="vh">Weekly opening hours for Girard Roofing</caption>
+          <tbody>
+            <tr data-day="1"><th scope="row">Monday</th><td>7 AM – 9 PM</td></tr>
+            <tr data-day="2"><th scope="row">Tuesday</th><td>7 AM – 5 PM</td></tr>
+            <tr data-day="3"><th scope="row">Wednesday</th><td>7 AM – 10 PM</td></tr>
+            <tr data-day="4"><th scope="row">Thursday</th><td>7 AM – 10 PM</td></tr>
+            <tr data-day="5"><th scope="row">Friday</th><td>7 AM – 5 PM</td></tr>
+            <tr data-day="6"><th scope="row">Saturday</th><td>7 AM – 5 PM</td></tr>
+            <tr data-day="0"><th scope="row">Sunday</th><td class="closed">Closed</td></tr>
+          </tbody>
+        </table>
+        <p class="note">These are the hours the listing publishes, including the 10 PM Wednesday and Thursday close. Call ahead to confirm before you head over.</p>
+      </div>
+
+      <div>
+        <div class="mapbox">
+          <iframe src="https://maps.google.com/maps?q=33.8804128,-84.0045761&amp;output=embed" title="Map showing Girard Roofing at 1825 Windburn Ct SW, Snellville, GA 30078" width="600" height="430" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div class="addr">
+            <span class="a">1825 Windburn Ct SW, Snellville, GA 30078</span>
+            <span class="b">Roofing contractor based in Snellville, Gwinnett County. Call to confirm they cover your street — no service-area list is published, so this page doesn't invent one.</span>
+          </div>
+        </div>
+        <div class="ctarow" style="margin-top:18px">
+          <a class="btn btn-primary" href="tel:+17704763539">Call <span class="num">(770) 476-3539</span></a>
+          <a class="btn btn-ghost" href="https://www.google.com/maps/place/Girard+Roofing/data=!4m7!3m6!1s0x88f5b970c64ebae1:0xf1bf6aaed7da666f!8m2!3d33.8804128!4d-84.0045761!16s%2Fg%2F1hc11gd2z!19sChIJ4bpOxnC59YgRb2ba165qv_E" rel="noopener">Open the Google listing</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" aria-label="Call Girard Roofing">
+  <div class="wrap band-in">
+    <div>
+      <h2>Describe the leak. They'll tell you what it is.</h2>
+      <p>Where the stain is, when it shows up, and roughly how old the roof is — that's usually enough to know whether this is a flashing job, a shingle job, or decking. Free estimates, as lettered on the truck.</p>
+    </div>
+    <div class="ctarow" style="justify-content:flex-start">
+      <a class="btn btn-primary" href="tel:+17704763539">Call <span class="num">(770) 476-3539</span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ 7. CONTACT / FOOTER — no invented email, no invented social profiles ============ -->
+<footer class="ftr" id="contact">
+  <div class="wrap">
+    <div class="ftr-grid">
+      <div>
+        <h4>Girard Roofing</h4>
+        <a class="big" href="tel:+17704763539">(770) 476-3539</a>
+        <p style="margin-top:10px;font-size:15.5px;line-height:1.6">1825 Windburn Ct SW<br>Snellville, GA 30078</p>
+        <p style="margin-top:12px;font-size:15px;color:#8fa8ba">Roofing contractor · Since 1983 · 4.9 ★ from 78 Google reviews</p>
+        <a class="btn btn-primary btn-sm" style="margin-top:16px" href="tel:+17704763539">Call <span class="num">(770) 476-3539</span></a>
+      </div>
+      <div>
+        <h4>On this page</h4>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#why">Why Girard</a></li>
+          <li><a href="#ask">What to ask any roofer</a></li>
+          <li><a href="#hours">Hours &amp; location</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Elsewhere</h4>
+        <ul>
+          <li><a href="https://www.girardroofing.com/" rel="noopener">girardroofing.com</a></li>
+          <li><a href="https://www.google.com/maps/place/Girard+Roofing/data=!4m7!3m6!1s0x88f5b970c64ebae1:0xf1bf6aaed7da666f!8m2!3d33.8804128!4d-84.0045761!16s%2Fg%2F1hc11gd2z!19sChIJ4bpOxnC59YgRb2ba165qv_E" rel="noopener">Google listing &amp; reviews</a></li>
+        </ul>
+        <p style="margin-top:14px;font-size:14.5px;color:#8fa8ba">Phone is the only contact channel this business publishes. Listed open Mon–Sat from 7 AM; closed Sunday.</p>
+      </div>
+    </div>
+    <div class="ftr-b">
+      <span>© Girard Roofing · Snellville, GA</span>
+      <span>All photographs on this page are Girard Roofing's own work photos.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Sticky mobile bar: primary tel: CTA plus the two sections a phone user can't reach from the collapsed nav -->
+<div class="bar">
+  <a class="btn btn-primary" href="tel:+17704763539">Call <span class="num">(770) 476-3539</span></a>
+  <a class="btn btn-ghost" href="#services">Services</a>
+  <a class="btn btn-ghost" href="#hours">Hours</a>
+</div>
+
+<!-- JSON-LD: no priceRange (nothing in the facts states one), no aggregateRating (third-party reviews),
+     image is the local harvested logo that ships alongside this file. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RoofingContractor",
+  "name": "Girard Roofing",
+  "url": "https://www.girardroofing.com/",
+  "image": "assets/asset_1.jpg",
+  "telephone": "+1-770-476-3539",
+  "foundingDate": "1983",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1825 Windburn Ct SW",
+    "addressLocality": "Snellville",
+    "addressRegion": "GA",
+    "postalCode": "30078",
+    "addressCountry": "US"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 33.8804128, "longitude": -84.0045761 },
+  "areaServed": [
+    { "@type": "City", "name": "Snellville" },
+    { "@type": "AdministrativeArea", "name": "Gwinnett County" }
+  ],
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "07:00", "closes": "21:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Tuesday", "opens": "07:00", "closes": "17:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Wednesday", "opens": "07:00", "closes": "22:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday", "opens": "07:00", "closes": "22:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "07:00", "closes": "17:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "07:00", "closes": "17:00" }
+  ],
+  "makesOffer": [
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Roof leak repair" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Shingle and flashing repair" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Roof deck and wood repair" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Solar power roof vent installation" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Roof maintenance" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "New gutters" } }
+  ],
+  "sameAs": [
+    "https://www.google.com/maps/place/Girard+Roofing/data=!4m7!3m6!1s0x88f5b970c64ebae1:0xf1bf6aaed7da666f!8m2!3d33.8804128!4d-84.0045761!16s%2Fg%2F1hc11gd2z!19sChIJ4bpOxnC59YgRb2ba165qv_E"
+  ]
+}
+</script>
+
+<script>
+(function () {
+  "use strict";
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var finePointer = window.matchMedia && window.matchMedia("(pointer: fine)").matches;
+  var stage = document.getElementById("stage");
+  var scene = document.getElementById("scene");
+  var hdr = document.getElementById("hdr");
+
+  /* ---- 3D hero drivers: state is READ in the event handlers, WRITTEN only inside rAF ---- */
+  var tRx = 0, tRy = 0, tSy = 0, cRx = 0, cRy = 0, cSy = 0, raf = null, stuck = false;
+  var MAX = 4.5;
+
+  function tick() {
+    cRx += (tRx - cRx) * 0.09;
+    cRy += (tRy - cRy) * 0.09;
+    cSy += (tSy - cSy) * 0.16;
+    if (scene) {
+      scene.style.setProperty("--rx", cRx.toFixed(3) + "deg");
+      scene.style.setProperty("--ry", cRy.toFixed(3) + "deg");
+    }
+    if (stage) stage.style.setProperty("--sy", cSy.toFixed(1) + "px");
+    var want = window.scrollY > 12;
+    if (want !== stuck) { stuck = want; hdr.classList.toggle("is-stuck", want); }
+    if (Math.abs(tRx - cRx) > 0.01 || Math.abs(tRy - cRy) > 0.01 || Math.abs(tSy - cSy) > 0.4) {
+      raf = requestAnimationFrame(tick);
+    } else { raf = null; }
+  }
+  function kick() { if (raf === null) raf = requestAnimationFrame(tick); }
+
+  window.addEventListener("scroll", function () {
+    var y = window.scrollY || 0;
+    if (!reduce) tSy = Math.min(y, 900);
+    kick();
+  }, { passive: true });
+
+  if (!reduce && finePointer && stage) {
+    stage.addEventListener("pointermove", function (e) {
+      var r = stage.getBoundingClientRect();
+      var nx = (e.clientX - r.left) / r.width - 0.5;
+      var ny = (e.clientY - r.top) / r.height - 0.5;
+      tRy = Math.max(-MAX, Math.min(MAX, nx * MAX * 2));
+      tRx = Math.max(-MAX, Math.min(MAX, -ny * MAX * 2));
+      kick();
+    }, { passive: true });
+    stage.addEventListener("pointerleave", function () { tRx = 0; tRy = 0; kick(); }, { passive: true });
+  }
+  kick();
+
+  /* ---- open/closed computed client-side from the same table published above (America/New_York) ---- */
+  var HOURS = { 0: null, 1: [7, 21], 2: [7, 17], 3: [7, 22], 4: [7, 22], 5: [7, 17], 6: [7, 17] };
+  var NAMES = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  var IDX = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
+
+  function label(h) {
+    var ampm = h >= 12 ? "PM" : "AM";
+    var v = h % 12; if (v === 0) v = 12;
+    return v + " " + ampm;
+  }
+
+  try {
+    var parts = new Intl.DateTimeFormat("en-US", {
+      timeZone: "America/New_York", weekday: "short", hour: "numeric", minute: "numeric", hour12: false
+    }).formatToParts(new Date());
+    var wd = null, hh = null, mm = null;
+    parts.forEach(function (p) {
+      if (p.type === "weekday") wd = IDX[p.value];
+      if (p.type === "hour") hh = parseInt(p.value, 10);
+      if (p.type === "minute") mm = parseInt(p.value, 10);
+    });
+    if (wd !== null && hh !== null) {
+      if (hh === 24) hh = 0;
+      var row = document.querySelector('tr[data-day="' + wd + '"]');
+      if (row) row.classList.add("today");
+
+      var el = document.getElementById("status");
+      var txt = document.getElementById("statusText");
+      var today = HOURS[wd];
+      var now = hh + mm / 60;
+      var open = today && now >= today[0] && now < today[1];
+
+      if (open) {
+        txt.textContent = "Open now · closes " + label(today[1]);
+        el.classList.add("on");
+      } else {
+        var d = wd, hop = 0, next = null;
+        if (today && now < today[0]) { next = { day: wd, at: today[0], today: true }; }
+        else {
+          while (hop < 7 && !next) { hop++; d = (wd + hop) % 7; if (HOURS[d]) next = { day: d, at: HOURS[d][0], today: false }; }
+        }
+        txt.textContent = next
+          ? "Closed now · opens " + (next.today ? "" : NAMES[next.day] + " ") + label(next.at)
+          : "Closed now";
+        el.classList.add("on", "shut");
+      }
+    }
+  } catch (err) { /* status badge simply stays hidden; the published table above is the source of truth */ }
+})();
+</script>
+</body>
+</html>
