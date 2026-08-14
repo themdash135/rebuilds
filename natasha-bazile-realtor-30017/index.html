@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js scroll-smooth">
+<head>
+    <meta name="robots" content="noindex,nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Natasha Bazile, Realtor — Real Estate Agent in Grayson, GA</title>
+<meta name="description" content="Natasha Bazile is a real estate agent based at 414 Pine Grove Ave, Grayson, GA 30017 in Gwinnett County. Rated 5.0 stars across 31 Google reviews. Call (404) 857-2508.">
+<meta name="theme-color" content="#0B0B0C">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.remove('no-js');</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        ink: '#0B0B0C',
+        coal: '#141416',
+        smoke: '#1E1E21',
+        bone: '#F6F5F3',
+        brand: { DEFAULT: '#E11D2F', dark: '#B4121F', soft: '#FF4757' }
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'sans-serif'],
+        serif: ['"Instrument Serif"', 'Georgia', 'serif']
+      }
+    }
+  }
+}
+</script>
+<style>
+  :root{ --rx:0; --ry:0; --s:0; }
+  html{ scroll-behavior:smooth; }
+  body{ -webkit-font-smoothing:antialiased; }
+  section[id]{ scroll-margin-top:126px; }
+  @media (min-width:768px){ section[id]{ scroll-margin-top:88px; } }
+
+  /* ---- 3D hero scene ---------------------------------------------------
+     Stage sets perspective; four layers sit at distinct translateZ depths.
+     Drivers (pointer + scroll) only ever write --rx/--ry/--s, and every
+     layer animates transform/opacity only. With JS disabled the vars stay
+     at 0 and each layer renders at its CSS rest transform = finished hero.
+     BACK PLATE ART DIRECTION: the approved exterior is a 1400x355 banner
+     crop. Upscaling it to fill a 700px stage read soft, so it is anchored
+     as a bottom band at its native aspect ratio and the generated colour
+     field carries the upper region instead. */
+  .stage{ perspective:1100px; perspective-origin:50% 42%; }
+  .scene{
+    transform-style:preserve-3d;
+    transform: rotateX(calc(var(--ry) * 1deg)) rotateY(calc(var(--rx) * 1deg));
+    transition: transform .45s cubic-bezier(.2,.7,.3,1);
+  }
+  .layer{ transform-style:preserve-3d; will-change:transform; }
+  .l-back{  transform: translateZ(-170px) scale(1.20) translateY(calc(var(--s) * -34px)); }
+  .l-scrim{ transform: translateZ(-70px)  scale(1.08) translateY(calc(var(--s) * -14px)); }
+  .l-type{  transform: translateZ(10px)   translateY(calc(var(--s) * 16px)); }
+  .l-face{
+    transform: translateZ(95px) translate3d(calc(var(--rx) * 1.6px), calc(var(--ry) * -1.4px), 0)
+               rotateY(calc(var(--rx) * -0.6deg)) translateY(calc(var(--s) * 34px));
+    transition: transform .3s cubic-bezier(.2,.7,.3,1);
+  }
+  .edge-glow{ box-shadow:0 30px 90px -30px rgba(0,0,0,.85), 0 0 0 1px rgba(255,255,255,.08) inset; }
+  .hairline{ border-color:rgba(255,255,255,.14); }
+
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    .scene{ transform:none !important; transition:none !important; }
+    .l-back{  transform: translateZ(-170px) scale(1.20) !important; }
+    .l-scrim{ transform: translateZ(-70px) scale(1.08) !important; }
+    .l-type{  transform: translateZ(10px) !important; }
+    .l-face{  transform: translateZ(95px) !important; transition:none !important; }
+    .reveal{ opacity:1 !important; transform:none !important; }
+  }
+
+  .reveal{ opacity:1; transform:none; }
+  .js .reveal{ opacity:0; transform:translateY(14px); transition:opacity .6s ease, transform .6s cubic-bezier(.2,.7,.3,1); }
+  .js .reveal.in{ opacity:1; transform:none; }
+
+  .rule-red{ background:linear-gradient(90deg,transparent,#E11D2F 18%,#E11D2F 82%,transparent); }
+  .card-hover{ transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+  .card-hover:hover{ transform:translateY(-4px); box-shadow:0 24px 50px -28px rgba(0,0,0,.45); }
+  .link-u{ text-underline-offset:4px; text-decoration-thickness:1px; }
+  #hdr.shrunk{ box-shadow:0 10px 30px -22px rgba(0,0,0,.6); }
+  #hdr.shrunk .logo-img{ height:2rem; }
+  .chiprow{ scrollbar-width:none; -ms-overflow-style:none; }
+  .chiprow::-webkit-scrollbar{ display:none; }
+</style>
+</head>
+<body class="font-sans bg-bone text-ink antialiased pb-20 md:pb-0">
+<script>document.documentElement.classList.add('js');</script>
+
+<!-- BUILD NOTE — FACT SOURCES
+     (1) lead.json: name, phone 4048572508, address 414 Pine Grove Ave / Grayson / GA / 30017,
+         lat-lng, rating 5.0, review_count 31, hours (all 7 days "Open 24 hours"),
+         category "real estate agency", website soldbynat.com, card_text attributes
+         ("Onsite services", "Online appointments").
+     (2) Harvested site: nav headings "Natasha Bazile | Work With Natasha | Learn With Natasha";
+         approved assets in assets/ (triage), including the Virtual Properties Realty
+         brokerage mark bound to this business.
+     NOT USED AS FACT: the pain-point analysis. It proposed a "free home valuation" offer,
+     named service-area towns, named client testimonials and closed-deal stats — none of these
+     are evidenced anywhere, so none of them appear on this page. No phone number other than
+     the scraped one appears (the brief mentioned a second number; it is not in lead.json).
+     No form is shipped because no backend exists: tel: is the sole conversion path.
+     No claim is made anywhere about who answers the phone or how fast — that is unevidenced
+     staffing information, and it is question 05 on the call script instead. -->
+
+<!-- ============================ HEADER ============================ -->
+<header id="hdr" class="fixed top-0 inset-x-0 z-50 bg-white/95 backdrop-blur border-b border-black/10 transition-all duration-300">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 py-2 flex items-center gap-4">
+    <a href="#top" class="flex items-center gap-3 shrink-0" aria-label="Natasha Bazile, Realtor — back to top">
+      <!-- Black-on-white wordmark kept on white header chrome, never over photography. -->
+      <img src="assets/Official_20Sold_20by_20Nat_20Logo_Black_20and_20White.png" alt="Sold by Nat.com — Real Estate Services wordmark with a house-roof graphic" width="216" height="96" class="logo-img h-9 w-auto transition-all duration-300">
+    </a>
+    <nav class="hidden md:flex items-center gap-1 ml-auto text-[13px] font-semibold tracking-tight" aria-label="Primary">
+      <a href="#services" class="px-3 py-2.5 rounded-lg hover:bg-black/5 transition">Services</a>
+      <a href="#ask" class="px-3 py-2.5 rounded-lg hover:bg-black/5 transition">What to Ask</a>
+      <a href="#why" class="px-3 py-2.5 rounded-lg hover:bg-black/5 transition">Why Natasha</a>
+      <a href="#area" class="px-3 py-2.5 rounded-lg hover:bg-black/5 transition">Grayson</a>
+      <a href="#visit" class="px-3 py-2.5 rounded-lg hover:bg-black/5 transition">Hours &amp; Location</a>
+      <a href="#contact" class="px-3 py-2.5 rounded-lg hover:bg-black/5 transition">Contact</a>
+    </nav>
+    <a href="tel:+14048572508" class="ml-auto md:ml-3 inline-flex items-center gap-2 rounded-full bg-brand px-4 sm:px-5 py-3 text-white text-[13px] sm:text-sm font-bold tracking-tight hover:bg-brand-dark transition min-h-[44px]">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+      <span class="hidden sm:inline">Call </span>(404)&nbsp;857-2508
+    </a>
+  </div>
+  <!-- Mobile anchor nav: same in-page destinations as the desktop nav, as a
+       horizontally scrolling chip row so phone users can reach any section. -->
+  <nav class="md:hidden border-t border-black/10 bg-white/95" aria-label="Sections">
+    <div class="chiprow flex gap-2 overflow-x-auto px-4 py-2">
+      <a href="#services" class="shrink-0 rounded-full border border-black/15 px-3.5 py-2 text-[13px] font-bold tracking-tight">Services</a>
+      <a href="#ask" class="shrink-0 rounded-full border border-black/15 px-3.5 py-2 text-[13px] font-bold tracking-tight">What to Ask</a>
+      <a href="#why" class="shrink-0 rounded-full border border-black/15 px-3.5 py-2 text-[13px] font-bold tracking-tight">Why Natasha</a>
+      <a href="#area" class="shrink-0 rounded-full border border-black/15 px-3.5 py-2 text-[13px] font-bold tracking-tight">Grayson</a>
+      <a href="#visit" class="shrink-0 rounded-full border border-black/15 px-3.5 py-2 text-[13px] font-bold tracking-tight">Hours</a>
+      <a href="#contact" class="shrink-0 rounded-full border border-black/15 px-3.5 py-2 text-[13px] font-bold tracking-tight">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<!-- ============================ 1. HERO (CSS 3D scene) ============================ -->
+<section id="top" class="stage relative overflow-hidden bg-ink pt-32 md:pt-28">
+  <div class="scene relative min-h-[640px] md:min-h-[680px] lg:min-h-[740px] flex items-center">
+
+    <!-- BACK PLATE: approved exterior photograph, uncaptioned ambience. Not labeled as a
+         listing, as a sold property, or as the Grayson address. Not lazy-loaded: hero layer.
+         Anchored as a bottom band at close to its native 1400x355 aspect so it is not
+         upscaled to fill the stage; the colour field above carries the upper region. -->
+    <div class="layer l-back absolute inset-0">
+      <div class="absolute inset-0 bg-[radial-gradient(120%_90%_at_18%_0%,#25252B_0%,#0B0B0C_62%)]" aria-hidden="true"></div>
+      <img src="assets/8d62b9_13e02042e1714cf4a215a993cf8ce293_mv2.jpg" alt="Wide banner crop of a large modern stone-and-stucco house with wood garage doors" width="1400" height="355" class="absolute bottom-0 inset-x-0 w-full h-auto max-h-[46%] object-cover object-center opacity-95">
+    </div>
+
+    <!-- MID PLATE: generated scrim. Asserts nothing; supplies depth separation, headline
+         legibility, and the brand-red roofline accent echoing the Sold by Nat mark. The
+         gradient is weighted to the left column so the house stays legible on the right. -->
+    <div class="layer l-scrim absolute inset-0 pointer-events-none" aria-hidden="true">
+      <svg class="w-full h-full" viewBox="0 0 1400 720" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="g1" x1="0" y1="1" x2="0" y2="0">
+            <stop offset="0%" stop-color="#0B0B0C" stop-opacity=".92"/>
+            <stop offset="38%" stop-color="#0B0B0C" stop-opacity=".45"/>
+            <stop offset="100%" stop-color="#0B0B0C" stop-opacity=".05"/>
+          </linearGradient>
+          <linearGradient id="g2" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#0B0B0C" stop-opacity=".96"/>
+            <stop offset="55%" stop-color="#0B0B0C" stop-opacity=".55"/>
+            <stop offset="100%" stop-color="#0B0B0C" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <rect width="1400" height="720" fill="url(#g1)"/>
+        <rect width="1400" height="720" fill="url(#g2)"/>
+        <path d="M0 690 L120 612 L240 690" fill="none" stroke="#E11D2F" stroke-width="5" stroke-linejoin="round" opacity=".9"/>
+        <path d="M240 690 L360 612 L480 690" fill="none" stroke="#E11D2F" stroke-width="5" stroke-linejoin="round" opacity=".45"/>
+        <path d="M480 690 L600 612 L720 690" fill="none" stroke="#E11D2F" stroke-width="5" stroke-linejoin="round" opacity=".2"/>
+      </svg>
+    </div>
+
+    <!-- FRONT PLANES: live text + CTA (never baked into an image), and the portrait -->
+    <div class="relative w-full mx-auto max-w-7xl px-4 sm:px-6 py-14 md:py-20 grid lg:grid-cols-[1.15fr_.85fr] gap-10 lg:gap-8 items-center">
+
+      <div class="layer l-type max-w-2xl">
+        <p class="inline-flex items-center gap-2 rounded-full border border-white/25 bg-black/40 px-3.5 py-1.5 text-[11px] sm:text-xs font-bold uppercase tracking-[.18em] text-white/85">
+          <span class="h-1.5 w-1.5 rounded-full bg-brand"></span> Grayson, Georgia · Gwinnett County
+        </p>
+        <h1 class="mt-5 text-white font-black tracking-[-.03em] text-[2.5rem] leading-[1.02] sm:text-6xl lg:text-7xl [text-shadow:0_2px_30px_rgba(0,0,0,.55)]">
+          Natasha Bazile,<br>Realtor <span class="font-serif italic font-normal text-brand-soft">in Grayson, GA</span>
+        </h1>
+        <p class="mt-5 text-white/85 text-base sm:text-lg leading-relaxed max-w-xl [text-shadow:0_1px_16px_rgba(0,0,0,.6)]">
+          A real estate agent based at <strong class="text-white font-semibold">414 Pine Grove Ave, Grayson, GA 30017</strong> — rated
+          <strong class="text-white font-semibold">5.0 out of 5 across 31 Google reviews</strong>, with hours listed as open 24 hours, every day of the week.
+          Buying or selling, the fastest way to a straight answer is a phone call.
+        </p>
+
+        <div class="mt-8 flex flex-col sm:flex-row gap-3 sm:items-center">
+          <a href="tel:+14048572508" class="group inline-flex items-center justify-center gap-2.5 rounded-full bg-brand px-7 py-4 text-white font-extrabold tracking-tight text-base shadow-[0_18px_40px_-18px_rgba(225,29,47,.9)] hover:bg-brand-dark transition min-h-[52px]">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+            Call (404) 857-2508
+          </a>
+          <a href="https://www.google.com/maps/place/Natasha+Bazile,+Realtor/data=!4m7!3m6!1s0x88f5b9431baaaaab:0x886ee0f5f357a698!8m2!3d33.8932028!4d-83.9546395!16s%2Fg%2F11g0k1w7yt!19sChIJq6qqG0O59YgRmKZX8_Xgbog" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 rounded-full border border-white/35 bg-black/35 px-6 py-4 text-white/95 font-semibold tracking-tight hover:bg-white/10 transition min-h-[52px]">
+            View the Google listing
+            <span class="text-brand-soft font-bold">5.0 ★</span>
+          </a>
+        </div>
+
+        <p class="mt-5 text-xs sm:text-[13px] text-white/65 max-w-lg [text-shadow:0_1px_12px_rgba(0,0,0,.7)]">
+          Her Google profile lists <span class="text-white/85">Onsite services</span> and <span class="text-white/85">Online appointments</span>. Phone is the number on her Google listing.
+        </p>
+      </div>
+
+      <!-- Portrait: the only asset bound to this business's identity. -->
+      <div class="layer l-face justify-self-center lg:justify-self-end">
+        <div class="relative">
+          <div class="absolute -inset-6 rounded-full bg-brand/25 blur-3xl" aria-hidden="true"></div>
+          <img src="assets/8d62b9_12721edc308041798a787d03673f1f2a_mv2.png" alt="Natasha Bazile smiling in a red top, giving a thumbs-up and holding a mug reading 'I got 99 problems but closing deals ain't one'" width="293" height="293" class="relative w-40 h-40 sm:w-56 sm:h-56 lg:w-[19rem] lg:h-[19rem] rounded-full object-cover edge-glow">
+          <div class="relative mx-auto mt-4 w-max rounded-full bg-white/95 px-4 py-2 text-[11px] font-bold uppercase tracking-[.14em] text-ink">Natasha Bazile</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 2. SOCIAL PROOF STRIP ============================ -->
+<!-- BUILD NOTE: rating + review COUNT only, as text. No review body is quoted anywhere on
+     this page, and no aggregateRating appears in the JSON-LD (Google's reviews are not
+     first-party data this site collects). The pain-point brief asked for named client
+     testimonials and closed-deal stats — none exist in the scrape or the harvested site,
+     so the strip shows only numbers that are literally in lead.json. -->
+<section class="bg-coal border-y border-white/10">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 py-8 grid grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-7 text-white">
+    <div class="border-l-2 border-brand pl-4">
+      <div class="flex items-center gap-1.5 text-brand-soft" aria-hidden="true">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.9-6.2-3.3-6.2 3.3L7 14.2l-5-4.9 6.9-1L12 2Z"/></svg>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.9-6.2-3.3-6.2 3.3L7 14.2l-5-4.9 6.9-1L12 2Z"/></svg>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.9-6.2-3.3-6.2 3.3L7 14.2l-5-4.9 6.9-1L12 2Z"/></svg>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.9-6.2-3.3-6.2 3.3L7 14.2l-5-4.9 6.9-1L12 2Z"/></svg>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.9-6.2-3.3-6.2 3.3L7 14.2l-5-4.9 6.9-1L12 2Z"/></svg>
+      </div>
+      <p class="mt-2 text-3xl sm:text-4xl font-black tracking-tight">5.0<span class="text-white/40 text-xl font-bold">/5</span></p>
+      <p class="text-[13px] text-white/60 font-medium">31 Google reviews · perfect rating</p>
+    </div>
+    <div class="border-l-2 border-white/15 pl-4">
+      <p class="text-3xl sm:text-4xl font-black tracking-tight">24/7</p>
+      <p class="mt-1 text-[13px] text-white/60 font-medium">Hours listed as open 24 hours, all seven days</p>
+    </div>
+    <div class="border-l-2 border-white/15 pl-4">
+      <p class="text-3xl sm:text-4xl font-black tracking-tight">30017</p>
+      <p class="mt-1 text-[13px] text-white/60 font-medium">Grayson, GA — her listed address ZIP</p>
+    </div>
+    <div class="border-l-2 border-white/15 pl-4">
+      <p class="text-3xl sm:text-4xl font-black tracking-tight leading-none">VPR</p>
+      <p class="mt-1.5 text-[13px] text-white/60 font-medium">Affiliated with Virtual Properties Realty</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 3. SERVICES ============================ -->
+<!-- BUILD NOTE — EVIDENCE PER CARD:
+     • "Buying a home" and "Selling a home" trace to (a) the scraped Google category
+       "real estate agency" / card_text "Real estate agent", and (b) her own site's
+       navigation heading "Work With Natasha", which the current-site audit records as
+       "Work with Natasha – for Buyers & Sellers".
+     • No third consumer service is claimed. New construction, relocation, property
+       management, IDX search and home valuation appear nowhere in the scrape or the
+       harvested site, so they appear nowhere here.
+     • The numbered sequences are CATEGORY EDUCATION — how residential transactions
+       generally run — and are labeled as such in the heading, the lede and at the point
+       of every step. They are not a description of Natasha's own process. -->
+<section id="services" class="bg-bone">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 py-16 md:py-20">
+    <div class="grid lg:grid-cols-[.8fr_1.2fr] gap-10 lg:gap-14">
+      <div class="lg:sticky lg:top-28 lg:self-start">
+        <p class="text-xs font-black uppercase tracking-[.2em] text-brand">Work with Natasha</p>
+        <h2 class="mt-3 text-3xl sm:text-4xl lg:text-5xl font-black tracking-[-.03em] leading-[1.05]">Two sides of<br>the same table.</h2>
+        <p class="mt-4 text-[15px] leading-relaxed text-ink/70">
+          Natasha represents buyers and sellers as a licensed real estate agent working under
+          Virtual Properties Realty. That is the whole consumer offer — no upsell, no course,
+          no cart.
+        </p>
+        <div class="mt-6 h-px rule-red"></div>
+        <a href="tel:+14048572508" class="mt-6 inline-flex items-center justify-center gap-2.5 rounded-full bg-brand px-6 py-3.5 text-white font-extrabold tracking-tight hover:bg-brand-dark transition min-h-[48px]">
+          Call (404) 857-2508
+        </a>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-5">
+        <article class="card-hover rounded-2xl bg-white border border-black/10 p-6 sm:p-7 shadow-[0_1px_0_rgba(0,0,0,.04)]">
+          <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-ink text-white">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/><path d="M9 22V12h6v10"/></svg>
+          </div>
+          <h3 class="mt-4 text-xl font-extrabold tracking-tight">Buying a home</h3>
+          <p class="mt-2 text-[15px] leading-relaxed text-ink/70">
+            Representation on the buy side: touring homes, writing the offer, and holding the
+            contract together through to the closing table — with an agent whose Google rating
+            is a clean 5.0 across 31 reviews.
+          </p>
+          <p class="mt-5 text-[11px] font-black uppercase tracking-[.14em] text-ink/45">How home purchases generally work</p>
+          <p class="mt-1 text-[12px] leading-relaxed text-ink/50 italic">General industry outline, not a statement of Natasha's own process — ask her how she runs hers.</p>
+          <ol class="mt-3 space-y-2.5 text-[14px] text-ink/80">
+            <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand/10 text-[10px] font-black text-brand">1</span> Buyers typically start with a consultation and a lender pre-approval.</li>
+            <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand/10 text-[10px] font-black text-brand">2</span> Search and tours narrow the list to homes worth an offer.</li>
+            <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand/10 text-[10px] font-black text-brand">3</span> An accepted offer usually opens due diligence, inspection and appraisal.</li>
+            <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand/10 text-[10px] font-black text-brand">4</span> Financing clears, then the parties close and keys change hands.</li>
+          </ol>
+        </article>
+
+        <article class="card-hover rounded-2xl bg-ink text-white border border-white/10 p-6 sm:p-7">
+          <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-brand text-white">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M10 21v-5h4v5"/></svg>
+          </div>
+          <h3 class="mt-4 text-xl font-extrabold tracking-tight">Selling a home</h3>
+          <p class="mt-2 text-[15px] leading-relaxed text-white/70">
+            Listing representation: pricing conversation, prep, going to market, and negotiating
+            the offers that come back. Her listed hours are open 24 hours a day, seven days a
+            week — so the call does not have to wait for Monday.
+          </p>
+          <p class="mt-5 text-[11px] font-black uppercase tracking-[.14em] text-white/45">How home sales generally work</p>
+          <p class="mt-1 text-[12px] leading-relaxed text-white/45 italic">General industry outline, not a statement of Natasha's own process — ask her how she runs hers.</p>
+          <ol class="mt-3 space-y-2.5 text-[14px] text-white/85">
+            <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-white/10 text-[10px] font-black text-brand-soft">1</span> Sellers usually begin with a walkthrough and a pricing discussion.</li>
+            <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-white/10 text-[10px] font-black text-brand-soft">2</span> Prep and photography come before the home is listed.</li>
+            <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-white/10 text-[10px] font-black text-brand-soft">3</span> Showings generate offers; terms and price get negotiated.</li>
+            <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-white/10 text-[10px] font-black text-brand-soft">4</span> Inspection and appraisal are worked through, then closing.</li>
+          </ol>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FULL-BLEED BAND + CALL SCRIPT ============================ -->
+<!-- BUILD NOTE: the kitchen photograph is approved ambience with no location binding. It is
+     NOT captioned as her listing, a sold property, or the Grayson address — the visible
+     caption says so explicitly. It is given a split-panel treatment at full opacity rather
+     than being ghosted behind text, so the approved photography is actually legible.
+     Commission rates, listing timelines and valuations are not published anywhere in the
+     scrape, so instead of inventing numbers this band ships the approved call-script
+     pattern: the exact questions to ask on the phone. -->
+<section id="ask" class="bg-ink text-white">
+  <div class="grid lg:grid-cols-[1fr_1fr]">
+    <div class="relative min-h-[220px] lg:min-h-full order-1 lg:order-2">
+      <img src="assets/8d62b9_830ac17e8d4c41d990d90ea46d3ccd10_mv2.webp" alt="Luxury white and black kitchen interior with a marble island, gold fixtures and a stocked pantry" width="1020" height="259" loading="lazy" class="absolute inset-0 h-full w-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-r from-ink via-ink/25 to-transparent lg:from-ink lg:via-ink/10 lg:to-transparent" aria-hidden="true"></div>
+      <p class="absolute bottom-0 inset-x-0 bg-ink/80 px-5 py-3 text-[12px] text-white/70 italic">Illustrative interior photography from her own website — not a listing, not a sold property, and not this address.</p>
+    </div>
+
+    <div class="order-2 lg:order-1 px-4 sm:px-6 lg:pl-[max(1.5rem,calc((100vw-80rem)/2+1.5rem))] py-16 md:py-20">
+      <div class="lg:max-w-xl">
+        <p class="text-xs font-black uppercase tracking-[.2em] text-brand-soft">Before you commit to any agent</p>
+        <h2 class="mt-3 text-3xl sm:text-4xl lg:text-[2.75rem] font-black tracking-[-.03em] leading-[1.06]">Five questions worth<br>asking on the first call.</h2>
+        <p class="mt-4 text-[15px] leading-relaxed text-white/70">
+          Commission structure, marketing budget and timelines are things no agent's website can
+          answer honestly for your specific home — they depend on the property and the market.
+          So rather than post a number that would be a guess, here is the script. Ask Natasha
+          these, and ask the next agent the same ones.
+        </p>
+
+        <ul class="mt-8 divide-y divide-white/10 border-y hairline border-y-[rgba(255,255,255,.14)]">
+          <li class="flex gap-4 py-4"><span class="font-serif italic text-2xl text-brand-soft leading-none w-8 shrink-0">01</span><p class="text-[15px] leading-relaxed text-white/85">“Do you work in my part of the county, and how recently have you closed near me?”</p></li>
+          <li class="flex gap-4 py-4"><span class="font-serif italic text-2xl text-brand-soft leading-none w-8 shrink-0">02</span><p class="text-[15px] leading-relaxed text-white/85">“What is your commission, what does it cover, and what is negotiable?”</p></li>
+          <li class="flex gap-4 py-4"><span class="font-serif italic text-2xl text-brand-soft leading-none w-8 shrink-0">03</span><p class="text-[15px] leading-relaxed text-white/85">“What would you list my house at, and what is that number based on?”</p></li>
+          <li class="flex gap-4 py-4"><span class="font-serif italic text-2xl text-brand-soft leading-none w-8 shrink-0">04</span><p class="text-[15px] leading-relaxed text-white/85">“Who pays for photography, staging and marketing — and what exactly gets produced?”</p></li>
+          <li class="flex gap-4 py-4"><span class="font-serif italic text-2xl text-brand-soft leading-none w-8 shrink-0">05</span><p class="text-[15px] leading-relaxed text-white/85">“When I call or text, am I reaching you or an assistant, and how long is a typical reply?”</p></li>
+        </ul>
+
+        <a href="tel:+14048572508" class="mt-8 inline-flex items-center justify-center gap-2.5 rounded-full bg-brand px-7 py-4 text-white font-extrabold tracking-tight shadow-[0_18px_40px_-18px_rgba(225,29,47,.9)] hover:bg-brand-dark transition min-h-[52px]">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+          Call (404) 857-2508
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 4. WHY NATASHA / PAIN POINTS ============================ -->
+<!-- BUILD NOTE: addresses pain points 1 (is she local to Grayson), 2 (proof exists but was
+     invisible) and 3 (no findable conversion path). Every supporting number is from
+     lead.json. Nothing here claims volume, days-on-market or sale-to-list, because none of
+     those are published anywhere in the available inputs. -->
+<section id="why" class="bg-white">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 py-16 md:py-20">
+    <div class="flex flex-wrap items-end justify-between gap-6">
+      <div class="max-w-2xl">
+        <p class="text-xs font-black uppercase tracking-[.2em] text-brand">Why Natasha</p>
+        <h2 class="mt-3 text-3xl sm:text-4xl lg:text-5xl font-black tracking-[-.03em] leading-[1.05]">Three things people<br>want to know first.</h2>
+      </div>
+      <p class="text-[15px] leading-relaxed text-ink/60 max-w-sm">
+        Every answer below is checkable — her Google listing, her address, and her phone.
+        Nothing on this page is a promise you cannot verify before you dial.
+      </p>
+    </div>
+
+    <div class="mt-10 grid md:grid-cols-3 gap-5">
+      <article class="reveal rounded-2xl border border-black/10 bg-bone p-6 sm:p-7 card-hover">
+        <span class="font-serif italic text-4xl text-brand leading-none">01</span>
+        <h3 class="mt-3 text-lg font-extrabold tracking-tight">“Is she actually near me?”</h3>
+        <p class="mt-2 text-[15px] leading-relaxed text-ink/70">
+          Her listed address is <strong class="font-semibold text-ink">414 Pine Grove Ave, Grayson, GA 30017</strong> — in Grayson,
+          in Gwinnett County. It is on this page, in the map below, and in the page's structured
+          data, instead of being a broker address buried in a footer.
+        </p>
+      </article>
+      <article class="reveal rounded-2xl border border-black/10 bg-bone p-6 sm:p-7 card-hover">
+        <span class="font-serif italic text-4xl text-brand leading-none">02</span>
+        <h3 class="mt-3 text-lg font-extrabold tracking-tight">“Has anyone actually used her?”</h3>
+        <p class="mt-2 text-[15px] leading-relaxed text-ink/70">
+          <strong class="font-semibold text-ink">31 Google reviews, averaging a flat 5.0.</strong> Not a selected quote,
+          not a screenshot — the whole listing, one tap away, so you can read all 31 yourself.
+        </p>
+        <a href="https://www.google.com/maps/place/Natasha+Bazile,+Realtor/data=!4m7!3m6!1s0x88f5b9431baaaaab:0x886ee0f5f357a698!8m2!3d33.8932028!4d-83.9546395!16s%2Fg%2F11g0k1w7yt!19sChIJq6qqG0O59YgRmKZX8_Xgbog" target="_blank" rel="noopener" class="mt-3 inline-flex items-center gap-1.5 text-sm font-bold text-brand hover:text-brand-dark link-u underline">Read them on Google →</a>
+      </article>
+      <article class="reveal rounded-2xl border border-black/10 bg-bone p-6 sm:p-7 card-hover">
+        <span class="font-serif italic text-4xl text-brand leading-none">03</span>
+        <h3 class="mt-3 text-lg font-extrabold tracking-tight">“How do I even start?”</h3>
+        <p class="mt-2 text-[15px] leading-relaxed text-ink/70">
+          One phone number, one button, on every screen of this page and pinned to the bottom
+          of your phone. Her hours are listed as open 24 hours, every day —
+          <strong class="font-semibold text-ink">so there is no wrong time to try.</strong>
+        </p>
+        <a href="tel:+14048572508" class="mt-3 inline-flex items-center gap-1.5 text-sm font-bold text-brand hover:text-brand-dark link-u underline">(404) 857-2508 →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ SERVICE AREA ============================ -->
+<!-- BUILD NOTE: the only geography evidenced anywhere in the inputs is her own listed
+     address — Grayson, GA 30017, which is in Gwinnett County, Georgia. The pain-point brief
+     proposed naming surrounding towns and ZIPs; that list is not evidenced by lead.json or
+     by her site, so it is not published. Copy and JSON-LD areaServed name exactly the same
+     three places: Grayson, Gwinnett County, Georgia. -->
+<section id="area" class="bg-coal text-white">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 py-16 md:py-20 grid lg:grid-cols-[1.1fr_.9fr] gap-10 lg:gap-16 items-center">
+    <div>
+      <p class="text-xs font-black uppercase tracking-[.2em] text-brand-soft">Where she is based</p>
+      <h2 class="mt-3 text-3xl sm:text-4xl lg:text-5xl font-black tracking-[-.03em] leading-[1.05]">Grayson, Georgia.<br>Gwinnett County.</h2>
+      <p class="mt-5 text-[15px] sm:text-base leading-relaxed text-white/75 max-w-xl">
+        Natasha Bazile's listed business address is <strong class="text-white font-semibold">414 Pine Grove Ave, Grayson, GA 30017</strong>.
+        Grayson sits inside Gwinnett County, Georgia — so if you are searching for a real estate
+        agent in Grayson or the 30017 ZIP, that is the address on her own Google listing, and it
+        is the one used in this page's structured data.
+      </p>
+      <p class="mt-4 text-[15px] leading-relaxed text-white/60 max-w-xl">
+        How far beyond Grayson she travels is not published anywhere online, and this page will
+        not guess at it. It is question 01 on the call script above — ask her directly, and you
+        will have a real answer in about thirty seconds.
+      </p>
+      <div class="mt-7 flex flex-wrap gap-2.5">
+        <span class="rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm font-semibold">Grayson</span>
+        <span class="rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm font-semibold">Gwinnett County</span>
+        <span class="rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm font-semibold">Georgia</span>
+        <span class="rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm font-semibold">30017</span>
+      </div>
+      <a href="tel:+14048572508" class="mt-8 inline-flex items-center justify-center gap-2.5 rounded-full bg-brand px-7 py-4 text-white font-extrabold tracking-tight hover:bg-brand-dark transition min-h-[52px]">
+        Call (404) 857-2508
+      </a>
+    </div>
+    <dl class="grid grid-cols-2 gap-px bg-[rgba(255,255,255,.14)] rounded-2xl overflow-hidden border border-[rgba(255,255,255,.14)]">
+      <div class="bg-coal p-5 sm:p-6"><dt class="text-[11px] font-black uppercase tracking-[.16em] text-white/45">Business</dt><dd class="mt-1.5 text-[15px] font-semibold leading-snug">Natasha Bazile, Realtor</dd></div>
+      <div class="bg-coal p-5 sm:p-6"><dt class="text-[11px] font-black uppercase tracking-[.16em] text-white/45">Category</dt><dd class="mt-1.5 text-[15px] font-semibold leading-snug">Real estate agent</dd></div>
+      <div class="bg-coal p-5 sm:p-6"><dt class="text-[11px] font-black uppercase tracking-[.16em] text-white/45">Rating</dt><dd class="mt-1.5 text-[15px] font-semibold leading-snug">5.0 · 31 Google reviews</dd></div>
+      <div class="bg-coal p-5 sm:p-6"><dt class="text-[11px] font-black uppercase tracking-[.16em] text-white/45">Brokerage</dt><dd class="mt-1.5 text-[15px] font-semibold leading-snug">Virtual Properties Realty</dd></div>
+      <div class="bg-coal p-5 sm:p-6"><dt class="text-[11px] font-black uppercase tracking-[.16em] text-white/45">Google attributes</dt><dd class="mt-1.5 text-[15px] font-semibold leading-snug">Onsite services · Online appointments</dd></div>
+      <div class="bg-coal p-5 sm:p-6"><dt class="text-[11px] font-black uppercase tracking-[.16em] text-white/45">Her own site</dt><dd class="mt-1.5 text-[15px] font-semibold leading-snug"><a href="https://soldbynat.com/" target="_blank" rel="noopener" class="underline link-u decoration-brand-soft hover:text-brand-soft transition">soldbynat.com</a></dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ============================ 5. HOURS + LOCATION ============================ -->
+<!-- BUILD NOTE: hours published exactly as scraped — all seven days "Open 24 hours". No
+     "open now" badge is hardcoded anywhere; the 24-hour statement is a property of the table
+     itself, not of the current time. Map is a keyless embed at the scraped lat/lng and is
+     deliberately NOT lazy-loaded. Every "Directions" control points at the Google Maps
+     directions endpoint for those coordinates, so the label matches the destination. -->
+<section id="visit" class="bg-bone">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 py-16 md:py-20">
+    <div class="max-w-2xl">
+      <p class="text-xs font-black uppercase tracking-[.2em] text-brand">Hours &amp; location</p>
+      <h2 class="mt-3 text-3xl sm:text-4xl lg:text-5xl font-black tracking-[-.03em] leading-[1.05]">Open 24 hours, every day.</h2>
+      <p class="mt-4 text-[15px] leading-relaxed text-ink/70">
+        These are the hours published on her Google listing, reproduced exactly. It is an
+        unusual schedule to publish, so treat it as an open door rather than a guarantee —
+        call, and if it is the middle of the night, expect to leave a message.
+      </p>
+    </div>
+
+    <div class="mt-9 grid lg:grid-cols-[.85fr_1.15fr] gap-6 lg:gap-8 items-start">
+      <div class="rounded-2xl border border-black/10 bg-white overflow-hidden">
+        <table class="w-full text-[15px]">
+          <caption class="sr-only">Hours of operation as published on the Google listing</caption>
+          <tbody>
+            <tr class="border-b border-black/[.07]"><th scope="row" class="text-left font-semibold px-5 py-3.5">Monday</th><td class="px-5 py-3.5 text-right text-ink/70">Open 24 hours</td></tr>
+            <tr class="border-b border-black/[.07]"><th scope="row" class="text-left font-semibold px-5 py-3.5">Tuesday</th><td class="px-5 py-3.5 text-right text-ink/70">Open 24 hours</td></tr>
+            <tr class="border-b border-black/[.07]"><th scope="row" class="text-left font-semibold px-5 py-3.5">Wednesday</th><td class="px-5 py-3.5 text-right text-ink/70">Open 24 hours</td></tr>
+            <tr class="border-b border-black/[.07]"><th scope="row" class="text-left font-semibold px-5 py-3.5">Thursday</th><td class="px-5 py-3.5 text-right text-ink/70">Open 24 hours</td></tr>
+            <tr class="border-b border-black/[.07]"><th scope="row" class="text-left font-semibold px-5 py-3.5">Friday</th><td class="px-5 py-3.5 text-right text-ink/70">Open 24 hours</td></tr>
+            <tr class="border-b border-black/[.07]"><th scope="row" class="text-left font-semibold px-5 py-3.5">Saturday</th><td class="px-5 py-3.5 text-right text-ink/70">Open 24 hours</td></tr>
+            <tr><th scope="row" class="text-left font-semibold px-5 py-3.5">Sunday</th><td class="px-5 py-3.5 text-right text-ink/70">Open 24 hours</td></tr>
+          </tbody>
+        </table>
+        <div class="border-t border-black/10 bg-ink text-white p-5">
+          <p class="text-[11px] font-black uppercase tracking-[.16em] text-white/45">Address</p>
+          <address class="mt-1.5 not-italic text-[15px] font-semibold leading-snug">414 Pine Grove Ave<br>Grayson, GA 30017</address>
+          <p class="mt-4 text-[11px] font-black uppercase tracking-[.16em] text-white/45">Phone</p>
+          <a href="tel:+14048572508" class="mt-1.5 inline-block text-xl font-black tracking-tight hover:text-brand-soft transition">(404) 857-2508</a>
+          <div class="mt-5 flex flex-col sm:flex-row gap-2.5">
+            <a href="tel:+14048572508" class="flex-1 inline-flex items-center justify-center rounded-full bg-brand px-5 py-3.5 font-extrabold tracking-tight hover:bg-brand-dark transition min-h-[48px]">Call (404) 857-2508</a>
+            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=33.8932028,-83.9546395" target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center rounded-full border border-white/25 px-5 py-3.5 font-semibold hover:bg-white/10 transition min-h-[48px]">Directions on Google</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="rounded-2xl overflow-hidden border border-black/10 bg-white">
+        <iframe title="Map showing the location of Natasha Bazile, Realtor at 414 Pine Grove Ave, Grayson, GA 30017" src="https://maps.google.com/maps?q=33.8932028,-83.9546395&output=embed" width="600" height="560" style="border:0;width:100%;height:420px;display:block" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="px-5 py-4 border-t border-black/10 flex flex-wrap items-center justify-between gap-3">
+          <p class="text-[13px] text-ink/60">Grayson, GA 30017 · Gwinnett County, Georgia</p>
+          <p class="text-[13px] font-bold text-ink">5.0 ★ · 31 Google reviews</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 6. CONTACT + FOOTER ============================ -->
+<section id="contact" class="bg-ink text-white">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 py-16 md:py-20">
+    <div class="grid lg:grid-cols-[1.1fr_.9fr] gap-10 items-center">
+      <div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-[-.03em] leading-[1.05]">
+          Buying or selling in<br>Grayson? <span class="font-serif italic font-normal text-brand-soft">Call her.</span>
+        </h2>
+        <p class="mt-4 text-[15px] sm:text-base leading-relaxed text-white/70 max-w-lg">
+          No form, no portal — one number, listed on her own Google profile, with 31 reviews
+          averaging a perfect 5.0 behind it.
+        </p>
+        <div class="mt-8 flex flex-col sm:flex-row gap-3">
+          <a href="tel:+14048572508" class="inline-flex items-center justify-center gap-2.5 rounded-full bg-brand px-7 py-4 text-white font-extrabold tracking-tight shadow-[0_18px_40px_-18px_rgba(225,29,47,.9)] hover:bg-brand-dark transition min-h-[52px]">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+            Call (404) 857-2508
+          </a>
+          <a href="https://soldbynat.com/" target="_blank" rel="noopener" class="inline-flex items-center justify-center rounded-full border border-white/25 px-6 py-4 font-semibold hover:bg-white/10 transition min-h-[52px]">Visit soldbynat.com</a>
+        </div>
+      </div>
+      <div class="justify-self-center lg:justify-self-end">
+        <img src="assets/8d62b9_12721edc308041798a787d03673f1f2a_mv2.png" alt="Natasha Bazile smiling in a red top, giving a thumbs-up and holding a mug reading 'I got 99 problems but closing deals ain't one'" width="293" height="293" loading="lazy" class="w-44 h-44 sm:w-56 sm:h-56 rounded-full object-cover edge-glow">
+        <p class="mt-4 text-center text-[13px] font-bold uppercase tracking-[.14em] text-white/60">Natasha Bazile · Realtor</p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="border-t border-white/10 bg-coal">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 py-12 grid gap-10 md:grid-cols-[1.1fr_.9fr_.9fr]">
+      <div>
+        <!-- Black-on-white primary mark placed on a white plate so it stays on light chrome. -->
+        <div class="inline-flex rounded-xl bg-white px-4 py-3">
+          <img src="assets/Official_20Sold_20by_20Nat_20Logo_Black_20and_20White.png" alt="Sold by Nat.com — Real Estate Services wordmark with a house-roof graphic" width="216" height="96" loading="lazy" class="h-10 w-auto">
+        </div>
+        <address class="mt-5 not-italic text-[15px] leading-relaxed text-white/70">
+          Natasha Bazile, Realtor<br>
+          414 Pine Grove Ave<br>
+          Grayson, GA 30017
+        </address>
+        <a href="tel:+14048572508" class="mt-3 inline-block text-lg font-black tracking-tight hover:text-brand-soft transition">(404) 857-2508</a>
+      </div>
+
+      <nav aria-label="Footer">
+        <p class="text-[11px] font-black uppercase tracking-[.16em] text-white/40">On this page</p>
+        <ul class="mt-4 space-y-2.5 text-[15px] text-white/75">
+          <li><a href="#services" class="hover:text-white transition">Services</a></li>
+          <li><a href="#ask" class="hover:text-white transition">What to ask on the call</a></li>
+          <li><a href="#why" class="hover:text-white transition">Why Natasha</a></li>
+          <li><a href="#area" class="hover:text-white transition">Grayson &amp; Gwinnett County</a></li>
+          <li><a href="#visit" class="hover:text-white transition">Hours &amp; location</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <p class="text-[11px] font-black uppercase tracking-[.16em] text-white/40">Affiliation &amp; listings</p>
+        <div class="mt-4 flex items-center gap-4">
+          <img src="assets/VPR_20SILVER_20No_20Background.png" alt="Silver Virtual Properties Realty logo with an orbit swoosh" width="296" height="181" loading="lazy" class="h-12 w-auto opacity-90">
+          <p class="text-[13px] leading-snug text-white/60">Virtual Properties Realty<br>brokerage affiliation</p>
+        </div>
+        <a href="https://www.google.com/maps/place/Natasha+Bazile,+Realtor/data=!4m7!3m6!1s0x88f5b9431baaaaab:0x886ee0f5f357a698!8m2!3d33.8932028!4d-83.9546395!16s%2Fg%2F11g0k1w7yt!19sChIJq6qqG0O59YgRmKZX8_Xgbog" target="_blank" rel="noopener" class="mt-6 inline-flex items-center gap-2 rounded-lg border border-white/20 px-4 py-3 text-[13px] font-semibold hover:bg-white/10 transition min-h-[44px]">
+          Google listing · 5.0 ★ · 31 reviews
+        </a>
+      </div>
+    </div>
+
+    <!-- Pain point 4: the agent-training brand gets one clearly labeled door, off this page,
+         so the consumer path is never routed through it. Wordmark has a baked black
+         background and is used only inside this dark strip. -->
+    <div class="border-t border-white/10">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 py-6 flex flex-wrap items-center gap-x-6 gap-y-4">
+        <img src="assets/2_20_1_.png" alt="Nat Knows Real Estate script wordmark in white and red on black" width="271" height="101" loading="lazy" class="h-9 w-auto">
+        <p class="text-[14px] text-white/60 max-w-xl">
+          Licensed agent looking for training rather than a home? That side of Natasha's work
+          lives on her own site, on its own page — this one is for buyers and sellers only.
+        </p>
+        <a href="https://soldbynat.com/" target="_blank" rel="noopener" class="ml-auto inline-flex items-center justify-center rounded-full border border-white/25 px-5 py-3 text-[13px] font-semibold hover:bg-white/10 transition min-h-[44px]">Learn with Natasha on soldbynat.com</a>
+      </div>
+    </div>
+
+    <div class="border-t border-white/10">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 py-6 flex flex-wrap items-center justify-between gap-3 text-[12.5px] text-white/45">
+        <p>&copy; <span id="yr">2026</span> Natasha Bazile, Realtor · Grayson, GA 30017</p>
+        <p>Rating and review count shown as published on Google. Hours as listed — call to confirm.</p>
+      </div>
+    </div>
+  </footer>
+</section>
+
+<!-- Mobile sticky conversion bar -->
+<div class="fixed bottom-0 inset-x-0 z-50 md:hidden border-t border-black/10 bg-white/95 backdrop-blur px-3 py-2.5 flex gap-2.5">
+  <a href="tel:+14048572508" class="flex-[1.4] inline-flex items-center justify-center gap-2 rounded-full bg-brand px-4 py-3 text-white font-extrabold tracking-tight min-h-[48px]">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+    Call (404) 857-2508
+  </a>
+  <a href="https://www.google.com/maps/dir/?api=1&amp;destination=33.8932028,-83.9546395" target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center rounded-full border border-black/15 px-4 py-3 font-bold text-ink text-[14px] min-h-[48px]">Directions</a>
+</div>
+
+<!-- JSON-LD: RealEstateAgent is a real schema.org business type. No aggregateRating —
+     the Google rating is not first-party review data collected by this site. areaServed
+     lists exactly the places named in visible copy: Grayson, Gwinnett County, Georgia.
+     image/logo are omitted rather than shipped as relative paths that would not resolve
+     for a consumer; the facts they would carry are all in visible copy. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RealEstateAgent",
+  "name": "Natasha Bazile, Realtor",
+  "description": "Real estate agent based at 414 Pine Grove Ave, Grayson, GA 30017, in Gwinnett County, Georgia. Representation for home buyers and sellers.",
+  "url": "https://soldbynat.com/",
+  "telephone": "+14048572508",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "414 Pine Grove Ave",
+    "addressLocality": "Grayson",
+    "addressRegion": "GA",
+    "postalCode": "30017",
+    "addressCountry": "US"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 33.8932028, "longitude": -83.9546395 },
+  "hasMap": "https://www.google.com/maps/place/Natasha+Bazile,+Realtor/data=!4m7!3m6!1s0x88f5b9431baaaaab:0x886ee0f5f357a698!8m2!3d33.8932028!4d-83.9546395!16s%2Fg%2F11g0k1w7yt!19sChIJq6qqG0O59YgRmKZX8_Xgbog",
+  "sameAs": [
+    "https://soldbynat.com/",
+    "https://www.google.com/maps/place/Natasha+Bazile,+Realtor/data=!4m7!3m6!1s0x88f5b9431baaaaab:0x886ee0f5f357a698!8m2!3d33.8932028!4d-83.9546395!16s%2Fg%2F11g0k1w7yt!19sChIJq6qqG0O59YgRmKZX8_Xgbog"
+  ],
+  "areaServed": [
+    { "@type": "City", "name": "Grayson" },
+    { "@type": "AdministrativeArea", "name": "Gwinnett County" },
+    { "@type": "State", "name": "Georgia" }
+  ],
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  }]
+}
+</script>
+
+<script>
+(function () {
+  var yr = document.getElementById('yr');
+  if (yr) yr.textContent = new Date().getFullYear();
+
+  var hdr = document.getElementById('hdr');
+  var scene = document.querySelector('.scene');
+  var stage = document.querySelector('.stage');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  // --- reveal on scroll (opacity/transform only) ---
+  if ('IntersectionObserver' in window && !reduce.matches) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
+  }
+
+  // --- header condense ---
+  var lastY = -1, queued = false;
+  function frame() {
+    queued = false;
+    if (hdr) hdr.classList.toggle('shrunk', lastY > 24);
+    if (scene && stage && !reduce.matches) {
+      var h = stage.offsetHeight || 1;
+      var p = Math.max(0, Math.min(1, lastY / h));
+      scene.style.setProperty('--s', p.toFixed(4));
+    }
+  }
+  function onScroll() {
+    lastY = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if (!queued) { queued = true; requestAnimationFrame(frame); }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // --- pointer driver (desktop only; touch has no pointer, scroll depth carries it) ---
+  if (scene && stage && !reduce.matches && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    var mx = 0, my = 0, pQueued = false;
+    function pFrame() {
+      pQueued = false;
+      scene.style.setProperty('--rx', mx.toFixed(3));
+      scene.style.setProperty('--ry', my.toFixed(3));
+    }
+    stage.addEventListener('pointermove', function (e) {
+      var r = stage.getBoundingClientRect();
+      mx = ((e.clientX - r.left) / r.width - 0.5) * 7;   // max ~3.5deg
+      my = ((e.clientY - r.top) / r.height - 0.5) * -5;  // max ~2.5deg
+      if (!pQueued) { pQueued = true; requestAnimationFrame(pFrame); }
+    }, { passive: true });
+    stage.addEventListener('pointerleave', function () {
+      mx = 0; my = 0;
+      if (!pQueued) { pQueued = true; requestAnimationFrame(pFrame); }
+    }, { passive: true });
+  }
+})();
+</script>
+</body>
+</html>
