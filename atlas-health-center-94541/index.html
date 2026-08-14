@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="robots" content="noindex,nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chiropractor in Hayward, CA | Atlas Health Center</title>
+<meta name="description" content="Atlas Health Center — Hayward chiropractic office at 21565 Foothill Blvd. Rated 5.0 stars across 126 Google reviews. Adjustments, corrective exercise therapy and personal-injury care. Call (510) 398-8082.">
+
+<!-- BUILD NOTE — no canonical and no og:image are emitted: this rebuild has no known deploy
+     URL, so a self-referencing canonical cannot be written and no absolute image URL exists.
+     Pointing either at atlashealthcenter.net would name a different document. Omitted
+     deliberately rather than guessed. -->
+<meta property="og:title" content="Chiropractor in Hayward, CA | Atlas Health Center">
+<meta property="og:description" content="Hayward chiropractic office at 21565 Foothill Blvd. 5.0 stars, 126 Google reviews. Call (510) 398-8082.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config={theme:{extend:{colors:{ink:'#0A1A2F',brand:'#14508C',brandlite:'#2E86D6',paper:'#F4F8FC',gold:'#E8A33D',line:'#DCE6F2'},fontFamily:{display:['Manrope','system-ui','sans-serif'],body:['Inter','system-ui','sans-serif']}}}};
+</script>
+<style>
+:root{--ink:#0A1A2F;--brand:#14508C;--brandlite:#2E86D6;--paper:#F4F8FC;--gold:#E8A33D;--line:#DCE6F2}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.dsp{font-family:Manrope,system-ui,sans-serif;letter-spacing:-.022em}
+section[id],footer[id]{scroll-margin-top:88px}
+/* below 1024px the sticky header carries a second row (the chip nav), so anchors need
+   clearance for both rows */
+@media (max-width:1023px){section[id],footer[id]{scroll-margin-top:132px}}
+
+/* ---------- shared ---------- */
+.wrap{width:100%;max-width:1200px;margin:0 auto;padding-left:20px;padding-right:20px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:52px;padding:0 1.35rem;border-radius:14px;font-weight:700;font-family:Manrope,sans-serif;font-size:1.02rem;line-height:1;transition:transform .18s ease,box-shadow .18s ease,background-color .18s ease;text-decoration:none}
+/* PRIMARY ACTION — identical styling at every repetition, including the pre-footer band */
+.btn-primary{background:var(--brand);color:#fff;box-shadow:0 10px 24px -10px rgba(20,80,140,.75)}
+.btn-primary:hover{background:#0F3F70;transform:translateY(-2px);box-shadow:0 16px 30px -12px rgba(20,80,140,.9)}
+.btn-secondary{background:#fff;color:var(--brand);border:1.5px solid var(--line);box-shadow:0 2px 10px -6px rgba(10,26,47,.35)}
+.btn-secondary:hover{border-color:var(--brandlite);transform:translateY(-2px)}
+.btn-ghost{background:rgba(255,255,255,.10);color:#fff;border:1.5px solid rgba(255,255,255,.42)}
+.btn-ghost:hover{background:rgba(255,255,255,.20);transform:translateY(-2px)}
+.chip{display:inline-flex;align-items:center;gap:.4rem;border-radius:999px;padding:.42rem .8rem;font-size:.8rem;font-weight:600;line-height:1}
+.eyebrow{font-family:Manrope,sans-serif;font-weight:800;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--brandlite)}
+.rule{height:1px;background:var(--line)}
+
+/* logo plate — the brand PNG has an opaque white background, so it is placed on a white
+   chip and never colour-filtered. Filtering it produced a solid rectangle. */
+.logochip{display:inline-flex;align-items:center;background:#fff;border-radius:14px;padding:9px 14px;box-shadow:0 10px 26px -14px rgba(0,0,0,.7)}
+.logochip img{display:block;height:38px;width:auto}
+
+/* photo crop — trims the bottom-right corner of harvested files so any enhancement/app
+   glyph in that corner cannot ship. Applied to every harvested photo on the page,
+   including the hero back plate (see .l-back img). */
+.crop{position:relative;overflow:hidden;background:#0A1A2F}
+.crop img{display:block;width:100%;height:100%;object-fit:cover;transform:scale(1.11) translate(-2.2%,-2.2%);transform-origin:center}
+
+/* ---------- header ---------- */
+.hdr{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.93);backdrop-filter:saturate(160%) blur(12px);border-bottom:1px solid var(--line);transition:box-shadow .2s ease}
+.hdr.is-stuck{box-shadow:0 8px 26px -18px rgba(10,26,47,.7)}
+.hdr .bar{display:flex;align-items:center;gap:16px;height:76px;transition:height .2s ease}
+.hdr.is-stuck .bar{height:64px}
+.navlink{font-family:Manrope,sans-serif;font-weight:600;font-size:.92rem;color:#31465F;padding:.5rem .1rem;position:relative;text-decoration:none}
+.navlink:after{content:"";position:absolute;left:0;right:100%;bottom:.15rem;height:2px;background:var(--brandlite);transition:right .22s ease}
+.navlink:hover{color:var(--brand)}
+.navlink:hover:after{right:0}
+
+/* mobile/tablet section nav — horizontally scrollable anchor chips, 44px tap targets */
+.chipnav{display:flex;gap:8px;overflow-x:auto;overflow-y:hidden;padding:0 20px 10px;border-top:1px solid var(--line);padding-top:8px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.chipnav::-webkit-scrollbar{display:none}
+.chipnav a{display:inline-flex;align-items:center;min-height:44px;padding:0 15px;border-radius:999px;white-space:nowrap;font-family:Manrope,sans-serif;font-weight:700;font-size:.88rem;color:#274764;background:var(--paper);border:1px solid var(--line);text-decoration:none}
+.chipnav a:active{background:#E3EDF7}
+@media (min-width:1024px){.chipnav{display:none}}
+
+/* ---------- 3D HERO ---------- */
+.stage{position:relative;overflow:hidden;background:#06121F;perspective:1100px;perspective-origin:52% 42%}
+.scene{position:absolute;inset:0;transform-style:preserve-3d;transform:rotateX(0deg) rotateY(0deg);will-change:transform}
+.layer{position:absolute;inset:0;transform-style:preserve-3d;will-change:transform}
+/* rest transforms — these are the no-JS / reduced-motion composition */
+.l-back{transform:translate3d(0,0,-300px) scale(1.46)}
+.l-scrim{transform:translate3d(0,0,-150px) scale(1.22)}
+.l-mid{transform:translate3d(0,0,-70px)}
+.l-front{transform:translate3d(0,0,72px)}
+/* back plate carries the same corner crop as .crop: the extra scale + up-left shift keeps
+   the source file's bottom-right corner outside the frame at every viewport width */
+.l-back img{width:100%;height:100%;object-fit:cover;object-position:50% 38%;filter:saturate(.86) contrast(1.02);transform:scale(1.13) translate(-3%,-3.5%);transform-origin:center}
+.heroshade{position:absolute;inset:0;background:
+  radial-gradient(120% 90% at 18% 40%,rgba(4,14,26,.94) 0%,rgba(4,14,26,.78) 34%,rgba(4,14,26,.30) 62%,rgba(4,14,26,.55) 100%),
+  linear-gradient(180deg,rgba(6,18,31,.72) 0%,rgba(6,18,31,.18) 40%,rgba(6,18,31,.86) 100%)}
+.midcard{position:absolute;right:3.2%;bottom:8%;width:min(31%,320px);border-radius:22px;overflow:hidden;
+  box-shadow:0 44px 80px -34px rgba(0,0,0,.95),0 0 0 1px rgba(255,255,255,.16) inset;aspect-ratio:925/1152}
+.midcard .crop{width:100%;height:100%}
+.hero-copy{position:relative;z-index:2}
+@media (max-width:900px){
+  /* mid plane stays a real, readable plane on touch — it is the depth cue that survives
+     without a pointer driver */
+  .midcard{width:38%;max-width:230px;right:2%;bottom:4%;opacity:.96}
+  .l-back img{object-position:56% 36%}
+}
+@media (max-width:520px){.midcard{width:44%;max-width:186px;right:-3%;bottom:2%}}
+@media (prefers-reduced-motion:reduce){.scene,.layer{transition:none!important}}
+
+.stars{color:var(--gold);letter-spacing:.06em}
+
+/* ---------- proof strip ---------- */
+.proof{background:var(--ink);color:#fff}
+.proof .cell{padding:26px 22px;border-right:1px solid rgba(255,255,255,.13)}
+.proof .cell:last-child{border-right:0}
+@media (max-width:1023px){.proof .cell{border-right:0;border-bottom:1px solid rgba(255,255,255,.13)}.proof .cell:last-child{border-bottom:0}}
+
+/* ---------- cards ---------- */
+.card{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.card:hover{transform:translateY(-4px);box-shadow:0 26px 48px -30px rgba(10,26,47,.6);border-color:#C3D6EA}
+.numrow{display:grid;grid-template-columns:64px 1fr;gap:18px;align-items:start;padding:20px 0;border-top:1px solid var(--line)}
+.num{font-family:Manrope,sans-serif;font-weight:800;font-size:1.5rem;color:var(--brandlite);line-height:1}
+.hrs td{padding:11px 10px;border-top:1px solid var(--line);vertical-align:top;font-size:.95rem}
+.hrs tr.today td{background:#EAF3FB}
+.hrs .day{font-weight:700;font-family:Manrope,sans-serif;white-space:nowrap}
+.qa{border-top:1px solid var(--line);padding:14px 0;display:grid;grid-template-columns:26px 1fr;gap:12px}
+
+/* ---------- sticky mobile action bar ---------- */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:70;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-top:1px solid var(--line)}
+.mbar .btn{min-height:50px;font-size:.95rem;padding:0 .7rem}
+@media (min-width:900px){.mbar{display:none}}
+@media (max-width:899px){body{padding-bottom:82px}}
+.hide{display:none}
+</style>
+</head>
+<body class="font-body">
+
+<!-- BUILD NOTE — SCOPE: this_location_only. Every fact on this page traces to (1) the scraped
+     lead facts block or (2) Atlas Health Center's own published pages, with their Hayward
+     location page (atlashealthcenter.net/hayward) treated as authoritative over the homepage.
+     No amenity, parking, wait-time, staffing, price or insurance claim appears anywhere.
+     Service-area copy names Hayward and the East Bay only — both derivable from the scraped
+     address — and areaServed lists exactly those two entries. -->
+
+<header class="hdr" id="top">
+  <div class="wrap bar">
+    <a href="#top" class="flex items-center gap-3 shrink-0" aria-label="Atlas Health Center — Hayward, top of page">
+      <!-- Approved asset: brand logo, location-neutral. Shown unfiltered on white. -->
+      <img src="assets/909f490a-4198-4077-896f-f1204140d2e8_screenshot-2026-06-25-at-11-17-59-am.png" width="1588" height="900" alt="Atlas Health Center logo — blue script wordmark" class="h-8 w-auto md:h-9">
+      <span class="dsp font-extrabold text-[.95rem] md:text-base leading-tight text-ink">Atlas Health Center<span class="block text-[.7rem] font-bold tracking-[.14em] uppercase text-brandlite">Hayward</span></span>
+    </a>
+    <nav class="hidden lg:flex items-center gap-6 ml-4" aria-label="Section navigation">
+      <a class="navlink" href="#services">Services</a>
+      <a class="navlink" href="#why">Why this office</a>
+      <a class="navlink" href="#first-visit">First visit</a>
+      <a class="navlink" href="#costs">Cost &amp; insurance</a>
+      <a class="navlink" href="#visit">Hours &amp; location</a>
+      <a class="navlink" href="#contact">Contact</a>
+    </nav>
+    <div class="ml-auto flex items-center gap-2">
+      <span class="hidden xl:inline text-sm font-semibold text-[#41586F]"><span class="stars">★</span> 5.0 · 126 reviews</span>
+      <a class="btn btn-primary hidden sm:inline-flex" href="tel:+15103988082">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+        Call (510) 398-8082
+      </a>
+    </div>
+  </div>
+  <!-- BUILD NOTE — mobile/tablet section nav. Same six in-page anchors as the desktop nav,
+       every one pointing at an id on this page. Hidden at 1024px+ where the inline nav shows. -->
+  <nav class="chipnav" aria-label="Section navigation (mobile)">
+    <a href="#services">Services</a>
+    <a href="#why">Why this office</a>
+    <a href="#first-visit">First visit</a>
+    <a href="#costs">Cost &amp; insurance</a>
+    <a href="#visit">Hours &amp; location</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- ============ 1. HERO — CSS 3D scene ============ -->
+<!-- BUILD NOTE — Hero layer stack, front to back: (front) type/CTA plate + brand logo on a
+     white plate; (scrim) generated SVG/gradient plane; (mid) spine.webp floating card;
+     (back) adjustment.webp wide plate. All photo planes are approved assets, cropped so the
+     source files' bottom-right corner never enters frame. No photo layer is captioned or
+     alt-labeled as the Hayward premises. -->
+<section class="stage" style="min-height:clamp(600px,88vh,860px)" aria-label="Atlas Health Center Hayward introduction">
+  <div class="scene" id="scene" aria-hidden="true">
+    <!-- BACK PLATE -->
+    <div class="layer l-back" id="lBack">
+      <img src="assets/6ac78cc1-0aa9-4d0e-84c6-70070d8b07fe_adjustment.webp" width="922" height="929" alt="" role="presentation">
+    </div>
+    <!-- SCRIM PLANE (generated vector — guarantees headline legibility over photography) -->
+    <div class="layer l-scrim" id="lScrim">
+      <div class="heroshade"></div>
+      <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none" style="position:absolute;inset:0;mix-blend-mode:screen;opacity:.5">
+        <defs><radialGradient id="hg" cx="20%" cy="34%" r="72%">
+          <stop offset="0%" stop-color="#2E86D6" stop-opacity=".55"/>
+          <stop offset="55%" stop-color="#14508C" stop-opacity=".18"/>
+          <stop offset="100%" stop-color="#06121F" stop-opacity="0"/>
+        </radialGradient></defs>
+        <rect width="100" height="100" fill="url(#hg)"/>
+      </svg>
+    </div>
+    <!-- MID CARD -->
+    <div class="layer l-mid" id="lMid">
+      <figure class="midcard">
+        <div class="crop"><img src="assets/b3794968-268f-486e-a017-5849aa51c857_spine.webp" width="833" height="1037" alt="Color-coded anatomical spine model resting on a blue treatment table"></div>
+      </figure>
+    </div>
+  </div>
+
+  <!-- FRONT PLANE — real content, readable with JS disabled -->
+  <div class="layer l-front" id="lFront" style="pointer-events:none">
+    <div class="wrap h-full flex items-center" style="pointer-events:auto">
+      <div class="hero-copy max-w-[660px] py-16 md:py-24">
+        <span class="logochip mb-5">
+          <img src="assets/909f490a-4198-4077-896f-f1204140d2e8_screenshot-2026-06-25-at-11-17-59-am.png" width="1588" height="900" alt="Atlas Health Center logo — blue script wordmark">
+        </span>
+        <div class="flex flex-wrap items-center gap-2 mb-4">
+          <span class="chip" style="background:rgba(232,163,61,.16);color:#F6C87E;border:1px solid rgba(232,163,61,.4)"><span class="stars">★★★★★</span> 5.0 · 126 Google reviews</span>
+          <!-- chip is arithmetic on the hours table below: Mon–Fri open, Sun/Sat closed;
+               Tue closes 6:30 PM, Wed 7:30 PM, Thu 7:00 PM — all past 6 PM -->
+          <span class="chip" style="background:rgba(255,255,255,.12);color:#DCEAF7;border:1px solid rgba(255,255,255,.28)">Open Mon–Fri · past 6 PM Tue–Thu</span>
+          <span class="chip hide" id="openNow" style="background:rgba(255,255,255,.12);color:#DCEAF7;border:1px solid rgba(255,255,255,.28)"></span>
+        </div>
+        <h1 class="text-white font-extrabold leading-[1.03] text-[2.4rem] sm:text-[3.1rem] lg:text-[3.9rem]">Chiropractic care in Hayward, CA</h1>
+        <p class="mt-4 text-[1.06rem] sm:text-[1.16rem] leading-relaxed text-[#D6E5F3] max-w-[54ch]">
+          Adjustments, corrective exercise therapy and personal-injury care at <strong class="text-white font-semibold">21565 Foothill Blvd</strong> — Atlas Health Center's East Bay office in Hayward.
+        </p>
+        <div class="mt-7 flex flex-col sm:flex-row gap-3">
+          <a class="btn btn-primary" href="tel:+15103988082">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+            Call (510) 398-8082
+          </a>
+          <a class="btn btn-ghost" href="https://www.zocdoc.com/practice/atlas-health-center-35450?LocIdent=427575" target="_blank" rel="noopener">Existing patients: book on Zocdoc</a>
+        </div>
+        <p class="mt-4 text-[.92rem] text-[#B9CEE2] max-w-[52ch]">
+          Atlas Health Center's own Hayward page: <em>“New Patients, please call the office at (510) 398-8082 to schedule your appointment.”</em>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2. SOCIAL PROOF STRIP ============ -->
+<!-- BUILD NOTE — rating + count only, per workflow. No review body is quoted anywhere on
+     this page. "Dr. Michael Coley" and "Dr. Cedric" are taken from the reviewer text Atlas
+     Health Center publishes on its own Hayward page, stated as who reviewers name, not as a
+     credential or staffing claim. No DC license number or founding year is published by the
+     business, so neither is shown — the omission is forced, not lazy. -->
+<section class="proof" aria-label="Trust signals">
+  <div class="wrap">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+      <div class="cell">
+        <div class="stars text-lg leading-none">★★★★★</div>
+        <p class="dsp text-2xl font-extrabold mt-2">5.0 · 126 Google reviews</p>
+        <p class="text-[.9rem] text-[#9FB6CC] mt-1">The rating on this office's Google listing.</p>
+      </div>
+      <div class="cell">
+        <p class="eyebrow" style="color:#7FB4E4">Who patients name</p>
+        <p class="dsp text-xl font-bold mt-2">Dr. Michael Coley</p>
+        <p class="text-[.9rem] text-[#9FB6CC] mt-1">The provider named most often in this office's reviews (also written “Dr. Mike”). “Dr. Cedric” appears too.</p>
+      </div>
+      <div class="cell">
+        <p class="eyebrow" style="color:#7FB4E4">Where</p>
+        <p class="dsp text-xl font-bold mt-2">21565 Foothill Blvd</p>
+        <p class="text-[.9rem] text-[#9FB6CC] mt-1">Hayward, CA 94541 — this page covers the Hayward office only.</p>
+      </div>
+      <div class="cell">
+        <p class="eyebrow" style="color:#7FB4E4">Direct line</p>
+        <p class="dsp text-xl font-bold mt-2"><a href="tel:+15103988082" class="hover:text-brandlite">(510) 398-8082</a></p>
+        <p class="text-[.9rem] text-[#9FB6CC] mt-1">The Hayward office number, not the brand switchboard.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. SERVICES ============ -->
+<section id="services" class="py-16 md:py-24 bg-white">
+  <div class="wrap">
+    <div class="grid lg:grid-cols-12 gap-10 items-start">
+      <div class="lg:col-span-5">
+        <p class="eyebrow">Services</p>
+        <h2 class="text-[2rem] md:text-[2.7rem] font-extrabold leading-[1.06] mt-3">Adjustments, corrective exercise and injury care</h2>
+        <p class="mt-4 text-[1.02rem] leading-relaxed text-[#3D5570]">
+          These are the three services Atlas Health Center publishes a page for. The descriptions explain <strong>what each type of chiropractic care generally involves</strong> — category information, not this office's protocol or your treatment plan. Call to confirm what applies to your case.
+        </p>
+        <a class="btn btn-primary mt-6" href="tel:+15103988082">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+          Call (510) 398-8082
+        </a>
+      </div>
+
+      <div class="lg:col-span-7 grid sm:grid-cols-2 gap-5">
+        <!-- BUILD NOTE — evidence: atlashealthcenter.net/chiropractic-adjustments-in-san-francisco-ca -->
+        <article class="card sm:col-span-2 grid sm:grid-cols-2">
+          <div class="crop" style="min-height:200px"><img src="assets/6ac78cc1-0aa9-4d0e-84c6-70070d8b07fe_adjustment.webp" width="922" height="929" loading="lazy" alt="Chiropractor in a mask performing a side-posture lower-back adjustment on a patient lying on a blue table, anatomy posters on the wall behind"></div>
+          <div class="p-6">
+            <h3 class="text-xl font-extrabold">Chiropractic adjustments</h3>
+            <p class="mt-2 text-[.96rem] leading-relaxed text-[#3D5570]">An adjustment is a controlled, directed force applied to a specific spinal or joint segment to restore movement where it has become restricted. Sessions are typically short and repeated over a course rather than one-off.</p>
+          </div>
+        </article>
+
+        <!-- BUILD NOTE — evidence: atlashealthcenter.net/corrective-exercise-therapy-in-san-francisco-ca -->
+        <article class="card">
+          <div class="crop" style="aspect-ratio:1252/832"><img src="assets/8f7496ab-98b2-4d4f-b96c-0fd7fbb09a23_correctiveexercise1.webp" width="1127" height="749" loading="lazy" alt="Masked practitioner guiding a masked patient through resistance-band pulls at a cable machine"></div>
+          <div class="p-6">
+            <h3 class="text-xl font-extrabold">Corrective exercise therapy</h3>
+            <p class="mt-2 text-[.96rem] leading-relaxed text-[#3D5570]">Prescribed movement work — bands, cables, bodyweight loading — used alongside adjustments so the muscles around a joint can hold the change. Generally taught in-office and repeated at home between visits.</p>
+          </div>
+        </article>
+
+        <!-- BUILD NOTE — evidence: atlashealthcenter.net/personal-injury-chiropractic-care-in-san-francisco-ca -->
+        <article class="card">
+          <div class="crop" style="aspect-ratio:1024/1026"><img src="assets/526f784b-f136-43e5-a856-4d1fe954ba4c_pi.webp" width="922" height="924" loading="lazy" alt="Practitioner seen from behind applying a handheld percussion tool to a patient lying face-down on a blue drop table"></div>
+          <div class="p-6">
+            <h3 class="text-xl font-extrabold">Personal-injury care</h3>
+            <p class="mt-2 text-[.96rem] leading-relaxed text-[#3D5570]">Chiropractic care following a collision or other injury event. This category usually involves documentation and billing arrangements that differ from routine visits — ask about that on the call before your first appointment.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- symptom band — different layout from the card grid above -->
+    <!-- BUILD NOTE — each chip corresponds to a symptom page Atlas Health Center publishes:
+         back pain, neck pain, headache/migraine, shoulder pain, arm and leg pain, scoliosis. -->
+    <div class="mt-14 rounded-3xl border border-line bg-paper p-7 md:p-9">
+      <div class="flex flex-col md:flex-row md:items-center gap-5 md:gap-10">
+        <div class="md:w-1/3">
+          <p class="eyebrow">Symptoms Atlas writes about</p>
+          <h3 class="text-2xl font-extrabold mt-2 leading-tight">Six complaints they publish care pages for</h3>
+        </div>
+        <ul class="md:w-2/3 grid grid-cols-2 sm:grid-cols-3 gap-3">
+          <li class="bg-white border border-line rounded-xl px-4 py-3 font-semibold text-[.95rem]">Back pain</li>
+          <li class="bg-white border border-line rounded-xl px-4 py-3 font-semibold text-[.95rem]">Neck pain</li>
+          <li class="bg-white border border-line rounded-xl px-4 py-3 font-semibold text-[.95rem]">Headaches &amp; migraines</li>
+          <li class="bg-white border border-line rounded-xl px-4 py-3 font-semibold text-[.95rem]">Shoulder pain</li>
+          <li class="bg-white border border-line rounded-xl px-4 py-3 font-semibold text-[.95rem]">Arm &amp; leg pain</li>
+          <li class="bg-white border border-line rounded-xl px-4 py-3 font-semibold text-[.95rem]">Scoliosis</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. WHY THIS OFFICE — pain-point section ============ -->
+<!-- BUILD NOTE — addresses P1 (visitors land on a San Francisco-facing page), P3/P4
+     (promised booking with no path, and the SF number as the only tappable CTA) and
+     P2 (no cost/insurance answer). Each claim below is about this page's own structure
+     or restates a fact already published by the business. -->
+<section id="why" class="py-16 md:py-24" style="background:linear-gradient(180deg,#0A1A2F 0%,#102B49 100%);color:#fff">
+  <div class="wrap">
+    <p class="eyebrow" style="color:#7FB4E4">Why this page exists</p>
+    <h2 class="text-[2rem] md:text-[2.7rem] font-extrabold leading-[1.06] mt-3 max-w-[20ch]">Built for the Hayward office, not the brand.</h2>
+    <p class="mt-4 max-w-[62ch] text-[1.02rem] leading-relaxed text-[#BFD4E8]">Atlas Health Center runs several offices from one website. If you searched for a chiropractor near Foothill Blvd, three things usually go wrong. Here is how each is handled here.</p>
+
+    <div class="mt-10 max-w-[900px]">
+      <div class="numrow" style="border-color:rgba(255,255,255,.16)">
+        <div class="num" style="color:#7FB4E4">01</div>
+        <div>
+          <h3 class="text-xl font-extrabold">One office on this page: Hayward</h3>
+          <p class="mt-2 text-[#BFD4E8] leading-relaxed">The address, the hours, the map pin and the phone number on this page all belong to 21565 Foothill Blvd, Hayward, CA 94541. Nothing here describes another office. Atlas's other offices have their own pages — <a class="underline decoration-[#7FB4E4] underline-offset-4 hover:text-white" href="https://atlashealthcenter.net/locations" target="_blank" rel="noopener">see the Atlas locations page</a>.</p>
+        </div>
+      </div>
+      <div class="numrow" style="border-color:rgba(255,255,255,.16)">
+        <div class="num" style="color:#7FB4E4">02</div>
+        <div>
+          <h3 class="text-xl font-extrabold">The tappable number is the Hayward number</h3>
+          <p class="mt-2 text-[#BFD4E8] leading-relaxed">Every call button on this page dials <a class="underline decoration-[#7FB4E4] underline-offset-4 hover:text-white" href="tel:+15103988082">(510) 398-8082</a> — the number Atlas publishes for this office and asks new patients to use. On a phone it sits in the bar fixed to the bottom of the screen, one tap from any point in the page.</p>
+        </div>
+      </div>
+      <div class="numrow" style="border-color:rgba(255,255,255,.16)">
+        <div class="num" style="color:#7FB4E4">03</div>
+        <div>
+          <h3 class="text-xl font-extrabold">Online booking, labelled for who it's actually for</h3>
+          <p class="mt-2 text-[#BFD4E8] leading-relaxed">Atlas's Hayward page offers online booking under the heading “Existing Patient Booking”, and asks new patients to phone. So the Zocdoc link here says exactly that, and phoning is the primary action. Sending a first-time patient into a returning-patient queue would waste your evening.</p>
+          <a class="btn btn-secondary mt-4" href="https://www.zocdoc.com/practice/atlas-health-center-35450?LocIdent=427575" target="_blank" rel="noopener">Existing patients: book on Zocdoc</a>
+        </div>
+      </div>
+      <div class="numrow" style="border-color:rgba(255,255,255,.16)">
+        <div class="num" style="color:#7FB4E4">04</div>
+        <div>
+          <h3 class="text-xl font-extrabold">Cost and insurance: asked, not invented</h3>
+          <p class="mt-2 text-[#BFD4E8] leading-relaxed">Atlas does not publish cash rates or a list of accepted plans for this office, so this page prints none. What it gives you instead is the exact set of questions to ask when you call — <a class="underline decoration-[#7FB4E4] underline-offset-4 hover:text-white" href="#costs">the call script is below</a>.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-10">
+      <a class="btn btn-primary" href="tel:+15103988082">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+        Call (510) 398-8082
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PHOTOGRAPHY BAND (uncaptioned, full-bleed) ============ -->
+<!-- BUILD NOTE — approved harvested photography used as imagery only. Per the asset rules
+     none of these frames is labelled, captioned or implied to be the Hayward premises;
+     the disclosure line under the band states their provenance plainly. -->
+<section class="py-14 md:py-20 bg-white" aria-label="Photography from Atlas Health Center's website">
+  <div class="wrap">
+    <div class="grid md:grid-cols-12 gap-4">
+      <figure class="md:col-span-5 crop rounded-2xl" style="aspect-ratio:4/3"><img src="assets/4f2eb558-9752-4a13-9f54-4e81728971a5_table1.webp" width="1138" height="758" loading="lazy" alt="Treatment room viewed through a doorway: adjustment table, stool, shelves of folded linens, spine models, an e-stim unit and a red patterned rug"></figure>
+      <figure class="md:col-span-3 crop rounded-2xl" style="aspect-ratio:3/4"><img src="assets/548119aa-5d5c-417a-8580-67526018f0c5_van-ness.webp" width="980" height="1225" loading="lazy" alt="Adjustment table on a red rug beside a photo collage board, a pedestal fan and a pull-down projector screen"></figure>
+      <figure class="md:col-span-4 crop rounded-2xl" style="aspect-ratio:4/3"><img src="assets/18718806-3bfd-4f08-bd7d-877565531963_screenshot-2026-03-17-at-14103-pm.webp" width="861" height="668" loading="lazy" alt="Three abstract canvas paintings hung in a row on a beige wall"></figure>
+    </div>
+    <p class="mt-4 text-[.86rem] text-[#5B7189] max-w-[76ch]">Photographs published by Atlas Health Center on their own website, shown here as imagery only and not labelled as any particular office.</p>
+  </div>
+</section>
+
+<!-- ============ 5. FIRST VISIT — category education ============ -->
+<!-- BUILD NOTE — explicitly framed as general category information about chiropractic
+     first visits. No sentence describes this office's own protocol, timing or policy. -->
+<section id="first-visit" class="py-16 md:py-24 bg-paper border-y border-line">
+  <div class="wrap grid lg:grid-cols-12 gap-10">
+    <div class="lg:col-span-5">
+      <p class="eyebrow">General guidance · not this office's policy</p>
+      <h2 class="text-[2rem] md:text-[2.6rem] font-extrabold leading-[1.06] mt-3">How chiropractic first visits generally work</h2>
+      <p class="mt-4 text-[1.02rem] leading-relaxed text-[#3D5570]">Atlas Health Center has not published a first-visit walkthrough for the Hayward office, so the sequence below describes how chiropractic intake appointments <strong>are commonly structured across the profession</strong>. Treat it as orientation for the phone call, and confirm the specifics with the office.</p>
+      <div class="mt-6 rounded-2xl bg-white border border-line p-5">
+        <p class="text-[.95rem] leading-relaxed text-[#3D5570]"><strong class="text-ink">From their own page:</strong> new patients are asked to phone <a class="text-brand font-semibold underline underline-offset-4" href="tel:+15103988082">(510) 398-8082</a> to schedule. Online booking is for existing patients.</p>
+      </div>
+    </div>
+    <div class="lg:col-span-7">
+      <div class="rounded-3xl bg-white border border-line px-6 md:px-8 py-2">
+        <div class="numrow"><div class="num">1</div><div><h3 class="font-extrabold text-lg">Intake paperwork and history</h3><p class="mt-1.5 text-[.96rem] leading-relaxed text-[#3D5570]">Chiropractic offices generally start with health history, current medications, prior imaging, and how the complaint began — collision, lifting, gradual onset. Bring anything you already have.</p></div></div>
+        <div class="numrow"><div class="num">2</div><div><h3 class="font-extrabold text-lg">Physical examination</h3><p class="mt-1.5 text-[.96rem] leading-relaxed text-[#3D5570]">Exams in this field typically cover posture, range of motion, palpation of the spine and joints, and orthopaedic or neurological screening tests relevant to the complaint.</p></div></div>
+        <div class="numrow"><div class="num">3</div><div><h3 class="font-extrabold text-lg">Findings explained before anything is done</h3><p class="mt-1.5 text-[.96rem] leading-relaxed text-[#3D5570]">Standard practice is that the practitioner explains what they found and what they propose before treatment begins. If that does not happen, it is reasonable to ask for it.</p></div></div>
+        <div class="numrow"><div class="num">4</div><div><h3 class="font-extrabold text-lg">Treatment, where it's appropriate that day</h3><p class="mt-1.5 text-[.96rem] leading-relaxed text-[#3D5570]">Some first appointments include an adjustment or soft-tissue work; others are exam-only. Which one yours is is a decision for the treating clinician.</p></div></div>
+        <div class="numrow" style="border-bottom:1px solid var(--line)"><div class="num">5</div><div><h3 class="font-extrabold text-lg">A plan, and a review point</h3><p class="mt-1.5 text-[.96rem] leading-relaxed text-[#3D5570]">Care is usually proposed as a course of visits with a point at which progress is re-checked. Ask when that review happens and what would change the plan.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. COST & INSURANCE — call script ============ -->
+<!-- BUILD NOTE — required "missing commercial data" pattern. No rate, plan name, panel,
+     lead time or availability claim appears; the section is a list of questions only. -->
+<section id="costs" class="py-16 md:py-24 bg-white">
+  <div class="wrap grid lg:grid-cols-12 gap-10">
+    <div class="lg:col-span-4">
+      <p class="eyebrow">Cost &amp; insurance</p>
+      <h2 class="text-[2rem] md:text-[2.6rem] font-extrabold leading-[1.06] mt-3">What to ask when you call</h2>
+      <p class="mt-4 text-[1.02rem] leading-relaxed text-[#3D5570]">Atlas Health Center does not publish prices or accepted insurance for the Hayward office. Rather than guess, here is the script — read it down the page while the phone rings and you will have every answer in one call.</p>
+      <a class="btn btn-primary mt-6" href="tel:+15103988082">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+        Call (510) 398-8082
+      </a>
+    </div>
+    <div class="lg:col-span-8">
+      <div class="grid sm:grid-cols-2 gap-x-10">
+        <div>
+          <div class="qa" style="border-top:0"><span class="num text-base">Q1</span><p class="text-[.98rem] leading-relaxed">“Do you take <em>[your plan]</em> — and do you bill it directly, or do I pay and submit the claim myself?”</p></div>
+          <div class="qa"><span class="num text-base">Q2</span><p class="text-[.98rem] leading-relaxed">“If I'm paying cash, what does a first visit with the exam cost, and what does a follow-up visit cost?”</p></div>
+          <div class="qa"><span class="num text-base">Q3</span><p class="text-[.98rem] leading-relaxed">“Are X-rays or imaging part of the first appointment, and is that billed separately?”</p></div>
+          <div class="qa"><span class="num text-base">Q4</span><p class="text-[.98rem] leading-relaxed">“This came from a car accident — do you handle personal-injury cases and bill the claim?”</p></div>
+        </div>
+        <div>
+          <div class="qa sm:border-t-0"><span class="num text-base">Q5</span><p class="text-[.98rem] leading-relaxed">“It happened at work — do you take workers' compensation, and what do you need from my employer?”</p></div>
+          <div class="qa"><span class="num text-base">Q6</span><p class="text-[.98rem] leading-relaxed">“How long should I allow for the first appointment, and what should I bring?”</p></div>
+          <div class="qa"><span class="num text-base">Q7</span><p class="text-[.98rem] leading-relaxed">“When is the soonest you can see me, and is that at the Foothill Blvd office?”</p></div>
+          <div class="qa"><span class="num text-base">Q8</span><p class="text-[.98rem] leading-relaxed">“Is the plan a set number of visits, and when do you re-assess whether it's working?”</p></div>
+        </div>
+      </div>
+      <p class="mt-6 text-[.88rem] text-[#5B7189]">No price, plan or availability figure is printed on this page because Atlas Health Center has not published one for this office.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7. HOURS + LOCATION ============ -->
+<!-- BUILD NOTE — hours published exactly as Atlas Health Center's own Hayward location page
+     lists them (location page outranks Google per workflow). The Google Maps listing shows a
+     different Friday/Saturday pattern; the discrepancy is disclosed once in visible copy and
+     is not averaged or double-published. Visible hours and JSON-LD assert identical values. -->
+<section id="visit" class="py-16 md:py-24 bg-paper border-t border-line">
+  <div class="wrap">
+    <div class="grid lg:grid-cols-12 gap-10">
+      <div class="lg:col-span-5">
+        <p class="eyebrow">Hours &amp; location</p>
+        <h2 class="text-[2rem] md:text-[2.6rem] font-extrabold leading-[1.06] mt-3">21565 Foothill Blvd</h2>
+        <address class="not-italic mt-3 text-[1.06rem] leading-relaxed text-[#3D5570]">
+          Atlas Health Center — Hayward<br>21565 Foothill Blvd<br>Hayward, CA 94541
+        </address>
+        <p class="mt-4 text-[1.02rem]"><a class="text-brand font-bold underline underline-offset-4" href="tel:+15103988082">(510) 398-8082</a> · <a class="text-brand font-bold underline underline-offset-4" href="mailto:info@atlashealthcenter.net">info@atlashealthcenter.net</a></p>
+        <div class="flex flex-wrap gap-3 mt-5">
+          <a class="btn btn-primary" href="tel:+15103988082">Call (510) 398-8082</a>
+          <a class="btn btn-secondary" href="https://www.google.com/maps/place/Atlas+Health+Center/data=!4m7!3m6!1s0x808f91e160dc9a73:0x4b3356e9b0fa588a!8m2!3d37.6829569!4d-122.0896252!16s%2Fg%2F11n7cpl5bx!19sChIJc5rcYOGRj4ARilj6sOlWM0s" target="_blank" rel="noopener">Open in Google Maps</a>
+        </div>
+
+        <table class="hrs w-full mt-8 bg-white rounded-2xl border border-line overflow-hidden">
+          <caption class="text-left px-4 pt-4 pb-2 font-extrabold dsp text-lg">Office hours</caption>
+          <tbody>
+            <tr data-d="1"><td class="day">Monday</td><td>8:30 AM – 12:30 PM<br>1:30 – 5:30 PM</td></tr>
+            <tr data-d="2"><td class="day">Tuesday</td><td>8:30 AM – 12:30 PM<br>2 – 6:30 PM</td></tr>
+            <tr data-d="3"><td class="day">Wednesday</td><td>2:30 – 7:30 PM</td></tr>
+            <tr data-d="4"><td class="day">Thursday</td><td>8:30 AM – 1 PM<br>2:30 – 7 PM</td></tr>
+            <tr data-d="5"><td class="day">Friday</td><td>8:30 – 10:30 AM</td></tr>
+            <tr data-d="6"><td class="day">Saturday</td><td>Closed</td></tr>
+            <tr data-d="0"><td class="day">Sunday</td><td>Closed</td></tr>
+          </tbody>
+        </table>
+        <p class="mt-3 text-[.88rem] leading-relaxed text-[#5B7189]">Hours as published by Atlas Health Center for this office. The Google listing shows a different Friday and Saturday pattern — call to confirm before you drive over. Open past 6 PM Tuesday, Wednesday and Thursday; closed Saturday and Sunday.</p>
+      </div>
+
+      <div class="lg:col-span-7">
+        <div class="rounded-3xl overflow-hidden border border-line bg-white h-full min-h-[420px]">
+          <iframe title="Map showing Atlas Health Center — Hayward at 21565 Foothill Blvd" src="https://maps.google.com/maps?q=37.6829569,-122.0896252&output=embed" width="100%" height="100%" style="border:0;display:block;min-height:420px" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="mt-4 grid sm:grid-cols-2 gap-4">
+          <div class="rounded-2xl border border-line bg-white p-5">
+            <p class="eyebrow">Service area</p>
+            <p class="mt-2 text-[.98rem] leading-relaxed text-[#3D5570]">Hayward, CA 94541 — Atlas Health Center's East Bay office, on Foothill Blvd.</p>
+          </div>
+          <div class="rounded-2xl border border-line bg-white p-5">
+            <p class="eyebrow">Other Atlas offices</p>
+            <p class="mt-2 text-[.98rem] leading-relaxed text-[#3D5570]">This page covers the Hayward office only. Atlas Health Center's other offices each have their own page — <a class="text-brand font-semibold underline underline-offset-4" href="https://atlashealthcenter.net/locations" target="_blank" rel="noopener">see the Atlas locations page</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRE-FOOTER CTA ============ -->
+<!-- BUILD NOTE — the primary action here uses the same .btn.btn-primary rule as every other
+     repetition on the page, with no inline override. It sits on a white card so the brand
+     blue keeps its contrast against the gradient band. -->
+<section class="py-14 md:py-20" style="background:linear-gradient(120deg,#14508C 0%,#0A1A2F 70%);color:#fff">
+  <div class="wrap flex flex-col md:flex-row md:items-center gap-8">
+    <div class="md:flex-1">
+      <p class="eyebrow" style="color:#9FC8EE">Ready when you are</p>
+      <h2 class="text-[1.9rem] md:text-[2.5rem] font-extrabold leading-[1.08] mt-2">Phone the Hayward office and get seen.</h2>
+      <p class="mt-3 text-[#C6DCF0] max-w-[52ch] leading-relaxed">New patients are asked to call. Existing patients can book online. Either way, one tap.</p>
+    </div>
+    <div class="bg-white rounded-3xl p-5 md:p-6 shadow-2xl">
+      <div class="flex flex-col sm:flex-row gap-3">
+        <a class="btn btn-primary" href="tel:+15103988082">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+          Call (510) 398-8082
+        </a>
+        <a class="btn btn-secondary" href="https://www.zocdoc.com/practice/atlas-health-center-35450?LocIdent=427575" target="_blank" rel="noopener">Existing patients: book on Zocdoc</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 8. CONTACT / FOOTER ============ -->
+<footer id="contact" class="bg-ink text-white pt-14 pb-10">
+  <div class="wrap">
+    <div class="grid md:grid-cols-4 gap-9">
+      <div class="md:col-span-2">
+        <span class="logochip">
+          <img src="assets/909f490a-4198-4077-896f-f1204140d2e8_screenshot-2026-06-25-at-11-17-59-am.png" width="1588" height="900" loading="lazy" alt="Atlas Health Center logo — blue script wordmark">
+        </span>
+        <p class="mt-4 text-[#A9C0D6] leading-relaxed max-w-[46ch]">Chiropractic care in Hayward, CA — adjustments, corrective exercise therapy and personal-injury care at 21565 Foothill Blvd. Rated <span class="stars">★</span> 5.0 across 126 Google reviews.</p>
+      </div>
+      <div>
+        <p class="eyebrow" style="color:#7FB4E4">Contact</p>
+        <ul class="mt-3 space-y-2 text-[#D6E5F3]">
+          <li><a class="font-bold hover:text-white underline underline-offset-4" href="tel:+15103988082">(510) 398-8082</a></li>
+          <li><a class="hover:text-white underline underline-offset-4" href="mailto:info@atlashealthcenter.net">info@atlashealthcenter.net</a></li>
+          <li class="pt-1">21565 Foothill Blvd<br>Hayward, CA 94541</li>
+          <li class="pt-1"><a class="hover:text-white underline underline-offset-4" href="https://atlashealthcenter.net/hayward" target="_blank" rel="noopener">atlashealthcenter.net/hayward</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="eyebrow" style="color:#7FB4E4">On this page</p>
+        <ul class="mt-3 space-y-2 text-[#D6E5F3]">
+          <li><a class="hover:text-white" href="#services">Services</a></li>
+          <li><a class="hover:text-white" href="#why">Why this office</a></li>
+          <li><a class="hover:text-white" href="#first-visit">First visit</a></li>
+          <li><a class="hover:text-white" href="#costs">Cost &amp; insurance</a></li>
+          <li><a class="hover:text-white" href="#visit">Hours &amp; location</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-10 pt-6 border-t border-white/15 flex flex-col sm:flex-row gap-3 sm:items-center justify-between text-[.85rem] text-[#8FA8C0]">
+      <p>© 2026 Atlas Health Center. Hayward office, 21565 Foothill Blvd.</p>
+      <p>Rating and review count as published on the Google listing for this office.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- sticky mobile action bar -->
+<div class="mbar" role="group" aria-label="Contact actions">
+  <a class="btn btn-primary" href="tel:+15103988082">Call (510) 398-8082</a>
+  <a class="btn btn-secondary" href="https://www.zocdoc.com/practice/atlas-health-center-35450?LocIdent=427575" target="_blank" rel="noopener">Zocdoc (existing)</a>
+</div>
+
+<!-- BUILD NOTE — JSON-LD: @type MedicalClinic (a business type). medicalSpecialty is omitted
+     deliberately: no in-range MedicalSpecialty value exists for chiropractic, so the fact is
+     carried in visible copy instead. availableService entries are MedicalTherapy, which is in
+     range for that property (Service is not). No aggregateRating markup — the Google rating is
+     not first-party review data. openingHoursSpecification matches the visible hours table
+     exactly. areaServed lists Hayward and the East Bay; visible copy names the same two and
+     no other place beyond the postal address. -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"MedicalClinic",
+  "name":"Atlas Health Center — Hayward",
+  "telephone":"+1-510-398-8082",
+  "email":"info@atlashealthcenter.net",
+  "image":"assets/909f490a-4198-4077-896f-f1204140d2e8_screenshot-2026-06-25-at-11-17-59-am.png",
+  "hasMap":"https://www.google.com/maps/place/Atlas+Health+Center/data=!4m7!3m6!1s0x808f91e160dc9a73:0x4b3356e9b0fa588a!8m2!3d37.6829569!4d-122.0896252!16s%2Fg%2F11n7cpl5bx!19sChIJc5rcYOGRj4ARilj6sOlWM0s",
+  "address":{"@type":"PostalAddress","streetAddress":"21565 Foothill Blvd","addressLocality":"Hayward","addressRegion":"CA","postalCode":"94541","addressCountry":"US"},
+  "geo":{"@type":"GeoCoordinates","latitude":37.6829569,"longitude":-122.0896252},
+  "areaServed":[
+    {"@type":"Place","name":"Hayward"},
+    {"@type":"Place","name":"East Bay"}
+  ],
+  "openingHoursSpecification":[
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Monday","opens":"08:30","closes":"12:30"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Monday","opens":"13:30","closes":"17:30"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Tuesday","opens":"08:30","closes":"12:30"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Tuesday","opens":"14:00","closes":"18:30"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Wednesday","opens":"14:30","closes":"19:30"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Thursday","opens":"08:30","closes":"13:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Thursday","opens":"14:30","closes":"19:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Friday","opens":"08:30","closes":"10:30"}
+  ],
+  "availableService":[
+    {"@type":"MedicalTherapy","name":"Chiropractic adjustments"},
+    {"@type":"MedicalTherapy","name":"Corrective exercise therapy"},
+    {"@type":"MedicalTherapy","name":"Personal injury chiropractic care"}
+  ]
+}
+</script>
+
+<script>
+(function(){
+  "use strict";
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---- sticky header condense ---- */
+  var hdr = document.querySelector(".hdr");
+  /* ---- 3D hero drivers: pointer (fine pointers only) + scroll ---- */
+  var scene = document.getElementById("scene"),
+      lBack = document.getElementById("lBack"),
+      lScrim = document.getElementById("lScrim"),
+      lMid  = document.getElementById("lMid"),
+      lFront= document.getElementById("lFront");
+  var px = 0, py = 0, sy = 0, queued = false;
+
+  function render(){
+    queued = false;
+    if (hdr) hdr.classList.toggle("is-stuck", sy > 12);
+    if (reduce || !scene) return;
+    var rx = (-py * 3.2).toFixed(3), ry = (px * 4.2).toFixed(3);
+    scene.style.transform = "rotateX(" + rx + "deg) rotateY(" + ry + "deg)";
+    lBack.style.transform  = "translate3d(" + (px * -14) + "px," + (sy * 0.055) + "px,-300px) scale(1.46)";
+    lScrim.style.transform = "translate3d(" + (px * -6)  + "px," + (sy * 0.030) + "px,-150px) scale(1.22)";
+    lMid.style.transform   = "translate3d(" + (px * 26)  + "px," + (sy * -0.075 + py * 10) + "px,-70px)";
+    lFront.style.transform = "translate3d(" + (px * 12)  + "px," + (sy * -0.115) + "px,72px)";
+  }
+  function queue(){ if (!queued){ queued = true; requestAnimationFrame(render); } }
+
+  window.addEventListener("scroll", function(){ sy = window.pageYOffset || 0; queue(); }, {passive:true});
+
+  if (!reduce && window.matchMedia("(pointer: fine)").matches){
+    window.addEventListener("pointermove", function(e){
+      px = (e.clientX / window.innerWidth) * 2 - 1;
+      py = (e.clientY / window.innerHeight) * 2 - 1;
+      queue();
+    }, {passive:true});
+  }
+  sy = window.pageYOffset || 0; queue();
+
+  /* ---- open/closed status, computed live from the published hours ---- */
+  var HOURS = {0:[],1:[[510,750],[810,1050]],2:[[510,750],[840,1110]],3:[[870,1170]],4:[[510,780],[870,1140]],5:[[510,630]],6:[]};
+  var DAYS = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+  var IDX = {Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6};
+
+  function fmt(m){
+    var h = Math.floor(m/60), mm = m%60, ap = h>=12 ? "PM":"AM", hh = h%12; if(hh===0) hh=12;
+    return hh + (mm ? ":" + (mm<10?"0":"") + mm : "") + " " + ap;
+  }
+  function laNow(){
+    try{
+      var p = new Intl.DateTimeFormat("en-US",{timeZone:"America/Los_Angeles",weekday:"short",hour:"2-digit",minute:"2-digit",hour12:false}).formatToParts(new Date());
+      var o = {}; p.forEach(function(x){ o[x.type] = x.value; });
+      var d = IDX[o.weekday]; if (d === undefined) return null;
+      var h = parseInt(o.hour,10) % 24;
+      return {d:d, m:h*60 + parseInt(o.minute,10)};
+    }catch(e){ return null; }
+  }
+  var now = laNow();
+  if (now){
+    var row = document.querySelector('.hrs tr[data-d="' + now.d + '"]');
+    if (row) row.classList.add("today");
+
+    var msg = null, spans = HOURS[now.d] || [], i;
+    for (i=0;i<spans.length;i++){
+      if (now.m >= spans[i][0] && now.m < spans[i][1]){ msg = "Open now · until " + fmt(spans[i][1]); break; }
+    }
+    if (!msg){
+      for (i=0;i<8 && !msg;i++){
+        var dd = (now.d + i) % 7, list = HOURS[dd] || [];
+        for (var j=0;j<list.length;j++){
+          if (i > 0 || list[j][0] > now.m){
+            msg = "Closed now · opens " + (i===0 ? "" : (i===1 ? "tomorrow " : DAYS[dd] + " ")) + fmt(list[j][0]);
+            break;
+          }
+        }
+      }
+    }
+    if (msg){
+      var chip = document.getElementById("openNow");
+      chip.textContent = msg;
+      chip.classList.remove("hide");
+    }
+  }
+})();
+</script>
+</body>
+</html>
