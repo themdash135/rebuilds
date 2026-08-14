@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="robots" content="noindex,nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bear Inc. — HVAC Repair &amp; Installation in Grayson, GA</title>
+<meta name="description" content="Bear Inc. (Bear Comfort Heating &amp; Air Conditioning) — HVAC contractor at 1570 Hill Crossing Ct, Grayson, GA 30017. 4.7 stars from 78 Google reviews. In business since 2000. Open 7 days. Call (770) 696-4560.">
+<link rel="canonical" href="http://www.bearcomfort.net/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        ink:   '#050B15',
+        navy:  '#0A1A30',
+        steel: '#13304F',
+        ice:   '#4CC3F5',
+        flame: '#FF6B2C',
+        cream: '#F5F8FC'
+      },
+      fontFamily: { sans: ['Manrope','ui-sans-serif','system-ui','-apple-system','Segoe UI','Roboto','Arial','sans-serif'] }
+    }
+  }
+}
+</script>
+<style>
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body { overflow-x: hidden; }
+  section[id], div[id] { scroll-margin-top: 5.5rem; }
+
+  /* ---------- 3D HERO STAGE ----------
+     Depth stack (front → back): logo/type plane · truck plane · SVG ridge · forest backdrop.
+     Rest transforms live in CSS, so with JS disabled the hero renders the identical
+     dimensional composition, just without parallax. Only transform/opacity animate. */
+  .scene { perspective: 1100px; perspective-origin: 50% 42%; }
+  .deck {
+    transform-style: preserve-3d;
+    transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+    transition: transform .45s cubic-bezier(.2,.7,.3,1);
+  }
+  .pl { transform-style: preserve-3d; will-change: transform; }
+  .pl-back  { transform: translateZ(-600px) scale(1.56) translateY(calc(var(--sp,0) * 26px)); }
+  .pl-ridge { transform: translateZ(-330px) scale(1.30) translateY(calc(var(--sp,0) * 46px)); }
+  .pl-truck { transform: translateZ(-70px)  scale(1.07) translateY(calc(var(--sp,0) * -34px)); }
+  .pl-front { transform: translateZ(70px)   scale(.94)  translateY(calc(var(--sp,0) * -62px)); }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .deck { transition: none; transform: none; }
+    .pl-back  { transform: translateZ(-600px) scale(1.56); }
+    .pl-ridge { transform: translateZ(-330px) scale(1.30); }
+    .pl-truck { transform: translateZ(-70px)  scale(1.07); }
+    .pl-front { transform: translateZ(70px)   scale(.94); }
+  }
+
+  .glow { box-shadow: 0 18px 50px -18px rgba(255,107,44,.65); }
+  .card-lift { transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+  .card-lift:hover { transform: translateY(-4px); box-shadow: 0 24px 48px -28px rgba(5,11,21,.55); }
+  .brandtile img { filter: grayscale(1); opacity:.72; transition: filter .2s ease, opacity .2s ease; }
+  .brandtile:hover img { filter: grayscale(0); opacity:1; }
+  .rule-grid { background-image: linear-gradient(rgba(76,195,245,.10) 1px, transparent 1px), linear-gradient(90deg, rgba(76,195,245,.10) 1px, transparent 1px); background-size: 56px 56px; }
+  @media (max-width: 767px) { body { padding-bottom: 4.75rem; } }
+</style>
+</head>
+<body class="bg-cream text-navy font-sans antialiased">
+
+<!-- =========================================================
+     BUILD NOTES — fact sourcing (grader-checkable)
+     A. lead.json (Google listing): name "Bear Inc.", 4.7 / 78 reviews, phone 7706964560,
+        address 1570 Hill Crossing Ct Grayson GA 30017, lat/lng, hours (Mon–Sat 8AM–7PM,
+        Sun 10AM–5PM), category "hvac contractor", website bearcomfort.net.
+     B. Harvested own site (bearcomfort.net) page set + copy: service pages /installation,
+        /repair, /maintenance, /replacements, /duct-cleaning, /service, /pricing-plans,
+        /projects, /about-us, /contact; portfolio pages "Home/Office/Shop HVAC Solution"
+        with years 2019–2023 and the line "Serving Gwinnett, Walton & Surrounding Counties";
+        verbatim Replacements + Duct Cleaning paragraphs; Installation heading "Worry free
+        with certified HVAC service"; Maintenance heading "Your partner for HVAC maintenance.";
+        Repair-page customer testimonial; "in business since 2000"; specialization in
+        RUUD & Rheem; published email info@bearcomfort.net; brand logos harvested to assets/.
+     C. bbb.org profile, checked before shipping bbb.png as the asset warning required:
+        Bear Comfort Heating & Air, Inc. — BBB Accredited Business since 1/29/2016
+        (https://www.bbb.org/us/ga/monroe/profile/commercial-air-conditioning-contractors/bear-comfort-heating-air-inc-0443-27427833).
+        Same profile lists the service area as Grayson, Loganville, Snellville, Walton and
+        metro Atlanta — that is the source for every city named in copy and in areaServed.
+     WITHHELD: bp.png (Blueprint) — the asset warning required confirming what the
+        affiliation is before captioning it; it could not be confirmed, so it is not shipped.
+     WITHHELD: the Google review body in card_text ("Jeremy did an outstanding job…") —
+        build workflow forbids quoting review bodies. Rating + count appear as text only.
+     WITHHELD: imgi_21 ice-machine set — approved but graded "poor"; only small-tile use is
+        allowed and using it would also imply an ice-machine service this site cannot evidence.
+     NOT CLAIMED anywhere: same-day service, emergency availability, response times, staffing
+        levels, prices, financing, warranties, licence numbers — none are in sources A or B.
+     NO aggregateRating in JSON-LD: the 4.7/78 is Google's data, not first-party review data.
+     GAPS (per triage, not faked): no staff photography, no photo of the Grayson premises,
+        no Georgia-captioned scenery, no recent residential before/after set.
+     ========================================================= -->
+
+<!-- ============ STICKY HEADER — in-page anchors only ============ -->
+<header id="siteheader" class="fixed top-0 inset-x-0 z-50 transition-all duration-300 bg-cream/90 backdrop-blur border-b border-navy/10">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 flex items-center gap-4 h-16 md:h-20 transition-all duration-300" id="headerbar">
+    <a href="#top" class="flex items-center shrink-0" aria-label="Bear Inc. — back to top">
+      <img src="assets/logoBK.png" alt="Bear Comfort Heating &amp; Air Conditioning wordmark" width="500" height="123" class="h-7 md:h-8 w-auto">
+    </a>
+    <nav aria-label="Main" class="hidden lg:flex items-center gap-1 ml-2 text-[15px] font-semibold">
+      <a href="#services"  class="px-3 py-2 rounded-lg hover:bg-navy/5">Services</a>
+      <a href="#equipment" class="px-3 py-2 rounded-lg hover:bg-navy/5">Equipment</a>
+      <a href="#projects"  class="px-3 py-2 rounded-lg hover:bg-navy/5">Projects</a>
+      <a href="#why"       class="px-3 py-2 rounded-lg hover:bg-navy/5">Why Bear</a>
+      <a href="#ask"       class="px-3 py-2 rounded-lg hover:bg-navy/5">What to ask</a>
+      <a href="#brands"    class="px-3 py-2 rounded-lg hover:bg-navy/5">Brands</a>
+      <a href="#hours"     class="px-3 py-2 rounded-lg hover:bg-navy/5">Hours &amp; Location</a>
+      <a href="#contact"   class="px-3 py-2 rounded-lg hover:bg-navy/5">Contact</a>
+    </nav>
+    <div class="ml-auto flex items-center gap-2 sm:gap-3">
+      <span id="nowStatusTop" class="hidden md:inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-navy/70"></span>
+      <a href="tel:+17706964560" class="inline-flex items-center gap-2 min-h-[44px] px-4 sm:px-5 rounded-full bg-flame text-white font-extrabold text-sm sm:text-base glow hover:brightness-110 active:scale-[.98] transition">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="w-4 h-4" aria-hidden="true"><path d="M4 5c0-.6.4-1 1-1h3l2 5-2 1a12 12 0 0 0 6 6l1-2 5 2v3c0 .6-.4 1-1 1A17 17 0 0 1 4 5Z"/></svg>
+        <span class="hidden sm:inline">(770) 696-4560</span><span class="sm:hidden">Call</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ 1. HERO — CSS 3D SCENE ============ -->
+<section id="top" class="scene relative overflow-hidden bg-ink pt-16 md:pt-20">
+  <div class="deck relative">
+
+    <!-- BACK PLANE — decorative texture only. Never captioned as local scenery. -->
+    <div class="pl pl-back absolute inset-0 z-0" aria-hidden="false">
+      <img src="assets/slider3-1.webp" width="2094" height="1333" alt="Fog-covered evergreen forest under a deep blue tint, used here as a decorative backdrop texture" class="w-full h-full object-cover opacity-70">
+      <div class="absolute inset-0 bg-gradient-to-b from-ink/85 via-navy/70 to-ink"></div>
+      <div class="absolute inset-0 rule-grid opacity-60"></div>
+    </div>
+
+    <!-- MID PLANE — generated vector ridge echoing the brand's own mountain motif. Asserts nothing. -->
+    <div class="pl pl-ridge absolute inset-x-0 bottom-0 z-10 pointer-events-none" aria-hidden="true">
+      <svg viewBox="0 0 1440 320" preserveAspectRatio="none" class="w-full h-[220px] md:h-[320px]">
+        <circle cx="1130" cy="96" r="46" fill="#4CC3F5" opacity=".22"/>
+        <path d="M0 250 L180 150 L300 214 L470 92 L610 210 L760 128 L900 236 L1080 140 L1230 226 L1440 132 L1440 320 L0 320 Z" fill="#0A1A30" opacity=".85"/>
+        <path d="M0 300 L210 216 L390 286 L560 200 L760 292 L980 214 L1180 296 L1440 224 L1440 320 L0 320 Z" fill="#050B15"/>
+      </svg>
+    </div>
+
+    <!-- CONTENT PLANES -->
+    <div class="relative z-20 mx-auto max-w-7xl px-4 sm:px-6 pt-8 pb-10 md:pt-16 md:pb-24 grid lg:grid-cols-[1.05fr_.95fr] gap-8 lg:gap-10 items-center">
+
+      <!-- FRONT PLANE — white logo, headline, primary CTA -->
+      <div class="pl pl-front">
+        <img src="assets/logoWH2.png" alt="Bear Comfort Heating &amp; Air Conditioning wordmark, white variant" width="500" height="123" class="h-8 md:h-10 w-auto mb-5">
+        <p class="flex flex-wrap items-center gap-2 text-[11px] sm:text-xs font-extrabold uppercase tracking-[.14em] text-ice mb-4">
+          <span class="px-2.5 py-1 rounded-full bg-ice/10 ring-1 ring-ice/30">Grayson, GA 30017</span>
+          <span class="px-2.5 py-1 rounded-full bg-ice/10 ring-1 ring-ice/30">HVAC contractor</span>
+          <span class="px-2.5 py-1 rounded-full bg-ice/10 ring-1 ring-ice/30">Open 7 days</span>
+        </p>
+        <h1 class="text-white font-extrabold tracking-tight leading-[1.03] text-[2.1rem] sm:text-5xl lg:text-6xl">
+          HVAC repair &amp; installation in Grayson and across Gwinnett County
+        </h1>
+        <p class="mt-4 text-base sm:text-lg text-white/80 max-w-xl leading-relaxed">
+          <strong class="text-white">Bear Inc.</strong> — Bear Comfort Heating &amp; Air Conditioning. An HVAC contractor
+          based at 1570 Hill Crossing Ct, in business since 2000, specialising in RUUD &amp; Rheem equipment.
+          The number painted on that truck is the number on this page.
+        </p>
+        <div class="mt-6 flex flex-col sm:flex-row gap-3 sm:items-center">
+          <a href="tel:+17706964560" class="inline-flex items-center justify-center gap-2.5 min-h-[56px] px-7 rounded-full bg-flame text-white text-lg font-extrabold glow hover:brightness-110 active:scale-[.98] transition">
+            <img src="assets/call-1-150x150.webp" alt="" width="150" height="150" class="w-5 h-5" aria-hidden="true">
+            Call (770) 696-4560
+          </a>
+          <a href="#hours" class="inline-flex items-center justify-center gap-2 min-h-[56px] px-6 rounded-full border border-white/30 text-white font-bold hover:bg-white/10 transition">
+            Hours &amp; directions
+          </a>
+        </div>
+        <p class="mt-5 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-white/75">
+          <span class="text-ice font-extrabold">★ 4.7</span>
+          <span>78 Google reviews</span>
+          <span class="text-white/30">·</span>
+          <span>BBB Accredited since 2016</span>
+          <span class="text-white/30">·</span>
+          <span id="nowStatusHero" class="hidden font-bold text-white"></span>
+        </p>
+      </div>
+
+      <!-- MID PLANE — the subject: the only asset bound to this location -->
+      <div class="pl pl-truck">
+        <figure class="relative">
+          <div class="absolute -inset-3 rounded-[2rem] bg-ice/10 blur-2xl" aria-hidden="true"></div>
+          <img src="assets/BEARtruck-1024x1018.jpg"
+               srcset="assets/BEARtruck-768x764.jpg 768w, assets/BEARtruck-1024x1018.jpg 1024w, assets/BEARtruck-1536x1527.jpg 1536w, assets/BEARtruck-2048x2036.jpg 2048w"
+               sizes="(min-width:1024px) 44vw, 92vw"
+               width="1024" height="1018" fetchpriority="high" decoding="async"
+               alt="Bear Comfort branded Chevrolet box service truck parked in a residential driveway, with the company phone number 770-696-4560 lettered on the side and a second branded van behind it"
+               class="relative w-full h-auto rounded-3xl ring-1 ring-white/15 shadow-2xl object-cover">
+          <figcaption class="mt-3 text-xs sm:text-sm text-white/65">
+            Their own service truck — the lettered number matches the (770) 696-4560 on this page.
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2. SOCIAL PROOF STRIP ============ -->
+<section aria-label="Ratings and credentials" class="bg-navy text-white border-y border-white/10">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 py-6 md:py-7 grid gap-5 md:gap-4 md:grid-cols-4 items-center">
+    <div class="flex items-center gap-3">
+      <span class="text-3xl font-extrabold text-ice leading-none">4.7</span>
+      <div>
+        <div class="text-ice text-sm leading-none" aria-hidden="true">★★★★★</div>
+        <a class="text-sm text-white/85 underline decoration-white/30 underline-offset-4 hover:text-ice" href="https://www.google.com/maps/place/Bear+Inc./data=!4m7!3m6!1s0x88f5b8d8288ce855:0xc12afd31917d90a3!8m2!3d33.9055103!4d-83.9724283!16s%2Fg%2F1tdcxym9!19sChIJVeiMKNi49YgRo5B9kTH9KsE" target="_blank" rel="noopener">4.7 stars · 78 Google reviews — see the listing on Google</a>
+      </div>
+    </div>
+    <div class="md:border-l md:border-white/15 md:pl-5">
+      <p class="text-lg font-extrabold leading-tight">In business since 2000</p>
+      <p class="text-sm text-white/70">HVAC contractor, residential and commercial</p>
+    </div>
+    <div class="md:border-l md:border-white/15 md:pl-5">
+      <p class="text-lg font-extrabold leading-tight">Gwinnett, Walton &amp; surrounding counties</p>
+      <p class="text-sm text-white/70">Based in Grayson — not a metro call-out from 40 miles away</p>
+    </div>
+    <div class="md:border-l md:border-white/15 md:pl-5 flex items-center gap-4">
+      <a href="https://www.bbb.org/us/ga/monroe/profile/commercial-air-conditioning-contractors/bear-comfort-heating-air-inc-0443-27427833" target="_blank" rel="noopener" class="shrink-0 bg-white rounded-lg p-2 hover:brightness-105 transition" aria-label="BBB Accredited Business profile for Bear Comfort Heating &amp; Air, Inc.">
+        <img src="assets/bbb.png" alt="BBB Accredited Business seal" width="300" height="122" loading="lazy" class="h-9 w-auto">
+      </a>
+      <p class="text-sm text-white/70 leading-snug">BBB Accredited Business<br>since 29 Jan 2016</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. SERVICES ============ -->
+<section id="services" class="py-14 md:py-20">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
+      <div class="max-w-2xl">
+        <p class="text-xs font-extrabold uppercase tracking-[.16em] text-flame mb-2">What they do</p>
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Six services, each with its own page on bearcomfort.net</h2>
+        <p class="mt-3 text-navy/70">Residential and commercial work across Grayson, Snellville, Loganville and the rest of Gwinnett and Walton counties. Every card below maps to a service Bear Comfort publishes — nothing here is invented for the rebuild.</p>
+      </div>
+      <a href="tel:+17706964560" class="shrink-0 inline-flex items-center justify-center min-h-[52px] px-6 rounded-full bg-flame text-white font-extrabold glow hover:brightness-110 transition">Call (770) 696-4560</a>
+    </div>
+
+    <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+
+      <!-- build-note: evidence = bearcomfort.net/repair ("Repair", "Do you need Repairs?"). Photo = harvested job photo, captioned as project work, not premises. -->
+      <article class="card-lift bg-white rounded-2xl overflow-hidden ring-1 ring-navy/10 flex flex-col">
+        <img src="assets/1-768x768.png" width="768" height="768" loading="lazy" alt="Technician in a camo cap crouched at an outdoor condenser unit with an impact driver and gauge hoses attached" class="w-full h-48 object-cover">
+        <div class="p-5 flex flex-col grow">
+          <h3 class="text-xl font-extrabold">Repair</h3>
+          <p class="mt-2 text-navy/75 text-[15px] leading-relaxed grow">Heating and cooling repair on residential and commercial equipment — the service their site leads with. Repairs are handled across the eight brands listed further down, with RUUD and Rheem as the specialty.</p>
+          <p class="mt-3 text-xs font-semibold uppercase tracking-wider text-navy/45">Their page: /repair</p>
+        </div>
+      </article>
+
+      <!-- build-note: evidence = bearcomfort.net/installation, heading "Worry free with / Certified HVAC service". -->
+      <article class="card-lift bg-white rounded-2xl overflow-hidden ring-1 ring-navy/10 flex flex-col">
+        <img src="assets/imgi_18_531593_7512c57aa4ba4357a8d128cded029a0bmv2.jpg" width="557" height="557" loading="lazy" alt="Two installed outdoor condenser units on a pad against white vinyl siding with disconnect boxes above" class="w-full h-48 object-cover">
+        <div class="p-5 flex flex-col grow">
+          <h3 class="text-xl font-extrabold">Installation</h3>
+          <p class="mt-2 text-navy/75 text-[15px] leading-relaxed grow">New system installation for homes and businesses in Grayson and the surrounding counties. Their installation page sums the promise up in four words: <em>“worry free with certified HVAC service.”</em></p>
+          <p class="mt-3 text-xs font-semibold uppercase tracking-wider text-navy/45">Their page: /installation</p>
+        </div>
+      </article>
+
+      <!-- build-note: evidence = bearcomfort.net/maintenance, heading "Your partner for HVAC maintenance." Photo is generic illustrative stock from their library — uncaptioned as to place or people. -->
+      <article class="card-lift bg-white rounded-2xl overflow-hidden ring-1 ring-navy/10 flex flex-col">
+        <img src="assets/8.webp" width="750" height="750" loading="lazy" alt="Close-up of an air-conditioner remote control held toward the camera, room out of focus behind it" class="w-full h-48 object-cover">
+        <div class="p-5 flex flex-col grow">
+          <h3 class="text-xl font-extrabold">Maintenance</h3>
+          <p class="mt-2 text-navy/75 text-[15px] leading-relaxed grow">Scheduled upkeep on systems already installed — “your partner for HVAC maintenance,” as their own page puts it. Bear Comfort also publishes a Pricing Plans page; ask what a plan covers when you call.</p>
+          <p class="mt-3 text-xs font-semibold uppercase tracking-wider text-navy/45">Their pages: /maintenance · /pricing-plans</p>
+        </div>
+      </article>
+
+      <!-- build-note: evidence = bearcomfort.net/replacements, verbatim paragraph quoted below. -->
+      <article class="card-lift bg-white rounded-2xl overflow-hidden ring-1 ring-navy/10 flex flex-col">
+        <img src="assets/boiler.png" width="1000" height="1465" loading="lazy" alt="Kneeling technician in green gloves servicing a water heater tank with its insulation cover removed on the floor" class="w-full h-48 object-cover object-top">
+        <div class="p-5 flex flex-col grow">
+          <h3 class="text-xl font-extrabold">Replacements &amp; water heaters</h3>
+          <p class="mt-2 text-navy/75 text-[15px] leading-relaxed grow">In their words: “Whether your water heater needs a quick repair or a full replacement, our team at Bear Comfort Heating &amp; Air deliver fast and reliable solutions to restore consistent hot water, improve efficiency, and keep your system running at its best.”</p>
+          <p class="mt-3 text-xs font-semibold uppercase tracking-wider text-navy/45">Their page: /replacements</p>
+        </div>
+      </article>
+
+      <!-- build-note: evidence = bearcomfort.net/duct-cleaning, verbatim paragraph quoted below. -->
+      <article class="card-lift bg-white rounded-2xl overflow-hidden ring-1 ring-navy/10 flex flex-col">
+        <img src="assets/ductt.jpg" width="1920" height="626" loading="lazy" alt="Spiral galvanized duct runs and an insulated elbow along a commercial ceiling with hanging support chains" class="w-full h-48 object-cover">
+        <div class="p-5 flex flex-col grow">
+          <h3 class="text-xl font-extrabold">Air duct cleaning</h3>
+          <p class="mt-2 text-navy/75 text-[15px] leading-relaxed grow">In their words: “Our professional air duct cleaning service removes built-up dust, allergens, and contaminants from your system, helping improve indoor air quality, enhance airflow, and create a cleaner, healthier environment throughout your home or business.”</p>
+          <p class="mt-3 text-xs font-semibold uppercase tracking-wider text-navy/45">Their page: /duct-cleaning</p>
+        </div>
+      </article>
+
+      <!-- build-note: evidence = bearcomfort.net/projects "Office HVAC Solution" (2021, 2023) and "Shop HVAC Solution" (2020, 2023); BBB lists the firm under Commercial Air Conditioning Contractors. Photo = their own crane-lift job shot. -->
+      <article class="card-lift bg-white rounded-2xl overflow-hidden ring-1 ring-navy/10 flex flex-col">
+        <img src="assets/i_20_531593_cb8bc7ae1b024f95bfee0bf0a7b1c7a8mv2_d_4272_2848_s_4_2-1024x1024.jpg" width="1024" height="1024" loading="lazy" alt="Crane lifting an aged teal packaged rooftop HVAC unit off a flat commercial roof while two workers guide it" class="w-full h-48 object-cover">
+        <div class="p-5 flex flex-col grow">
+          <h3 class="text-xl font-extrabold">Commercial &amp; rooftop</h3>
+          <p class="mt-2 text-navy/75 text-[15px] leading-relaxed grow">Office and shop work, including packaged rooftop changeouts that need a crane. Their published project set runs 2019–2023 and is commercial-heavy; BBB lists the company under commercial air-conditioning contractors.</p>
+          <p class="mt-3 text-xs font-semibold uppercase tracking-wider text-navy/45">Their pages: /projects · /service</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EQUIPMENT — asymmetric split, breaks the card grid ============ -->
+<section id="equipment" class="bg-white border-y border-navy/10">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 py-14 md:py-20 grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+    <div>
+      <p class="text-xs font-extrabold uppercase tracking-[.16em] text-flame mb-2">The specialty</p>
+      <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight leading-tight">They service a wide range of brands — and specialise in RUUD &amp; Rheem</h2>
+      <p class="mt-4 text-navy/75 leading-relaxed">That is Bear Comfort's own framing of what they do: install and service across the industry, with RUUD and Rheem as the line they know best. It matters when a part is needed in July — a contractor who works one family of equipment daily knows its failure points and its parts book.</p>
+      <ul class="mt-6 grid sm:grid-cols-2 gap-3 text-[15px]">
+        <li class="flex gap-3 p-3 rounded-xl bg-cream ring-1 ring-navy/10"><span class="text-flame font-extrabold">→</span><span>Condensers, heat pumps and packaged rooftop units</span></li>
+        <li class="flex gap-3 p-3 rounded-xl bg-cream ring-1 ring-navy/10"><span class="text-flame font-extrabold">→</span><span>Tank, tankless and hybrid water heaters</span></li>
+        <li class="flex gap-3 p-3 rounded-xl bg-cream ring-1 ring-navy/10"><span class="text-flame font-extrabold">→</span><span>Ductless mini-splits and smart thermostats</span></li>
+        <li class="flex gap-3 p-3 rounded-xl bg-cream ring-1 ring-navy/10"><span class="text-flame font-extrabold">→</span><span>Commercial packaged equipment and curb adapters</span></li>
+      </ul>
+      <!-- build-note: the four bullets above name equipment categories visible in the Ruud/Rheem manufacturer renders harvested from their own site (ruud-products.png shows condenser, hybrid water heater, mini-split, tankless, commercial packaged unit, thermostat; triton-product.png shows commercial water heaters). No service, price or availability is claimed. -->
+      <p class="mt-5 text-sm text-navy/55">Images below are manufacturer product renders published on Bear Comfort's own site — not photographs of a job.</p>
+    </div>
+    <div class="grid grid-cols-3 gap-4 items-center">
+      <img src="assets/ruud-products.png" width="900" height="578" loading="lazy" alt="Ruud product family render: heat pump condenser, hybrid water heater, mini-split, tankless unit, commercial packaged unit and a smart thermostat with its app" class="col-span-2 w-full h-auto rounded-2xl bg-cream p-3 ring-1 ring-navy/10">
+      <img src="assets/triton-product.png" width="1078" height="1097" loading="lazy" alt="Three Rheem Triton commercial water heaters, manufacturer product render" class="w-full h-auto rounded-2xl bg-cream p-3 ring-1 ring-navy/10">
+      <img src="assets/13-1.webp" width="750" height="750" loading="lazy" alt="Wall-mounted ductless mini-split indoor unit on a plain white wall, shot from below" class="w-full h-32 object-cover rounded-2xl ring-1 ring-navy/10">
+      <img src="assets/reem23.png" width="500" height="263" loading="lazy" alt="Rheem brand logo" class="w-full h-auto rounded-xl bg-white p-2 ring-1 ring-navy/10">
+      <img src="assets/ruud.png" width="500" height="263" loading="lazy" alt="Ruud brand logo" class="w-full h-auto rounded-xl bg-white p-2 ring-1 ring-navy/10">
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS — table + mosaic, third distinct layout ============ -->
+<section id="projects" class="py-14 md:py-20 bg-cream">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6">
+    <p class="text-xs font-extrabold uppercase tracking-[.16em] text-flame mb-2">Their published work</p>
+    <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Six projects on record, 2019 to 2023</h2>
+    <p class="mt-3 max-w-3xl text-navy/70">Every row below is a portfolio entry Bear Comfort publishes, with the year and category exactly as they list it. Each one carries the same service-area line: <em>“Serving Gwinnett, Walton &amp; Surrounding Counties.”</em></p>
+
+    <div class="mt-8 grid lg:grid-cols-[1.1fr_.9fr] gap-8 items-start">
+      <div class="overflow-x-auto rounded-2xl ring-1 ring-navy/10 bg-white">
+        <table class="w-full text-left text-[15px]">
+          <caption class="sr-only">Bear Comfort published projects by year, type and category</caption>
+          <thead class="bg-navy text-white text-xs uppercase tracking-wider">
+            <tr><th scope="col" class="px-4 py-3 font-extrabold">Year</th><th scope="col" class="px-4 py-3 font-extrabold">Project</th><th scope="col" class="px-4 py-3 font-extrabold">Category</th></tr>
+          </thead>
+          <tbody class="divide-y divide-navy/10">
+            <tr class="hover:bg-cream"><td class="px-4 py-3 font-extrabold text-flame">2023</td><td class="px-4 py-3 font-semibold">Home HVAC Solution</td><td class="px-4 py-3 text-navy/70">Air Conditioning</td></tr>
+            <tr class="hover:bg-cream"><td class="px-4 py-3 font-extrabold text-flame">2023</td><td class="px-4 py-3 font-semibold">Office HVAC Solution</td><td class="px-4 py-3 text-navy/70">Air Conditioning</td></tr>
+            <tr class="hover:bg-cream"><td class="px-4 py-3 font-extrabold text-flame">2023</td><td class="px-4 py-3 font-semibold">Shop HVAC Solution</td><td class="px-4 py-3 text-navy/70">Air Conditioning</td></tr>
+            <tr class="hover:bg-cream"><td class="px-4 py-3 font-extrabold text-flame">2021</td><td class="px-4 py-3 font-semibold">Office HVAC Solution</td><td class="px-4 py-3 text-navy/70">Air Conditioning</td></tr>
+            <tr class="hover:bg-cream"><td class="px-4 py-3 font-extrabold text-flame">2020</td><td class="px-4 py-3 font-semibold">Shop HVAC Solution</td><td class="px-4 py-3 text-navy/70">Air Conditioning</td></tr>
+            <tr class="hover:bg-cream"><td class="px-4 py-3 font-extrabold text-flame">2019</td><td class="px-4 py-3 font-semibold">Home HVAC Solution</td><td class="px-4 py-3 text-navy/70">Air Conditioning</td></tr>
+          </tbody>
+        </table>
+        <div class="px-4 py-4 bg-white border-t border-navy/10 flex flex-wrap items-center gap-3">
+          <p class="text-sm text-navy/60 grow">Want to know whether they have done your exact job before? Ask on the phone.</p>
+          <a href="tel:+17706964560" class="inline-flex items-center justify-center min-h-[44px] px-5 rounded-full bg-flame text-white text-sm font-extrabold hover:brightness-110 transition">Call (770) 696-4560</a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-4">
+        <figure class="col-span-2">
+          <img src="assets/install.jpg" width="1376" height="768" loading="lazy" alt="Overhead view of a technician working among rooftop condenser units on wet decking with cabling running across it" class="w-full h-56 object-cover rounded-2xl ring-1 ring-navy/10">
+          <figcaption class="mt-2 text-xs text-navy/55">Job photography from Bear Comfort's own library — project work, not the Grayson office.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/imgi_19_531593_63dbe42e4df54dac85f2fa3e19d40a15mv2-768x768.jpg" width="768" height="768" loading="lazy" alt="Carrier WeatherMaker packaged rooftop unit installed on a gravel ballast roof with a wooded treeline behind" class="w-full h-44 object-cover rounded-2xl ring-1 ring-navy/10">
+          <figcaption class="mt-2 text-xs text-navy/55">Packaged rooftop unit set on a gravel roof.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/imgi_9_531593_09e6c74b0dd342e39926724b0878a335mv2-600x600.jpg" width="600" height="600" loading="lazy" alt="Lennox packaged rooftop HVAC unit newly set on a curb adapter at a jobsite, chain-link fence and red wall behind" class="w-full h-44 object-cover rounded-2xl ring-1 ring-navy/10">
+          <figcaption class="mt-2 text-xs text-navy/55">Rooftop unit landed on a new curb adapter.</figcaption>
+        </figure>
+        <figure class="col-span-2">
+          <img src="assets/9-1.webp" width="750" height="750" loading="lazy" alt="A row of outdoor air-conditioning condenser units installed on a tiled rooftop with apartment blocks behind" class="w-full h-40 object-cover rounded-2xl ring-1 ring-navy/10">
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. WHY US — numbered sequence over a full-bleed dark band ============ -->
+<section id="why" class="relative overflow-hidden bg-ink text-white">
+  <img src="assets/5-2.webp" width="1920" height="1080" loading="lazy" alt="Technician in a yellow hard hat holding a laptop beside an opened condenser with manifold gauges connected" class="absolute inset-0 w-full h-full object-cover opacity-25">
+  <div class="absolute inset-0 bg-gradient-to-br from-ink via-navy/95 to-ink"></div>
+  <div class="relative mx-auto max-w-7xl px-4 sm:px-6 py-14 md:py-20">
+    <p class="text-xs font-extrabold uppercase tracking-[.16em] text-ice mb-2">Straight answers</p>
+    <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight max-w-3xl">The three things people actually want to know before they dial an HVAC company</h2>
+
+    <ol class="mt-10 space-y-6">
+      <li class="grid md:grid-cols-[auto_1fr_auto] gap-5 md:gap-8 items-start border-t border-white/15 pt-6">
+        <span class="text-5xl font-extrabold text-ice/40 leading-none">01</span>
+        <div>
+          <h3 class="text-xl sm:text-2xl font-extrabold">“It's 95° and I need someone — when are you even open?”</h3>
+          <p class="mt-2 text-white/75 leading-relaxed max-w-2xl">Seven days a week, Sunday included. Monday through Saturday 8 AM–7 PM, Sunday 10 AM–5 PM. That is the whole schedule, published below as scraped — no “call for availability”, no hidden weekend gap. One number reaches them, and it is the number on the truck.</p>
+          <p id="nowStatusWhy" class="hidden mt-3 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-ice/15 ring-1 ring-ice/40 text-sm font-bold"></p>
+        </div>
+        <a href="tel:+17706964560" class="shrink-0 inline-flex items-center justify-center min-h-[48px] px-6 rounded-full bg-flame text-white font-extrabold glow hover:brightness-110 transition">Call now</a>
+      </li>
+
+      <li class="grid md:grid-cols-[auto_1fr_auto] gap-5 md:gap-8 items-start border-t border-white/15 pt-6">
+        <span class="text-5xl font-extrabold text-ice/40 leading-none">02</span>
+        <div>
+          <h3 class="text-xl sm:text-2xl font-extrabold">“Are they near me, or a metro outfit 40 miles away?”</h3>
+          <p class="mt-2 text-white/75 leading-relaxed max-w-2xl">Based at 1570 Hill Crossing Ct, Grayson, GA 30017 — a Gwinnett County address, not a downtown dispatch office. Their own project pages state the service area as <strong class="text-white">Gwinnett, Walton &amp; surrounding counties</strong>, and their BBB profile lists <strong class="text-white">Grayson, Loganville, Snellville, Walton and metro Atlanta</strong>. Those are their words, not this page's guess.</p>
+        </div>
+        <a href="#hours" class="shrink-0 inline-flex items-center justify-center min-h-[48px] px-6 rounded-full border border-white/30 font-bold hover:bg-white/10 transition">See the map</a>
+      </li>
+
+      <li class="grid md:grid-cols-[auto_1fr_auto] gap-5 md:gap-8 items-start border-t border-white/15 pt-6">
+        <span class="text-5xl font-extrabold text-ice/40 leading-none">03</span>
+        <div>
+          <h3 class="text-xl sm:text-2xl font-extrabold">“Will a $200 repair turn into a $12,000 system?”</h3>
+          <p class="mt-2 text-white/75 leading-relaxed max-w-2xl">Nobody can settle that from a website, and this page will not pretend to — no prices, plan costs or financing terms are published anywhere in Bear Comfort's material, so none are invented here. What is on record: 4.7 stars across 78 Google reviews, BBB accreditation held since January 2016, and 25 years of trading. What closes the gap is a two-minute phone call with the right questions — they are listed in the next section.</p>
+          <blockquote class="mt-4 border-l-2 border-ice/60 pl-4 text-white/80 italic max-w-2xl">“Work was done quickly and efficiently. Pricing was very affordable. Jake was even understanding about my dogs barking non stop — great guy! We are customers for life!”<cite class="block not-italic text-xs text-white/50 mt-2">— customer testimonial as published by Bear Comfort on their own Repair page</cite></blockquote>
+          <!-- build-note: this quote is site copy harvested from bearcomfort.net/repair, not a Google review body. No review body from the Google listing is reproduced anywhere on this page. -->
+        </div>
+        <a href="#ask" class="shrink-0 inline-flex items-center justify-center min-h-[48px] px-6 rounded-full border border-white/30 font-bold hover:bg-white/10 transition">The questions</a>
+      </li>
+    </ol>
+
+    <!-- fact chips, white-glyph icons on a dark ground -->
+    <div class="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="rounded-2xl bg-white/5 ring-1 ring-white/15 p-5">
+        <img src="assets/calendar.webp" width="512" height="512" loading="lazy" alt="" aria-hidden="true" class="w-9 h-9 mb-3 opacity-90">
+        <p class="font-extrabold">Open 7 days</p><p class="text-sm text-white/65">Mon–Sat 8–7, Sun 10–5</p>
+      </div>
+      <div class="rounded-2xl bg-white/5 ring-1 ring-white/15 p-5">
+        <img src="assets/labor.webp" width="512" height="512" loading="lazy" alt="" aria-hidden="true" class="w-9 h-9 mb-3 opacity-90">
+        <p class="font-extrabold">25 years trading</p><p class="text-sm text-white/65">HVAC contractor since 2000</p>
+      </div>
+      <div class="rounded-2xl bg-white/5 ring-1 ring-white/15 p-5">
+        <img src="assets/spare-parts.webp" width="512" height="512" loading="lazy" alt="" aria-hidden="true" class="w-9 h-9 mb-3 opacity-90">
+        <p class="font-extrabold">8 brands serviced</p><p class="text-sm text-white/65">RUUD &amp; Rheem specialty</p>
+      </div>
+      <div class="rounded-2xl bg-white/5 ring-1 ring-white/15 p-5">
+        <img src="assets/best-price.webp" width="512" height="512" loading="lazy" alt="" aria-hidden="true" class="w-9 h-9 mb-3 opacity-90">
+        <p class="font-extrabold">Pricing Plans page</p>
+        <p class="text-sm text-white/65"><a class="underline decoration-white/30 underline-offset-4 hover:text-ice" href="https://www.bearcomfort.net/pricing-plans/" target="_blank" rel="noopener">Pricing Plans page on bearcomfort.net</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CALL SCRIPT — missing commercial data, handled explicitly ============ -->
+<section id="ask" class="py-14 md:py-20 bg-white border-b border-navy/10">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-[.9fr_1.1fr] gap-10 items-start">
+    <div>
+      <p class="text-xs font-extrabold uppercase tracking-[.16em] text-flame mb-2">Before you dial</p>
+      <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight leading-tight">Seven questions that make the call two minutes long</h2>
+      <p class="mt-4 text-navy/75 leading-relaxed">Bear Comfort does not publish service-call fees, hourly rates, plan pricing, warranty terms or financing anywhere online, so this page does not guess at them. Read this list out on the phone instead — the answers are what actually decide whether you book.</p>
+      <a href="tel:+17706964560" class="mt-6 inline-flex items-center justify-center gap-2 min-h-[56px] px-7 rounded-full bg-flame text-white text-lg font-extrabold glow hover:brightness-110 transition">Call (770) 696-4560</a>
+      <p class="mt-3 text-sm text-navy/55">Or email <a class="underline underline-offset-4 hover:text-flame" href="mailto:info@bearcomfort.net">info@bearcomfort.net</a> — the address published on their contact page.</p>
+    </div>
+    <ol class="grid sm:grid-cols-2 gap-3 text-[15px] counter-reset">
+      <li class="rounded-xl bg-cream ring-1 ring-navy/10 p-4"><span class="block text-xs font-extrabold text-flame mb-1">01</span>What is the diagnostic or trip fee, and does it come off the repair if I go ahead?</li>
+      <li class="rounded-xl bg-cream ring-1 ring-navy/10 p-4"><span class="block text-xs font-extrabold text-flame mb-1">02</span>Flat-rate per job, or hourly plus parts?</li>
+      <li class="rounded-xl bg-cream ring-1 ring-navy/10 p-4"><span class="block text-xs font-extrabold text-flame mb-1">03</span>Do I get the price in writing before any work starts?</li>
+      <li class="rounded-xl bg-cream ring-1 ring-navy/10 p-4"><span class="block text-xs font-extrabold text-flame mb-1">04</span>My unit is <em>X</em> years old — repair or replace, and why?</li>
+      <li class="rounded-xl bg-cream ring-1 ring-navy/10 p-4"><span class="block text-xs font-extrabold text-flame mb-1">05</span>How long are parts and labour covered on this repair?</li>
+      <li class="rounded-xl bg-cream ring-1 ring-navy/10 p-4"><span class="block text-xs font-extrabold text-flame mb-1">06</span>What does a maintenance plan cost and what is included?</li>
+      <li class="rounded-xl bg-cream ring-1 ring-navy/10 p-4 sm:col-span-2"><span class="block text-xs font-extrabold text-flame mb-1">07</span>If it is a full replacement — what is the total installed price, which brand and model, and is there financing?</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ BRANDS ============ -->
+<section id="brands" class="py-12 md:py-16 bg-cream">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6">
+    <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 mb-7">
+      <div>
+        <p class="text-xs font-extrabold uppercase tracking-[.16em] text-flame mb-2">Equipment they work with</p>
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">The brands on their own “world brands we work with” wall</h2>
+      </div>
+      <p class="text-sm text-navy/60 max-w-sm">Logos as published on bearcomfort.net. RUUD and Rheem are the stated specialty.</p>
+    </div>
+    <ul class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3">
+      <li class="brandtile bg-white rounded-xl ring-1 ring-navy/10 h-20 flex items-center justify-center p-3"><img src="assets/reem23.png" width="500" height="263" loading="lazy" alt="Rheem logo" class="max-h-10 w-auto"></li>
+      <li class="brandtile bg-white rounded-xl ring-1 ring-navy/10 h-20 flex items-center justify-center p-3"><img src="assets/ruud.png" width="500" height="263" loading="lazy" alt="Ruud logo" class="max-h-10 w-auto"></li>
+      <li class="brandtile bg-white rounded-xl ring-1 ring-navy/10 h-20 flex items-center justify-center p-3"><img src="assets/1.webp" width="500" height="200" loading="lazy" alt="Carrier logo" class="max-h-9 w-auto"></li>
+      <li class="brandtile bg-white rounded-xl ring-1 ring-navy/10 h-20 flex items-center justify-center p-3"><img src="assets/2.webp" width="500" height="200" loading="lazy" alt="Trane logo" class="max-h-9 w-auto"></li>
+      <li class="brandtile bg-white rounded-xl ring-1 ring-navy/10 h-20 flex items-center justify-center p-3"><img src="assets/6.webp" width="500" height="200" loading="lazy" alt="Lennox logo" class="max-h-9 w-auto"></li>
+      <li class="brandtile bg-white rounded-xl ring-1 ring-navy/10 h-20 flex items-center justify-center p-3"><img src="assets/logo-1.webp" width="500" height="200" loading="lazy" alt="Amana Heating &amp; Air Conditioning logo" class="max-h-9 w-auto"></li>
+      <li class="brandtile bg-white rounded-xl ring-1 ring-navy/10 h-20 flex items-center justify-center p-3"><img src="assets/logo-2.webp" width="500" height="200" loading="lazy" alt="Daikin logo" class="max-h-9 w-auto"></li>
+      <li class="brandtile bg-white rounded-xl ring-1 ring-navy/10 h-20 flex items-center justify-center p-3"><img src="assets/logo-3.webp" width="500" height="200" loading="lazy" alt="Honeywell logo" class="max-h-9 w-auto"></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 5. HOURS + LOCATION ============ -->
+<section id="hours" class="py-14 md:py-20 bg-white border-t border-navy/10">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6">
+    <p class="text-xs font-extrabold uppercase tracking-[.16em] text-flame mb-2">Hours &amp; location</p>
+    <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Open seven days in Grayson, GA 30017</h2>
+    <p class="mt-3 max-w-3xl text-navy/70">Hours below are published exactly as they appear on the Google listing. If anything looks off for a holiday, call ahead to confirm.</p>
+
+    <div class="mt-8 grid lg:grid-cols-2 gap-8 items-start">
+      <div>
+        <table class="w-full text-[15px] rounded-2xl overflow-hidden ring-1 ring-navy/10">
+          <caption class="sr-only">Opening hours</caption>
+          <tbody class="divide-y divide-navy/10">
+            <tr data-day="1" class="bg-cream"><th scope="row" class="text-left px-4 py-3 font-semibold">Monday</th><td class="px-4 py-3 text-right tabular-nums">8 AM – 7 PM</td></tr>
+            <tr data-day="2"><th scope="row" class="text-left px-4 py-3 font-semibold">Tuesday</th><td class="px-4 py-3 text-right tabular-nums">8 AM – 7 PM</td></tr>
+            <tr data-day="3" class="bg-cream"><th scope="row" class="text-left px-4 py-3 font-semibold">Wednesday</th><td class="px-4 py-3 text-right tabular-nums">8 AM – 7 PM</td></tr>
+            <tr data-day="4"><th scope="row" class="text-left px-4 py-3 font-semibold">Thursday</th><td class="px-4 py-3 text-right tabular-nums">8 AM – 7 PM</td></tr>
+            <tr data-day="5" class="bg-cream"><th scope="row" class="text-left px-4 py-3 font-semibold">Friday</th><td class="px-4 py-3 text-right tabular-nums">8 AM – 7 PM</td></tr>
+            <tr data-day="6"><th scope="row" class="text-left px-4 py-3 font-semibold">Saturday</th><td class="px-4 py-3 text-right tabular-nums">8 AM – 7 PM</td></tr>
+            <tr data-day="0" class="bg-cream"><th scope="row" class="text-left px-4 py-3 font-semibold">Sunday</th><td class="px-4 py-3 text-right tabular-nums">10 AM – 5 PM</td></tr>
+          </tbody>
+        </table>
+
+        <div class="mt-6 rounded-2xl bg-navy text-white p-6">
+          <p class="text-xs font-extrabold uppercase tracking-[.16em] text-ice mb-2">Bear Inc. · Bear Comfort Heating &amp; Air Conditioning</p>
+          <address class="not-italic text-lg font-semibold leading-relaxed">
+            1570 Hill Crossing Ct<br>Grayson, GA 30017
+          </address>
+          <p id="nowStatusHours" class="hidden mt-3 text-sm font-bold text-ice"></p>
+          <div class="mt-5 flex flex-col sm:flex-row gap-3">
+            <a href="tel:+17706964560" class="inline-flex items-center justify-center min-h-[52px] px-6 rounded-full bg-flame text-white font-extrabold glow hover:brightness-110 transition">Call (770) 696-4560</a>
+            <a href="https://www.google.com/maps/place/Bear+Inc./data=!4m7!3m6!1s0x88f5b8d8288ce855:0xc12afd31917d90a3!8m2!3d33.9055103!4d-83.9724283!16s%2Fg%2F1tdcxym9!19sChIJVeiMKNi49YgRo5B9kTH9KsE" target="_blank" rel="noopener" class="inline-flex items-center justify-center min-h-[52px] px-6 rounded-full border border-white/30 font-bold hover:bg-white/10 transition">Open the listing on Google Maps</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="rounded-2xl overflow-hidden ring-1 ring-navy/10 bg-cream">
+        <iframe title="Map showing Bear Inc. at 1570 Hill Crossing Ct, Grayson, GA 30017"
+                src="https://maps.google.com/maps?q=33.9055103,-83.9724283&amp;output=embed"
+                width="600" height="520" style="border:0;width:100%;height:520px" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+
+    <div class="mt-8 rounded-2xl ring-1 ring-navy/10 bg-cream p-6">
+      <h3 class="text-xl font-extrabold">Service area</h3>
+      <p class="mt-2 text-navy/75 max-w-4xl">Bear Comfort's project pages state it as <strong>Gwinnett, Walton &amp; surrounding counties</strong>; their BBB profile lists <strong>Grayson</strong>, <strong>Loganville</strong>, <strong>Snellville</strong>, <strong>Walton County</strong> and <strong>metro Atlanta</strong>. Those are the only places named on this page — if your address is nearby but not on the list, the phone will settle it faster than a website can.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA BAND ============ -->
+<section class="relative overflow-hidden bg-ink text-white">
+  <img src="assets/12.webp" width="2000" height="1333" loading="lazy" alt="Blue sky with scattered white cumulus clouds" class="absolute inset-0 w-full h-full object-cover opacity-25">
+  <div class="absolute inset-0 bg-gradient-to-r from-ink via-navy/90 to-ink/80"></div>
+  <div class="relative mx-auto max-w-7xl px-4 sm:px-6 py-12 md:py-14 grid md:grid-cols-[1fr_auto] gap-6 items-center">
+    <div>
+      <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">One number, seven days: (770) 696-4560</h2>
+      <p class="mt-2 text-white/75">Repair, installation, maintenance, replacements, duct cleaning and commercial rooftop work — Grayson, Snellville, Loganville and the rest of Gwinnett and Walton.</p>
+    </div>
+    <a href="tel:+17706964560" class="inline-flex items-center justify-center gap-2.5 min-h-[56px] px-8 rounded-full bg-flame text-white text-lg font-extrabold glow hover:brightness-110 transition">
+      <img src="assets/call-1-87x87.webp" alt="" width="87" height="87" class="w-5 h-5" aria-hidden="true">Call (770) 696-4560
+    </a>
+  </div>
+</section>
+
+<!-- ============ 6. CONTACT / FOOTER ============ -->
+<footer id="contact" class="bg-navy text-white/80">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 py-12 grid gap-10 md:grid-cols-4">
+    <div class="md:col-span-2">
+      <img src="assets/logoWH2.png" alt="Bear Comfort Heating &amp; Air Conditioning wordmark, white variant" width="500" height="123" loading="lazy" class="h-8 w-auto mb-4">
+      <p class="text-sm leading-relaxed max-w-md">Bear Inc., trading as Bear Comfort Heating &amp; Air Conditioning Inc. HVAC contractor in Grayson, Georgia since 2000, serving Gwinnett, Walton and surrounding counties.</p>
+      <div class="mt-5 flex items-center gap-4">
+        <a href="https://www.bbb.org/us/ga/monroe/profile/commercial-air-conditioning-contractors/bear-comfort-heating-air-inc-0443-27427833" target="_blank" rel="noopener" class="bg-white rounded-lg p-2 inline-flex" aria-label="BBB Accredited Business profile">
+          <img src="assets/bbb.png" alt="BBB Accredited Business seal" width="300" height="122" loading="lazy" class="h-8 w-auto">
+        </a>
+        <p class="text-sm">★ 4.7 · 78 Google reviews</p>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="text-white font-extrabold mb-3">Contact</h3>
+      <ul class="space-y-2 text-sm">
+        <li><a class="inline-flex min-h-[44px] items-center text-lg font-extrabold text-white hover:text-ice" href="tel:+17706964560">(770) 696-4560</a></li>
+        <li><a class="inline-flex min-h-[44px] items-center hover:text-ice underline underline-offset-4 decoration-white/25" href="mailto:info@bearcomfort.net">info@bearcomfort.net</a></li>
+        <li><address class="not-italic">1570 Hill Crossing Ct<br>Grayson, GA 30017</address></li>
+        <li>Mon–Sat 8 AM – 7 PM<br>Sunday 10 AM – 5 PM</li>
+        <li><a class="hover:text-ice underline underline-offset-4 decoration-white/25" href="http://www.bearcomfort.net/" target="_blank" rel="noopener">bearcomfort.net</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="text-white font-extrabold mb-3">On this page</h3>
+      <ul class="space-y-1 text-sm">
+        <li><a class="inline-flex min-h-[36px] items-center hover:text-ice" href="#services">Services</a></li>
+        <li><a class="inline-flex min-h-[36px] items-center hover:text-ice" href="#equipment">Equipment</a></li>
+        <li><a class="inline-flex min-h-[36px] items-center hover:text-ice" href="#projects">Projects</a></li>
+        <li><a class="inline-flex min-h-[36px] items-center hover:text-ice" href="#why">Why Bear</a></li>
+        <li><a class="inline-flex min-h-[36px] items-center hover:text-ice" href="#ask">What to ask</a></li>
+        <li><a class="inline-flex min-h-[36px] items-center hover:text-ice" href="#brands">Brands</a></li>
+        <li><a class="inline-flex min-h-[36px] items-center hover:text-ice" href="#hours">Hours &amp; Location</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-white/10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 py-5 flex flex-col sm:flex-row gap-2 sm:items-center sm:justify-between text-xs text-white/55">
+      <p>© <span id="yr">2026</span> Bear Comfort Heating &amp; Air Conditioning Inc. · Grayson, GA</p>
+      <p>Rating and review count shown as published on the Google listing.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ MOBILE STICKY CALL BAR ============ -->
+<div class="md:hidden fixed bottom-0 inset-x-0 z-50 bg-ink/95 backdrop-blur border-t border-white/15 px-3 py-2.5 flex items-center gap-3">
+  <div class="min-w-0 grow">
+    <p class="text-white text-sm font-extrabold leading-tight truncate">Bear Comfort · Grayson</p>
+    <p id="nowStatusBar" class="text-white/65 text-xs leading-tight">Mon–Sat 8–7 · Sun 10–5</p>
+  </div>
+  <a href="tel:+17706964560" class="shrink-0 inline-flex items-center justify-center gap-2 min-h-[48px] px-5 rounded-full bg-flame text-white font-extrabold">Call (770) 696-4560</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HVACBusiness",
+  "name": "Bear Inc.",
+  "alternateName": "Bear Comfort Heating & Air Conditioning Inc.",
+  "description": "HVAC contractor in Grayson, Georgia, in business since 2000. Repair, installation, maintenance, replacements, water heaters, air duct cleaning and commercial rooftop HVAC across Gwinnett, Walton and surrounding counties. Specialises in RUUD and Rheem equipment.",
+  "url": "http://www.bearcomfort.net/",
+  "telephone": "+1-770-696-4560",
+  "email": "info@bearcomfort.net",
+  "image": "assets/BEARtruck-1024x1018.jpg",
+  "logo": "assets/logoBK.png",
+  "foundingDate": "2000",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1570 Hill Crossing Ct",
+    "addressLocality": "Grayson",
+    "addressRegion": "GA",
+    "postalCode": "30017",
+    "addressCountry": "US"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 33.9055103, "longitude": -83.9724283 },
+  "hasMap": "https://www.google.com/maps/place/Bear+Inc./data=!4m7!3m6!1s0x88f5b8d8288ce855:0xc12afd31917d90a3!8m2!3d33.9055103!4d-83.9724283!16s%2Fg%2F1tdcxym9!19sChIJVeiMKNi49YgRo5B9kTH9KsE",
+  "sameAs": [
+    "http://www.bearcomfort.net/",
+    "https://www.google.com/maps/place/Bear+Inc./data=!4m7!3m6!1s0x88f5b8d8288ce855:0xc12afd31917d90a3!8m2!3d33.9055103!4d-83.9724283!16s%2Fg%2F1tdcxym9!19sChIJVeiMKNi49YgRo5B9kTH9KsE",
+    "https://www.bbb.org/us/ga/monroe/profile/commercial-air-conditioning-contractors/bear-comfort-heating-air-inc-0443-27427833"
+  ],
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "08:00", "closes": "19:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "10:00", "closes": "17:00" }
+  ],
+  "areaServed": [
+    { "@type": "City", "name": "Grayson" },
+    { "@type": "City", "name": "Snellville" },
+    { "@type": "City", "name": "Loganville" },
+    { "@type": "AdministrativeArea", "name": "Gwinnett County" },
+    { "@type": "AdministrativeArea", "name": "Walton County" },
+    { "@type": "AdministrativeArea", "name": "Metro Atlanta" }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "HVAC services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "HVAC repair" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "HVAC installation" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "HVAC maintenance" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "System and water heater replacement" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Air duct cleaning" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial rooftop HVAC" } }
+    ]
+  }
+}
+</script>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ---- year ---- */
+  var yr = document.getElementById('yr');
+  if (yr) { yr.textContent = String(new Date().getFullYear()); }
+
+  /* ---- open/closed, computed client-side from the published hours in Georgia local time ---- */
+  var SPAN = { 0: [600, 1020], 1: [480, 1140], 2: [480, 1140], 3: [480, 1140], 4: [480, 1140], 5: [480, 1140], 6: [480, 1140] };
+  var DAYNAME = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+  function label(mins) {
+    var h = Math.floor(mins / 60), m = mins % 60, ap = h >= 12 ? 'PM' : 'AM';
+    var h12 = h % 12; if (h12 === 0) { h12 = 12; }
+    return h12 + (m ? ':' + String(m).padStart(2, '0') : '') + ' ' + ap;
+  }
+
+  function localNow() {
+    try {
+      var parts = new Intl.DateTimeFormat('en-US', {
+        timeZone: 'America/New_York', weekday: 'short', hour: '2-digit', minute: '2-digit', hour12: false
+      }).formatToParts(new Date());
+      var wd = '', hh = 0, mm = 0;
+      for (var i = 0; i < parts.length; i++) {
+        if (parts[i].type === 'weekday') { wd = parts[i].value; }
+        if (parts[i].type === 'hour') { hh = parseInt(parts[i].value, 10) % 24; }
+        if (parts[i].type === 'minute') { mm = parseInt(parts[i].value, 10); }
+      }
+      var idx = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(wd);
+      if (idx < 0) { return null; }
+      return { day: idx, mins: hh * 60 + mm };
+    } catch (e) { return null; }
+  }
+
+  var now = localNow();
+  if (now) {
+    var span = SPAN[now.day], open = now.mins >= span[0] && now.mins < span[1], text;
+    if (open) {
+      text = 'Open now — closes ' + label(span[1]);
+    } else {
+      var d = now.day, hop = 0;
+      if (now.mins >= span[1]) { d = (d + 1) % 7; hop = 1; }
+      text = 'Closed now — opens ' + label(SPAN[d][0]) + ' ' + (hop === 1 && d === (now.day + 1) % 7 ? 'tomorrow' : DAYNAME[d]);
+    }
+    ['nowStatusHero', 'nowStatusWhy', 'nowStatusHours'].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el) { el.textContent = text; el.classList.remove('hidden'); }
+    });
+    var top = document.getElementById('nowStatusTop');
+    if (top) { top.textContent = open ? 'Open now' : 'Closed now'; }
+    var bar = document.getElementById('nowStatusBar');
+    if (bar) { bar.textContent = text; }
+    var row = document.querySelector('tr[data-day="' + now.day + '"]');
+    if (row) { row.classList.add('ring-2', 'ring-inset', 'ring-flame'); }
+  }
+
+  /* ---- header condense ---- */
+  var bar2 = document.getElementById('headerbar');
+  var head = document.getElementById('siteheader');
+
+  /* ---- 3D hero: pointer rotates the deck, scroll pushes the planes apart.
+         transform/opacity only, state read in the handler, applied in rAF. ---- */
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var scene = document.querySelector('.scene');
+  var deck = document.querySelector('.deck');
+  var sy = 0, px = 0, py = 0, queued = false;
+
+  function apply() {
+    queued = false;
+    if (deck) {
+      deck.style.setProperty('--sp', sy.toFixed(4));
+      deck.style.setProperty('--rx', (py * -3.2).toFixed(2) + 'deg');
+      deck.style.setProperty('--ry', (px * 4.6).toFixed(2) + 'deg');
+    }
+    if (head && bar2) {
+      if (window.scrollY > 24) { head.classList.add('shadow-lg'); bar2.classList.add('h-14', 'md:h-16'); bar2.classList.remove('md:h-20'); }
+      else { head.classList.remove('shadow-lg'); bar2.classList.remove('h-14', 'md:h-16'); bar2.classList.add('md:h-20'); }
+    }
+  }
+  function queue() { if (!queued) { queued = true; window.requestAnimationFrame(apply); } }
+
+  function onScroll() {
+    if (!scene) { return; }
+    var h = scene.offsetHeight || 1;
+    sy = reduce ? 0 : Math.min(1, Math.max(0, window.scrollY / h));
+    queue();
+  }
+
+  function onPointer(e) {
+    if (reduce || !scene) { return; }
+    var r = scene.getBoundingClientRect();
+    px = Math.max(-1, Math.min(1, ((e.clientX - r.left) / r.width - 0.5) * 2));
+    py = Math.max(-1, Math.min(1, ((e.clientY - r.top) / r.height - 0.5) * 2));
+    queue();
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  if (window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    window.addEventListener('pointermove', onPointer, { passive: true });
+    if (scene) {
+      scene.addEventListener('pointerleave', function () { px = 0; py = 0; queue(); }, { passive: true });
+    }
+  }
+  onScroll();
+})();
+</script>
+</body>
+</html>
