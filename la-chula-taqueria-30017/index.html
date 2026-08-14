@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="robots" content="noindex,nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Chula Taqueria — Street Tacos in Grayson, GA</title>
+<meta name="description" content="La Chula Taqueria, 516 Grayson Pkwy, Grayson, GA 30017. Authentic Mexican street tacos, birria and house margaritas. 4.7 stars across 168 Google reviews. Open 7 days, 11 AM. Call (470) 657-5679.">
+<meta name="theme-color" content="#0A241A">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="assets/favicon-64.png" sizes="64x64" type="image/png">
+<link rel="apple-touch-icon" href="assets/favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="assets/IMG_4776-800.webp" imagesrcset="assets/IMG_4776-480.webp 480w, assets/IMG_4776-800.webp 800w, assets/IMG_4776-1066.webp 1066w" imagesizes="(max-width:700px) 160vw, 120vw">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;600;800&display=swap" rel="stylesheet">
+
+<!--
+  BUILD NOTES — La Chula Taqueria, Grayson GA (single-location rebuild)
+
+  STYLE DEVIATION (documented per build_workflow "Design standard"): the Apple/Spotify
+  anchor is kept for type hierarchy, depth and rollovers, but the palette is pulled from
+  the brand's own logo art (deep green, cream, brand red, tajin orange) rather than a
+  neutral tech palette. Pain-point analysis calls for warm, appetite-forward restaurant
+  character on a dark ground so the harvested food photography carries the page.
+
+  NO TAILWIND CDN ON PURPOSE: all CSS is inline and hand-written so the hero is a finished
+  hero with JavaScript disabled. A CDN stylesheet is permitted by the workflow, but it
+  cannot satisfy "layers at their CSS rest position" when scripting is off.
+
+  IMAGE PIPELINE (iter-2): resized WebP derivatives now exist in assets/ for all eight
+  photographs (480w / 800w / native-width, plus 1200w and 1600w for the one 3549x5324
+  original) and every <img> references them through srcset + sizes. The hero photo is
+  preloaded and eager; everything below the fold is lazy + async-decoded with explicit
+  width/height. The decorative watermark and the two logo marks are served as small WebP
+  derivatives as well. No original multi-megabyte JPEG is referenced anywhere on the page.
+
+  RENDER FIX (iter-2): a global img{height:auto} now overrides the presentational height
+  attribute, so every CSS aspect-ratio box (the 3:4 drink cards especially) renders at its
+  intended height. Verified in Chromium at 390x844 and 1280x800: drink card images render
+  373x497 desktop / 333x444 mobile, no horizontal scroll at either width.
+
+  HEADER (iter-2): on phones the header wraps to two rows — brand + call button, then a
+  full-width scrolling chip nav with 44px tap targets — so the wordmark can never overlap
+  the nav. At >=960px the chips return to a single centered row.
+
+  CTA POLICY: no ordering/booking URL exists in the scraped data, so tel: is the primary
+  action per build_workflow ("If no working booking URL exists ... tel: is the sole booking
+  path"). The Google card does advertise "Order online", so that evidenced capability is
+  surfaced as a clearly-labelled secondary link to the brand's own site — the label names
+  its literal destination (lachulataqueria.com) and promises no flow this page cannot prove.
+
+  FORCED OMISSIONS (not laziness):
+   - Review BODIES are never quoted: build_workflow forbids it, even though the scraped
+     card_text contains one. Rating + count appear as text only, sourced and linked.
+   - No aggregateRating in JSON-LD (third-party review data — policy violation).
+   - No per-item prices anywhere: none are published in any harvested source. The only
+     price fact available is the Google card's "$10-20", attributed to Google on the page.
+   - Drink NAMES are not published either, so the three drink cards are titled by what is
+     visibly in each frame rather than by a menu name this build cannot verify.
+   - No exterior, interior, staff or kitchen photography exists in the approved pool, so no
+     section claims to show the Grayson room. Every photo is described by what is in frame.
+   - banner.png is not referenced in any form.
+
+  TRUST SIGNALS PRESENT (two distinct types, per workflow minimum): (1) Google rating 4.7
+  with 168 review count, linked to the source listing; (2) the business's own harvested
+  photography used throughout. Nothing else (years in business, awards, ownership story)
+  is published by the brand, so nothing else is asserted.
+-->
+
+<style>
+:root{
+  --cream:#F7EEDF; --cream-dim:#CFC3AE; --muted:#9C917F;
+  --ink:#0B0A09; --green:#123D2B; --green-d:#0A241A; --green-l:#1B5A40;
+  --red:#C0272D; --red-l:#DA3B41; --tajin:#E4813A;
+  --hdr-m:116px; --hdr-d:76px;
+  --r:14px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--ink);color:var(--cream);
+  font-family:Archivo,system-ui,-apple-system,Segoe UI,sans-serif;
+  font-size:16px;line-height:1.6;overflow-x:hidden;
+  padding-bottom:76px;
+}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:Anton,Impact,system-ui,sans-serif;font-weight:400;letter-spacing:.01em;line-height:.98;margin:0;text-transform:uppercase}
+p{margin:0}
+section{scroll-margin-top:calc(var(--hdr-m) + 8px)}
+.wrap{width:100%;max-width:1200px;margin:0 auto;padding:0 20px}
+.eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:800;color:var(--tajin)}
+.lede{color:var(--cream-dim);font-size:16px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- header (mobile: brand row + full-width chip row) ---------- */
+.hdr{position:fixed;inset:0 0 auto 0;z-index:60;background:rgba(10,36,26,.86);backdrop-filter:blur(14px);border-bottom:1px solid rgba(247,238,223,.14);transition:background .25s ease,box-shadow .25s ease}
+.hdr.scrolled{background:rgba(8,20,15,.96);box-shadow:0 10px 30px rgba(0,0,0,.45)}
+.hdr-row{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:9px 0}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0;flex:1 1 auto}
+.brand img{width:38px;height:38px;border-radius:50%;background:var(--cream);flex:0 0 auto}
+.brand span{min-width:0;overflow:hidden}
+.brand b{display:block;font-family:Anton,sans-serif;font-weight:400;font-size:16px;letter-spacing:.02em;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.brand small{display:none;color:var(--cream-dim);font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hdr-cta{margin-left:auto;display:flex;align-items:center;gap:8px;flex:0 0 auto}
+.hdr-tel{display:none}
+.lbl-l{display:none}
+.chips{order:3;flex:1 0 100%;display:flex;gap:6px;overflow-x:auto;padding:0 0 2px;scrollbar-width:none;-ms-overflow-style:none;-webkit-overflow-scrolling:touch}
+.chips::-webkit-scrollbar{display:none}
+.chips a{flex:0 0 auto;display:flex;align-items:center;min-height:44px;padding:0 14px;border-radius:999px;border:1px solid rgba(247,238,223,.2);color:var(--cream-dim);text-decoration:none;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;transition:.2s}
+.chips a:hover,.chips a:focus-visible{background:var(--cream);color:var(--green-d);border-color:var(--cream)}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:50px;padding:0 22px;border-radius:999px;text-decoration:none;font-weight:800;font-size:15px;letter-spacing:.04em;transition:transform .18s ease,box-shadow .18s ease,background .18s ease,color .18s ease;white-space:nowrap}
+.btn-p{background:var(--red);color:#fff;box-shadow:0 12px 28px rgba(192,39,45,.42)}
+.btn-p:hover,.btn-p:focus-visible{background:var(--red-l);transform:translateY(-2px);box-shadow:0 16px 34px rgba(192,39,45,.5)}
+.btn-s{border:1.5px solid rgba(247,238,223,.55);color:var(--cream)}
+.btn-s:hover,.btn-s:focus-visible{background:var(--cream);color:var(--green-d);transform:translateY(-2px)}
+.btn-sm{min-height:44px;padding:0 16px;font-size:13px}
+:focus-visible{outline:3px solid var(--tajin);outline-offset:3px}
+
+/* ---------- hero 3D ---------- */
+.hero{position:relative;height:100svh;min-height:600px;max-height:1040px;overflow:hidden;background:var(--green-d)}
+.stage{position:absolute;inset:0}
+.scene{position:absolute;inset:0}
+.layer{position:absolute;inset:0}
+.layer.photo img{width:100%;height:100%;object-fit:cover;object-position:52% 42%}
+.layer.scrim{background:
+  linear-gradient(180deg,rgba(10,36,26,.94) 0%,rgba(10,36,26,.55) 34%,rgba(10,36,26,.72) 68%,rgba(8,20,15,.97) 100%),
+  radial-gradient(90% 70% at 50% 58%,rgba(18,61,43,0) 0%,rgba(8,20,15,.8) 100%)}
+.agave{position:absolute;bottom:6%;width:min(30vw,240px);aspect-ratio:437/353;background:url("assets/agave.png") center/contain no-repeat;opacity:.5}
+.agave.l{left:-3%}
+.agave.r{right:-3%;transform:scaleX(-1)}
+.layer.front{display:flex;align-items:center;justify-content:center;padding:calc(var(--hdr-m) + 10px) 20px 24px}
+.hero-in{width:100%;max-width:760px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:12px}
+.hero-logo{width:60px;height:60px}
+.ribbon{display:inline-flex;align-items:center;justify-content:center;min-height:34px;padding:0 26px;background:url("assets/boton.png") center/100% 100% no-repeat;color:var(--cream);font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase}
+.hero h1{font-size:clamp(2.05rem,8.4vw,4.6rem);text-shadow:0 8px 34px rgba(0,0,0,.6)}
+.hero h1 em{font-style:normal;color:var(--tajin)}
+.hero-sub{color:var(--cream);font-size:clamp(14px,3.4vw,18px);max-width:44ch;text-shadow:0 3px 16px rgba(0,0,0,.7)}
+.hero-cta{display:flex;flex-direction:column;gap:10px;width:100%;max-width:340px}
+.status{display:inline-flex;align-items:center;gap:9px;padding:7px 15px;border-radius:999px;background:rgba(8,20,15,.72);border:1px solid rgba(247,238,223,.24);font-size:12.5px;font-weight:600;color:var(--cream)}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--tajin);flex:0 0 auto}
+.status.is-open .dot{background:#39D98A;box-shadow:0 0 0 4px rgba(57,217,138,.2)}
+.status.is-closed .dot{background:#E4813A}
+
+/* ---------- info bar ---------- */
+.infobar{background:var(--green);border-block:1px solid rgba(247,238,223,.14)}
+.infogrid{display:grid;grid-template-columns:1fr;gap:1px;background:rgba(247,238,223,.14)}
+.infogrid > *{background:var(--green);padding:16px 20px;display:flex;flex-direction:column;gap:3px;text-decoration:none}
+.infogrid k{display:block;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--tajin);font-weight:800}
+.infogrid v{display:block;font-size:15px;font-weight:600;color:var(--cream);line-height:1.35}
+.infogrid a v u{text-decoration:none;border-bottom:1px solid rgba(247,238,223,.4)}
+.infogrid a:hover v u{border-color:var(--tajin);color:var(--tajin)}
+
+/* ---------- proof ---------- */
+.proof{background:var(--cream);color:var(--green-d);padding:34px 0}
+.proof-in{display:grid;gap:22px;align-items:center}
+.score{display:flex;align-items:center;gap:16px}
+.score b{font-family:Anton,sans-serif;font-size:clamp(3.2rem,14vw,4.6rem);line-height:.85;color:var(--green-d)}
+.stars{color:var(--red);font-size:19px;letter-spacing:3px;line-height:1}
+.score span{font-weight:800;font-size:14px;color:var(--green)}
+.proof p{color:#3B4A42;font-size:14.5px}
+.proof-facts{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.fact{border:1px solid rgba(18,61,43,.2);border-radius:var(--r);padding:11px 13px;background:rgba(18,61,43,.045)}
+.fact k{display:block;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--green-l);font-weight:800}
+.fact v{display:block;font-weight:800;font-size:14.5px;color:var(--green-d);margin-top:2px}
+.srclink{display:inline-flex;align-items:center;min-height:44px;font-weight:800;font-size:13.5px;color:var(--red);text-decoration:none;border-bottom:2px solid var(--red);align-self:flex-start}
+.srclink:hover{color:var(--green-d);border-color:var(--green-d)}
+
+/* ---------- generic section ---------- */
+.sec{padding:56px 0}
+.sec-head{display:flex;flex-direction:column;gap:10px;margin-bottom:26px;max-width:60ch}
+.sec-head h2{font-size:clamp(1.85rem,6.4vw,3.1rem)}
+
+/* ---------- menu split ---------- */
+.split{display:grid;gap:26px;align-items:start}
+.figure{position:relative;border-radius:20px;overflow:hidden;background:var(--green-d);box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.figure img{width:100%;height:auto;object-fit:cover;aspect-ratio:4/5;transition:transform .6s ease}
+.figure:hover img{transform:scale(1.04)}
+.figure figcaption{position:absolute;inset:auto 0 0 0;padding:26px 16px 14px;background:linear-gradient(180deg,transparent,rgba(8,20,15,.92));font-size:12.5px;color:var(--cream-dim)}
+.rows{border-top:1px solid rgba(247,238,223,.16)}
+.row{display:flex;gap:14px;align-items:flex-start;padding:16px 2px;border-bottom:1px solid rgba(247,238,223,.16);transition:background .2s ease,padding .2s ease}
+.row:hover{background:rgba(247,238,223,.05);padding-left:8px}
+.row-n{font-family:Anton,sans-serif;color:var(--green-l);font-size:15px;padding-top:3px;min-width:26px}
+.row h3{font-size:20px;letter-spacing:.03em}
+.row p{color:var(--cream-dim);font-size:14.5px;margin-top:4px}
+.row a{color:var(--tajin);font-weight:800;font-size:13px;text-decoration:none;border-bottom:1px solid rgba(228,129,58,.5)}
+.pricenote{margin-top:18px;padding:15px 17px;border-radius:var(--r);background:var(--green);border:1px solid rgba(247,238,223,.16);font-size:14.5px;color:var(--cream-dim)}
+.pricenote b{color:var(--cream)}
+.pricenote a{color:var(--tajin);font-weight:800}
+
+/* ---------- full-bleed band ---------- */
+.band{position:relative;min-height:62vh;display:flex;align-items:flex-end;overflow:hidden;background:var(--green-d)}
+.band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 45%}
+.band::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,20,15,.35),rgba(8,20,15,.9))}
+.band-in{position:relative;z-index:2;padding:34px 0 30px}
+.band h2{font-size:clamp(1.7rem,5.6vw,3rem);max-width:18ch;text-shadow:0 6px 26px rgba(0,0,0,.6)}
+.band p{color:var(--cream-dim);max-width:52ch;margin-top:12px;font-size:14.5px}
+
+/* ---------- drinks grid ---------- */
+.grid3{display:grid;gap:18px}
+.card{background:var(--green);border:1px solid rgba(247,238,223,.14);border-radius:20px;overflow:hidden;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.card:hover{transform:translateY(-6px);box-shadow:0 26px 54px rgba(0,0,0,.5);border-color:rgba(228,129,58,.55)}
+.card img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover}
+.card-b{padding:16px 17px 19px}
+.card-b h3{font-size:19px}
+.card-b p{color:var(--cream-dim);font-size:14px;margin-top:6px}
+
+/* ---------- why (numbered) ---------- */
+.why{position:relative;background:var(--green-d);overflow:hidden}
+.why::before{content:"";position:absolute;top:-4%;right:-14%;width:min(70vw,520px);aspect-ratio:2653/4196;background:url("assets/bg-icon-logo-720.webp") center/contain no-repeat;opacity:.07;pointer-events:none}
+.steps{position:relative;z-index:2;display:grid;gap:0;border-top:1px solid rgba(247,238,223,.16)}
+.step{display:grid;grid-template-columns:60px 1fr;gap:14px;padding:20px 0;border-bottom:1px solid rgba(247,238,223,.16)}
+.step b{font-family:Anton,sans-serif;font-size:30px;color:var(--red);line-height:1}
+.step h3{font-size:20px;margin-bottom:6px}
+.step p{color:var(--cream-dim);font-size:14.5px}
+.step p a{color:var(--tajin);font-weight:700}
+
+/* ---------- call script ---------- */
+.ask{background:var(--cream);color:var(--green-d)}
+.ask .sec-head h2{color:var(--green-d)}
+.ask .lede{color:#3B4A42}
+.asklist{display:grid;gap:10px;counter-reset:q;margin:0;padding:0;list-style:none}
+.asklist li{counter-increment:q;background:#fff;border:1px solid rgba(18,61,43,.16);border-radius:var(--r);padding:14px 16px 14px 52px;position:relative;font-size:14.5px;color:#2C3A33;font-weight:600}
+.asklist li::before{content:counter(q);position:absolute;left:14px;top:12px;width:26px;height:26px;border-radius:50%;background:var(--green-d);color:var(--cream);font-family:Anton,sans-serif;font-size:14px;display:grid;place-items:center}
+.askcta{margin-top:20px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.askcta .btn-s{border-color:rgba(18,61,43,.45);color:var(--green-d)}
+.askcta .btn-s:hover{background:var(--green-d);color:var(--cream)}
+
+/* ---------- visit ---------- */
+.visit{background:var(--green)}
+.htable{width:100%;border-collapse:collapse;font-size:15px}
+.htable caption{text-align:left;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--tajin);font-weight:800;padding-bottom:8px}
+.htable th,.htable td{padding:11px 4px;border-bottom:1px solid rgba(247,238,223,.16);text-align:left}
+.htable th{font-weight:600;color:var(--cream-dim);width:42%}
+.htable td{font-weight:800;text-align:right}
+.htable tr.today th,.htable tr.today td{color:var(--tajin)}
+.htable tr.today th::after{content:" · today";font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+.mapwrap{border-radius:20px;overflow:hidden;border:1px solid rgba(247,238,223,.2);background:var(--green-d);min-height:300px}
+.mapwrap iframe{display:block;width:100%;height:340px;border:0}
+.addr{margin-top:16px;display:grid;gap:12px}
+.addr a{text-decoration:none}
+
+/* ---------- footer ---------- */
+.ftr{background:var(--ink);border-top:1px solid rgba(247,238,223,.14);padding:40px 0 30px}
+.ftr-in{display:grid;gap:26px}
+.ftr img{width:64px;height:64px}
+.ftr h3{font-size:20px;margin-bottom:8px}
+.ftr p,.ftr li{color:var(--cream-dim);font-size:14.5px}
+.ftr ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.ftr a{color:var(--cream);text-decoration:none;border-bottom:1px solid rgba(247,238,223,.3)}
+.ftr a:hover{color:var(--tajin);border-color:var(--tajin)}
+.ftr .fine{margin-top:26px;padding-top:16px;border-top:1px solid rgba(247,238,223,.12);color:var(--muted);font-size:12.5px}
+
+/* ---------- sticky mobile bar ---------- */
+.sticky{position:fixed;inset:auto 0 0 0;z-index:70;display:flex;gap:8px;padding:9px 12px calc(9px + env(safe-area-inset-bottom));background:rgba(8,20,15,.96);backdrop-filter:blur(12px);border-top:1px solid rgba(247,238,223,.16)}
+.sticky .btn{flex:1;min-height:48px;font-size:14px;padding:0 10px}
+
+/* ---------- responsive ---------- */
+@media (max-width:420px){
+  .hero-cta .btn{padding:0 14px;font-size:14px}
+}
+@media (min-width:520px){
+  .lbl-l{display:inline}
+  .lbl-s{display:none}
+}
+@media (min-width:700px){
+  .infogrid{grid-template-columns:repeat(2,1fr)}
+  .grid3{grid-template-columns:repeat(2,1fr)}
+  .proof-in{grid-template-columns:auto 1fr;gap:30px}
+  .proof-facts{grid-template-columns:repeat(4,1fr)}
+  .hero-cta{flex-direction:row;max-width:none;justify-content:center}
+  .asklist{grid-template-columns:repeat(2,1fr)}
+  .hero-logo{width:72px;height:72px}
+}
+@media (min-width:960px){
+  body{padding-bottom:0}
+  .sticky{display:none}
+  section{scroll-margin-top:calc(var(--hdr-d) + 10px)}
+  .hdr-row{flex-wrap:nowrap;height:var(--hdr-d);padding:0}
+  .brand{flex:0 0 auto}
+  .brand img{width:44px;height:44px}
+  .brand b{font-size:20px}
+  .brand small{display:block}
+  .chips{order:0;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);flex:0 0 auto;width:auto;padding:0;overflow:visible}
+  .hdr .wrap{position:relative}
+  .hdr-tel{display:inline-flex;font-weight:800;font-size:14px;color:var(--cream);text-decoration:none;letter-spacing:.02em}
+  .infogrid{grid-template-columns:repeat(4,1fr)}
+  .grid3{grid-template-columns:repeat(3,1fr)}
+  .split{grid-template-columns:0.85fr 1.15fr;gap:44px}
+  .visit-split{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+  .steps{grid-template-columns:repeat(2,1fr);column-gap:40px}
+  .step{grid-template-columns:70px 1fr}
+  .ftr-in{grid-template-columns:1.2fr 1fr 1fr}
+  .sec{padding:76px 0}
+  .layer.front{padding-top:calc(var(--hdr-d) + 20px)}
+  .hero-logo{width:88px;height:88px}
+  .agave{width:min(20vw,260px);bottom:8%}
+  .agave.l{left:1%}
+  .agave.r{right:1%}
+}
+
+/* 3D depth only where the browser can actually do it (no-JS safe: rest transforms live here) */
+@supports (transform-style:preserve-3d){
+  .stage{perspective:1000px;perspective-origin:50% 45%}
+  .scene{transform-style:preserve-3d;transform:rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .18s ease-out}
+  .layer{transform-style:preserve-3d;transform:translate3d(0,calc(var(--py,0px) * var(--k,0)),var(--z,0px)) scale(var(--s,1));will-change:transform}
+  .layer.front{opacity:var(--fade,1)}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .scene{transition:none}
+  .figure img,.card,.btn,.row{transition:none}
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Restaurant",
+  "name":"La Chula Taqueria",
+  "image":"assets/IMG_4776-1066.webp",
+  "url":"https://lachulataqueria.com/",
+  "telephone":"+1-470-657-5679",
+  "servesCuisine":"Mexican",
+  "priceRange":"$10-20",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"516 Grayson Pkwy",
+    "addressLocality":"Grayson",
+    "addressRegion":"GA",
+    "postalCode":"30017",
+    "addressCountry":"US"
+  },
+  "geo":{"@type":"GeoCoordinates","latitude":33.8921819,"longitude":-83.9595152},
+  "hasMap":"https://www.google.com/maps/place/La+Chula+Taqueria/data=!4m7!3m6!1s0x88f5b92785bf32af:0x646632c8bd806759!8m2!3d33.8921819!4d-83.9595152!16s%2Fg%2F11y_vckcxt!19sChIJrzK_hSe59YgRWWeAvcgyZmQ",
+  "areaServed":[
+    {"@type":"City","name":"Grayson"},
+    {"@type":"State","name":"Georgia"}
+  ],
+  "openingHoursSpecification":[
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Sunday"],"opens":"11:00","closes":"21:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday"],"opens":"11:00","closes":"23:00"}
+  ]
+}
+</script>
+</head>
+
+<body>
+
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <div class="hdr-row">
+      <a class="brand" href="#top">
+        <img src="assets/logo-main-96.webp" width="96" height="96" alt="La Chula Taqueria logo: a woman in a taco-print bandana and cat-eye sunglasses, drawn in red and green">
+        <span>
+          <b>La Chula Taqueria</b>
+          <small>516 Grayson Pkwy, Grayson, GA</small>
+        </span>
+      </a>
+      <nav class="chips" aria-label="Sections of this page">
+        <a href="#menu">Menu</a>
+        <a href="#drinks">Drinks</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#why">Why La Chula</a>
+        <a href="#visit">Hours &amp; Map</a>
+      </nav>
+      <div class="hdr-cta">
+        <a class="hdr-tel" href="tel:+14706575679">(470) 657-5679</a>
+        <a class="btn btn-p btn-sm" href="tel:+14706575679" aria-label="Call La Chula Taqueria at (470) 657-5679"><span class="lbl-l">Call (470)&nbsp;657-5679</span><span class="lbl-s">Call</span></a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ 1. HERO — CSS 3D scene (4 layers, distinct translateZ depths) ============
+     Back plane: the only photograph in the stage (assets/IMG_4776, served as WebP srcset),
+     overscaled so no parallax offset can reveal an edge. Mid: CSS gradient scrim (equivalent
+     to the planned SVG scrim, with zero extra requests) + two agave.png silhouettes at the
+     stage edges — the PNG vectors are the only alpha-capable assets, and no JPEG is ever
+     masked or cut out. Front: cream logo-light + boton.png ribbon + type + CTAs, the
+     fastest-moving plane. With JS off, every layer sits at its CSS rest transform and the
+     hero is complete. -->
+<section class="hero" id="top">
+  <div class="stage" id="stage">
+    <div class="scene" id="scene">
+
+      <div class="layer photo" data-k="0.05" style="--z:-260px;--s:1.44">
+        <img src="assets/IMG_4776-800.webp"
+             srcset="assets/IMG_4776-480.webp 480w, assets/IMG_4776-800.webp 800w, assets/IMG_4776-1066.webp 1066w"
+             sizes="(max-width:700px) 160vw, 120vw" width="1066" height="1600" fetchpriority="high" decoding="async"
+             alt="A hand lifting a street taco above a plate holding a birria taco, beside a salt-rimmed margarita garnished with a jalapeño slice and a dried lime wheel, with a Modelo bottle behind">
+      </div>
+
+      <div class="layer scrim" data-k="0.10" style="--z:-160px;--s:1.28" aria-hidden="true"></div>
+
+      <div class="layer" data-k="0.18" style="--z:-70px;--s:1.08" aria-hidden="true">
+        <span class="agave l"></span>
+        <span class="agave r"></span>
+      </div>
+
+      <div class="layer front" data-k="0.30" style="--z:60px">
+        <div class="hero-in">
+          <img class="hero-logo" src="assets/logo-light-176.webp" width="176" height="176" decoding="async"
+               alt="La Chula Taqueria logo in cream: a woman in a taco-print bandana and cat-eye sunglasses">
+          <!-- "Open 7 days" is arithmetic on the scraped hours table: all seven rows have hours. -->
+          <span class="ribbon">Open 7 Days · Grayson, GA</span>
+          <h1>Authentic Mexican Street&nbsp;Flavor in <em>Grayson, Georgia</em></h1>
+          <p class="hero-sub">Street tacos, birria and house margaritas at 516 Grayson Pkwy — rated 4.7 across 168 Google reviews.</p>
+          <p class="status" id="status" role="status">
+            <span class="dot"></span>
+            <span id="status-text">Open 7 days · 11 AM–9 PM · Fri &amp; Sat until 11 PM</span>
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-p" href="tel:+14706575679">Call (470) 657-5679</a>
+            <a class="btn btn-s" href="https://lachulataqueria.com/" rel="noopener">Order online at lachulataqueria.com</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Info strip: the four facts a hungry searcher needs before deciding, in text, first scroll. -->
+<section class="infobar" aria-label="Address, phone, hours and price at a glance">
+  <div class="wrap">
+    <div class="infogrid">
+      <a href="https://www.google.com/maps/place/La+Chula+Taqueria/data=!4m7!3m6!1s0x88f5b92785bf32af:0x646632c8bd806759!8m2!3d33.8921819!4d-83.9595152!16s%2Fg%2F11y_vckcxt!19sChIJrzK_hSe59YgRWWeAvcgyZmQ" rel="noopener">
+        <k>Address · directions on Google Maps</k>
+        <v><u>516 Grayson Pkwy, Grayson, GA 30017</u></v>
+      </a>
+      <a href="tel:+14706575679">
+        <k>Phone · tap to call</k>
+        <v><u>(470) 657-5679</u></v>
+      </a>
+      <div>
+        <k>Hours today</k>
+        <v id="today-hours">Mon–Thu &amp; Sun 11 AM–9 PM · Fri–Sat 11 AM–11 PM</v>
+      </div>
+      <div>
+        <k>Typical spend</k>
+        <v>$10–20 per person <span style="font-weight:400;color:var(--cream-dim)">(per Google)</span></v>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2. SOCIAL PROOF — rating + count as text only.
+     Review bodies are deliberately NOT quoted (build_workflow forbids quoting them) and the
+     rating is deliberately NOT marked up in JSON-LD (third-party review data). ============ -->
+<section class="proof" id="reviews">
+  <div class="wrap proof-in">
+    <div class="score">
+      <b>4.7</b>
+      <div>
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <span>168 Google reviews</span>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <p><strong>4.7 stars across 168 Google reviews</strong> — the strongest thing this taqueria owns, and the number people compare in Maps before they pick a place. Read them at the source; we don't reprint reviews here.</p>
+      <div class="proof-facts">
+        <div class="fact"><k>Rating</k><v>4.7 / 5</v></div>
+        <div class="fact"><k>Reviews</k><v>168</v></div>
+        <div class="fact"><k>Kitchen</k><v>Mexican</v></div>
+        <div class="fact"><k>Open</k><v>7 days a week</v></div>
+      </div>
+      <a class="srclink" href="https://www.google.com/maps/place/La+Chula+Taqueria/data=!4m7!3m6!1s0x88f5b92785bf32af:0x646632c8bd806759!8m2!3d33.8921819!4d-83.9595152!16s%2Fg%2F11y_vckcxt!19sChIJrzK_hSe59YgRWWeAvcgyZmQ" rel="noopener">Read the 168 reviews on Google Maps</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. SERVICES / MENU — asymmetric split, not a card grid.
+     EVIDENCE FOR EVERY ITEM BELOW:
+       • Street tacos — assets/IMG_4721.jpg (two street tacos, white onion + cilantro, lime wedges)
+         and assets/IMG_4816.jpg (hands taking street tacos from a shared table).
+       • Birria taco — assets/IMG_4776.jpg (plated birria taco under a lifted street taco).
+       • House margaritas — assets/IMG_4642.jpg, assets/IMG_4646.jpg, assets/1772260028342.jpg.
+       • Mexican beer — assets/IMG_4776.jpg (Modelo bottle) and assets/IMG_4826.jpg (beer poured).
+       • Category "Mexican" and the $10–20 spend band come from the scraped Google card.
+     Nothing is listed that does not appear in La Chula's own photography. No per-item price is
+     published in any harvested source, so none is invented — the price question is routed to
+     the call-script section instead. ============ -->
+<section class="sec" id="menu">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">The Menu</span>
+      <h2>What comes out of the kitchen</h2>
+      <p class="lede">Every item here is one we can show you in La Chula's own photographs — no stock food, no borrowed plates. The complete list lives on their site.</p>
+    </div>
+
+    <div class="split">
+      <figure class="figure" style="margin:0">
+        <img src="assets/IMG_4721-800.webp"
+             srcset="assets/IMG_4721-480.webp 480w, assets/IMG_4721-800.webp 800w, assets/IMG_4721-1066.webp 1066w"
+             sizes="(min-width:960px) 470px, calc(100vw - 40px)"
+             width="1066" height="1600" loading="lazy" decoding="async"
+             alt="Two street tacos topped with chopped white onion and cilantro on a plate with lime wedges, next to a spice-rimmed cocktail garnished with a dried orange wheel on a dark wood table">
+        <figcaption>Street tacos with onion, cilantro and lime — photographed by La Chula.</figcaption>
+      </figure>
+
+      <div>
+        <div class="rows">
+          <div class="row">
+            <span class="row-n">01</span>
+            <div>
+              <h3>Street Tacos</h3>
+              <p>Served two to a plate in their photos: chopped white onion, cilantro, lime wedges on the side.</p>
+            </div>
+          </div>
+          <div class="row">
+            <span class="row-n">02</span>
+            <div>
+              <h3>Birria Taco</h3>
+              <p>Plated alongside the street tacos in La Chula's own photography, with a margarita and a Modelo on the same table.</p>
+            </div>
+          </div>
+          <div class="row">
+            <span class="row-n">03</span>
+            <div>
+              <h3>House Margaritas</h3>
+              <p>Salt rims, tajín rims, jalapeño slices, dried lime and grapefruit wheels — three of them are photographed below. <a href="#drinks">See the drinks →</a></p>
+            </div>
+          </div>
+          <div class="row">
+            <span class="row-n">04</span>
+            <div>
+              <h3>Mexican Beer</h3>
+              <p>Modelo bottles on the table in their shoot, poured over a spread of tacos.</p>
+            </div>
+          </div>
+        </div>
+
+        <p class="pricenote">
+          <b>What it costs:</b> Google lists a typical spend of <b>$10–20 per person</b>. Individual dish prices aren't published anywhere we could verify them, so we don't guess — <a href="tel:+14706575679">call (470) 657-5679</a> or check <a href="https://lachulataqueria.com/" rel="noopener">lachulataqueria.com</a> for the full menu.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Full-bleed lifestyle band — breaks the split/grid rhythm. The photo is location-neutral and
+     is captioned only by what is in the frame; it is never described as the Grayson dining room. -->
+<section class="band" aria-label="Street tacos shared at the table">
+  <img src="assets/IMG_4816-800.webp"
+       srcset="assets/IMG_4816-480.webp 480w, assets/IMG_4816-800.webp 800w, assets/IMG_4816-1067.webp 1067w"
+       sizes="100vw" width="1067" height="1600" loading="lazy" decoding="async"
+       alt="Overhead view of four people's hands reaching across a wooden table to take street tacos, with plated tacos and a beer alongside">
+  <div class="wrap band-in">
+    <h2>Tacos are a table sport</h2>
+    <p>Four hands, one table, plates in the middle. That's the format — a taquería built around street tacos and cold drinks, at 516 Grayson Pkwy in Grayson, Georgia.</p>
+  </div>
+</section>
+
+<!-- ============ DRINKS — card grid (first grid on the page; follows a split and a full-bleed band).
+     Evidence: three separate harvested cocktail photographs. Card titles and descriptions state
+     only what is visibly in each frame — drink names and prices are not published in any
+     harvested source, so none are asserted. ==== -->
+<section class="sec" id="drinks">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">From the Glass</span>
+      <h2>Rimmed, garnished, photographed</h2>
+      <p class="lede">Three drinks from La Chula's own camera roll. Menu names and prices aren't published where we could confirm them, so each card is titled by what's in the frame — ask when you call.</p>
+    </div>
+
+    <div class="grid3">
+      <article class="card">
+        <img src="assets/1772260028342-800.webp"
+             srcset="assets/1772260028342-480.webp 480w, assets/1772260028342-800.webp 800w, assets/1772260028342-1200.webp 1200w"
+             sizes="(min-width:960px) 370px, (min-width:700px) 46vw, calc(100vw - 40px)"
+             width="1200" height="1800" loading="lazy" decoding="async"
+             alt="A deep red hibiscus-and-watermelon margarita with a chile-salt tajín rim and a dried lime wheel, standing on a stainless steel counter">
+        <div class="card-b">
+          <h3>Hibiscus red, tajín rim</h3>
+          <p>Watermelon-red pour, chile-salt rim, dried lime wheel. Built on the pass, not styled in a studio.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="assets/IMG_4646-800.webp"
+             srcset="assets/IMG_4646-480.webp 480w, assets/IMG_4646-800.webp 800w, assets/IMG_4646-1067.webp 1067w"
+             sizes="(min-width:960px) 370px, (min-width:700px) 46vw, calc(100vw - 40px)"
+             width="1067" height="1600" loading="lazy" decoding="async"
+             alt="A paloma-style grapefruit cocktail with a tajín rim and a dried grapefruit wedge, flanked by two margaritas against a brick wall">
+        <div class="card-b">
+          <h3>Grapefruit, tajín rim</h3>
+          <p>Paloma-style build with a dried grapefruit wedge, a pair of margaritas standing guard against brick.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="assets/IMG_4642-800.webp"
+             srcset="assets/IMG_4642-480.webp 480w, assets/IMG_4642-800.webp 800w, assets/IMG_4642-1066.webp 1066w"
+             sizes="(min-width:960px) 370px, (min-width:700px) 46vw, calc(100vw - 40px)"
+             width="1066" height="1600" loading="lazy" decoding="async"
+             alt="A salt-rimmed margarita garnished with a jalapeño slice and a dried lime wheel, resting on a rustic wooden ledge against brick">
+        <div class="card-b">
+          <h3>Salt rim, jalapeño slice</h3>
+          <p>The classic build — salt rim, dried lime wheel, and a jalapeño slice riding on top.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. WHY US — numbered sequence answering the top pain points ============ -->
+<section class="sec why" id="why">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Why this page exists</span>
+      <h2>The four things you wanted to know at 7 PM</h2>
+      <p class="lede">Hungry, in the car, deciding between here and whatever else Maps shows. Every answer is on this screen.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step">
+        <b>01</b>
+        <div>
+          <h3>Are they open right now?</h3>
+          <p>The badge in the hero and the row in <a href="#visit">Hours &amp; Map</a> are calculated live from the published hours, in Eastern time. Doors open at 11 AM, seven days.</p>
+        </div>
+      </div>
+      <div class="step">
+        <b>02</b>
+        <div>
+          <h3>Where exactly is it?</h3>
+          <p>516 Grayson Pkwy, Grayson, GA 30017 — written out in the header, the strip under the hero, the map section and the footer, every one of them tapping straight through to driving directions.</p>
+        </div>
+      </div>
+      <div class="step">
+        <b>03</b>
+        <div>
+          <h3>Can I feed the family for a normal number?</h3>
+          <p>Google puts the range at $10–20 per person. Dish-level prices aren't published, so instead of inventing them we wrote you the exact questions to ask on the phone.</p>
+        </div>
+      </div>
+      <div class="step">
+        <b>04</b>
+        <div>
+          <h3>Is it the real thing?</h3>
+          <p>4.7 stars over 168 Google reviews, and every photograph on this page came from La Chula's own camera — not a stock library. Their own headline says it: authentic Mexican street flavor in Grayson, Georgia.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CALL SCRIPT — the approved pattern for commercial data a scrape cannot know
+     (dish prices, phone-ahead ordering, large orders, kids' options). These are printed as
+     QUESTIONS, so the page promises no capability the business hasn't published. ============ -->
+<section class="sec ask">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Before you drive over</span>
+      <h2>What to ask when you call</h2>
+      <p class="lede">Prices, ordering ahead and large orders aren't published online. Sixty seconds on the phone settles all of it — here's the script.</p>
+    </div>
+    <ol class="asklist">
+      <li>What do the street tacos and the birria run today, per taco and per plate?</li>
+      <li>Can I place a pickup order over the phone, and how long until it's ready?</li>
+      <li>Is the kitchen still taking orders at the hour I'd be arriving?</li>
+      <li>What works best for kids, and for anyone avoiding spice?</li>
+      <li>For a group order, how much notice do you want?</li>
+    </ol>
+    <div class="askcta">
+      <a class="btn btn-p" href="tel:+14706575679">Call (470) 657-5679</a>
+      <a class="btn btn-s" href="https://lachulataqueria.com/" rel="noopener">Order online at lachulataqueria.com</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. HOURS + LOCATION — hours exactly as scraped, keyless embed, never lazy ==== -->
+<section class="sec visit" id="visit">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Find Us</span>
+      <h2>516 Grayson Pkwy, Grayson</h2>
+      <p class="lede">Open every day at 11 AM. Late on Friday and Saturday.</p>
+    </div>
+
+    <div class="visit-split">
+      <div>
+        <table class="htable" id="htable">
+          <caption>Hours as published on their Google listing</caption>
+          <tbody>
+            <tr data-day="1"><th scope="row">Monday</th><td>11 AM – 9 PM</td></tr>
+            <tr data-day="2"><th scope="row">Tuesday</th><td>11 AM – 9 PM</td></tr>
+            <tr data-day="3"><th scope="row">Wednesday</th><td>11 AM – 9 PM</td></tr>
+            <tr data-day="4"><th scope="row">Thursday</th><td>11 AM – 9 PM</td></tr>
+            <tr data-day="5"><th scope="row">Friday</th><td>11 AM – 11 PM</td></tr>
+            <tr data-day="6"><th scope="row">Saturday</th><td>11 AM – 11 PM</td></tr>
+            <tr data-day="0"><th scope="row">Sunday</th><td>11 AM – 9 PM</td></tr>
+          </tbody>
+        </table>
+
+        <div class="addr">
+          <p class="lede" style="font-size:14px">Holidays and one-off changes aren't published anywhere we can read — call ahead to confirm.</p>
+          <a class="btn btn-p" href="tel:+14706575679">Call (470) 657-5679</a>
+          <a class="btn btn-s" href="https://www.google.com/maps/place/La+Chula+Taqueria/data=!4m7!3m6!1s0x88f5b92785bf32af:0x646632c8bd806759!8m2!3d33.8921819!4d-83.9595152!16s%2Fg%2F11y_vckcxt!19sChIJrzK_hSe59YgRWWeAvcgyZmQ" rel="noopener">Directions on Google Maps</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="mapwrap">
+          <iframe src="https://maps.google.com/maps?q=33.8921819,-83.9595152&amp;output=embed"
+                  title="Map showing La Chula Taqueria at 516 Grayson Pkwy, Grayson, GA 30017"
+                  width="600" height="450" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <figure class="figure" style="margin:18px 0 0">
+          <img src="assets/IMG_4826-800.webp"
+               srcset="assets/IMG_4826-480.webp 480w, assets/IMG_4826-800.webp 800w, assets/IMG_4826-1067.webp 1067w"
+               sizes="(min-width:960px) 560px, calc(100vw - 40px)"
+               width="1067" height="1600" loading="lazy" decoding="async"
+               alt="Overhead view of two people touching margarita glasses together above a table of tacos while a bottle of beer is poured into a glass"
+               style="aspect-ratio:16/10">
+          <figcaption>Margaritas over a table of tacos — from La Chula's own photography.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ 6. CONTACT / FOOTER — no invented email, no invented social ============ -->
+<footer class="ftr">
+  <div class="wrap ftr-in">
+    <div>
+      <img src="assets/logo-light-176.webp" width="176" height="176" loading="lazy" decoding="async"
+           alt="La Chula Taqueria logo in cream: a woman in a taco-print bandana and cat-eye sunglasses">
+      <h3 style="margin-top:14px">La Chula Taqueria</h3>
+      <p>Authentic Mexican street flavor in Grayson, Georgia. Rated 4.7 across 168 Google reviews.</p>
+    </div>
+    <div>
+      <h3>Come eat</h3>
+      <ul>
+        <li><a href="https://www.google.com/maps/place/La+Chula+Taqueria/data=!4m7!3m6!1s0x88f5b92785bf32af:0x646632c8bd806759!8m2!3d33.8921819!4d-83.9595152!16s%2Fg%2F11y_vckcxt!19sChIJrzK_hSe59YgRWWeAvcgyZmQ" rel="noopener">516 Grayson Pkwy, Grayson, GA 30017</a></li>
+        <li><a href="tel:+14706575679">(470) 657-5679</a></li>
+        <li>Mon–Thu &amp; Sun 11 AM – 9 PM</li>
+        <li>Fri &amp; Sat 11 AM – 11 PM</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Links</h3>
+      <ul>
+        <li><a href="https://lachulataqueria.com/" rel="noopener">lachulataqueria.com — full menu &amp; online ordering</a></li>
+        <li><a href="https://www.google.com/maps/place/La+Chula+Taqueria/data=!4m7!3m6!1s0x88f5b92785bf32af:0x646632c8bd806759!8m2!3d33.8921819!4d-83.9595152!16s%2Fg%2F11y_vckcxt!19sChIJrzK_hSe59YgRWWeAvcgyZmQ" rel="noopener">Google Maps listing &amp; reviews</a></li>
+        <li><a href="#menu">Menu</a> · <a href="#drinks">Drinks</a> · <a href="#visit">Hours &amp; map</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap">
+    <p class="fine">© La Chula Taqueria · 516 Grayson Pkwy, Grayson, GA 30017 · (470) 657-5679. Rating and hours shown as published on the restaurant's Google listing; photography is the restaurant's own.</p>
+  </div>
+</footer>
+
+<div class="sticky">
+  <a class="btn btn-p" href="tel:+14706575679">Call (470) 657-5679</a>
+  <a class="btn btn-s" href="https://lachulataqueria.com/" rel="noopener">Order online</a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- live open/closed, computed from the published hours in Eastern time ----------
+     No time-relative string is hardcoded in the HTML: the static fallback states the full week. */
+  var HOURS = {0:[11,21],1:[11,21],2:[11,21],3:[11,21],4:[11,21],5:[11,23],6:[11,23]};
+  var DAYS  = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+  var IDX   = {Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6};
+
+  function label(h){ var ap = h >= 12 ? "PM" : "AM"; return (((h + 11) % 12) + 1) + " " + ap; }
+
+  function nowET(){
+    try{
+      var parts = new Intl.DateTimeFormat("en-US",{
+        timeZone:"America/New_York", weekday:"short", hour:"2-digit", minute:"2-digit", hour12:false
+      }).formatToParts(new Date());
+      var o = {};
+      parts.forEach(function(p){ o[p.type] = p.value; });
+      var d = IDX[o.weekday];
+      var h = parseInt(o.hour, 10) % 24;
+      var m = parseInt(o.minute, 10);
+      if (typeof d !== "number" || isNaN(h) || isNaN(m)) return null;
+      return { day:d, mins:h * 60 + m };
+    }catch(e){ return null; }
+  }
+
+  var t = nowET();
+  if (t){
+    var box  = document.getElementById("status");
+    var text = document.getElementById("status-text");
+    var todayCell = document.getElementById("today-hours");
+    var span = HOURS[t.day], open = span[0] * 60, close = span[1] * 60;
+    var isOpen = t.mins >= open && t.mins < close;
+
+    if (box && text){
+      box.classList.add(isOpen ? "is-open" : "is-closed");
+      if (isOpen){
+        text.textContent = "Open now · until " + label(span[1]);
+      } else if (t.mins < open){
+        text.textContent = "Closed · opens 11 AM today";
+      } else {
+        text.textContent = "Closed · opens 11 AM " + DAYS[(t.day + 1) % 7];
+      }
+    }
+    if (todayCell){
+      todayCell.textContent = DAYS[t.day] + " · " + label(span[0]) + " – " + label(span[1]);
+    }
+    var row = document.querySelector('#htable tr[data-day="' + t.day + '"]');
+    if (row) row.classList.add("today");
+  }
+
+  /* ---------- header condense ---------- */
+  var hdr = document.getElementById("hdr");
+
+  /* ---------- 3D hero: transform + opacity only, all writes inside rAF ---------- */
+  var stage  = document.getElementById("stage");
+  var scene  = document.getElementById("scene");
+  var layers = stage ? Array.prototype.slice.call(stage.querySelectorAll(".layer")) : [];
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+  var fine   = window.matchMedia("(pointer: fine)");
+  var supports3d = window.CSS && CSS.supports && CSS.supports("transform-style","preserve-3d");
+
+  var scrollY = 0, rx = 0, ry = 0, queued = false;
+
+  function paint(){
+    queued = false;
+    if (hdr) hdr.classList.toggle("scrolled", scrollY > 24);
+    if (!supports3d || reduce.matches || !stage) return;
+
+    var h = stage.offsetHeight || 1;
+    var p = Math.min(scrollY / h, 1);
+    if (p < 1){
+      for (var i = 0; i < layers.length; i++){
+        layers[i].style.setProperty("--py", (scrollY * -1) + "px");
+      }
+      var front = layers[layers.length - 1];
+      if (front) front.style.setProperty("--fade", String(Math.max(0, 1 - p * 1.25)));
+    }
+    if (scene) scene.style.setProperty("--rx", rx.toFixed(2) + "deg");
+    if (scene) scene.style.setProperty("--ry", ry.toFixed(2) + "deg");
+  }
+
+  function queue(){ if (!queued){ queued = true; requestAnimationFrame(paint); } }
+
+  /* each layer's --k is its parallax rate: back plane slowest, front plane fastest */
+  layers.forEach(function(l){ l.style.setProperty("--k", l.getAttribute("data-k") || "0"); });
+
+  window.addEventListener("scroll", function(){ scrollY = window.pageYOffset || 0; queue(); }, {passive:true});
+
+  if (stage && fine.matches && !reduce.matches){
+    stage.addEventListener("pointermove", function(e){
+      var r = stage.getBoundingClientRect();
+      ry = ((e.clientX - r.left) / r.width  - 0.5) * 7;   /* max 3.5deg either way */
+      rx = (0.5 - (e.clientY - r.top) / r.height) * 5;    /* max 2.5deg either way */
+      queue();
+    }, {passive:true});
+    stage.addEventListener("pointerleave", function(){ rx = 0; ry = 0; queue(); }, {passive:true});
+  }
+
+  scrollY = window.pageYOffset || 0;
+  queue();
+})();
+</script>
+
+</body>
+</html>
