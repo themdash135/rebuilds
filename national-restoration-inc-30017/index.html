@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="robots" content="noindex,nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>National Restoration Inc — Roofing Contractor in Grayson, GA</title>
+<meta name="description" content="National Restoration Inc — roofing contractor at 1120 Mt McKinley Dr, Grayson, GA. Roofing, siding, gutters and painting. 4.9 stars from 56 Google reviews. Open 8 AM–8 PM, seven days a week. Call (404) 271-3254 for a free inspection.">
+<meta name="theme-color" content="#08100c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- BUILD NOTE — sources of fact
+     (1) lead.json: name, phone 4042713254, address 1120 Mt McKinley Dr Grayson GA 30017,
+         lat/lng 33.89871/-83.9817442, rating 4.9, 56 reviews, category "roofing contractor",
+         hours Mon-Sun 8 AM-8 PM (all 7 rows identical in the scrape).
+     (2) Their own site (nationalrestorationatl.com): services page headings = Siding, Gutters,
+         Painting, Roofing; site title = "A commercial & residential roofing company";
+         services page = "Need help? Contact us today for a free inspection!";
+         contact page = "FREE ESTIMATES / Are available all year around";
+         manufacturer logos icons-01..07 and the BBB badge are published on their site.
+     NOT used as fact: the pain-point analysis. No storm/hail service, no insurance-claim
+     service, no 24/7 response, no license number, no years-in-business, no crew claims —
+     none of those are evidenced, so none are asserted. The hail/insurance material on this
+     page is labelled category education and the unknowns are handled with a call-script block.
+     Google review body text from card_text is deliberately NOT quoted (rating + count only).
+     Deviation note: style anchor is "Apple meets Spotify" executed dark/industrial rather than
+     airy — trades brand character per the pain-point analysis (storm-chaser fear => dense,
+     fact-heavy sections, minimal empty bands). Hand-written CSS instead of a CDN so the page
+     is fully styled with JS disabled. -->
+
+<!-- BUILD NOTE — asset use. Every approved FULL-SIZE file in assets/ is used on this page:
+     logo-temp, natio, roofing (hero); roof-04, siding-01, gutters-03, paint-01 (service cards);
+     pi01 (why-us split); roof-05, roof-06, siding-02, siding-03, siding-1, gutter, gutters-01,
+     gutters-02, exterior_painting, paint-02, paint-03, paint-04, paint-05 (gallery);
+     icons-01..07 + bbb (badge strips). The three approved 300px thumbnails
+     (gutter-300x200, gutters-01-300x214, paint-05-300x214) are intentionally omitted because
+     their full-size originals ship instead, per the ship-full-size-originals warning.
+     No photo anywhere is captioned or alt-labelled as the Grayson premises. -->
+
+<style>
+:root{
+  --ink:#070f0b; --ink-2:#0d1913; --ink-3:#122219;
+  --sand:#f6f4ef; --sand-2:#ece8df;
+  --green:#17a150; --green-2:#3ad47f; --green-deep:#0c5e30;
+  --text:#111a15; --muted:#5d6b63; --muted-d:#a3b5aa;
+  --line:#dcd7cc; --line-d:rgba(255,255,255,.14);
+  --wrap:1180px; --r:14px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--sand);color:var(--text);
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;padding-bottom:64px}
+@media(min-width:820px){body{padding-bottom:0}}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3,h4{font-family:Archivo,Inter,system-ui,sans-serif;margin:0;line-height:1.05;letter-spacing:-.02em}
+h2{font-size:clamp(1.65rem,4.4vw,2.5rem);font-weight:800}
+h3{font-size:1.16rem;font-weight:700;letter-spacing:-.01em}
+p{margin:0 0 .85em}
+.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 18px}
+section{scroll-margin-top:78px}
+.eyebrow{font-family:Archivo,sans-serif;font-weight:700;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--green-deep)}
+.dark .eyebrow{color:var(--green-2)}
+.lede{font-size:1.03rem;color:var(--muted);max-width:66ch}
+.dark{background:var(--ink);color:#eef4f0}
+.dark .lede{color:var(--muted-d)}
+.dark a{color:#eef4f0}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:52px;
+  padding:.85rem 1.25rem;border-radius:12px;font-family:Archivo,sans-serif;font-weight:700;
+  font-size:1rem;text-decoration:none;border:1px solid transparent;transition:transform .15s ease,box-shadow .15s ease,background .15s ease}
+.btn-primary{background:var(--green);color:#fff;box-shadow:0 10px 24px -12px rgba(23,161,80,.9)}
+.btn-primary:hover{background:#149047;transform:translateY(-2px);box-shadow:0 16px 30px -14px rgba(23,161,80,.95)}
+.btn-ghost{background:transparent;border-color:rgba(255,255,255,.34);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.1);transform:translateY(-2px)}
+.btn-ghost-d{background:#fff;border-color:var(--line);color:var(--text)}
+.btn-ghost-d:hover{background:var(--sand-2);transform:translateY(-2px)}
+.btn small{display:block;font-family:Inter,sans-serif;font-weight:500;font-size:.72rem;opacity:.85;letter-spacing:.02em}
+
+/* ---------- header ---------- */
+.hdr{position:sticky;top:0;z-index:60;background:rgba(7,15,11,.92);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line-d);transition:padding .2s ease}
+.hdr-in{display:flex;align-items:center;gap:12px;padding:10px 18px;max-width:var(--wrap);margin:0 auto}
+.hdr.is-stuck .hdr-in{padding-top:5px;padding-bottom:5px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff;margin-right:auto;min-width:0}
+.brand img{width:76px;height:41px;object-fit:cover;mix-blend-mode:screen;border-radius:4px;transition:width .2s ease}
+.hdr.is-stuck .brand img{width:62px;height:34px}
+.brand b{font-family:Archivo,sans-serif;font-size:.92rem;font-weight:700;line-height:1.1;display:block}
+.brand span{font-size:.7rem;color:var(--muted-d);letter-spacing:.06em;text-transform:uppercase}
+.nav-d{display:none;gap:2px}
+.nav-d a{font-size:.86rem;font-weight:500;text-decoration:none;color:#d6e2db;padding:.5rem .6rem;border-radius:8px}
+.nav-d a:hover{background:rgba(255,255,255,.1);color:#fff}
+.hdr .btn{min-height:44px;padding:.5rem .9rem;font-size:.92rem}
+.mnav{position:relative}
+.mnav summary{list-style:none;cursor:pointer;min-height:44px;min-width:44px;display:flex;align-items:center;justify-content:center;
+  border:1px solid var(--line-d);border-radius:10px;padding:0 .7rem;color:#fff;font-size:.85rem;font-weight:600}
+.mnav summary::-webkit-details-marker{display:none}
+.mnav nav{position:absolute;right:0;top:calc(100% + 8px);background:var(--ink-2);border:1px solid var(--line-d);
+  border-radius:12px;padding:6px;min-width:200px;box-shadow:0 24px 50px -20px rgba(0,0,0,.8)}
+.mnav nav a{display:block;padding:.7rem .8rem;text-decoration:none;color:#e6efe9;font-size:.95rem;border-radius:8px}
+.mnav nav a:hover{background:rgba(255,255,255,.08)}
+@media(min-width:940px){.nav-d{display:flex}.mnav{display:none}}
+
+/* ---------- 3D hero ---------- */
+.hero{background:var(--ink);color:#fff;position:relative}
+.stage{position:relative;overflow:hidden;perspective:1100px;perspective-origin:50% 45%;
+  min-height:600px;display:flex;align-items:center}
+@media(min-width:820px){.stage{min-height:640px}}
+.scene{position:relative;transform-style:preserve-3d;width:100%;
+  transform:rotateX(calc(var(--rx,0) * 1deg)) rotateY(calc(var(--ry,0) * 1deg));
+  transition:transform .3s cubic-bezier(.2,.7,.3,1);
+  display:grid;grid-template-columns:1fr;gap:26px;align-items:center;
+  max-width:var(--wrap);margin:0 auto;padding:86px 18px 74px}
+@media(min-width:900px){.scene{grid-template-columns:1.02fr .98fr;gap:38px;padding:96px 18px 88px}}
+.layer{position:relative}
+.plate{position:absolute;inset:-10%;z-index:0;
+  transform:translateZ(-180px) scale(1.42) translateY(calc(var(--sy,0) * .05px))}
+.plate img{width:100%;height:100%;object-fit:cover}
+.scrim{position:absolute;inset:-6%;z-index:1;
+  transform:translateZ(-70px) scale(1.16) translateY(calc(var(--sy,0) * .11px))}
+.scrim svg{width:100%;height:100%;display:block}
+.front{z-index:3;transform:translateZ(80px) translateY(calc(var(--sy,0) * -.16px))}
+.hero-logo{width:200px;height:109px;object-fit:contain;mix-blend-mode:screen;margin-bottom:14px}
+.hero h1{font-size:clamp(2.1rem,7.2vw,3.6rem);font-weight:800;margin:.1em 0 .35em;text-wrap:balance;
+  text-shadow:0 6px 30px rgba(0,0,0,.55)}
+.hero h1 em{font-style:normal;color:var(--green-2)}
+.hero .sub{font-size:1.05rem;color:#d3e2d9;max-width:44ch;margin-bottom:1.1em}
+.hero-cta{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:14px}
+.chipline{display:flex;flex-wrap:wrap;gap:8px;font-size:.83rem}
+.chip{display:inline-flex;align-items:center;gap:.4rem;background:rgba(255,255,255,.09);
+  border:1px solid var(--line-d);border-radius:999px;padding:.36rem .7rem;color:#e2ece6}
+.chip b{font-weight:700;color:#fff}
+.star{color:#ffc94d}
+.hcard{z-index:2;margin:0;transform:translateZ(30px) rotateY(-7deg) rotateX(2deg) translateY(calc(var(--sy,0) * -.05px));
+  border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.2);
+  box-shadow:0 40px 70px -30px rgba(0,0,0,.9);background:var(--ink-2)}
+.hcard img{width:100%;height:auto}
+.hcard figcaption{font-size:.76rem;color:#c4d4cb;padding:.6rem .8rem;background:rgba(0,0,0,.45)}
+.hero-credit{position:relative;z-index:4;margin:0;padding:0 18px 12px;max-width:var(--wrap);
+  margin-inline:auto;font-size:.74rem;color:#93a89c}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .scene{transition:none}
+  .btn:hover{transform:none}
+}
+
+/* ---------- proof strip ---------- */
+.proof{background:var(--ink-2);color:#fff;border-top:1px solid var(--line-d)}
+.proof-in{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line-d);
+  border-left:1px solid var(--line-d);border-right:1px solid var(--line-d)}
+@media(min-width:760px){.proof-in{grid-template-columns:repeat(4,1fr)}}
+.pcell{background:var(--ink-2);padding:18px 16px}
+.pcell b{display:block;font-family:Archivo,sans-serif;font-size:1.5rem;font-weight:800;line-height:1.1}
+.pcell span{font-size:.82rem;color:var(--muted-d);display:block;margin-top:2px}
+.proof-foot{display:flex;flex-wrap:wrap;align-items:center;gap:14px;padding:14px 0 22px;font-size:.85rem;color:var(--muted-d)}
+.proof-foot img{width:52px;height:84px;object-fit:contain;background:#fff;border-radius:8px;padding:4px}
+.proof-foot a{color:var(--green-2);font-weight:600}
+
+/* ---------- generic section ---------- */
+.sec{padding:56px 0}
+.sec-head{max-width:70ch;margin-bottom:26px}
+.sec-head h2{margin:.25em 0 .3em}
+
+/* ---------- services ---------- */
+.grid-s{display:grid;gap:18px;grid-template-columns:1fr}
+@media(min-width:640px){.grid-s{grid-template-columns:1fr 1fr}}
+@media(min-width:1000px){.grid-s{grid-template-columns:repeat(4,1fr)}}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;
+  display:flex;flex-direction:column;transition:transform .18s ease,box-shadow .18s ease}
+.card:hover{transform:translateY(-4px);box-shadow:0 24px 40px -26px rgba(10,30,20,.55)}
+.card img{width:100%;aspect-ratio:7/5;object-fit:cover}
+.card-b{padding:16px;display:flex;flex-direction:column;gap:.5rem;flex:1}
+.card-b p{font-size:.92rem;color:var(--muted);margin:0}
+.card-b h3{display:flex;align-items:center;gap:.5rem}
+.tag{font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--green-deep);background:#e3f5ea;border-radius:999px;padding:.2rem .5rem}
+.card-b .mini{margin-top:auto;font-weight:700;font-size:.9rem;color:var(--green-deep);text-decoration:none;
+  border-top:1px solid var(--line);padding-top:.7rem}
+.card-b .mini:hover{text-decoration:underline}
+
+/* ---------- brands ---------- */
+.brands{background:var(--sand-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:26px 0}
+.brand-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:12px}
+@media(min-width:760px){.brand-row{grid-template-columns:repeat(7,1fr)}}
+.brand-row img{width:100%;aspect-ratio:1;object-fit:contain;background:#fff;border:1px solid var(--line);
+  border-radius:10px;padding:8px}
+
+/* ---------- split ---------- */
+.split{display:grid;gap:26px;grid-template-columns:1fr;align-items:center}
+@media(min-width:900px){.split{grid-template-columns:1.05fr .95fr;gap:44px}}
+.split figure{margin:0;border-radius:var(--r);overflow:hidden;border:1px solid var(--line-d)}
+.split figcaption{font-size:.76rem;color:var(--muted-d);padding:.55rem .1rem 0}
+.reasons{list-style:none;margin:0;padding:0;display:grid;gap:2px}
+.reasons li{background:var(--ink-2);border:1px solid var(--line-d);border-radius:12px;padding:14px 16px}
+.reasons b{display:block;font-family:Archivo,sans-serif;font-size:1.02rem;margin-bottom:.15rem}
+.reasons span{font-size:.92rem;color:var(--muted-d)}
+
+/* ---------- gallery band ---------- */
+.gal{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:20px}
+@media(min-width:700px){.gal{grid-template-columns:repeat(4,1fr)}}
+.gal figure{margin:0;position:relative;border-radius:10px;overflow:hidden;background:#000}
+.gal img{width:100%;aspect-ratio:7/5;object-fit:cover;transition:transform .4s ease,opacity .3s ease;opacity:.92}
+.gal figure:hover img{transform:scale(1.06);opacity:1}
+.gal figcaption{position:absolute;left:0;right:0;bottom:0;font-size:.72rem;color:#eaf2ed;
+  background:linear-gradient(transparent,rgba(0,0,0,.82));padding:22px 8px 7px}
+.gal-note{font-size:.8rem;color:var(--muted-d);margin-top:12px}
+
+/* ---------- numbered steps ---------- */
+.steps{counter-reset:s;display:grid;gap:14px;grid-template-columns:1fr;margin-top:8px}
+@media(min-width:820px){.steps{grid-template-columns:repeat(3,1fr)}}
+.step{counter-increment:s;position:relative;background:#fff;border:1px solid var(--line);
+  border-radius:var(--r);padding:18px 18px 18px 18px}
+.step::before{content:counter(s,decimal-leading-zero);font-family:Archivo,sans-serif;font-weight:800;
+  font-size:1.5rem;color:var(--green);display:block;margin-bottom:.3rem}
+.step h3{margin-bottom:.3rem}
+.step p{font-size:.92rem;color:var(--muted);margin:0}
+.notice{border-left:4px solid var(--green);background:#eef7f1;border-radius:0 12px 12px 0;
+  padding:14px 16px;font-size:.93rem;color:#20422f;margin-top:20px}
+
+/* ---------- ask list ---------- */
+.ask{display:grid;gap:0;grid-template-columns:1fr;margin-top:18px;border:1px solid var(--line-d);border-radius:var(--r);overflow:hidden}
+@media(min-width:820px){.ask{grid-template-columns:1fr 1fr}}
+.ask li{list-style:none;padding:15px 18px;border-bottom:1px solid var(--line-d);font-size:.96rem;
+  display:flex;gap:.7rem;align-items:flex-start}
+.ask li:last-child{border-bottom:none}
+.ask q{quotes:"“" "”";color:#fff}
+.ask i{font-style:normal;color:var(--green-2);font-weight:800;font-family:Archivo,sans-serif;font-size:.8rem;padding-top:.2rem}
+
+/* ---------- hours + map ---------- */
+.hl{display:grid;gap:26px;grid-template-columns:1fr}
+@media(min-width:900px){.hl{grid-template-columns:.9fr 1.1fr;gap:34px;align-items:start}}
+table{width:100%;border-collapse:collapse;font-size:.96rem;background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+th,td{text-align:left;padding:.6rem .85rem;border-bottom:1px solid var(--line)}
+th{font-family:Archivo,sans-serif;font-weight:600;color:var(--muted);width:52%}
+tr:last-child th,tr:last-child td{border-bottom:none}
+.status{display:inline-flex;align-items:center;gap:.45rem;font-weight:700;font-size:.9rem;
+  background:#e3f5ea;color:var(--green-deep);border-radius:999px;padding:.35rem .75rem;margin-bottom:12px}
+.status .dot{width:8px;height:8px;border-radius:50%;background:var(--green)}
+.status.shut{background:#f6e7e7;color:#8a2b2b}
+.status.shut .dot{background:#b83a3a}
+.mapbox{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);background:#dfe5e1}
+.mapbox iframe{width:100%;height:340px;border:0;display:block}
+.addr{font-size:1.02rem;line-height:1.5;margin:0 0 12px}
+.addr b{font-family:Archivo,sans-serif}
+
+/* ---------- footer ---------- */
+.ftr{background:var(--ink);color:#e7efea;border-top:1px solid var(--line-d);padding:44px 0 34px}
+.ftr-grid{display:grid;gap:24px;grid-template-columns:1fr}
+@media(min-width:760px){.ftr-grid{grid-template-columns:1.2fr .9fr .9fr}}
+.ftr img.fl{width:150px;height:81px;object-fit:contain;mix-blend-mode:screen;margin-bottom:10px}
+.ftr h4{font-family:Archivo,sans-serif;font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--green-2);margin:0 0 .6rem}
+.ftr a{color:#e7efea}
+.ftr ul{list-style:none;margin:0;padding:0;display:grid;gap:.45rem;font-size:.94rem}
+.ftr .tel{font-family:Archivo,sans-serif;font-size:1.5rem;font-weight:800;text-decoration:none;display:inline-block;margin:.2rem 0 .5rem}
+.ftr-bot{border-top:1px solid var(--line-d);margin-top:26px;padding-top:16px;font-size:.78rem;color:var(--muted-d);
+  display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
+
+/* ---------- mobile call bar ---------- */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:70;display:flex;gap:8px;padding:8px;
+  background:rgba(7,15,11,.96);backdrop-filter:blur(8px);border-top:1px solid var(--line-d)}
+.callbar .btn{flex:1;min-height:48px;font-size:.95rem}
+@media(min-width:820px){.callbar{display:none}}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RoofingContractor",
+  "name": "National Restoration Inc",
+  "url": "http://nationalrestorationatl.com/",
+  "telephone": "+1-404-271-3254",
+  "image": "assets/roofing.jpg",
+  "logo": "assets/logo-temp.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1120 Mt McKinley Dr",
+    "addressLocality": "Grayson",
+    "addressRegion": "GA",
+    "postalCode": "30017",
+    "addressCountry": "US"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 33.89871, "longitude": -83.9817442 },
+  "hasMap": "https://www.google.com/maps/place/National+Restoration+Inc/data=!4m7!3m6!1s0x88f5095d74de6873:0xf9212057a6ba3820!8m2!3d33.89871!4d-83.9817442!16s%2Fg%2F11fpq849v0!19sChIJc2jedF0J9YgRIDi6plcgIfk",
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "08:00",
+    "closes": "20:00"
+  }],
+  "areaServed": [
+    { "@type": "City", "name": "Grayson" },
+    { "@type": "AdministrativeArea", "name": "Gwinnett County" },
+    { "@type": "Place", "name": "metro Atlanta" }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Roofing" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Siding" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Gutters" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Painting" } }
+    ]
+  },
+  "sameAs": ["https://www.google.com/maps/place/National+Restoration+Inc/data=!4m7!3m6!1s0x88f5095d74de6873:0xf9212057a6ba3820!8m2!3d33.89871!4d-83.9817442!16s%2Fg%2F11fpq849v0!19sChIJc2jedF0J9YgRIDi6plcgIfk"]
+}
+</script>
+<!-- BUILD NOTE — schema: @type RoofingContractor is a real schema.org business type
+     (LocalBusiness > HomeAndConstructionBusiness). No aggregateRating: the 4.9/56 is Google's
+     review data, not first-party, so it stays in visible copy only. Hours in schema (08:00-20:00
+     all seven days) are identical to the hours table in visible copy. areaServed entries
+     (Grayson, Gwinnett County, metro Atlanta) are exactly the place names used in copy. -->
+</head>
+<body>
+
+<header class="hdr" id="hdr">
+  <div class="hdr-in">
+    <a class="brand" href="#top">
+      <img src="assets/logo-temp.jpg" alt="National Restoration 'NR' logo, green and white rooflines on black" width="696" height="378">
+      <span class="brandtxt"><b>National Restoration Inc</b><span>Grayson, GA · Roofing</span></span>
+    </a>
+    <nav class="nav-d" aria-label="Section navigation">
+      <a href="#services">Services</a>
+      <a href="#work">Photos</a>
+      <a href="#why">Why us</a>
+      <a href="#storm">Storm &amp; claims</a>
+      <a href="#hours">Hours &amp; location</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <details class="mnav">
+      <summary aria-label="Open section menu">Menu</summary>
+      <nav aria-label="Section navigation">
+        <a href="#services">Services</a>
+        <a href="#work">Photos</a>
+        <a href="#why">Why us</a>
+        <a href="#storm">Storm &amp; claims</a>
+        <a href="#hours">Hours &amp; location</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </details>
+    <a class="btn btn-primary" href="tel:+14042713254">(404)&nbsp;271-3254</a>
+  </div>
+</header>
+
+<!-- ============ 1. HERO — CSS 3D scene ============ -->
+<section class="hero" id="top">
+  <div class="stage" id="stage">
+    <div class="scene" id="scene">
+
+      <!-- back plate -->
+      <div class="layer plate">
+        <img src="assets/roofing.jpg" alt="Aerial drone view of a completed dark-shingle roof on a large suburban home with a cul-de-sac below" width="600" height="400" fetchpriority="high" decoding="async">
+      </div>
+
+      <!-- mid scrim: generated vector, asserts nothing -->
+      <div class="layer scrim" aria-hidden="true">
+        <svg viewBox="0 0 1200 700" preserveAspectRatio="none" focusable="false">
+          <defs>
+            <linearGradient id="hg" x1="0" y1="0" x2="0.55" y2="1">
+              <stop offset="0" stop-color="#04140b" stop-opacity=".95"/>
+              <stop offset=".5" stop-color="#062a19" stop-opacity=".8"/>
+              <stop offset="1" stop-color="#020c07" stop-opacity=".94"/>
+            </linearGradient>
+          </defs>
+          <rect width="1200" height="700" fill="url(#hg)"/>
+          <path d="M0 700 L0 566 L190 468 L372 566 L566 428 L764 566 L960 468 L1200 604 L1200 700 Z" fill="#07190f" opacity=".9"/>
+          <path d="M0 700 L0 626 L206 548 L424 642 L644 520 L884 634 L1104 548 L1200 592 L1200 700 Z" fill="#3ad47f" opacity=".12"/>
+        </svg>
+      </div>
+
+      <!-- front type / CTA plane -->
+      <div class="layer front">
+        <img class="hero-logo" src="assets/logo-temp.jpg" alt="National Restoration 'NR' brand logo with roofline shapes in green and white" width="696" height="378" decoding="async">
+        <p class="eyebrow">Roofing contractor · 1120 Mt McKinley Dr, Grayson, GA</p>
+        <h1>Roofing, siding, gutters &amp; painting in <em>Grayson</em> and metro Atlanta.</h1>
+        <p class="sub">National Restoration Inc is a residential &amp; commercial roofing company based in Grayson, Gwinnett County. Inspections are free. Open 8&nbsp;AM–8&nbsp;PM, seven days a week.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="tel:+14042713254">Call for a free inspection<small>(404) 271-3254 · 8 AM–8 PM daily</small></a>
+          <a class="btn btn-ghost" href="#services">See what they do</a>
+        </div>
+        <div class="chipline">
+          <span class="chip"><span class="star">★</span> <b>4.9</b> · 56 Google reviews</span>
+          <span class="chip">Open <b>7 days</b> · 8 AM–8 PM</span>
+          <span class="chip">Residential &amp; commercial</span>
+        </div>
+      </div>
+
+      <!-- mid photographic card -->
+      <figure class="hcard layer">
+        <img src="assets/natio.jpg" alt="Large two-story brick house with a multi-gable shingle roof, manicured lawn and wooded backdrop" width="700" height="500" decoding="async">
+        <figcaption>Shingle roof and exterior — photography published on National Restoration's own website.</figcaption>
+      </figure>
+
+    </div>
+  </div>
+  <p class="hero-credit">Backdrop: completed roofing work photographed from above, published on National Restoration's own website.</p>
+</section>
+<!-- BUILD NOTE — hero: four layers at distinct translateZ (plate −180px, scrim −70px, card +30px,
+     type/CTA +80px) inside a stage with perspective:1100px. Pointer rotates the scene ≤5°, scroll
+     drifts layers at different rates; both are JS enhancements applied via CSS custom properties
+     inside requestAnimationFrame, transform/opacity only. With JS off the custom props fall back
+     to 0 and the layers sit at their CSS rest depths — name, value proposition and tel: CTA all
+     readable. prefers-reduced-motion disables both drivers and keeps the static depth staging.
+     No hero photo is captioned as the Grayson premises. -->
+
+<!-- ============ 2. SOCIAL PROOF STRIP ============ -->
+<section class="proof" id="proof">
+  <div class="wrap">
+    <div class="proof-in">
+      <div class="pcell"><b>4.9 <span class="star">★</span></b><span>Google rating</span></div>
+      <div class="pcell"><b>56</b><span>Google reviews</span></div>
+      <div class="pcell"><b>7 days</b><span>Open 8 AM–8 PM</span></div>
+      <div class="pcell"><b>Free</b><span>Inspections &amp; estimates</span></div>
+    </div>
+    <div class="proof-foot">
+      <img src="assets/bbb.png" alt="Better Business Bureau Accredited Business badge with blue torch logo" width="217" height="350" loading="lazy" decoding="async">
+      <p style="margin:0">4.9 stars from 56 reviews on the Google listing for National Restoration Inc. The BBB Accredited Business badge above is the one published on the company's own website — ask them for current standing when you call.
+        <a href="https://www.google.com/maps/place/National+Restoration+Inc/data=!4m7!3m6!1s0x88f5095d74de6873:0xf9212057a6ba3820!8m2!3d33.89871!4d-83.9817442!16s%2Fg%2F11fpq849v0!19sChIJc2jedF0J9YgRIDi6plcgIfk" rel="noopener">View the Google listing</a>
+      </p>
+    </div>
+  </div>
+</section>
+<!-- BUILD NOTE — trust signals, two distinct types minimum: (a) Google rating 4.9 + count 56
+     from lead.json; (b) the BBB accreditation badge published on their own site, framed as
+     "published on their site / ask for current standing" because currency cannot be verified
+     from the scrape; (c) real harvested photography throughout. No review body is quoted —
+     the review sentence in card_text is deliberately omitted. No license number, no
+     years-in-business figure: neither appears in lead.json or on any harvested page. -->
+
+<!-- ============ 3. SERVICES ============ -->
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">What they do</p>
+      <h2>Four services, listed plainly.</h2>
+      <p class="lede">These are the four services National Restoration publishes on its own site — roofing, siding, gutters and painting — for houses and commercial buildings. If your job is on this list, the inspection is free.</p>
+    </div>
+    <div class="grid-s">
+
+      <!-- evidence: services page heading "Roofing"; gallery heading "Roof"; site title
+           "A commercial & residential roofing company"; Google category "roofing contractor" -->
+      <article class="card">
+        <img src="assets/roof-04.jpg" alt="Drone aerial of a two-story suburban home with a new gray architectural-shingle roof and a pickup in the driveway" width="700" height="500" loading="lazy" decoding="async">
+        <div class="card-b">
+          <h3>Roofing <span class="tag">Main trade</span></h3>
+          <p>Roof replacement and roof repair, residential and commercial — the trade the company is listed under and the one it calls itself on its own site. Missing shingles, an active leak, or a roof at the end of its life: this is the number to call.</p>
+          <a class="mini" href="tel:+14042713254">Free roof inspection → (404) 271-3254</a>
+        </div>
+      </article>
+
+      <!-- evidence: services page heading "Siding"; gallery heading "Siding";
+           James Hardie logo (icons-07) published on their site -->
+      <article class="card">
+        <img src="assets/siding-01.jpg" alt="Close-up of gray vinyl siding on a house gable with white-trimmed windows" width="700" height="500" loading="lazy" decoding="async">
+        <div class="card-b">
+          <h3>Siding</h3>
+          <p>Exterior siding — installation and replacement, vinyl and fiber cement. James Hardie is among the siding manufacturers shown on their site.</p>
+          <a class="mini" href="tel:+14042713254">Free siding inspection → call</a>
+        </div>
+      </article>
+
+      <!-- evidence: services page heading "Gutters"; gallery heading "Gutters";
+           harvested photos show seamless gutter runs and leaf-guard caps -->
+      <article class="card">
+        <img src="assets/gutters-03.jpg" alt="Almond seamless gutter, soffit and downspout at the corner of a yellow-brick house" width="700" height="500" loading="lazy" decoding="async">
+        <div class="card-b">
+          <h3>Gutters</h3>
+          <p>Gutters and downspouts, including seamless runs and leaf-guard caps along the roof edge. Ask about gutter work at the same visit as a roof inspection.</p>
+          <a class="mini" href="tel:+14042713254">Ask about gutters → call</a>
+        </div>
+      </article>
+
+      <!-- evidence: services page heading "Painting"; gallery heading "Painting"; harvested
+           interior paint photos + exterior_painting.jpg; Sherwin-Williams logo (icons-06) -->
+      <article class="card">
+        <img src="assets/paint-01.jpg" alt="Freshly painted empty room with two-tone blue walls, white trim and chair rail over a hardwood floor" width="700" height="500" loading="lazy" decoding="async">
+        <div class="card-b">
+          <h3>Painting</h3>
+          <p>Interior and exterior painting. Their published photos show both — repainted rooms, trim and stairwells, and full house exteriors. Sherwin-Williams appears among the brands on their site.</p>
+          <a class="mini" href="tel:+14042713254">Ask about painting → call</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- brands strip — full-bleed band, different layout from the card grid above -->
+<section class="brands" aria-label="Brands installed">
+  <div class="wrap">
+    <p class="eyebrow">Brands we install</p>
+    <p class="lede" style="margin:.35em 0 0;font-size:.92rem">Manufacturer logos published on National Restoration's own website. Listed here as brands installed — not as certifications.</p>
+    <div class="brand-row">
+      <img src="assets/icons-01.jpg" alt="GAF roofing manufacturer logo, white letters on red" width="250" height="250" loading="lazy" decoding="async">
+      <img src="assets/icons-04.jpg" alt="Owens Corning logo, white wordmark on a red square" width="250" height="250" loading="lazy" decoding="async">
+      <img src="assets/icons-05.jpg" alt="CertainTeed Saint-Gobain Roofing logo" width="250" height="250" loading="lazy" decoding="async">
+      <img src="assets/icons-02.jpg" alt="IKO roofing products logo with red shingle-knight mark" width="250" height="250" loading="lazy" decoding="async">
+      <img src="assets/icons-03.jpg" alt="TAMKO Building Products logo, red box with black text" width="250" height="250" loading="lazy" decoding="async">
+      <img src="assets/icons-07.jpg" alt="James Hardie siding products logo with green JH monogram" width="250" height="250" loading="lazy" decoding="async">
+      <img src="assets/icons-06.jpg" alt="Sherwin-Williams 'Cover the Earth' paint logo on a blue field" width="250" height="250" loading="lazy" decoding="async">
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. WHY US / PAIN POINTS — asymmetric split, dark ============ -->
+<section class="sec dark" id="why">
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow">Why this one</p>
+      <h2 style="margin:.25em 0 .5em">The three things a Gwinnett homeowner actually checks.</h2>
+      <p class="lede" style="margin-bottom:1.2em">After a storm, metro Atlanta fills up with door-knockers. Here is what can be verified about this company before you dial, and how to vet anyone else who shows up.</p>
+      <ul class="reasons">
+        <li><b>A fixed local address, not a truck</b><span>1120 Mt McKinley Dr, Grayson, GA 30017 — mapped at the bottom of this page. Gwinnett County, metro Atlanta.</span></li>
+        <li><b>4.9 out of 5 across 56 Google reviews</b><span>Neighbors' ratings on the public listing, not a badge the company printed itself.</span></li>
+        <li><b>Reachable 8 AM to 8 PM, every day of the week</b><span>Including Saturday and Sunday — all seven rows of the hours table read 8 AM–8 PM.</span></li>
+        <li><b>A free inspection before anything is priced</b><span>Their own site says it: contact them for a free inspection, and free estimates are available all year round.</span></li>
+      </ul>
+      <p style="margin-top:18px"><a class="btn btn-primary" href="tel:+14042713254">Call for a free inspection<small>(404) 271-3254</small></a></p>
+    </div>
+    <figure>
+      <img src="assets/pi01.jpg" alt="Brick single-family home with a shingle roof, hedges and a manicured lawn on a sunny day" width="800" height="500" loading="lazy" decoding="async">
+      <figcaption>Exterior photography published on National Restoration's website, shown as illustration of the services listed above.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ WORK / PHOTO BAND — full-bleed mosaic ============ -->
+<section class="sec dark" id="work" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Photos</p>
+      <h2>Roofing, siding, gutter and painting photography.</h2>
+      <p class="lede">Every image below is published on National Restoration's own website. They are shown here as illustration of the four services — roofs, siding, gutters and paintwork — not as a claim about any particular address.</p>
+    </div>
+    <div class="gal">
+      <figure><img src="assets/roof-05.jpg" alt="Overhead drone shot of a large home with a dark gray shingle roof and neighborhood street" width="700" height="500" loading="lazy" decoding="async"><figcaption>Architectural shingle roof, drone view</figcaption></figure>
+      <figure><img src="assets/roof-06.jpg" alt="Two-story brick and siding home at dusk with a dark shingle roof and trimmed shrubs" width="700" height="500" loading="lazy" decoding="async">
+        <figcaption>Shingle roof at dusk</figcaption></figure>
+      <figure><img src="assets/siding-03.jpg" alt="Vinyl siding mid-installation over OSB sheathing with an aluminum ladder against the wall" width="700" height="500" loading="lazy" decoding="async"><figcaption>Siding going up over sheathing</figcaption></figure>
+      <figure><img src="assets/siding-02.jpg" alt="Two-story blue vinyl-sided townhouse with a covered porch and shrubs under a clear sky" width="700" height="500" loading="lazy" decoding="async"><figcaption>Vinyl siding, full elevation</figcaption></figure>
+      <figure><img src="assets/siding-1.jpg" alt="Close-up of gray horizontal lap siding with two white-trimmed windows" width="600" height="400" loading="lazy" decoding="async"><figcaption>Lap siding and window trim</figcaption></figure>
+      <figure><img src="assets/gutters-01.jpg" alt="Roof edge with shingles, leaf debris and a mesh gutter guard installed on a white gutter" width="700" height="500" loading="lazy" decoding="async"><figcaption>Mesh gutter guard at the roof edge</figcaption></figure>
+      <figure><img src="assets/gutters-02.jpg" alt="House corner showing a gutter run and corrugated downspout on a gray-sided home with architectural shingles" width="700" height="500" loading="lazy" decoding="async"><figcaption>Gutter run and downspout</figcaption></figure>
+      <figure><img src="assets/gutter.jpg" alt="White gutter, fascia and corrugated downspout on a gray-sided gable end against a blue sky" width="600" height="400" loading="lazy" decoding="async"><figcaption>Gutter, fascia and downspout</figcaption></figure>
+      <figure><img src="assets/exterior_painting.jpg" alt="Two workers in white protective suits on ladders prepping and painting a salmon shingle-sided house exterior" width="600" height="404" loading="lazy" decoding="async"><figcaption>Exterior prep and painting</figcaption></figure>
+      <figure><img src="assets/paint-03.jpg" alt="Empty living room with sage-green walls, white bay windows, a fireplace and hardwood floor" width="700" height="500" loading="lazy" decoding="async"><figcaption>Interior repaint, living room</figcaption></figure>
+      <figure><img src="assets/paint-04.jpg" alt="Two-story foyer with an oak staircase, cream walls, chair rail and arched doorway" width="700" height="500" loading="lazy" decoding="async"><figcaption>Foyer and stairwell</figcaption></figure>
+      <figure><img src="assets/paint-02.jpg" alt="Interior foyer and dining room with fresh paint, wainscoting, hardwood and tile floors" width="700" height="500" loading="lazy" decoding="async"><figcaption>Wainscoting and trim</figcaption></figure>
+      <figure><img src="assets/paint-05.jpg" alt="Empty bedroom with pale blue-gray walls, a ceiling fan, carpet and an ensuite bathroom beyond" width="700" height="500" loading="lazy" decoding="async"><figcaption>Bedroom repaint</figcaption></figure>
+    </div>
+    <p class="gal-note">Photography harvested from nationalrestorationatl.com. Captions describe what is in the frame only — no image here is presented as a specific customer's completed job or as the Grayson office.</p>
+  </div>
+</section>
+
+<!-- ============ 5. STORM / HAIL — category education + call script ============ -->
+<section class="sec" id="storm">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Category guide — general information</p>
+      <h2>Hail and storm damage: how roof claims generally work.</h2>
+      <p class="lede"><strong>Read this as general background on the trade, not as a description of National Restoration's own process.</strong> Metro Atlanta sits in hail country and this is the sequence homeowners are typically walked through after a storm. What this company does on your specific job is a question for the phone call — the script is below.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <h3>An inspection, before the insurer</h3>
+        <p>Hail bruising and wind-lifted shingles are usually invisible from the ground, so the first step is generally someone getting on the roof and photographing what is there.</p>
+      </div>
+      <div class="step">
+        <h3>Damage documented in writing</h3>
+        <p>Claims typically turn on evidence: dated photographs, a written scope of the damage, and the storm date. Contractors normally supply this so the homeowner isn't describing a roof from memory.</p>
+      </div>
+      <div class="step">
+        <h3>The adjuster's visit</h3>
+        <p>Insurers usually send their own adjuster. Homeowners commonly ask their contractor to be on site for that visit so both parties are measuring the same roof.</p>
+      </div>
+    </div>
+    <div class="notice">
+      <strong>Nothing on this page states what any insurer will approve, what a deductible will be, or what a roof will cost.</strong> Prices, insurance handling and lead times are not published anywhere by this company, so they are not guessed at here. Ask them directly — the exact questions are below.
+    </div>
+  </div>
+</section>
+
+<!-- ============ CALL SCRIPT — dark, two-column list ============ -->
+<section class="sec dark" id="ask" style="padding-top:44px">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Before you hire anyone</p>
+      <h2>What to ask when you call (404) 271-3254.</h2>
+      <p class="lede">Prices, warranties, licensing paperwork and insurance handling are not published, so ask on the phone. These are the questions worth asking any roofer who knocks on your door in Gwinnett County, this one included.</p>
+    </div>
+    <ul class="ask">
+      <li><i>01</i><q>Do you do roof repairs, or only full replacements?</q></li>
+      <li><i>02</i><q>Are you licensed and insured — can you email me the certificate of insurance?</q></li>
+      <li><i>03</i><q>Is the inspection free, and is there any obligation after it?</q></li>
+      <li><i>04</i><q>Do you handle insurance claims, and will you be here when the adjuster comes?</q></li>
+      <li><i>05</i><q>What warranty covers your workmanship, and what does the shingle manufacturer cover?</q></li>
+      <li><i>06</i><q>Which shingle brand are you quoting, and what grade of shingle is it?</q></li>
+      <li><i>07</i><q>How soon could you start, and how many days is the job on site?</q></li>
+      <li><i>08</i><q>Does the quote include tear-off, disposal, and a magnet sweep of the yard?</q></li>
+      <li><i>09</i><q>Who is on site running the job, and how do I reach that person?</q></li>
+      <li><i>10</i><q>Can you also quote the gutters, siding or paintwork while you are up there?</q></li>
+    </ul>
+    <p style="margin-top:20px"><a class="btn btn-primary" href="tel:+14042713254">Call now and run the list<small>(404) 271-3254 · open until 8 PM</small></a></p>
+  </div>
+</section>
+
+<!-- ============ 6. HOURS + LOCATION ============ -->
+<section class="sec" id="hours">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Hours &amp; location</p>
+      <h2>Grayson, Gwinnett County — open every day, 8 AM to 8 PM.</h2>
+    </div>
+    <div class="hl">
+      <div>
+        <p class="status" id="statusPill" hidden><span class="dot"></span><span id="statusText"></span></p>
+        <p class="addr"><b>National Restoration Inc</b><br>1120 Mt McKinley Dr<br>Grayson, GA 30017</p>
+        <p style="margin-bottom:14px">
+          <a class="btn btn-primary" href="tel:+14042713254">Call (404) 271-3254</a>
+          <a class="btn btn-ghost-d" href="https://www.google.com/maps/place/National+Restoration+Inc/data=!4m7!3m6!1s0x88f5095d74de6873:0xf9212057a6ba3820!8m2!3d33.89871!4d-83.9817442!16s%2Fg%2F11fpq849v0!19sChIJc2jedF0J9YgRIDi6plcgIfk" rel="noopener">Open in Google Maps</a>
+        </p>
+        <table>
+          <caption class="visually-hidden" style="text-align:left;font-size:.78rem;color:var(--muted);padding:.4rem .1rem">Opening hours</caption>
+          <tbody>
+            <tr><th scope="row">Monday</th><td>8 AM – 8 PM</td></tr>
+            <tr><th scope="row">Tuesday</th><td>8 AM – 8 PM</td></tr>
+            <tr><th scope="row">Wednesday</th><td>8 AM – 8 PM</td></tr>
+            <tr><th scope="row">Thursday</th><td>8 AM – 8 PM</td></tr>
+            <tr><th scope="row">Friday</th><td>8 AM – 8 PM</td></tr>
+            <tr><th scope="row">Saturday</th><td>8 AM – 8 PM</td></tr>
+            <tr><th scope="row">Sunday</th><td>8 AM – 8 PM</td></tr>
+          </tbody>
+        </table>
+        <p style="font-size:.82rem;color:var(--muted);margin-top:10px">Hours exactly as published on the company's Google listing — all seven days read 8 AM–8 PM. The company's own website does not publish hours, so this is the only source; call ahead to confirm before driving out.</p>
+      </div>
+      <div class="mapbox">
+        <iframe src="https://maps.google.com/maps?q=33.89871,-83.9817442&amp;output=embed" title="Map showing National Restoration Inc at 1120 Mt McKinley Dr, Grayson, GA 30017" width="600" height="340" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7. CONTACT / FOOTER ============ -->
+<footer class="ftr" id="contact">
+  <div class="wrap">
+    <div class="ftr-grid">
+      <div>
+        <img class="fl" src="assets/logo-temp.jpg" alt="National Restoration 'NR' brand logo in green and white" width="696" height="378" loading="lazy" decoding="async">
+        <h4>Call</h4>
+        <a class="tel" href="tel:+14042713254">(404) 271-3254</a>
+        <p style="font-size:.92rem;color:var(--muted-d);margin:0">Free inspection · free estimates all year round · 8 AM–8 PM, seven days.</p>
+      </div>
+      <div>
+        <h4>Find them</h4>
+        <ul>
+          <li>National Restoration Inc</li>
+          <li>1120 Mt McKinley Dr<br>Grayson, GA 30017</li>
+          <li>Grayson · Gwinnett County · metro Atlanta</li>
+          <li><a href="https://www.google.com/maps/place/National+Restoration+Inc/data=!4m7!3m6!1s0x88f5095d74de6873:0xf9212057a6ba3820!8m2!3d33.89871!4d-83.9817442!16s%2Fg%2F11fpq849v0!19sChIJc2jedF0J9YgRIDi6plcgIfk" rel="noopener">Open in Google Maps</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>On this page</h4>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#work">Photos</a></li>
+          <li><a href="#why">Why us</a></li>
+          <li><a href="#storm">Storm &amp; claims</a></li>
+          <li><a href="#ask">What to ask</a></li>
+          <li><a href="#hours">Hours &amp; location</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ftr-bot">
+      <span>National Restoration Inc · Roofing contractor · Grayson, GA · 4.9 ★ from 56 Google reviews</span>
+      <span><a href="http://nationalrestorationatl.com/" rel="noopener">nationalrestorationatl.com</a></span>
+    </div>
+  </div>
+</footer>
+<!-- BUILD NOTE — no email address and no social links appear anywhere: none are present in
+     lead.json or verifiable from the harvest. No contact form ships, because there is no
+     backend — tel: is the single conversion path and the primary CTA is styled identically at
+     every repetition (hero, why-us, call-script, hours, footer, mobile bar). Copyright year is
+     omitted entirely so it cannot go stale. -->
+
+<div class="callbar">
+  <a class="btn btn-primary" href="tel:+14042713254">Call (404) 271-3254</a>
+  <a class="btn btn-ghost" href="#hours">Hours</a>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  /* sticky header condensing */
+  var hdr = document.getElementById('hdr');
+  var scene = document.getElementById('scene');
+  var stage = document.getElementById('stage');
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var sy = 0, rx = 0, ry = 0, queued = false;
+
+  function render() {
+    queued = false;
+    if (scene) {
+      scene.style.setProperty('--sy', sy.toFixed(2));
+      scene.style.setProperty('--rx', rx.toFixed(2));
+      scene.style.setProperty('--ry', ry.toFixed(2));
+    }
+  }
+  function schedule() {
+    if (!queued) { queued = true; window.requestAnimationFrame(render); }
+  }
+
+  function onScroll() {
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if (hdr) { hdr.classList.toggle('is-stuck', y > 12); }
+    if (!reduce && scene) {
+      sy = Math.min(y, 700);
+      schedule();
+    }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  /* pointer driver — desktop only, no touch equivalent by design */
+  if (!reduce && stage && window.matchMedia && window.matchMedia('(pointer: fine)').matches) {
+    stage.addEventListener('pointermove', function (e) {
+      var r = stage.getBoundingClientRect();
+      if (!r.width || !r.height) return;
+      var px = (e.clientX - r.left) / r.width - 0.5;
+      var py = (e.clientY - r.top) / r.height - 0.5;
+      ry = px * 5;      /* max 5deg — stays under the 8deg legibility limit */
+      rx = -py * 3.5;
+      schedule();
+    }, { passive: true });
+    stage.addEventListener('pointerleave', function () { rx = 0; ry = 0; schedule(); }, { passive: true });
+  }
+
+  /* open/closed computed client-side from the published hours (08:00-20:00, all 7 days, ET) */
+  var pill = document.getElementById('statusPill');
+  var txt = document.getElementById('statusText');
+  if (pill && txt && window.Intl && Intl.DateTimeFormat) {
+    try {
+      var parts = new Intl.DateTimeFormat('en-US', {
+        timeZone: 'America/New_York', hour: 'numeric', minute: 'numeric', hour12: false
+      }).formatToParts(new Date());
+      var h = 0, m = 0, i;
+      for (i = 0; i < parts.length; i++) {
+        if (parts[i].type === 'hour') { h = parseInt(parts[i].value, 10) % 24; }
+        if (parts[i].type === 'minute') { m = parseInt(parts[i].value, 10); }
+      }
+      var mins = h * 60 + m;
+      var open = mins >= 480 && mins < 1200;
+      txt.textContent = open ? 'Open now · closes 8 PM' : 'Closed now · opens 8 AM';
+      pill.classList.toggle('shut', !open);
+      pill.hidden = false;
+    } catch (err) { /* leave the pill hidden; the hours table is the source of truth */ }
+  }
+
+  /* mobile menu closes after an in-page jump */
+  var mnav = document.querySelector('.mnav');
+  if (mnav) {
+    mnav.addEventListener('click', function (e) {
+      if (e.target && e.target.tagName === 'A') { mnav.removeAttribute('open'); }
+    });
+  }
+})();
+</script>
+</body>
+</html>
