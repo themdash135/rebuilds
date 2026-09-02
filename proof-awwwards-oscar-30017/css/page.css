@@ -1,0 +1,256 @@
+/* Type, colour and the two layouts.
+ *
+ * `html.static` is the default in the markup. Everything reads and works in it.
+ * `html.live` is what page.js swaps in once WebGL2 has actually started, and
+ * all it does is hide the flat images so the scene behind them shows through.
+ *
+ * Colours are read off the client's own photographs — the violet is the paint
+ * on the wrecker and the cruiser, not a brand guess. There is no webfont: none
+ * is licensed for this account and pulling one from a CDN would put a third
+ * party in the critical path of a page whose whole argument is weight.
+ */
+
+:root {
+  --ink: #f4f2f8;
+  --dim: #a6a2b4;
+  --void: #04040a;
+  --violet: #a173ff;
+  --deep: #4b2b7f;
+  --display: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --gutter: clamp(1.25rem, 5vw, 6rem);
+}
+
+* { box-sizing: border-box; }
+
+html, body { margin: 0; padding: 0; background: var(--void); }
+
+body {
+  color: var(--ink);
+  font-family: var(--display);
+  font-size: clamp(1rem, 0.95rem + 0.25vw, 1.15rem);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+#stage {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  display: block;
+}
+html.static #stage { display: none; }
+
+main { position: relative; z-index: 1; }
+
+section {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  padding: clamp(4rem, 12vh, 9rem) var(--gutter);
+}
+
+/* Text sits over a live scene, so it carries its own contrast rather than
+ * relying on whatever pixel happens to be behind it. The camera is aimed to
+ * keep the vehicle out of this half of the frame, but a purple truck moving
+ * through white type is not a risk worth leaving to framing alone. */
+.panel {
+  --pad: clamp(1.4rem, 2.6vw, 2.4rem);
+  /* Wide enough to hold the two call-to-action pills on one line at the base
+   * font size; below that they wrap, which is correct on a phone and wrong on a
+   * desktop hero. */
+  max-width: calc(37rem + var(--gutter));
+  /* The scrim runs off the side of the viewport rather than stopping in open
+   * space. A radial gradient clipped by its own box leaves a hard vertical edge
+   * wherever it still has opacity at the boundary, and against a near-black
+   * scene that edge is more visible than the scrim it belongs to. Only the
+   * inward side has to fade, and it does. */
+  padding: var(--pad) var(--pad) var(--pad) var(--gutter);
+  margin-left: calc(var(--gutter) * -1);
+  /* Pure black, not --void. The canvas clears to 0,0,0 and --void is #04040a,
+   * so a scrim in the page colour showed up as a faintly lighter box wherever
+   * the scene behind it was empty. A scrim may only ever darken. */
+  background: radial-gradient(130% 80% at 22% 50%,
+    rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0.66) 34%, rgba(0, 0, 0, 0) 62%);
+}
+.panel.right {
+  margin-left: auto;
+  margin-right: calc(var(--gutter) * -1);
+  padding: var(--pad) var(--gutter) var(--pad) var(--pad);
+  background: radial-gradient(130% 80% at 78% 50%,
+    rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0.66) 34%, rgba(0, 0, 0, 0) 62%);
+}
+
+.panel > * {
+  text-shadow: 0 2px 24px rgba(2, 2, 6, 0.95), 0 1px 3px rgba(2, 2, 6, 0.9);
+}
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(1.6rem);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+[data-reveal].shown { opacity: 1; transform: none; }
+
+.eyebrow {
+  font-size: 0.74rem;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: var(--violet);
+  margin: 0 0 1.1rem;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: clamp(2.9rem, 9vw, 7.5rem);
+  line-height: 0.92;
+  letter-spacing: -0.035em;
+  font-weight: 800;
+  margin: 0 0 1.4rem;
+}
+h1 .thin { display: block; font-weight: 200; letter-spacing: -0.02em; opacity: 0.82; }
+
+h2 {
+  font-size: clamp(1.9rem, 4.6vw, 3.4rem);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+  margin: 0 0 1.1rem;
+}
+
+h3 { font-size: 1.05rem; font-weight: 700; margin: 0 0 0.35rem; letter-spacing: -0.01em; }
+
+p { margin: 0 0 1.1rem; color: var(--dim); }
+p.lead { color: var(--ink); font-size: clamp(1.05rem, 1.4vw, 1.3rem); }
+
+.actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.8rem; }
+
+a.call, a.text {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.95rem 1.45rem;
+  border-radius: 999px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  transition: transform 0.25s, background 0.25s, border-color 0.25s;
+}
+a.call { background: var(--violet); color: #14061f; }
+a.text { border: 1px solid rgba(244, 242, 248, 0.32); color: var(--ink); }
+a.call:hover, a.text:hover { transform: translateY(-2px); }
+a.text:hover { border-color: var(--violet); }
+a:focus-visible { outline: 2px solid var(--violet); outline-offset: 3px; }
+
+figcaption, .credit {
+  font-size: 0.8rem;
+  color: var(--dim);
+  letter-spacing: 0.02em;
+  margin-top: 0.9rem;
+  border-left: 2px solid var(--deep);
+  padding-left: 0.8rem;
+}
+
+/* The flat layout. One image per station, in the flow, sized like content. */
+.fallback { display: block; width: 100%; height: auto; margin: 2.5rem 0 0; }
+html.live .fallback { display: none; }
+html.static section { min-height: auto; padding-block: clamp(3rem, 9vh, 6rem); }
+/* No scene behind it, so nothing to protect the copy from and no bleed to the
+ * viewport edge to arrange. */
+html.static .panel,
+html.static .panel.right {
+  max-width: 46rem;
+  margin-inline: auto;
+  padding-inline: 0;
+  background: none;
+}
+
+/* Ambient clips: never load-bearing, always behind a poster. */
+.clip {
+  position: relative;
+  margin-top: 2rem;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(161, 115, 255, 0.22);
+}
+.clip video { display: block; width: 100%; height: auto; }
+.clip .credit { margin: 0; padding: 0.7rem 0.9rem; border: 0; background: rgba(4, 4, 10, 0.72); }
+
+/* Services: the whole price list, over a darkened tail of the scene. */
+.services { background: linear-gradient(rgba(4, 4, 10, 0) 0%, rgba(4, 4, 10, 0.93) 14%, rgba(4, 4, 10, 0.97) 100%); }
+/* These two sections own their own dark background, so the per-panel scrim
+ * that keeps copy off the vehicles would only mute them. */
+.services .panel, .visit .panel {
+  max-width: 72rem;
+  background: none;
+  margin-inline: auto;
+  padding-inline: 0;
+}
+
+/* Ten cards into an auto-fit grid means the last row is ragged at most widths.
+ * The usual 1px-gap-over-a-coloured-background trick paints those empty cells
+ * solid, so the rules are drawn by a ring on each card instead and an empty
+ * cell is simply empty. */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15.5rem, 1fr));
+  gap: 1px;
+  border: 1px solid rgba(161, 115, 255, 0.18);
+  border-radius: 14px;
+  overflow: hidden;
+  margin-top: 2.2rem;
+}
+.card {
+  background: rgba(8, 6, 16, 0.92);
+  box-shadow: 0 0 0 1px rgba(161, 115, 255, 0.18);
+  padding: 1.5rem 1.4rem;
+}
+.card p { font-size: 0.9rem; margin: 0 0 0.9rem; }
+.price { font-variant-numeric: tabular-nums; font-weight: 700; color: var(--ink); font-size: 1.02rem; }
+.price span { display: block; font-weight: 400; color: var(--dim); font-size: 0.86rem; }
+.note { margin-top: 1.4rem; font-size: 0.85rem; color: var(--dim); }
+
+.visit { background: rgba(4, 4, 10, 0.97); }
+.columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 2.2rem; margin-top: 2rem; }
+.columns h3 { color: var(--violet); font-size: 0.74rem; letter-spacing: 0.28em; text-transform: uppercase; margin-bottom: 0.8rem; }
+.columns a { color: var(--ink); text-decoration: none; border-bottom: 1px solid rgba(161, 115, 255, 0.45); }
+.columns dl { margin: 0; font-size: 0.94rem; color: var(--dim); }
+.columns dt, .columns dd { display: inline; margin: 0; }
+.columns dd::after { content: ""; display: block; }
+.columns dt { color: var(--ink); }
+
+footer {
+  position: relative;
+  z-index: 1;
+  padding: 2.5rem var(--gutter) 3.5rem;
+  background: var(--void);
+  border-top: 1px solid rgba(244, 242, 248, 0.1);
+  font-size: 0.8rem;
+  color: var(--dim);
+}
+
+/* On a phone the copy is the full width of the screen, so there is no half of
+ * the frame left over to put a truck in. It goes to the top and the scene takes
+ * the bottom, which is also where scene.js aims the camera below the reference
+ * aspect. */
+@media (max-width: 760px) {
+  section { align-items: flex-start; padding-top: clamp(3rem, 9vh, 5rem); }
+  .services, .visit { align-items: center; }
+  .panel, .panel.right {
+    max-width: none;
+    margin-inline: calc(var(--gutter) * -1);
+    padding-inline: var(--gutter);
+    background: linear-gradient(rgba(0, 0, 0, 0.92) 0%,
+      rgba(0, 0, 0, 0.78) 62%, rgba(0, 0, 0, 0) 100%);
+  }
+  .services .panel, .visit .panel { background: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] { opacity: 1; transform: none; transition: none; }
+  a.call, a.text { transition: none; }
+}

@@ -1,0 +1,231 @@
+<!doctype html>
+<!-- `static` is the starting class on purpose: the page is complete and readable
+     before any script runs, and js/page.js only swaps to `live` once WebGL2 has
+     actually started. See js/page.js for the three ways it gives up.
+
+     Every price, hour, phone number and service description below is copied from
+     facts.json, which carries a source_url and a source_quote for each one. The
+     two vehicle photographs are the client's own. Nothing generated on this page
+     depicts the business, its premises or its work. -->
+<html class="static" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oscar's Detailing Dudes — Detailing Hand Car Wash in Grayson, GA</title>
+<meta name="description" content="Detailing hand car wash at 2202 Loganville Hwy, Grayson, GA. Basic wash from $30, ceramic coating, window tinting, interior detailing. 5.0 stars from 30 Google reviews. Call or text 470-966-1113.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="css/page.css">
+</head>
+<body>
+
+<canvas id="stage" aria-hidden="true"></canvas>
+
+<main>
+<div id="journey">
+
+  <section class="hero">
+    <div class="panel" data-reveal>
+      <p class="eyebrow">Grayson, Georgia</p>
+      <h1>Oscar's<br>Detailing<span class="thin">Dudes</span></h1>
+      <!-- The 5.0-from-30-reviews line was here and came off. @blue-lagoon/research
+           refuses it twice: facts.json sources it to "google_maps_card", which is
+           not a URI, so no EvidenceItem can be minted for it at all; and running
+           the real lead.json through fromLeadRecord mints the captured rating as
+           `internal-only` — "informs copy and may not appear in it", because a
+           rating read on one dated pass is printed as current forever. It goes
+           back only behind a fresh capture that is dated on the page. -->
+      <p class="lead">Welcome to our detailing hand car wash. We promise not to judge you
+        for letting your car get so dirty in the first place.</p>
+      <div class="actions">
+        <a class="call" href="tel:+14709661113">Call 470-966-1113</a>
+        <a class="text" href="sms:+14709661113">Text for an appointment</a>
+      </div>
+      <img class="fallback" src="media/wrecker.webp" width="1600" height="573"
+           alt="A purple heavy-duty wrecker detailed by Oscar's Detailing Dudes, cut out against black.">
+    </div>
+  </section>
+
+  <section class="fleet">
+    <div class="panel right" data-reveal>
+      <p class="eyebrow">Trucks and fleet</p>
+      <h2>Big enough for a rotator.</h2>
+      <p>A team of experts, using the latest technology and techniques to clean cars
+        inside and out — by hand, one vehicle at a time.</p>
+      <p class="credit">Customer's truck, detailed by Oscar's. The livery and the lot
+        belong to the customer, not to Oscar's.</p>
+    </div>
+  </section>
+
+  <section class="beading">
+    <div class="panel" data-reveal>
+      <p class="eyebrow">Wash &amp; wax</p>
+      <h2>Water that has nowhere to sit.</h2>
+      <p>Exterior and interior wash, wipe down, windows and tires. Clay bar, buffing
+        and wax on the Super Deluxe.</p>
+      <p class="price">Wash Wax — $125 small · $175 SUV</p>
+      <div class="clip">
+        <video data-ambient="media/beads.mp4" poster="media/beads_poster.webp"
+               muted loop playsinline preload="none" width="768" height="768"
+               aria-label="Light travelling across water beading on violet paint."></video>
+        <p class="credit">Illustration. Generated locally to show beading, not a photograph
+          of a customer's vehicle.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="protection">
+    <div class="panel right" data-reveal>
+      <p class="eyebrow">Ceramic</p>
+      <h2>Protection that outlasts the drive home.</h2>
+      <p>Ceramic coating is $700 for a vehicle fresh out the dealer. Cars that first need
+        a wash, clay bar, buffing and waxing add $200.</p>
+      <p>Window tinting runs $275 to $325 — high-quality films, applied for a seamless
+        and long-lasting result, with privacy and protection from the sun.</p>
+    </div>
+  </section>
+
+  <section class="finished">
+    <div class="panel" data-reveal>
+      <p class="eyebrow">Finished work</p>
+      <h2>Come on in and let us work our Magic.</h2>
+      <p>Cars, SUVs, trucks and bikes. Prices may vary depending on the condition of
+        the vehicle — call or text and we will tell you before you arrive.</p>
+      <div class="actions">
+        <a class="call" href="tel:+14709661113">Call 470-966-1113</a>
+      </div>
+      <img class="fallback" src="media/cruiser.webp" width="1100" height="828"
+           alt="A purple cruiser motorcycle with silver flame paint, detailed by Oscar's Detailing Dudes.">
+      <p class="credit">Customer's motorcycle, detailed by Oscar's.</p>
+    </div>
+  </section>
+
+</div>
+
+<section class="services">
+  <div class="panel" data-reveal>
+    <p class="eyebrow">Services and prices</p>
+    <h2>Everything, and what it costs.</h2>
+    <div class="grid">
+
+      <div class="card">
+        <h3>Basic Wash</h3>
+        <p>Exterior wash including the rims, window cleaning, and tire shine on the tires.</p>
+        <p class="price">$30 <span>small vehicle</span></p>
+        <p class="price">$50 <span>SUV</span></p>
+      </div>
+
+      <div class="card">
+        <h3>Basic Wash / Interior</h3>
+        <p>Exterior and interior wash, wipe down clean, vacuum, windows, rims, and tire dressing.</p>
+        <p class="price">$50 <span>small vehicle</span></p>
+        <p class="price">$75 <span>SUV</span></p>
+      </div>
+
+      <div class="card">
+        <h3>Wash Wax</h3>
+        <p>Exterior and interior wash, wipe down, cleaning windows and tires.</p>
+        <p class="price">$125 <span>small vehicle</span></p>
+        <p class="price">$175 <span>SUV</span></p>
+      </div>
+
+      <div class="card">
+        <h3>Interior Detailing</h3>
+        <p>Shampoo carpet, seats, mats, and conditioned leather.</p>
+        <p class="price">From $175</p>
+      </div>
+
+      <div class="card">
+        <h3>Super Deluxe Detailing</h3>
+        <p>Exterior wash, wipe down, cleaning windows and tires, clay bar, buffing, wax,
+          interior shampoo of carpet, seats, mats, and leather conditioning.</p>
+        <p class="price">$250 <span>small vehicle</span></p>
+        <p class="price">$275 <span>SUV</span></p>
+      </div>
+
+      <div class="card">
+        <h3>Ceramic</h3>
+        <p>Exterior wash, wipe down, cleaning windows and tires.</p>
+        <p class="price">$700 <span>fresh out the dealer</span></p>
+        <p class="price">+$200 <span>if it needs wash, clay bar, buffing and waxing</span></p>
+      </div>
+
+      <div class="card">
+        <h3>Lights Restoration</h3>
+        <p>A 2-step wet sanding process removes oxidation and contaminants, then compounding
+          and polishing removes scratches and restores the lens to a like-new look — and
+          better visibility at night or in the rain.</p>
+        <p class="price">$60</p>
+      </div>
+
+      <div class="card">
+        <h3>Engine Wash</h3>
+        <p>Engine components sprayed with a chemically safe degreaser, surfaces softly
+          scrubbed, dirt and grime gently pressure washed away, then engine dressing applied
+          to all plastics in the bay for a showroom gloss.</p>
+        <p class="price">$65</p>
+      </div>
+
+      <div class="card">
+        <h3>Odor Eliminator</h3>
+        <p>Professional odor elimination at the source. Whether it's from food, pets, or
+          other sources, we've got you covered.</p>
+        <p class="price">$100</p>
+      </div>
+
+      <div class="card">
+        <h3>Window Tinting</h3>
+        <p>High-quality tint films applied for a seamless and long-lasting result, giving
+          privacy and protection from the sun's rays.</p>
+        <p class="price">$275–$325</p>
+      </div>
+
+    </div>
+    <p class="note">Prices may vary depending on the condition of the vehicle.</p>
+  </div>
+</section>
+
+<section class="visit">
+  <div class="panel" data-reveal>
+    <p class="eyebrow">Visit</p>
+    <h2>2202 Loganville Hwy, Grayson, GA 30017</h2>
+    <div class="columns">
+      <div>
+        <h3>Hours</h3>
+        <dl>
+          <dt>Monday – Saturday</dt> <dd>8:00 AM – 5:00 PM</dd>
+          <dt>Sunday</dt> <dd>Closed</dd>
+        </dl>
+      </div>
+      <div>
+        <h3>Phone</h3>
+        <dl>
+          <dt>Front office</dt> <dd><a href="tel:+14709661113">470-966-1113</a></dd>
+          <dt>After hours</dt> <dd><a href="tel:+16789339465">678-933-9465</a></dd>
+        </dl>
+      </div>
+      <div>
+        <h3>Email</h3>
+        <dl>
+          <dt>Appointments by call or text</dt>
+          <dd><a href="mailto:Oscarsdetailingdudes@gmail.com">Oscarsdetailingdudes@gmail.com</a></dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p>Oscar Trucks and Cars Details LLC · 2202 Loganville Hwy, Grayson, GA 30017 · 470-966-1113</p>
+  <p>Vehicle photographs are the client's own and show customers' vehicles. Background
+    lighting, the water-beading surface and the ambient clips are generated locally and
+    depict no person, place or job.</p>
+</footer>
+
+<script src="js/gl.js"></script>
+<script src="js/shaders.js"></script>
+<script src="js/scene.js"></script>
+<script src="js/page.js"></script>
+</body>
+</html>
